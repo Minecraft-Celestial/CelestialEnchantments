@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "com.xiaoyue.celestial_enchantments.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "celestial_enchantments.refmap.json",
+  "mixins": [
+    "MixinTrident"
+  ],
+  "minVersion": "0.8"
+}
