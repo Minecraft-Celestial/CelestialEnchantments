@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/enchanted_book"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "celestial_enchantments:book": 2
+      },
+      "model": "celestial_enchantments:item/c_enchantment_book"
+    }
+  ]
+}

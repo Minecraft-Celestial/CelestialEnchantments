@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Specification-Title: celestial_enchantments
-Specification-Vendor: xiaoyue
-Specification-Version: 1
-Implementation-Title: celestial_enchantments
-Implementation-Version: 1.0
-Implementation-Vendor: xiaoyue
-Implementation-Timestamp: 2023-12-20T18:29:47+0800
-

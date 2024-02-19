@@ -1,0 +1,213 @@
+{
+  "itemGroup.celestial_enchantments.min_enchantment": "celestial_enchantments-Min level",
+  "itemGroup.celestial_enchantments.max_enchantment": "celestial_enchantments-Max level",
+  
+  "item.celestial_enchantments.c_enchantment_book": "Celestial enchantment book",
+  
+  "enchantment.celestial_enchantments.death_pact": "Death Pact",
+  "enchantment.celestial_enchantments.death_pact.desc": "When nearby players die, there is a 15% chance of [Enchantment Level] to gain strength, increase speed, restore health, and absorb damage. Otherwise, you will die together",
+  
+  "enchantment.celestial_enchantments.frost_thorns": "Frost thorns",
+  "enchantment.celestial_enchantments.frost_thorns.desc": "Deals [Enchantment Level] damage to the attacker when attacked, and grants the target a slow effect",
+  
+  "enchantment.celestial_enchantments.holy_shield": "Holy Shield",
+  "enchantment.celestial_enchantments.holy_shield.desc": "Obtain a short-term damage absorption effect after using a shield to block attacks",
+  
+  "enchantment.celestial_enchantments.upward_pick": "Upward pick",
+  "enchantment.celestial_enchantments.upward_pick.desc": "Give the target a brief floating effect",
+  
+  "enchantment.celestial_enchantments.morning_star": "morning star",
+  "enchantment.celestial_enchantments.morning_star.desc": "After the arrow hits the target, it will summon lightning with a 50% chance of [enchantment level] times",
+  
+  "enchantment.celestial_enchantments.fierce_slash": "Fierce Slash",
+  "enchantment.celestial_enchantments.fierce_slash.desc": "If you have attacked a creature in a short period of time, increase [Enchantment Level] * 10% of attack damage when attacking again",
+  
+  "enchantment.celestial_enchantments.trauma_absorption": "Trauma absorption",
+  "enchantment.celestial_enchantments.trauma_absorption.desc": "When hit, restore lost HP * [Enchantment Level] * 9% HP",
+  
+  "enchantment.celestial_enchantments.holy_prayer": "Holy Prayer",
+  "enchantment.celestial_enchantments.holy_prayer.desc": "Attacked while stealth gains health recovery effect",
+  
+  "enchantment.celestial_enchantments.blood_thirst_slash": "Bloodthirst Slash",
+  "enchantment.celestial_enchantments.blood_thirst_slash.desc": "Restore original damage * [enchantment level] * 10% health after attack",
+  
+  "enchantment.celestial_enchantments.destroy_resonance": "Destruction resonance",
+  "enchantment.celestial_enchantments.destroy_resonance.desc": "Deals one [Enchantment Level] * 2 attack damage to surrounding targets after being attacked",
+  
+  "enchantment.celestial_enchantments.unstable_blade": "Unstable blade",
+  "enchantment.celestial_enchantments.unstable_blade.desc": "When attacking, there is a [Enchantment Level] * 10% chance to increase the damage of this attack by 25%",
+  
+  "enchantment.celestial_enchantments.knight_slash": "Knight Slash",
+  "enchantment.celestial_enchantments.knight_slash.desc": "Attack damage increased by [Enchantment Level] * 15% while riding",
+  
+  "enchantment.celestial_enchantments.death_blade": "Death Blade",
+  "enchantment.celestial_enchantments.death_blade.desc": "Increase [Enchantment Level] * 5% of the target's maximum health attack damage during attack, with a maximum damage limit of [Enchantment Level] * 75",
+  
+  "enchantment.celestial_enchantments.echo_effect": "Echo effect",
+  "enchantment.celestial_enchantments.echo_effect.desc": "When receiving a fatal attack, dodge the damage and restore [Enchantment Level] * 5% of maximum health. This effect cools down for 600 seconds",
+  
+  "enchantment.celestial_enchantments.revenge": "revenge",
+  "enchantment.celestial_enchantments.revenge.desc": "Attacking a target that has recently attacked oneself increases [Enchantment Level] by 10% of attack damage",
+  
+  "enchantment.celestial_enchantments.knowledge_scholar": "Knowledge Scholar",
+  "enchantment.celestial_enchantments.knowledge_scholar.desc": "Increase [Enchantment Level] * 10% experience acquisition when picking up experience",
+  
+  "enchantment.celestial_enchantments.void_protection": "Void protection",
+  "enchantment.celestial_enchantments.void_protection.desc": "Reduce [Enchantment Level] * 8% of Void damage received",
+  
+  "enchantment.celestial_enchantments.cluster_awareness": "Cluster awareness",
+  "enchantment.celestial_enchantments.cluster_awareness.desc": "For every creature of the same type around the user, increase [Enchantment Level] * 12% of attack damage",
+  
+  "enchantment.celestial_enchantments.pure_body": "Pure Body",
+  "enchantment.celestial_enchantments.pure_body.desc": "Continuously clearing the potion effect on the body",
+  
+  "enchantment.celestial_enchantments.apoptosis_blade": "The Blade of Apoptosis",
+  "enchantment.celestial_enchantments.apoptosis_blade.desc": "After attacking, give the target a [Enchantment Level] * 2 second fade effect",
+  
+  "enchantment.celestial_enchantments.corruption_body": "The Body of Corruption",
+  "enchantment.celestial_enchantments.corruption_body.desc": "When attacked, reduces the attacker's enchantment level by 3 points of armor for a period of time",
+  
+  "enchantment.celestial_enchantments.celestial_shelter": "Star Moon Shelter",
+  "enchantment.celestial_enchantments.celestial_shelter.desc": "When damaged, a single attack can only receive up to 25% of the wearer's maximum health",
+  
+  "enchantment.celestial_enchantments.sharp_arrow": "Sharp arrow",
+  "enchantment.celestial_enchantments.sharp_arrow.desc": "Increase [Enchantment Level] * 20% Arrow Damage",
+  
+  "enchantment.celestial_enchantments.hearth_support": "Hearth support",
+  "enchantment.celestial_enchantments.hearth_support.desc": "When attacked, causes the attacker to fall into [Enchantment Level] * 2 seconds of combustion",
+  
+  "enchantment.celestial_enchantments.born_in_shadow": "Born in the shadows",
+  "enchantment.celestial_enchantments.born_in_shadow.desc": "Durability will slowly recover in areas with brightness less than 5",
+  
+  "enchantment.celestial_enchantments.shadow_touch": "Shadow Touch",
+  "enchantment.celestial_enchantments.shadow_touch.desc": "When attacking in areas with brightness less than 5, deal an additional [enchantment level] point of void damage to the target",
+  
+  "enchantment.celestial_enchantments.parting_wish": "A parting wish",
+  "enchantment.celestial_enchantments.parting_wish.desc": "Restore 8 health points to surrounding players at their enchantment level upon death",
+  
+  "enchantment.celestial_enchantments.death_hatred": "Death hatred",
+  "enchantment.celestial_enchantments.death_hatred.desc": "Deals [Enchantment Level] * 15 magic damage to surrounding creatures upon death",
+  
+  "enchantment.celestial_enchantments.corrupt_scholar": "Corrupt scholar",
+  "enchantment.celestial_enchantments.corrupt_scholar.desc": "When picking up experience, increase [Enchantment Level] * 80% experience acquisition, but there is a 25% chance of [Enchantment Level] * obtaining negative effects",
+  
+  "enchantment.celestial_enchantments.arrow_storm": "Storm Arrow",
+  "enchantment.celestial_enchantments.arrow_storm.desc": "Arrow damage reduced by [Enchantment Level] * 5%, dealing original damage [Enchantment Level] * 10% projectile damage to enemies around the target upon hit",
+  
+  "enchantment.celestial_enchantments.scorching_shield": "Scorching shield",
+  "enchantment.celestial_enchantments.scorching_shield.desc": "Using a shield to block an attack will cause the attacker to fall into [Enchantment Level] and burn for seconds",
+  
+  "enchantment.celestial_enchantments.destruction_crack": "Destruction crack",
+  "enchantment.celestial_enchantments.destruction_crack.desc": "Add a crack mark to the target after the attack. If you have a crack mark, you cannot gain invincible time after being attacked",
+  
+  "enchantment.celestial_enchantments.moon_blessing": "Moon Blessing",
+  "enchantment.celestial_enchantments.moon_blessing.desc": "Continuously gain [Enchantment Level] level health recovery effect while at night",
+  
+  "enchantment.celestial_enchantments.sun_blessing": "Sun Blessing",
+  "enchantment.celestial_enchantments.sun_blessing.desc": "Continuously gains [Enchantment Level] strength effects while in the daytime",
+  
+  "enchantment.celestial_enchantments.gift_of_thunder_god": "Gift of Thunder God",
+  "enchantment.celestial_enchantments.gift_of_thunder_god.desc": "When attacked by lightning, immediately recover 100% of lost life and obtain a brief [Enchantment Level] level speed increase and resistance enhancement effect",
+  
+  "enchantment.celestial_enchantments.reactive_block": "Reactive Block",
+  "enchantment.celestial_enchantments.reactive_block.desc": "After using a shield to block an attack, use [Enchantment Level] * 0.5 to repel the attacker",
+  
+  "enchantment.celestial_enchantments.potion_affinity": "Potion affinity",
+  "enchantment.celestial_enchantments.potion_affinity.desc": "The duration of the obtained potion effect has been increased by [Enchantment Level] * 15%",
+  
+  "enchantment.celestial_enchantments.fireproof_boots": "Fireproof boots",
+  "enchantment.celestial_enchantments.fireproof_boots.desc": "Immune to Magma Block damage and reduce flame damage taken by 15%",
+  
+  "enchantment.celestial_enchantments.death_blow": "deathblow",
+  "enchantment.celestial_enchantments.death_blow.desc": "Increase [Enchantment Level] * 25% critical damage on critical strikes",
+  
+  "enchantment.celestial_enchantments.burst_arrow": "Burst arrow",
+  "enchantment.celestial_enchantments.burst_arrow.desc": "After hitting the target, there is a [Enchantment Level] * 20% chance of an explosion, which does not damage the blocks",
+  
+  "enchantment.celestial_enchantments.quick_step_puncture": "Quick Step Puncture",
+  "enchantment.celestial_enchantments.quick_step_puncture.desc": "Increase [Enchantment Level] * 16% of attack damage when attacking the target while running, and repel the target with higher repulsion force",
+  
+  "enchantment.celestial_enchantments.accelerate_growth": "accelerate the ripening",
+  "enchantment.celestial_enchantments.accelerate_growth.desc": "Right click on the crop to consume some durability to ripen the crop",
+  
+  "enchantment.celestial_enchantments.solid_armor": "Solid armor",
+  "enchantment.celestial_enchantments.solid_armor.desc": "When the wearer's health is less than half, the damage received is reduced by [Enchantment Level] * 12%",
+  
+  "enchantment.celestial_enchantments.rain_and_dew_grace": "Rain and dew grace",
+  "enchantment.celestial_enchantments.rain_and_dew_grace.desc": "Continuously restores the wearer's life during rainy weather",
+  
+  "enchantment.celestial_enchantments.the_hand_of_thief": "The Hand of Thief",
+  "enchantment.celestial_enchantments.the_hand_of_thief.desc": "When killing a target, the probability of the target dropping the equipment they are wearing increases to 100%",
+  
+  "enchantment.celestial_enchantments.magic_blade": "Magic Blade",
+  "enchantment.celestial_enchantments.magic_blade.desc": "Your attack will receive additional magic damage equal to the original damage",
+  
+  "enchantment.celestial_enchantments.constraints_shield": "Shield of Constraints",
+  "enchantment.celestial_enchantments.constraints_shield.desc": "After 4 attacks per block, deal 50% of the original damage [enchantment level] * magic damage to the attacker on the next block",
+  
+  "enchantment.celestial_enchantments.photo_dynamic": "photodynamics",
+  "enchantment.celestial_enchantments.photo_dynamic.desc": "Increase [Enchantment Level] * 12% mining speed in areas with brightness above 10",
+  
+  "enchantment.celestial_enchantments.light_armor_killer": "Light Armor Killer",
+  "enchantment.celestial_enchantments.light_armor_killer.desc": "Increase [Enchantment Level] * 25% attack damage when attacking targets with armor values below 8",
+  
+  "enchantment.celestial_enchantments.quenched_blade": "Quenched Blade",
+  "enchantment.celestial_enchantments.quenched_blade.desc": "When attacking a burning target, extinguish the target's flame and increase [Enchantment Level] * 10% attack damage every 2 seconds based on the remaining burning time before extinguishment",
+  
+  "enchantment.celestial_enchantments.origin_of_life": "The Origin of Life",
+  "enchantment.celestial_enchantments.origin_of_life.desc": "There is a probability of obtaining resistance improvement or speed improvement effects when receiving treatment",
+  
+  "enchantment.celestial_enchantments.arrow_of_traction": "Arrow of traction",
+  "enchantment.celestial_enchantments.arrow_of_traction.desc": "After hitting the target, drag all entities within a radius of [enchantment level]+1 grid with the target as the center to the target",
+  
+  "enchantment.celestial_enchantments.fleet_of_foot": "fleet of foot",
+  "enchantment.celestial_enchantments.fleet_of_foot.desc": "Increase [Enchantment Level] * 10% Movement Speed",
+  
+  "enchantment.celestial_enchantments.misfortune_blade": "The Blade of Misfortune",
+  "enchantment.celestial_enchantments.misfortune_blade.desc": "After attacking, give the target 4 seconds to be poisoned. When the target is poisoned, the attack damage increases by [Enchantment Level] * 25%",
+  
+  "enchantment.celestial_enchantments.the_source_of_sin": "The Source of Sin",
+  "enchantment.celestial_enchantments.the_source_of_sin.desc": "When attacked, there is a 20% chance of [Enchantment Level] * making the attacker the target of surrounding creatures",
+  
+  "enchantment.celestial_enchantments.dimension_explorer": "Dimension Explorer",
+  "enchantment.celestial_enchantments.dimension_explorer.desc": "Gain 30 seconds of [Enchantment Level] level luck, strength, and urgency effects after crossing dimension each time",
+  
+  "enchantment.celestial_enchantments.sharp_halberd_tip": "Sharp halberd tip",
+  "enchantment.celestial_enchantments.sharp_halberd_tip.desc": "Increase [Enchantment Level] * 20% melee and throw damage",
+  
+  "enchantment.celestial_enchantments.hidden_blade": "Hidden Blade",
+  "enchantment.celestial_enchantments.hidden_blade.desc": "When equipped with stealth effect, the attack target increases [Enchantment Level] * 26% of attack damage",
+  
+  "enchantment.celestial_enchantments.divine_ejaculation": "Divine ejaculation",
+  "enchantment.celestial_enchantments.divine_ejaculation.desc": "The farther away from the attacking target, the higher the damage",
+  
+  "enchantment.celestial_enchantments.eye_in_shadow": "Eye in Shadow",
+  "enchantment.celestial_enchantments.eye_in_shadow.desc": "Continuously achieve night vision effects in areas with brightness less than 5",
+  
+  "enchantment.celestial_enchantments.explosive_halberd": "Explosive Halberd Tip",
+  "enchantment.celestial_enchantments.explosive_halberd.desc": "The thrown trident has a [Enchantment Level] * 20% chance of exploding",
+  
+  "enchantment.celestial_enchantments.suppression_blade": "Suppress the blade",
+  "enchantment.celestial_enchantments.suppression_blade.desc": "After the attack, the target will no longer be able to regain life",
+  
+  "enchantment.celestial_enchantments.have_nice_dream": "Have a good dream",
+  "enchantment.celestial_enchantments.have_nice_dream.desc": "After waking up from bed, obtain [enchantment level] level health recovery and jump enhancement effects",
+  
+  "enchantment.celestial_enchantments.void_chain": "Void Chain",
+  "enchantment.celestial_enchantments.void_chain.desc": "Reduce attack damage by 90%, deal original damage * [enchantment level] * 50% damage to surrounding targets after attack",
+  
+  "enchantment.celestial_enchantments.words_of_wisdom": "words of wisdom",
+  "enchantment.celestial_enchantments.words_of_wisdom.desc": "Increase attack damage by 5% for every level 5 experience level, with a maximum of [enchantment level] * 20%",
+  
+  "enchantment.celestial_enchantments.destruction_curse": "Curse of Destruction",
+  "enchantment.celestial_enchantments.destruction_curse.desc": "Increase explosion damage received by 40%, and increase other damage by 25%",
+  
+  "enchantment.celestial_enchantments.overeating_curse": "Overeating Curse",
+  "enchantment.celestial_enchantments.overeating_curse.desc": "Continuously obtain [Enchantment Level] level hunger effect",
+  
+  "enchantment.celestial_enchantments.curse_of_weakness": "Curse of weakness",
+  "enchantment.celestial_enchantments.curse_of_weakness.desc": "Reduce [Enchantment Level] * 15% of attack damage",
+  
+  "enchantment.celestial_enchantments.powerless_curse": "Powerless curse",
+  "enchantment.celestial_enchantments.powerless_curse.desc": "Reduce [Enchantment Level] * 15% of mining speed"
+}
