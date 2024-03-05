@@ -1,5 +1,6 @@
 package com.xiaoyue.celestial_enchantments.enchantments.armor;
 
+import com.xiaoyue.celestial_enchantments.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.generic.XCEnchBase;
 import com.xiaoyue.celestial_enchantments.register.CEnchantments;
 import net.minecraft.world.entity.Entity;
@@ -9,9 +10,9 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantments;
 
-public class HearthSupport extends XCEnchBase {
+public class HearthSupport extends ArmorEnch {
     public HearthSupport() {
-        super(Rarity.RARE, EnchantmentCategory.ARMOR_HEAD, new EquipmentSlot[] {EquipmentSlot.HEAD});
+        super(Rarity.RARE, Type.HEAD);
     }
 
     @Override
@@ -41,4 +42,5 @@ public class HearthSupport extends XCEnchBase {
             livingEntity.setSecondsOnFire(level * 40);
         }
     }
+
 }

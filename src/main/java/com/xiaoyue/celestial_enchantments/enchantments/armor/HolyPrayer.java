@@ -1,6 +1,7 @@
 package com.xiaoyue.celestial_enchantments.enchantments.armor;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
+import com.xiaoyue.celestial_enchantments.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.generic.XCEnchBase;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -9,9 +10,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
-public class HolyPrayer extends XCEnchBase {
+public class HolyPrayer extends ArmorEnch {
     public HolyPrayer() {
-        super(Rarity.RARE, EnchantmentCategory.ARMOR_LEGS, new EquipmentSlot[] {EquipmentSlot.LEGS});
+        super(Rarity.RARE, Type.LEGS);
     }
 
     @Override
@@ -35,11 +36,12 @@ public class HolyPrayer extends XCEnchBase {
     }
 
     @Override
-    public void doPostHurt(LivingEntity entity, Entity attacker, int level) {
-        if (entity instanceof Player player) {
+    public void doPostHurt(LivingEntity user, Entity attacker, int level) {
+        if (user instanceof Player player) {
             if (player.isCrouching()) {
                 EntityUtils.addEct(player, MobEffects.REGENERATION, 40, level - 1);
             }
         }
     }
+
 }

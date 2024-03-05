@@ -16,15 +16,14 @@ public class CEnchantmentsClient {
 
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
-		event.enqueueWork(() -> {
-			ItemProperties.register(Items.ENCHANTED_BOOK, new ResourceLocation(CelestialEnchantments.MODID, "book"), (itemStack, clientLevel, livingEntity, i) -> {
-				for (Enchantment enchantment : EnchantmentHelper.getEnchantments(itemStack).keySet()) {
-					if (enchantment instanceof XCEnchBase) {
-						return 2.0f;
+		event.enqueueWork(() -> ItemProperties.register(Items.ENCHANTED_BOOK, new ResourceLocation(CelestialEnchantments.MODID, "book"),
+				(itemStack, clientLevel, livingEntity, i) -> {
+					for (Enchantment enchantment : EnchantmentHelper.getEnchantments(itemStack).keySet()) {
+						if (enchantment instanceof XCEnchBase) {
+							return 2.0f;
+						}
 					}
-				}
-				return 0;
-			});
-		});
+					return 0;
+				}));
 	}
 }

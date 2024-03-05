@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import static com.xiaoyue.celestial_enchantments.CelestialEnchantments.MODID;
 
 @Mod.EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
-public class ClientHandler {
+public class CEClientEventHandler {
 
     @SubscribeEvent
     public static void renderTooltip(RenderTooltipEvent.Color event) {

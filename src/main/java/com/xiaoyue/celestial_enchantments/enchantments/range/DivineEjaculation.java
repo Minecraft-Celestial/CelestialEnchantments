@@ -1,40 +1,43 @@
 package com.xiaoyue.celestial_enchantments.enchantments.range;
 
-import com.xiaoyue.celestial_enchantments.generic.CAttackEnch;
-import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
-import net.minecraft.world.entity.EquipmentSlot;
+import com.xiaoyue.celestial_enchantments.generic.BowEnch;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
+import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraft.world.entity.projectile.Arrow;
 
-public class DivineEjaculation extends CAttackEnch {
-    public DivineEjaculation() {
-        super(Rarity.VERY_RARE, IEnchUtils.BOW_AND_CROSSBOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
-    }
+public class DivineEjaculation extends BowEnch {
 
-    @Override
-    public int getMinCost(int level) {
-        return (level * 25) - 1;
-    }
+	public DivineEjaculation() {
+		super(Rarity.VERY_RARE);
+	}
 
-    @Override
-    public int getMaxCost(int level) {
-        return 1 + (level * 28);
-    }
+	@Override
+	public int getMinCost(int level) {
+		return (level * 25) - 1;
+	}
 
-    @Override
-    public int getMaxLevel() {
-        return super.getMaxLevel();
-    }
+	@Override
+	public int getMaxCost(int level) {
+		return 1 + (level * 28);
+	}
 
-    @Override
-    public boolean isTradeable() {
-        return super.isTradeable();
-    }
+	@Override
+	public int getMaxLevel() {
+		return super.getMaxLevel();
+	}
 
-    @Override
-    public void onHurtEntity(LivingHurtEvent event, LivingEntity attacker, LivingEntity target, int level) {
-        if (level > 0) {
-            event.setAmount(event.getAmount() * (1 + (attacker.distanceTo(target) * 0.03f)));
-        }
-    }
+	@Override
+	public boolean isTradeable() {
+		return super.isTradeable();
+	}
+
+	@Override
+	public void hurtTarget(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
+		var owner = arrow.getOwner();
+		if (owner != null) {
+			cache.addHurtModifier(DamageModifier.multTotal(1 + owner.distanceTo(target) * 0.03f));
+		}
+	}
+
 }

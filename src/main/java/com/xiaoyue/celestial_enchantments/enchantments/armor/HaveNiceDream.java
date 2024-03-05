@@ -1,26 +1,34 @@
 package com.xiaoyue.celestial_enchantments.enchantments.armor;
 
-import com.xiaoyue.celestial_enchantments.generic.CAttackEnch;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import com.xiaoyue.celestial_core.utils.EntityUtils;
+import com.xiaoyue.celestial_enchantments.generic.ArmorEnch;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.player.Player;
 
-public class HaveNiceDream extends CAttackEnch {
-    public HaveNiceDream() {
-        super(Rarity.RARE, EnchantmentCategory.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
-    }
+public class HaveNiceDream extends ArmorEnch {
 
-    @Override
-    public int getMinCost(int level) {
-        return (level * 10) - 1;
-    }
+	public HaveNiceDream() {
+		super(Rarity.RARE, Type.HEAD);
+	}
 
-    @Override
-    public int getMaxCost(int level) {
-        return 1 + (level * 10);
-    }
+	@Override
+	public int getMinCost(int level) {
+		return (level * 10) - 1;
+	}
 
-    @Override
-    public int getMaxLevel() {
-        return 3;
-    }
+	@Override
+	public int getMaxCost(int level) {
+		return 1 + (level * 10);
+	}
+
+	@Override
+	public int getMaxLevel() {
+		return 3;
+	}
+
+	public static void onPlayerWake(Player player, int lv) {
+		EntityUtils.addEct(player, MobEffects.REGENERATION, 200, lv - 1);
+		EntityUtils.addEct(player, MobEffects.JUMP, 200, lv - 1);
+	}
+
 }

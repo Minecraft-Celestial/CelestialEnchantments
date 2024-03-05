@@ -1,36 +1,35 @@
 package com.xiaoyue.celestial_enchantments.enchantments.weapon;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
-import com.xiaoyue.celestial_enchantments.generic.CAttackEnch;
+import com.xiaoyue.celestial_enchantments.generic.AttackEnch;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
+import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.enchantment.EnchantmentCategory;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
-public class MisfortuneBlade extends CAttackEnch {
-    public MisfortuneBlade() {
-        super(Rarity.RARE, EnchantmentCategory.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
-    }
+public class MisfortuneBlade extends AttackEnch {
 
-    @Override
-    public boolean isTreasureOnly() {
-        return true;
-    }
+	public MisfortuneBlade() {
+		super(Rarity.RARE);
+	}
 
-    @Override
-    public int getMaxLevel() {
-        return super.getMaxLevel();
-    }
+	@Override
+	public boolean isTreasureOnly() {
+		return true;
+	}
 
-    @Override
-    public void onHurtEntity(LivingHurtEvent event, LivingEntity attacker, LivingEntity target, int level) {
-        if (level > 0) {
-            if (target.hasEffect(MobEffects.POISON)) {
-                event.setAmount(event.getAmount() * (1 + (level * 0.25f)));
-            } else {
-                EntityUtils.addEct(target, MobEffects.POISON, 80, level - 1);
-            }
-        }
-    }
+	@Override
+	public int getMaxLevel() {
+		return super.getMaxLevel();
+	}
+
+	@Override
+	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
+		if (target.hasEffect(MobEffects.POISON)) {
+			cache.addHurtModifier(DamageModifier.multTotal(1 + (lv * 0.25f)));
+		} else {
+			EntityUtils.addEct(target, MobEffects.POISON, 80, lv - 1);
+		}
+	}
+
 }

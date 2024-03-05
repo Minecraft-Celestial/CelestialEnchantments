@@ -5,7 +5,7 @@
   "item.celestial_enchantments.c_enchantment_book": "星月附魔书",
   
   "enchantment.celestial_enchantments.death_pact": "死亡契约",
-  "enchantment.celestial_enchantments.death_pact.desc": "周围玩家死亡时有[附魔等级]*15%概率获得力量，速度提升，生命恢复，伤害吸收，否则你将会一同死亡",
+  "enchantment.celestial_enchantments.death_pact.desc": "周围持有死亡契约的玩家死亡时有[附魔等级]*15%概率获得力量，速度提升，生命恢复，伤害吸收，否则你将会一同死亡",
   
   "enchantment.celestial_enchantments.frost_thorns": "冰霜荆棘",
   "enchantment.celestial_enchantments.frost_thorns.desc": "受到攻击时对攻击者造成[附魔等级]点伤害，并给予目标缓慢效果",
@@ -198,9 +198,6 @@
   
   "enchantment.celestial_enchantments.words_of_wisdom": "经验之谈",
   "enchantment.celestial_enchantments.words_of_wisdom.desc": "每拥有5级经验等级提高5%攻击伤害，上限[附魔等级]*20%",
-  
-  "enchantment.celestial_enchantments.suppression_blade": "抑制刀刃",
-  "enchantment.celestial_enchantments.suppression_blade.desc": "攻击后将使目标无法再恢复生命",
   
   "enchantment.celestial_enchantments.destruction_curse": "毁灭诅咒",
   "enchantment.celestial_enchantments.destruction_curse.desc": "受到的爆炸伤害提高40%，其他伤害提高25%",
