@@ -2,7 +2,6 @@ package com.xiaoyue.celestial_enchantments.event;
 
 import com.xiaoyue.celestial_enchantments.generic.*;
 import com.xiaoyue.celestial_enchantments.mixin.MixinTrident;
-import com.xiaoyue.celestial_enchantments.register.CEnchantments;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.AttackListener;
@@ -11,7 +10,6 @@ import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.level.Level;
 
 public class CEAttackListener implements AttackListener {
 

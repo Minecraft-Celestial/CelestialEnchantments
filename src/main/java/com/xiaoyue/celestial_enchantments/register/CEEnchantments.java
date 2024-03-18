@@ -20,7 +20,7 @@ import com.xiaoyue.celestial_enchantments.generic.XCEnchBase;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
-public class CEnchantments {
+public class CEEnchantments {
 
 	// Generic
 	public static final RegistryEntry<Enchantment> DEATH_PACT = reg("death_pact", DeathPact::new, "When nearby players with Death Pact die, there is a 15% chance of [Enchantment Level] to gain strength, increase speed, restore health, and absorb damage. Otherwise, you will die together");
@@ -80,7 +80,7 @@ public class CEnchantments {
 	public static final RegistryEntry<Enchantment> THE_SOURCE_OF_SIN = reg("the_source_of_sin", TheSourceOfSin::new, "When attacked, there is a 20% chance of [Enchantment Level] * making the attacker the target of surrounding creatures");
 	public static final RegistryEntry<Enchantment> DIMENSION_EXPLORER = reg("dimension_explorer", DimensionExplorer::new, "Gain 30 seconds of [Enchantment Level] level luck, strength, and urgency effects after crossing dimension each time");
 	public static final RegistryEntry<Enchantment> SHARP_HALBERD_TIP = reg("sharp_halberd_tip", SharpHalberdTip::new, "Increase [Enchantment Level] * 20% melee and throw damage");
-	public static final RegistryEntry<Enchantment> HIDDEN_BLADE = reg("hidden_blade", HiddenBlade::new, "When equipped with stealth effect, the attack target increases [Enchantment Level] * 26% of attack damage");
+	public static final RegistryEntry<Enchantment> HIDDEN_BLADE = reg("hidden_blade", HiddenBlade::new, "When in invisibility effect, the attack target increases [Enchantment Level] * 26% of attack damage");
 	public static final RegistryEntry<Enchantment> DIVINE_EJACULATION = reg("divine_ejaculation", DivineEjaculation::new, "The farther away from the attacking target, the higher the damage");
 	public static final RegistryEntry<Enchantment> EYE_IN_SHADOW = reg("eye_in_shadow", EyeInShadow::new, "Continuously achieve night vision effects in areas with brightness less than 5");
 	public static final RegistryEntry<Enchantment> EXPLOSIVE_HALBERD = reg("explosive_halberd", ExplosiveHalberd::new, "The thrown trident has a [Enchantment Level] * 20% chance of exploding");

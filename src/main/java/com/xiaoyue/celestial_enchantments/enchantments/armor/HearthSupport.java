@@ -1,13 +1,10 @@
 package com.xiaoyue.celestial_enchantments.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.generic.ArmorEnch;
-import com.xiaoyue.celestial_enchantments.generic.XCEnchBase;
-import com.xiaoyue.celestial_enchantments.register.CEnchantments;
+import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantments;
 
 public class HearthSupport extends ArmorEnch {
@@ -33,7 +30,7 @@ public class HearthSupport extends ArmorEnch {
     @Override
     protected boolean checkCompatibility(Enchantment enchantment) {
         return super.checkCompatibility(enchantment) && enchantment != Enchantments.THORNS
-                && enchantment != CEnchantments.FROST_THORNS.get();
+                && enchantment != CEEnchantments.FROST_THORNS.get();
     }
 
     @Override

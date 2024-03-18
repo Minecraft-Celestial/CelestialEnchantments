@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_enchantments;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.xiaoyue.celestial_enchantments.config.CommonConfig;
-import com.xiaoyue.celestial_enchantments.register.CEnchantments;
+import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import dev.xkmc.l2library.base.L2Registrate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,11 +28,11 @@ public class CelestialEnchantments {
 
 	public static final RegistryEntry<CreativeModeTab> TAB_ENCHMAX = REGISTRATE.buildModCreativeTab(
 			"max_enchantment", "Celestial Enchantments - Max Level", b -> b.icon(() ->
-							EnchantedBookItem.createForEnchantment(new EnchantmentInstance(CEnchantments.ACCELERATE_GROWTH.get(), 1)))
+							EnchantedBookItem.createForEnchantment(new EnchantmentInstance(CEEnchantments.ACCELERATE_GROWTH.get(), 1)))
 					.withTabsBefore(TAB_ENCHMIN.getKey()));
 
 	public CelestialEnchantments() {
-		CEnchantments.register();
+		CEEnchantments.register();
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.spec);
 	}
 

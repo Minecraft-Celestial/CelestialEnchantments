@@ -64,7 +64,7 @@
   "enchantment.celestial_enchantments.hearth_support": "Hearth Support",
   "enchantment.celestial_enchantments.hearth_support.desc": "When attacked, causes the attacker to fall into [Enchantment Level] * 2 seconds of combustion",
   "enchantment.celestial_enchantments.hidden_blade": "Hidden Blade",
-  "enchantment.celestial_enchantments.hidden_blade.desc": "When equipped with stealth effect, the attack target increases [Enchantment Level] * 26% of attack damage",
+  "enchantment.celestial_enchantments.hidden_blade.desc": "When in invisibility effect, the attack target increases [Enchantment Level] * 26% of attack damage",
   "enchantment.celestial_enchantments.holy_prayer": "Holy Prayer",
   "enchantment.celestial_enchantments.holy_prayer.desc": "Attacked while stealth gains health recovery effect",
   "enchantment.celestial_enchantments.holy_shield": "Holy Shield",
