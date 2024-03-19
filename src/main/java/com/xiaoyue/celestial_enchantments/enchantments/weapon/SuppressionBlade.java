@@ -1,6 +1,8 @@
 package com.xiaoyue.celestial_enchantments.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.generic.WeaponEnch;
+import com.xiaoyue.celestial_enchantments.register.CEEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
@@ -26,8 +28,8 @@ public class SuppressionBlade extends WeaponEnch {
 
 	@Override
 	public void doPostAttack(LivingEntity attacker, Entity target, int level) {
-		if (target instanceof LivingEntity livingEntity) {//TODO
-			livingEntity.getPersistentData().putBoolean("suppression_blade", true);
+		if (target instanceof LivingEntity livingEntity) {
+			livingEntity.addEffect(new MobEffectInstance(CEEffects.SUPPRESSED.get(), 1200));
 		}
 	}
 }

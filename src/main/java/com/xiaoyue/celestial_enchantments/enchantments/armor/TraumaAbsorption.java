@@ -26,11 +26,6 @@ public class TraumaAbsorption extends DefenceEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onDamagedFinal(LivingEntity user, AttackCache cache, int lv) {
 		user.heal((user.getMaxHealth() - user.getHealth()) * 0.09f);
 	}

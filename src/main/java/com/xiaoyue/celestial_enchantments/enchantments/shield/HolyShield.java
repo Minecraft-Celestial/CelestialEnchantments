@@ -28,11 +28,6 @@ public class HolyShield extends ShieldEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onShieldBlock(ShieldBlockEvent event, LivingEntity attacker, LivingEntity entity, int level) {
 		EntityUtils.addEct(entity, MobEffects.ABSORPTION, 100, level - 1);
 	}

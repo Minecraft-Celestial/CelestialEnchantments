@@ -91,7 +91,17 @@ public class XCEnchBase extends Enchantment {
 	}
 
 	@Override
-	public boolean isTradeable() {
+	public boolean isCurse() {
+		return super.isCurse();
+	}
+
+	@Override
+	public boolean isDiscoverable() {
+		return super.isDiscoverable();
+	}
+
+	@Override
+	public final boolean isTradeable() {
 		return super.isTradeable();
 	}
 

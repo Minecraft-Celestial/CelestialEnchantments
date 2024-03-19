@@ -4,10 +4,12 @@ import com.xiaoyue.celestial_enchantments.enchantments.armor.DimensionExplorer;
 import com.xiaoyue.celestial_enchantments.enchantments.armor.HaveNiceDream;
 import com.xiaoyue.celestial_enchantments.enchantments.armor.PotionAffinity;
 import com.xiaoyue.celestial_enchantments.enchantments.tool.AccelerateGrowth;
+import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraftforge.event.entity.living.LivingHealEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -28,7 +30,7 @@ public class CEMiscEventHandler {
 	}
 
 	@SubscribeEvent
-	public static void onAddedEffect(MobEffectEvent.Added event){
+	public static void onAddedEffect(MobEffectEvent.Added event) {
 		LivingEntity entity = event.getEntity();
 		int lv = EnchantmentHelper.getEnchantmentLevel(CEEnchantments.POTION_AFFINITY.get(), entity);
 		if (lv > 0) PotionAffinity.onAddedEffect(entity, lv, event.getEffectInstance());
@@ -42,10 +44,18 @@ public class CEMiscEventHandler {
 	}
 
 	@SubscribeEvent
-	public static void onRightBlockEvent(PlayerInteractEvent.RightClickBlock event){
+	public static void onRightBlockEvent(PlayerInteractEvent.RightClickBlock event) {
 		Player player = event.getEntity();
 		int lv = EnchantmentHelper.getEnchantmentLevel(CEEnchantments.ACCELERATE_GROWTH.get(), player);
 		if (lv > 0) AccelerateGrowth.onRightBlockEvent(event, lv);
+	}
+
+	@SubscribeEvent
+	public static void onLivingHeal(LivingHealEvent event) {
+		LivingEntity entity = event.getEntity();
+		if (entity.hasEffect(CEEffects.SUPPRESSED.get())) {
+			event.setCanceled(true);
+		}
 	}
 
 }

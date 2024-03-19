@@ -35,11 +35,6 @@ public class ConstraintsShield extends ShieldEnch
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public Token getData(ConstraintsShield context) {
 		return new Token();
 	}

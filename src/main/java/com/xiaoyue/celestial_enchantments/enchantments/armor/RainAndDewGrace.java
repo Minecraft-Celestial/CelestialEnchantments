@@ -26,11 +26,6 @@ public class RainAndDewGrace extends ArmorEnch implements LivingTickEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onLivingTick(LivingEvent.LivingTickEvent event, LivingEntity entity, int level) {
 		if (entity.tickCount % 100 == 0) {
 			entity.heal(level);

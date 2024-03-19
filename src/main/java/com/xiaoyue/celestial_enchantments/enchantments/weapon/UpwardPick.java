@@ -27,11 +27,6 @@ public class UpwardPick extends WeaponEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void doPostAttack(LivingEntity attacker, Entity entity, int level) {
 		if (entity instanceof LivingEntity livingEntity) {
 			EntityUtils.addEct(livingEntity, MobEffects.LEVITATION, 3, level + 3);

@@ -26,11 +26,6 @@ public class ReactiveBlock extends ShieldEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onShieldBlock(ShieldBlockEvent event, LivingEntity attacker, LivingEntity entity, int level) {
 		attacker.knockback(level * 0.5f, entity.getX() - attacker.getX(), entity.getZ() - attacker.getZ());
 	}

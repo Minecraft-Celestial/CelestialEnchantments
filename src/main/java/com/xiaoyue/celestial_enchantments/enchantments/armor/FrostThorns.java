@@ -30,11 +30,6 @@ public class FrostThorns extends ArmorEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	protected boolean checkCompatibility(Enchantment enchantment) {
 		return super.checkCompatibility(enchantment) && enchantment != Enchantments.THORNS;
 	}

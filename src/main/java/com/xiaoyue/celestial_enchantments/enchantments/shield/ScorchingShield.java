@@ -26,11 +26,6 @@ public class ScorchingShield extends ShieldEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onShieldBlock(ShieldBlockEvent event, LivingEntity attacker, LivingEntity entity, int level) {
 		attacker.setSecondsOnFire(level * 20);
 	}

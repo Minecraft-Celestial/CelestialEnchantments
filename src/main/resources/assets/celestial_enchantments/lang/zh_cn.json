@@ -80,7 +80,7 @@
   "enchantment.celestial_enchantments.born_in_shadow.desc": "在亮度小于5的地方会缓慢恢复耐久",
   
   "enchantment.celestial_enchantments.shadow_touch": "暗影之触",
-  "enchantment.celestial_enchantments.shadow_touch.desc": "在亮度小于5的地方攻击时额外对目标造成[附魔等级]点虚空伤害",
+  "enchantment.celestial_enchantments.shadow_touch.desc": "在亮度小于5的地方攻击时额外对目标造成[附魔等级]点深渊伤害",
   
   "enchantment.celestial_enchantments.parting_wish": "临别之愿",
   "enchantment.celestial_enchantments.parting_wish.desc": "死亡时恢复周围玩家[附魔等级]*8点生命",
@@ -98,7 +98,7 @@
   "enchantment.celestial_enchantments.scorching_shield.desc": "使用盾牌格挡攻击后使攻击者陷入[附魔等级]秒燃烧",
   
   "enchantment.celestial_enchantments.destruction_crack": "毁灭裂纹",
-  "enchantment.celestial_enchantments.destruction_crack.desc": "攻击后对目标添加裂纹印记，拥有裂纹印记时无法在受击后获得无敌时间",
+  "enchantment.celestial_enchantments.destruction_crack.desc": "攻击后目1分钟内无法在受击后获得无敌时间",
   
   "enchantment.celestial_enchantments.moon_blessing": "皎月祝福",
   "enchantment.celestial_enchantments.moon_blessing.desc": "处于夜间时持续获得[附魔等级]级生命恢复效果",
@@ -178,8 +178,8 @@
   "enchantment.celestial_enchantments.hidden_blade": "隐匿之刃",
   "enchantment.celestial_enchantments.hidden_blade.desc": "拥有隐身效果时攻击目标提高[附魔等级]*26%攻击伤害",
   
-  "enchantment.celestial_enchantments.divine_ejaculation": "神射",
-  "enchantment.celestial_enchantments.divine_ejaculation.desc": "与攻击目标距离越远，伤害越高",
+  "enchantment.celestial_enchantments.divine_projection": "神射",
+  "enchantment.celestial_enchantments.divine_projection.desc": "与攻击目标距离越远，伤害越高",
   
   "enchantment.celestial_enchantments.eye_in_shadow": "影中之眼",
   "enchantment.celestial_enchantments.eye_in_shadow.desc": "在亮度小于5的地方持续获得夜视效果",
@@ -188,7 +188,7 @@
   "enchantment.celestial_enchantments.explosive_halberd.desc": "投掷出的三叉戟有[附魔等级]*20%概率发生爆炸",
   
   "enchantment.celestial_enchantments.suppression_blade": "抑制刀刃",
-  "enchantment.celestial_enchantments.suppression_blade.desc": "攻击后将使目标无法再恢复生命",
+  "enchantment.celestial_enchantments.suppression_blade.desc": "攻击后将使目标1分钟内无法再恢复生命",
   
   "enchantment.celestial_enchantments.have_nice_dream": "做个好梦",
   "enchantment.celestial_enchantments.have_nice_dream.desc": "从床上醒来后，获得[附魔等级]级生命恢复与跳跃提升效果",
@@ -209,5 +209,11 @@
   "enchantment.celestial_enchantments.curse_of_weakness.desc": "降低[附魔等级]*15%攻击伤害",
   
   "enchantment.celestial_enchantments.powerless_curse": "无力诅咒",
-  "enchantment.celestial_enchantments.powerless_curse.desc": "降低[附魔等级]*15%挖掘速度"
+  "enchantment.celestial_enchantments.powerless_curse.desc": "降低[附魔等级]*15%挖掘速度",
+  "effect.celestial_enchantments.corruption": "腐蚀",
+  "effect.celestial_enchantments.corruption.description": "减少护甲",
+  "effect.celestial_enchantments.destructed": "破坏",
+  "effect.celestial_enchantments.destructed.description": "移除无敌帧",
+  "effect.celestial_enchantments.suppressed": "压制",
+  "effect.celestial_enchantments.suppressed.description": "阻止回血"
 }

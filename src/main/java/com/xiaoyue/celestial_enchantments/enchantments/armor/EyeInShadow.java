@@ -29,11 +29,6 @@ public class EyeInShadow extends ArmorEnch implements LivingTickEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onLivingTick(LivingEvent.LivingTickEvent event, LivingEntity entity, int lv) {
 		if (entity.level() instanceof ServerLevel sl) {
 			int light = CCUtils.getLight(sl, entity.blockPosition());

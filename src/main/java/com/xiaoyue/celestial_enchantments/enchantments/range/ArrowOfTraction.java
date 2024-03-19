@@ -30,11 +30,6 @@ public class ArrowOfTraction extends BowEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void hurtTarget(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
 		List<LivingEntity> entities = EntityUtils.getExceptForCentralEntity(target, lv + 1, 2);
 		for (LivingEntity list : entities) {

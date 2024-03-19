@@ -28,11 +28,6 @@ public class BornInShadow extends GeneralEnch implements LivingTickEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onLivingTick(LivingEvent.LivingTickEvent event, LivingEntity entity, int level) {
 		if (entity.level().isClientSide()) return;
 		if (entity.tickCount % 100 == 0) {

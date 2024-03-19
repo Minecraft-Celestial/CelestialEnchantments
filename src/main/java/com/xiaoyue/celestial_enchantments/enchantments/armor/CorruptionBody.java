@@ -1,15 +1,10 @@
 package com.xiaoyue.celestial_enchantments.enchantments.armor;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import com.xiaoyue.celestial_enchantments.generic.DefenceEnch;
+import com.xiaoyue.celestial_enchantments.register.CEEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-
-import java.util.UUID;
 
 public class CorruptionBody extends DefenceEnch {
 
@@ -32,17 +27,10 @@ public class CorruptionBody extends DefenceEnch {
 		return 5;
 	}
 
-	private Multimap<Attribute, AttributeModifier> createAttributeMap(int level) {
-		Multimap<Attribute, AttributeModifier> attributesDefault = HashMultimap.create();
-		attributesDefault.put(Attributes.ARMOR, new AttributeModifier(UUID.fromString("1-2-3-4-5"), "cbam", -(level * 2), AttributeModifier.Operation.ADDITION));
-		return attributesDefault;
-	}
-
 	@Override
 	public void doPostHurt(LivingEntity entity, Entity attacker, int level) {
 		if (attacker instanceof LivingEntity livingEntity) {
-
-			livingEntity.getAttributes().addTransientAttributeModifiers(this.createAttributeMap(level));
+			livingEntity.addEffect(new MobEffectInstance(CEEffects.CORRUPTION.get(), 1200, level - 1));
 		}
 	}
 }

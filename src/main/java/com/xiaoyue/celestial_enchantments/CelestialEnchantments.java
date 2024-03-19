@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.xiaoyue.celestial_enchantments.config.CommonConfig;
+import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import dev.xkmc.l2library.base.L2Registrate;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,7 @@ public class CelestialEnchantments {
 
 	public CelestialEnchantments() {
 		CEEnchantments.register();
+		CEEffects.register();
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.spec);
 	}
 

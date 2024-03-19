@@ -6,9 +6,9 @@ import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Arrow;
 
-public class DivineEjaculation extends BowEnch {
+public class DivineProjection extends BowEnch {
 
-	public DivineEjaculation() {
+	public DivineProjection() {
 		super(Rarity.VERY_RARE);
 	}
 
@@ -25,11 +25,6 @@ public class DivineEjaculation extends BowEnch {
 	@Override
 	public int getMaxLevel() {
 		return super.getMaxLevel();
-	}
-
-	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
 	}
 
 	@Override

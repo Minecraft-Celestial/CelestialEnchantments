@@ -35,11 +35,6 @@ public class MorningStar extends BowEnch {
 	}
 
 	@Override
-	public boolean isTradeable() {
-		return super.isTradeable();
-	}
-
-	@Override
 	public void onDamageTargetFinal(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
 		if (chance(target, 1 - Math.pow(0.5, lv))) {
 			GeneralEventHandler.schedule(() -> EntityUtils.spawnThunder(target));

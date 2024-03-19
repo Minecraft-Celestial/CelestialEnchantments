@@ -31,11 +31,6 @@ public class HolyPrayer extends ArmorEnch {
     }
 
     @Override
-    public boolean isTradeable() {
-        return super.isTradeable();
-    }
-
-    @Override
     public void doPostHurt(LivingEntity user, Entity attacker, int level) {
         if (user instanceof Player player) {
             if (player.isCrouching()) {
