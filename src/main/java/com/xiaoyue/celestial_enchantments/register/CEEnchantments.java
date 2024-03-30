@@ -84,7 +84,7 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> HIDDEN_BLADE = reg("hidden_blade", HiddenBlade::new, "When in invisibility effect, the attacker increases [Enchantment Level] * 26% attack damage");
 	public static final RegistryEntry<Enchantment> DIVINE_PROJECTION = reg("divine_projection", DivineProjection::new, "The further away from the attacking target, the higher the damage");
 	public static final RegistryEntry<Enchantment> EYE_IN_SHADOW = reg("eye_in_shadow", EyeInShadow::new, "Continuously achieve night vision effects in areas with brightness less than 5");
-	public static final RegistryEntry<Enchantment> EXPLOSIVE_HALBERD = reg("explosive_halberd", ExplosiveHalberd::new, "The thrown trident has a [Enchantment Level] * 20% chance of exploding");
+	public static final RegistryEntry<Enchantment> EXPLOSIVE_HALBERD = reg("explosive_halberd", ExplosiveHalberd::new, "The thrown trident has a [Enchantment Level] * 20% chance to explode");
 	public static final RegistryEntry<Enchantment> SUPPRESSION_BLADE = reg("suppression_blade", SuppressionBlade::new, "After the attack, the target will no longer be able to heal for 1 minutes");//TODO
 	public static final RegistryEntry<Enchantment> HAVE_NICE_DREAM = reg("have_nice_dream", HaveNiceDream::new, "After waking up from bed, obtain [enchantment level] level health recovery and jump enhancement effects");
 	public static final RegistryEntry<Enchantment> VOID_CHAIN = reg("void_chain", VoidChain::new, "Reduce attack damage by 90%, deal original damage * [enchantment level] * 50% damage to surrounding targets after attack");

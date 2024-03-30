@@ -42,7 +42,7 @@ public class CEGeneralEventHandler {
 	}
 
 	@SubscribeEvent
-	public void onPLayerBreak(PlayerEvent.BreakSpeed event) {
+	public static void onPLayerBreak(PlayerEvent.BreakSpeed event) {
 		float factor = 1;
 		for (var entry : IEnchUtils.getEnch(event.getEntity(), EquipmentSlot.MAINHAND).entrySet()) {
 			if (entry.getKey() instanceof PlayerBreakEnch ench) {
@@ -55,7 +55,7 @@ public class CEGeneralEventHandler {
 	}
 
 	@SubscribeEvent
-	public void onPickupXp(PlayerXpEvent.PickupXp event) {
+	public static void onPickupXp(PlayerXpEvent.PickupXp event) {
 		float val = 1;
 		for (var entry : IEnchUtils.getAllEnch(event.getEntity()).entrySet()) {
 			if (entry.getKey() instanceof ChangeXpEnch ench) {
@@ -66,7 +66,7 @@ public class CEGeneralEventHandler {
 	}
 
 	@SubscribeEvent
-	public void onLivingHeal(LivingHealEvent event) {
+	public static void onLivingHeal(LivingHealEvent event) {
 		for (var entry : IEnchUtils.getArmorEnch(event.getEntity()).entrySet()) {
 			if (entry.getKey() instanceof LivingHealEnch ench) {
 				ench.onLivingHeal(event, event.getEntity(), entry.getValue());
@@ -75,7 +75,7 @@ public class CEGeneralEventHandler {
 	}
 
 	@SubscribeEvent
-	public void onShieldBlock(ShieldBlockEvent event) {
+	public static void onShieldBlock(ShieldBlockEvent event) {
 		if (event.getDamageSource().getEntity() instanceof LivingEntity attacker) {
 			for (var entry : IEnchUtils.getHeldEnch(event.getEntity()).entrySet()) {
 				if (entry.getKey() instanceof ShieldEnch ench) {
@@ -86,7 +86,7 @@ public class CEGeneralEventHandler {
 	}
 
 	@SubscribeEvent
-	public void onLivingTick(LivingEvent.LivingTickEvent event) {
+	public static void onLivingTick(LivingEvent.LivingTickEvent event) {
 		for (Map.Entry<Enchantment, Integer> entry : IEnchUtils.getAllEnch(event.getEntity()).entrySet()) {
 			if (entry.getKey() instanceof LivingTickEnch ench) {
 				ench.onLivingTick(event, event.getEntity(), entry.getValue());
@@ -95,7 +95,7 @@ public class CEGeneralEventHandler {
 	}
 
 	@SubscribeEvent
-	public void onKillEntity(LivingDeathEvent event) {
+	public static void onKillEntity(LivingDeathEvent event) {
 		if (event.getSource().getEntity() instanceof LivingEntity attacker) {
 			for (var entry : IEnchUtils.getEnch(attacker, EquipmentSlot.MAINHAND).entrySet()) {
 				if (entry.getKey() instanceof AttackEnch ench) {

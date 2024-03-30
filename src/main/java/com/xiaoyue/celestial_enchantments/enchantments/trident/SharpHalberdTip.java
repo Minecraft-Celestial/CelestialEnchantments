@@ -5,6 +5,7 @@ import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrownTrident;
+import org.jetbrains.annotations.Nullable;
 
 public class SharpHalberdTip extends TridentEnch {
 
@@ -28,7 +29,7 @@ public class SharpHalberdTip extends TridentEnch {
 	}
 
 	@Override
-	public void hurtTarget(ThrownTrident trident, LivingEntity target, int lv, AttackCache cache) {
+	public void hurtTarget(@Nullable ThrownTrident trident, LivingEntity target, int lv, AttackCache cache) {
 		cache.addHurtModifier(DamageModifier.multTotal(1 + lv * 0.2f));
 	}
 

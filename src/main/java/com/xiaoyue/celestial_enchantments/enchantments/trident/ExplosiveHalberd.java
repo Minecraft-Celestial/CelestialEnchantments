@@ -6,6 +6,7 @@ import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 public class ExplosiveHalberd extends TridentEnch {
 
@@ -29,8 +30,8 @@ public class ExplosiveHalberd extends TridentEnch {
 	}
 
 	@Override
-	public void hurtTarget(ThrownTrident trident, LivingEntity target, int lv, AttackCache cache) {
-		if (!target.level().isClientSide()) {
+	public void hurtTarget(@Nullable ThrownTrident trident, LivingEntity target, int lv, AttackCache cache) {
+		if (trident != null && !target.level().isClientSide()) {
 			if (chance(target, lv * 0.2)) {
 				GeneralEventHandler.schedule(() -> target.level().explode(target,
 						target.getX(), target.getY(), target.getZ(), 1.0f, Level.ExplosionInteraction.NONE));

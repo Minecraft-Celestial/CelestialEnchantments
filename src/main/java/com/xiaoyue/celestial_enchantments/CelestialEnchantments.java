@@ -3,8 +3,10 @@ package com.xiaoyue.celestial_enchantments;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.xiaoyue.celestial_enchantments.config.CommonConfig;
+import com.xiaoyue.celestial_enchantments.event.CEAttackListener;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
+import dev.xkmc.l2damagetracker.contents.attack.AttackEventHandler;
 import dev.xkmc.l2library.base.L2Registrate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -35,6 +37,7 @@ public class CelestialEnchantments {
 	public CelestialEnchantments() {
 		CEEnchantments.register();
 		CEEffects.register();
+		AttackEventHandler.register(3560, new CEAttackListener());
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.spec);
 	}
 

@@ -5,6 +5,7 @@ import com.xiaoyue.celestial_enchantments.mixin.MixinTrident;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.AttackListener;
+import dev.xkmc.l2damagetracker.init.data.L2DamageTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.ThrownTrident;
@@ -54,8 +55,13 @@ public class CEAttackListener implements AttackListener {
 		} else if (user != null) {
 			var map = IEnchUtils.getEnch(user, EquipmentSlot.MAINHAND);
 			for (var ent : map.entrySet()) {
-				if (ent.getKey() instanceof AttackEnch atk) {
-					atk.onHurtTarget(user, target, cache, ent.getValue());
+				if (XCEnchBase.getSource(cache).is(L2DamageTypes.DIRECT)) {
+					if (ent.getKey() instanceof AttackEnch atk) {
+						atk.onHurtTarget(user, target, cache, ent.getValue());
+					}
+					if (ent.getKey() instanceof TridentEnch atk) {
+						atk.hurtTarget(null, target, ent.getValue(), cache);
+					}
 				}
 			}
 		}
@@ -88,7 +94,7 @@ public class CEAttackListener implements AttackListener {
 		} else if (user != null) {
 			var map = IEnchUtils.getEnch(user, EquipmentSlot.MAINHAND);
 			for (var ent : map.entrySet()) {
-				if (ent.getKey() instanceof AttackEnch atk) {
+				if (ent.getKey() instanceof AttackEnch atk && XCEnchBase.getSource(cache).is(L2DamageTypes.DIRECT)) {
 					atk.onDamageTargetFinal(user, target, cache, ent.getValue());
 				}
 			}
