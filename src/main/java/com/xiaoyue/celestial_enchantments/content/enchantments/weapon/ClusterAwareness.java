@@ -30,7 +30,7 @@ public class ClusterAwareness extends AttackEnch {
 		if (user instanceof Player player) {
 			count = EntityUtils.getExceptForCentralEntity(player, 6, 2, livingEntity -> livingEntity instanceof Player).size();
 		}
-		cache.addHurtModifier(DamageModifier.add(lv * count * (float) atk()));
+		cache.addHurtModifier(DamageModifier.multBase(lv * count * (float) atk()));
 	}
 
 	@Override

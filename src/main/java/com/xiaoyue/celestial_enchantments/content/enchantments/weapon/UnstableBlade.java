@@ -25,7 +25,7 @@ public class UnstableBlade extends AttackEnch {
 	@Override
 	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
 		if (user.getRandom().nextDouble() < lv * chance()) {
-			cache.addHurtModifier(DamageModifier.multTotal(1 + lv * (float) atk()));
+			cache.addHurtModifier(DamageModifier.multBase(lv * (float) atk()));
 		}
 	}
 

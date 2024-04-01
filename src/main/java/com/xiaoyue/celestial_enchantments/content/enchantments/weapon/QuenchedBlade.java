@@ -27,7 +27,7 @@ public class QuenchedBlade extends AttackEnch {
 		if (target.isOnFire()) {
 			target.setSecondsOnFire(1);
 			float i = Math.min(maxFire(), target.getRemainingFireTicks() * 0.05f) * (float) atk();
-			cache.addHurtModifier(DamageModifier.multTotal(1 + lv * i));
+			cache.addHurtModifier(DamageModifier.multBase(lv * i));
 			target.clearFire();
 		}
 	}

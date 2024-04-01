@@ -27,7 +27,7 @@ public class WordsOfWisdom extends AttackEnch {
 	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
 		if (user instanceof Player player) {
 			float i = Math.min(player.experienceLevel, maxLv()) * (float) atk();
-			cache.addHurtModifier(DamageModifier.multTotal(1 + i * lv));
+			cache.addHurtModifier(DamageModifier.multBase(i * lv));
 		}
 	}
 
