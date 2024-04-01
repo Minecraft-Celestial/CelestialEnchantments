@@ -12,7 +12,7 @@ import net.minecraftforge.event.entity.player.PlayerXpEvent;
 public class CorruptScholar extends ArmorEnch implements ChangeXpEnch {
 
 	public CorruptScholar() {
-		super(Rarity.UNCOMMON, Type.FEET, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, Type.HEAD, EnchConfigData.NORMAL_3);
 	}
 
 	@Override

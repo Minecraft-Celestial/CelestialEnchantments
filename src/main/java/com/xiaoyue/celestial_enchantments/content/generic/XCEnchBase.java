@@ -5,6 +5,8 @@ import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.base.L2Registrate;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -73,6 +75,10 @@ public class XCEnchBase extends Enchantment {
 		this.slots = Set.of(type.slots);
 		this.config = config;
 		CACHE.add(this);
+	}
+
+	public Component desc(int lv, String key, boolean alt) {
+		return Component.translatable(key).withStyle(ChatFormatting.DARK_GRAY);
 	}
 
 	protected boolean chance(LivingEntity e, double chance) {

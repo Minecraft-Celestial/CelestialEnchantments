@@ -12,7 +12,7 @@ import java.util.List;
 
 public class DestroyResonance extends ArmorEnch {
 	public DestroyResonance() {
-		super(Rarity.RARE, Type.HEAD, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, Type.ARMOR, EnchConfigData.NORMAL_3);
 	}
 
 	@Override

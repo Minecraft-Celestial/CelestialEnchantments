@@ -11,7 +11,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 public class HearthSupport extends ArmorEnch {
 
     public HearthSupport() {
-        super(Rarity.RARE, Type.HEAD, EnchConfigData.NORMAL_5);
+        super(Rarity.RARE, Type.ARMOR, EnchConfigData.NORMAL_5);
     }
 
     @Override

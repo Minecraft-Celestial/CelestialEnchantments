@@ -13,7 +13,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 public class FrostThorns extends ArmorEnch {
 
 	public FrostThorns() {
-		super(Rarity.RARE, Type.CHEST, EnchConfigData.NORMAL_5);
+		super(Rarity.RARE, Type.ARMOR, EnchConfigData.NORMAL_3);
 	}
 
 	@Override

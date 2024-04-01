@@ -1,7 +1,9 @@
 package com.xiaoyue.celestial_enchantments;
 
 import com.mojang.logging.LogUtils;
+import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.util.entry.RegistryEntry;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.event.CEAttackListener;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
@@ -35,6 +37,7 @@ public class CelestialEnchantments {
 		CEEnchantments.register();
 		CEEffects.register();
 		AttackEventHandler.register(3560, new CEAttackListener());
+		REGISTRATE.addDataGenerator(ProviderType.LANG, CELang::genLang);
 	}
 
 	public static ResourceLocation loc(String id) {
