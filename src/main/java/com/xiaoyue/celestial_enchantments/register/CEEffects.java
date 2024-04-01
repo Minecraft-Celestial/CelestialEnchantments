@@ -4,9 +4,9 @@ package com.xiaoyue.celestial_enchantments.register;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
-import com.xiaoyue.celestial_enchantments.effects.Corruption;
-import com.xiaoyue.celestial_enchantments.effects.Destructed;
-import com.xiaoyue.celestial_enchantments.effects.Suppressed;
+import com.xiaoyue.celestial_enchantments.content.effects.Corruption;
+import com.xiaoyue.celestial_enchantments.content.effects.Destructed;
+import com.xiaoyue.celestial_enchantments.content.effects.Suppressed;
 import net.minecraft.world.effect.MobEffect;
 
 public class CEEffects {

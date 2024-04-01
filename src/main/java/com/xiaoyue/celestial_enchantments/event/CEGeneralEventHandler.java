@@ -1,6 +1,6 @@
 package com.xiaoyue.celestial_enchantments.event;
 
-import com.xiaoyue.celestial_enchantments.generic.*;
+import com.xiaoyue.celestial_enchantments.content.generic.*;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
 import net.minecraft.nbt.Tag;
 import net.minecraft.world.entity.EquipmentSlot;

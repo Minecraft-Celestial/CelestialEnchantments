@@ -1,6 +1,6 @@
 package com.xiaoyue.celestial_enchantments.event;
 
-import com.xiaoyue.celestial_enchantments.generic.XCEnchBase;
+import com.xiaoyue.celestial_enchantments.content.generic.XCEnchBase;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;

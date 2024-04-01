@@ -2,7 +2,6 @@ package com.xiaoyue.celestial_enchantments;
 
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.util.entry.RegistryEntry;
-import com.xiaoyue.celestial_enchantments.config.CommonConfig;
 import com.xiaoyue.celestial_enchantments.event.CEAttackListener;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
@@ -13,9 +12,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import org.slf4j.Logger;
 
 @Mod(CelestialEnchantments.MODID)
@@ -38,7 +35,6 @@ public class CelestialEnchantments {
 		CEEnchantments.register();
 		CEEffects.register();
 		AttackEventHandler.register(3560, new CEAttackListener());
-		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.spec);
 	}
 
 	public static ResourceLocation loc(String id) {

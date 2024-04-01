@@ -1,6 +1,6 @@
 package com.xiaoyue.celestial_enchantments;
 
-import com.xiaoyue.celestial_enchantments.generic.XCEnchBase;
+import com.xiaoyue.celestial_enchantments.content.generic.XCEnchBase;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;

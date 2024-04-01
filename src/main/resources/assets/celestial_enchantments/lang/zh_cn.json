@@ -41,7 +41,7 @@
   "enchantment.celestial_enchantments.knight_slash.desc": "骑乘状态下攻击提高[附魔等级]*15%攻击伤害",
   
   "enchantment.celestial_enchantments.death_blade": "死亡刀刃",
-  "enchantment.celestial_enchantments.death_blade.desc": "攻击时额外提高[附魔等级]*5%目标最大生命攻击伤害，伤害上限[附魔等级]*75",
+  "enchantment.celestial_enchantments.death_blade.desc": "攻击时额外提高[附魔等级]*1%目标最大生命攻击伤害，伤害上限[附魔等级]*75",
   
   "enchantment.celestial_enchantments.echo_effect": "回光效应",
   "enchantment.celestial_enchantments.echo_effect.desc": "受到致命攻击时规避该伤害，并回复[附魔等级]*5%最大生命的生命，该效果冷却600秒",
@@ -131,7 +131,7 @@
   "enchantment.celestial_enchantments.accelerate_growth.desc": "右键作物可消耗部分耐久来催熟作物",
   
   "enchantment.celestial_enchantments.solid_armor": "坚实铠甲",
-  "enchantment.celestial_enchantments.solid_armor.desc": "穿戴者生命低于一半时，受到伤害降低[附魔等级]*12%",
+  "enchantment.celestial_enchantments.solid_armor.desc": "穿戴者生命低于一半时，受到伤害降低[附魔等级]3%",
   
   "enchantment.celestial_enchantments.rain_and_dew_grace": "雨露恩惠",
   "enchantment.celestial_enchantments.rain_and_dew_grace.desc": "处于雨天时持续恢复穿戴者生命",

@@ -1,9 +1,9 @@
 package com.xiaoyue.celestial_enchantments.event;
 
-import com.xiaoyue.celestial_enchantments.enchantments.armor.DimensionExplorer;
-import com.xiaoyue.celestial_enchantments.enchantments.armor.HaveNiceDream;
-import com.xiaoyue.celestial_enchantments.enchantments.armor.PotionAffinity;
-import com.xiaoyue.celestial_enchantments.enchantments.tool.AccelerateGrowth;
+import com.xiaoyue.celestial_enchantments.content.enchantments.armor.DimensionExplorer;
+import com.xiaoyue.celestial_enchantments.content.enchantments.armor.HaveNiceDream;
+import com.xiaoyue.celestial_enchantments.content.enchantments.armor.PotionAffinity;
+import com.xiaoyue.celestial_enchantments.content.enchantments.tool.AccelerateGrowth;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import net.minecraft.world.entity.LivingEntity;

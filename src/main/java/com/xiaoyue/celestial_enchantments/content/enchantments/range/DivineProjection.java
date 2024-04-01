@@ -1,0 +1,24 @@
+package com.xiaoyue.celestial_enchantments.content.enchantments.range;
+
+import com.xiaoyue.celestial_enchantments.content.generic.BowEnch;
+import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
+import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.Arrow;
+
+public class DivineProjection extends BowEnch {
+
+	public DivineProjection() {
+		super(Rarity.VERY_RARE, EnchConfigData.treasure(1));
+	}
+
+	@Override
+	public void hurtTarget(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
+		var owner = arrow.getOwner();
+		if (owner != null) {
+			cache.addHurtModifier(DamageModifier.multTotal(1 + owner.distanceTo(target) * 0.03f));
+		}
+	}
+
+}
