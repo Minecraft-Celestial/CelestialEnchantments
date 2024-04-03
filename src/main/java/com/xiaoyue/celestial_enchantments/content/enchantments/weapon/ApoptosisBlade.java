@@ -18,7 +18,7 @@ public class ApoptosisBlade extends WeaponEnch {
 	private static final EnchEffectEntry EFF = EnchEffectEntry.amp(() -> MobEffects.WITHER, ApoptosisBlade::dur);
 
 	public ApoptosisBlade() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, EFFECT);
 	}
 
 	@Override

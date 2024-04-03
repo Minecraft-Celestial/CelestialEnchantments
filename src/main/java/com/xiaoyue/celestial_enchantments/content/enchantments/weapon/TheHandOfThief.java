@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 public class TheHandOfThief extends AttackEnch {
 
 	public TheHandOfThief() {
-		super(Rarity.VERY_RARE, EnchConfigData.special(1));
+		super(Rarity.VERY_RARE, EnchConfigData.special(1), EFFECT);
 	}
 
 	@Override

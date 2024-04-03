@@ -11,11 +11,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class Revenge extends AttackEnch {
 
 	private static double atk() {
-		return 0.1;//TODO
+		return 0.08;//TODO
 	}
 
 	public Revenge() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, A30);
 	}
 
 	@Override

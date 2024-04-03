@@ -20,7 +20,7 @@ public class WordsOfWisdom extends AttackEnch {
 	}
 
 	public WordsOfWisdom() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchConfigData.NORMAL_3, A300);
 	}
 
 	@Override

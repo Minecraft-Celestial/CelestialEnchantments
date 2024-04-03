@@ -18,7 +18,7 @@ public class UpwardPick extends WeaponEnch {
 	private static final EnchEffectEntry EFF = EnchEffectEntry.amp(() -> MobEffects.LEVITATION, UpwardPick::dur);
 
 	public UpwardPick() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchConfigData.NORMAL_3, EFFECT);
 	}
 
 	@Override

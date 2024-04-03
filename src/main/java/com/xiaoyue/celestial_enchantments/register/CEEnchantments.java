@@ -26,22 +26,32 @@ public class CEEnchantments {
 	// 16 / 69
 
 	// weapons
-	public static final RegistryEntry<Enchantment> FATAL_BLOW = reg("fatal_blow", DeathBlow::new, "+%s crit damage");
-	public static final RegistryEntry<Enchantment> WITHERING_BLADE = reg("withering_blade", ApoptosisBlade::new, "Inflict %s");
-	public static final RegistryEntry<Enchantment> UPWARD_PICK = reg("upward_pick", UpwardPick::new, "Inflict %s");
-	public static final RegistryEntry<Enchantment> HIDDEN_BLADE = reg("hidden_blade", HiddenBlade::new, "When in %s, increase damage by %s");
-	public static final RegistryEntry<Enchantment> KNIGHT_SLASH = reg("knight_slash", KnightSlash::new, "While riding, increase damage by %s");
-	public static final RegistryEntry<Enchantment> MISFORTUNE_BLADE = reg("misfortune_blade", MisfortuneBlade::new, "If the target has %s, increase damage by %s");
-	public static final RegistryEntry<Enchantment> FIERCE_SLASH = reg("fierce_slash", FierceSlash::new, "Melee damage against the same target is increased by %s");
-	public static final RegistryEntry<Enchantment> REVENGE = reg("revenge", Revenge::new, "Damage to targets that recently attacked the user is increased by %s");
-	public static final RegistryEntry<Enchantment> UNSTABLE_BLADE = reg("unstable_blade", UnstableBlade::new, "%s chance to increase damage by %s");
-	public static final RegistryEntry<Enchantment> LIGHT_ARMOR_KILLER = reg("light_armor_killer", LightArmorKiller::new, "Increase %s damage to targets with armor below %s");
-	public static final RegistryEntry<Enchantment> CLUSTER_AWARENESS = reg("cluster_awareness", ClusterAwareness::new, "For every player around the player user (or every monster around the monster user), increase damage by %s");
-	public static final RegistryEntry<Enchantment> QUENCHED_BLADE = reg("quenched_blade", QuenchedBlade::new, "When attacking a burning target, extinguish the target's flame and increase damage by %s for every remaining seconds of fire, up to %s");
-	public static final RegistryEntry<Enchantment> QUICK_STEP_PUNCTURE = reg("quick_step_puncture", QuickStepPuncture::new, "While sprinting, increase damage by %s and knock back the target");
-	public static final RegistryEntry<Enchantment> WORDS_OF_WISDOM = reg("words_of_wisdom", WordsOfWisdom::new, "Increase damage by %s for every exp level, up to %s");
-	public static final RegistryEntry<Enchantment> DEATH_BLADE = reg("death_blade", DeathBlade::new, "Increase damage by %s of the target's maximum health");
-	public static final RegistryEntry<Enchantment> VAMPIRE_SLASH = reg("vampire_slash", VampireSlash::new, "On attack, heals %s of the damage dealt");
+	public static final RegistryEntry<Enchantment> WITHERING_BLADE = reg("withering_blade", ApoptosisBlade::new, "Inflict %s"); // effect
+	public static final RegistryEntry<Enchantment> UPWARD_PICK = reg("upward_pick", UpwardPick::new, "Inflict %s"); // effect
+	public static final RegistryEntry<Enchantment> VAMPIRE_SLASH = reg("vampire_slash", VampireSlash::new, "On attack, heals %s of the damage dealt");// effect
+
+	public static final RegistryEntry<Enchantment> UNSTABLE_BLADE = reg("unstable_blade", UnstableBlade::new, "%s chance to increase damage by %s"); // A30, 22.5%
+	public static final RegistryEntry<Enchantment> FIERCE_SLASH = reg("fierce_slash", FierceSlash::new, "Melee damage against the same target is increased by %s"); // A30, 24%
+	public static final RegistryEntry<Enchantment> REVENGE = reg("revenge", Revenge::new, "Damage to targets that recently attacked the user is increased by %s"); // A30, 24%
+	public static final RegistryEntry<Enchantment> HIDDEN_BLADE = reg("hidden_blade", HiddenBlade::new, "When in %s, increase damage by %s"); // A30, 30%
+	public static final RegistryEntry<Enchantment> MISFORTUNE_BLADE = reg("misfortune_blade", MisfortuneBlade::new, "If the target has %s, increase damage by %s"); // A30, 36%
+	public static final RegistryEntry<Enchantment> KNIGHT_SLASH = reg("knight_slash", KnightSlash::new, "While riding, increase damage by %s"); // A30, 45%
+
+	public static final RegistryEntry<Enchantment> FATAL_BLOW = reg("fatal_blow", DeathBlow::new, "+%s crit damage"); // A75, 75%
+	public static final RegistryEntry<Enchantment> LIGHT_ARMOR_KILLER = reg("light_armor_killer", LightArmorKiller::new, "Increase %s damage to targets with armor below %s"); // A75, 75%
+	public static final RegistryEntry<Enchantment> QUICK_STEP_PUNCTURE = reg("quick_step_puncture", QuickStepPuncture::new, "While sprinting, increase damage by %s and knock back the target");// A75, 80%
+	public static final RegistryEntry<Enchantment> CLUSTER_AWARENESS = reg("cluster_awareness", ClusterAwareness::new, "For every entity of the same type around the user, increase damage by %s");// A75, 9% per ally
+
+	public static final RegistryEntry<Enchantment> QUENCHED_BLADE = reg("quenched_blade", QuenchedBlade::new, "When attacking a burning target, extinguish the target's flame and increase damage by %s for every remaining seconds of fire, up to %s"); //A300, 144%
+	public static final RegistryEntry<Enchantment> WORDS_OF_WISDOM = reg("words_of_wisdom", WordsOfWisdom::new, "Increase damage by %s for every exp level, up to %s");// A300, 180%
+	// special
+	public static final RegistryEntry<Enchantment> DEATH_BLADE = reg("death_blade", DeathBlade::new, "Increase damage by %s of the target's maximum health");//A300, up to 4% of target max
+	public static final RegistryEntry<Enchantment> MAGIC_BLADE = reg("magic_blade", MagicBlade::new, "When you hurt an target, deal additional magic damage equal to the original damage"); // A300, 100%
+	public static final RegistryEntry<Enchantment> VOID_CHAIN = reg("void_chain", VoidChain::new, "Reduce attack damage by 90%, deal original damage * [enchantment level] * 50% damage to surrounding targets after attack");// A300,
+	public static final RegistryEntry<Enchantment> DESTRUCTION_CRACK = reg("destruction_crack", DestructionCrack::new, "On hit, remove invulnerable time on target for 1 minutes");// Effect
+	public static final RegistryEntry<Enchantment> SUPPRESSION_BLADE = reg("suppression_blade", SuppressionBlade::new, "After the attack, the target will no longer be able to heal for 1 minutes");// Effect
+	public static final RegistryEntry<Enchantment> SHADOW_TOUCH = reg("shadow_touch", ShadowTouch::new, "When attacking in areas with brightness less than 5, deal an additional [enchantment level] point of void damage to the target"); // A300
+	public static final RegistryEntry<Enchantment> THE_HAND_OF_THIEF = reg("the_hand_of_thief", TheHandOfThief::new, "When killing a target, the probability of the target dropping the equipment they are wearing increases to 100%"); // Effect
 
 	// TODO progress here
 
@@ -100,12 +110,6 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> DIVINE_PROJECTION = reg("divine_projection", DivineProjection::new, "The further away from the attacking target, the higher the damage");
 	public static final RegistryEntry<Enchantment> ACCELERATE_GROWTH = reg("accelerate_growth", AccelerateGrowth::new, "Right click on the crop to consume some durability to ripen the crop");
 	// special
-	public static final RegistryEntry<Enchantment> MAGIC_BLADE = reg("magic_blade", MagicBlade::new, "When you hurt an target, deal additional magic damage equal to the original damage");
-	public static final RegistryEntry<Enchantment> VOID_CHAIN = reg("void_chain", VoidChain::new, "Reduce attack damage by 90%, deal original damage * [enchantment level] * 50% damage to surrounding targets after attack");
-	public static final RegistryEntry<Enchantment> DESTRUCTION_CRACK = reg("destruction_crack", DestructionCrack::new, "On hit, remove invulnerable time on target for 1 minutes");
-	public static final RegistryEntry<Enchantment> SUPPRESSION_BLADE = reg("suppression_blade", SuppressionBlade::new, "After the attack, the target will no longer be able to heal for 1 minutes");
-	public static final RegistryEntry<Enchantment> SHADOW_TOUCH = reg("shadow_touch", ShadowTouch::new, "When attacking in areas with brightness less than 5, deal an additional [enchantment level] point of void damage to the target");
-	public static final RegistryEntry<Enchantment> THE_HAND_OF_THIEF = reg("the_hand_of_thief", TheHandOfThief::new, "When killing a target, the probability of the target dropping the equipment they are wearing increases to 100%");
 	public static final RegistryEntry<Enchantment> PURE_BODY = reg("pure_body", PureBody::new, "Continuously clearing the potion effect on the body");
 	public static final RegistryEntry<Enchantment> CELESTIAL_SHELTER = reg("celestial_shelter", CelestialShelter::new, "When damaged, a single attack can only deal up to %s of the wearer's maximum health");
 	// curse

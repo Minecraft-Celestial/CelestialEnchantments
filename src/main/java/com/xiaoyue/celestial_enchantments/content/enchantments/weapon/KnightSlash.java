@@ -15,7 +15,7 @@ public class KnightSlash extends AttackEnch {
 	}
 
 	public KnightSlash() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchConfigData.NORMAL_3, A30);
 	}
 
 	@Override

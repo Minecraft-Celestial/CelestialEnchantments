@@ -15,7 +15,7 @@ import java.util.List;
 public class VoidChain extends AttackEnch {
 
 	public VoidChain() {
-		super(Rarity.RARE, EnchConfigData.special(3));
+		super(Rarity.RARE, EnchConfigData.special(3), A300);
 	}
 
 	@Override

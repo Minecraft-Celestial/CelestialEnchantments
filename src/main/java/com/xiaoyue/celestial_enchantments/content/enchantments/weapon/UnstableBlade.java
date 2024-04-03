@@ -19,7 +19,7 @@ public class UnstableBlade extends AttackEnch {
 	}
 
 	public UnstableBlade() {
-		super(Rarity.COMMON, EnchConfigData.NORMAL_3);
+		super(Rarity.COMMON, EnchConfigData.NORMAL_3, A30);
 	}
 
 	@Override

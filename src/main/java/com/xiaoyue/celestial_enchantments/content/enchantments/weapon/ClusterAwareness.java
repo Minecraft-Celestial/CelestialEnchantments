@@ -8,8 +8,6 @@ import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.player.Player;
 
 public class ClusterAwareness extends AttackEnch {
 
@@ -18,18 +16,12 @@ public class ClusterAwareness extends AttackEnch {
 	}
 
 	public ClusterAwareness() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, A75);
 	}
 
 	@Override
 	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
-		int count = 0;
-		if (user instanceof Monster monster) {
-			count = EntityUtils.getExceptForCentralEntity(monster, 6, 2, livingEntity -> livingEntity instanceof Monster).size();
-		}
-		if (user instanceof Player player) {
-			count = EntityUtils.getExceptForCentralEntity(player, 6, 2, livingEntity -> livingEntity instanceof Player).size();
-		}
+		int count = EntityUtils.getExceptForCentralEntity(user, 6, 2, e -> e.getType() == user.getType()).size();
 		cache.addHurtModifier(DamageModifier.multBase(lv * count * (float) atk()));
 	}
 

@@ -15,7 +15,7 @@ public class DeathBlade extends AttackEnch {
 	}
 
 	public DeathBlade() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_5);
+		super(Rarity.VERY_RARE, EnchConfigData.special(5), A300);
 	}
 
 	@Override

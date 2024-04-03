@@ -18,7 +18,7 @@ public class DeathBlow extends WeaponEnch implements AttributeEnchantment {
 	}
 
 	public DeathBlow() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, A75);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class DeathBlow extends WeaponEnch implements AttributeEnchantment {
 		if (event.getSlotType() == EquipmentSlot.MAINHAND) {
 			event.addModifier(L2DamageTracker.CRIT_DMG.get(), new AttributeModifier(
 					MathHelper.getUUIDFromString("death_blow"),
-					"death_blow", lv * crit(), AttributeModifier.Operation.MULTIPLY_BASE));
+					"death_blow", lv * crit(), AttributeModifier.Operation.ADDITION));
 		}
 	}
 

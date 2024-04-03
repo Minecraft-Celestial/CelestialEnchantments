@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class SuppressionBlade extends WeaponEnch {
 
 	public SuppressionBlade() {
-		super(Rarity.RARE, EnchConfigData.special(1));
+		super(Rarity.RARE, EnchConfigData.special(1), EFFECT);
 	}
 
 	@Override

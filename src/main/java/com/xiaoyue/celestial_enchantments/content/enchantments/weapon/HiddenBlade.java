@@ -16,7 +16,7 @@ public class HiddenBlade extends AttackEnch {
 	}
 
 	public HiddenBlade() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchConfigData.NORMAL_3, A30);
 	}
 
 	@Override

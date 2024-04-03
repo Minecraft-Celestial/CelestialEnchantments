@@ -16,7 +16,7 @@ public class MisfortuneBlade extends AttackEnch {
 	}
 
 	public MisfortuneBlade() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchConfigData.NORMAL_3, A30);
 	}
 
 	@Override

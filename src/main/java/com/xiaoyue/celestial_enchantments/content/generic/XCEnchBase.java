@@ -23,6 +23,8 @@ import java.util.Set;
 
 public class XCEnchBase extends Enchantment {
 
+	public static final EnchGroup CURSE = new EnchGroup(ChatFormatting.RED);
+
 	private static final List<XCEnchBase> CACHE = new ArrayList<>();
 
 	public static ItemStack makeBook(Enchantment ench, int level) {

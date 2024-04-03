@@ -7,8 +7,8 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 public class AttackEnch extends WeaponEnch {
 
-	protected AttackEnch(Rarity rarity, EnchConfigData config) {
-		super(rarity, config);
+	protected AttackEnch(Rarity rarity, EnchConfigData config, EnchGroup group) {
+		super(rarity, config, group);
 	}
 
 	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {

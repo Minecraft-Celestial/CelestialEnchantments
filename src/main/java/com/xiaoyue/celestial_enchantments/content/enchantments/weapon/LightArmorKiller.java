@@ -19,7 +19,7 @@ public class LightArmorKiller extends AttackEnch {
 	}
 
 	public LightArmorKiller() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchConfigData.NORMAL_3, A75);
 	}
 
 	@Override

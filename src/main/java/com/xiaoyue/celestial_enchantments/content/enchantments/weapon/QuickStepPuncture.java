@@ -19,7 +19,7 @@ public class QuickStepPuncture extends AttackEnch {
 	}
 
 	public QuickStepPuncture() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_5);
+		super(Rarity.RARE, EnchConfigData.NORMAL_5, A75);
 	}
 
 	@Override

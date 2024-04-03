@@ -9,7 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class CurseOfWeakness extends AttackEnch {
 
 	public CurseOfWeakness() {
-		super(Rarity.UNCOMMON, EnchConfigData.curse(3));
+		super(Rarity.UNCOMMON, EnchConfigData.curse(3), CURSE);
 	}
 
 	@Override

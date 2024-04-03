@@ -19,7 +19,7 @@ public class QuenchedBlade extends AttackEnch {
 	}
 
 	public QuenchedBlade() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, A300);
 	}
 
 	@Override

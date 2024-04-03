@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class MagicBlade extends AttackEnch {
 
 	public MagicBlade() {
-		super(Rarity.RARE, EnchConfigData.special(1));
+		super(Rarity.RARE, EnchConfigData.special(1), A300);
 	}
 
 	@Override

@@ -11,11 +11,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class FierceSlash extends AttackEnch {
 
 	public static double atk() {
-		return 0.1;//TODO
+		return 0.08;//TODO
 	}
 
 	public FierceSlash() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchConfigData.NORMAL_3, A30);
 	}
 
 	@Override
