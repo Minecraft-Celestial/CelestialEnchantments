@@ -11,7 +11,7 @@ import java.util.List;
 public class TheSourceOfSin extends ArmorEnch {
 
 	public TheSourceOfSin() {
-		super(Rarity.VERY_RARE, Type.CHEST, EnchConfigData.NORMAL_3);
+		super(Rarity.VERY_RARE, Type.CHEST, EnchConfigData.NORMAL_3, REACTIVE);
 	}
 
 	@Override

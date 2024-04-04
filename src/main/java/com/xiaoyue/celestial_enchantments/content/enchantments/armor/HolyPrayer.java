@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Player;
 public class HolyPrayer extends ArmorEnch {
 
     public HolyPrayer() {
-        super(Rarity.RARE, Type.LEGS, EnchConfigData.NORMAL_3);
+        super(Rarity.RARE, Type.LEGS, EnchConfigData.NORMAL_3, EFFECT);
     }
 
     @Override

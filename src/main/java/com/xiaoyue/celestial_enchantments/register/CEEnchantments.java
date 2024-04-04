@@ -56,30 +56,30 @@ public class CEEnchantments {
 	// TODO progress here
 
 	// all armor
-	public static final RegistryEntry<Enchantment> VOID_PROTECTION = reg("void_protection", VoidProtection::new, "Reduce %s of void damage received");
-	public static final RegistryEntry<Enchantment> SOLID_ARMOR = reg("solid_armor", SolidArmor::new, "When the wearer's health is less than half, the damage received is reduced by %s");
-	public static final RegistryEntry<Enchantment> HEARTH_SUPPORT = reg("hearth_support", HearthSupport::new, "When attacked, burn attacker for %s seconds");
-	public static final RegistryEntry<Enchantment> DESTROY_RESONANCE = reg("destroy_resonance", DestroyResonance::new, "Deals %s damage to surrounding targets after being attacked");
-	public static final RegistryEntry<Enchantment> FROST_THORNS = reg("frost_thorns", FrostThorns::new, "Deals %s damage to the attacker when attacked, and inflicts %s");
+	public static final RegistryEntry<Enchantment> VOID_PROTECTION = reg("void_protection", VoidProtection::new, "Reduce %s of void damage received");// A
+	public static final RegistryEntry<Enchantment> SOLID_ARMOR = reg("solid_armor", SolidArmor::new, "When the wearer's health is less than half, the damage received is reduced by %s");//A
+	public static final RegistryEntry<Enchantment> HEARTH_SUPPORT = reg("hearth_support", HearthSupport::new, "When attacked, burn attacker for %s seconds");//B
+	public static final RegistryEntry<Enchantment> DESTROY_RESONANCE = reg("destroy_resonance", DestroyResonance::new, "Deals %s damage to surrounding targets after being attacked");//B
+	public static final RegistryEntry<Enchantment> FROST_THORNS = reg("frost_thorns", FrostThorns::new, "Deals %s damage to the attacker when attacked, and inflicts %s");//B
 	// head
-	public static final RegistryEntry<Enchantment> EYE_IN_SHADOW = reg("eye_in_shadow", EyeInShadow::new, "In areas with brightness less than 5, gain %s");
-	public static final RegistryEntry<Enchantment> HAVE_NICE_DREAM = reg("have_nice_dream", HaveNiceDream::new, "After waking up from bed, obtain %s and %s");
-	public static final RegistryEntry<Enchantment> CORRUPT_SCHOLAR = reg("corrupt_scholar", CorruptScholar::new, "+%s Exp pickup, but there has %s chance to gain harmful effects");
-	public static final RegistryEntry<Enchantment> KNOWLEDGE_SCHOLAR = reg("knowledge_scholar", KnowledgeScholar::new, "+%s Exp pickup");
-	public static final RegistryEntry<Enchantment> MOON_BLESSING = reg("moon_blessing", MoonBlessing::new, "At night, gain %s");
-	public static final RegistryEntry<Enchantment> SUN_BLESSING = reg("sun_blessing", SunBlessing::new, "In daytime, gain %s");
-	public static final RegistryEntry<Enchantment> RAIN_AND_DEW_GRACE = reg("rain_and_dew_grace", RainAndDewGrace::new, "In water or rain, gain %s");
+	public static final RegistryEntry<Enchantment> EYE_IN_SHADOW = reg("eye_in_shadow", EyeInShadow::new, "In areas with brightness less than 5, gain %s");//C
+	public static final RegistryEntry<Enchantment> HAVE_NICE_DREAM = reg("have_nice_dream", HaveNiceDream::new, "After waking up from bed, obtain %s and %s");//C
+	public static final RegistryEntry<Enchantment> CORRUPT_SCHOLAR = reg("corrupt_scholar", CorruptScholar::new, "+%s Exp pickup, but there has %s chance to gain harmful effects");//D
+	public static final RegistryEntry<Enchantment> KNOWLEDGE_SCHOLAR = reg("knowledge_scholar", KnowledgeScholar::new, "+%s Exp pickup");//D
+	public static final RegistryEntry<Enchantment> MOON_BLESSING = reg("moon_blessing", MoonBlessing::new, "At night, gain %s");//C
+	public static final RegistryEntry<Enchantment> SUN_BLESSING = reg("sun_blessing", SunBlessing::new, "In daytime, gain %s");//C
+	public static final RegistryEntry<Enchantment> RAIN_AND_DEW_GRACE = reg("rain_and_dew_grace", RainAndDewGrace::new, "In water or rain, gain %s");//C
 	// chest
-	public static final RegistryEntry<Enchantment> GIFT_OF_THUNDER_GOD = reg("gift_of_thunder_god", GiftOfThunderGod::new, "When struck by lightning, immediately recover all lost life, then gain %s, %s, and %s");
-	public static final RegistryEntry<Enchantment> THE_SOURCE_OF_SIN = reg("the_source_of_sin", TheSourceOfSin::new, "When attacked, has %s chance to make surrounding mobs attack the attacker");
-	public static final RegistryEntry<Enchantment> TRAUMA_ABSORPTION = reg("trauma_absorption", TraumaAbsorption::new, "On hurt, restore %s of the damage you took");
+	public static final RegistryEntry<Enchantment> GIFT_OF_THUNDER_GOD = reg("gift_of_thunder_god", GiftOfThunderGod::new, "When struck by lightning, immediately recover all lost life, then gain %s, %s, and %s");//C
+	public static final RegistryEntry<Enchantment> THE_SOURCE_OF_SIN = reg("the_source_of_sin", TheSourceOfSin::new, "When attacked, has %s chance to make surrounding mobs attack the attacker");//B
+	public static final RegistryEntry<Enchantment> TRAUMA_ABSORPTION = reg("trauma_absorption", TraumaAbsorption::new, "On hurt, restore %s of the damage you took");//B
 	// legs
-	public static final RegistryEntry<Enchantment> CORRUPTION_BODY = reg("corruption_body", CorruptionBody::new, "When attacked, inflict attacker with %s");
-	public static final RegistryEntry<Enchantment> HOLY_PRAYER = reg("holy_prayer", HolyPrayer::new, "When you are attacked while sneaking, gain %s");
+	public static final RegistryEntry<Enchantment> CORRUPTION_BODY = reg("corruption_body", CorruptionBody::new, "When attacked, inflict attacker with %s");//B
+	public static final RegistryEntry<Enchantment> HOLY_PRAYER = reg("holy_prayer", HolyPrayer::new, "When you are attacked while sneaking, gain %s");//B
 	// feet
-	public static final RegistryEntry<Enchantment> DIMENSION_EXPLORER = reg("dimension_explorer", DimensionExplorer::new, "When you cross dimension, gain %s, %s, and %s");
-	public static final RegistryEntry<Enchantment> FIREPROOF_BOOTS = reg("fireproof_boots", FireproofBoots::new, "Immune to hot floor damage and reduce fire damage taken by %s");
-	public static final RegistryEntry<Enchantment> FLEET_OF_FOOT = reg("fleet_of_foot", FleetOfFoot::new, "+%s Movement Speed");
+	public static final RegistryEntry<Enchantment> DIMENSION_EXPLORER = reg("dimension_explorer", DimensionExplorer::new, "When you cross dimension, gain %s, %s, and %s");//C
+	public static final RegistryEntry<Enchantment> FIREPROOF_BOOTS = reg("fireproof_boots", FireproofBoots::new, "Immune to hot floor damage and reduce fire damage taken by %s");//A
+	public static final RegistryEntry<Enchantment> FLEET_OF_FOOT = reg("fleet_of_foot", FleetOfFoot::new, "+%s Movement Speed");//D
 	// bow
 	public static final RegistryEntry<Enchantment> ARROW_OF_TRACTION = reg("arrow_of_traction", ArrowOfTraction::new, "After hitting the target, drag all entities within a radius of [enchantment level]+1 grid with the target as the center to the target");
 	public static final RegistryEntry<Enchantment> ARROW_STORM = reg("arrow_storm", ArrowStorm::new, "Arrow damage reduced by [Enchantment Level] * 5%, dealing original damage [Enchantment Level] * 10% projectile damage to enemies around the target upon hit");

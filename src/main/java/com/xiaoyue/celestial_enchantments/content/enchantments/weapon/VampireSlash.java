@@ -14,7 +14,7 @@ public class VampireSlash extends AttackEnch {
 	}
 
 	public VampireSlash() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_5, EFFECT);
+		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_5, INFLICT);
 	}
 
 	@Override

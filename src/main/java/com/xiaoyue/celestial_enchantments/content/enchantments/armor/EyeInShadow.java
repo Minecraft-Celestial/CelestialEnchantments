@@ -12,7 +12,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class EyeInShadow extends ArmorEnch implements LivingTickEnch {
 
 	public EyeInShadow() {
-		super(Rarity.VERY_RARE, Type.HEAD, EnchConfigData.NORMAL_1);
+		super(Rarity.VERY_RARE, Type.HEAD, EnchConfigData.NORMAL_1, EFFECT);
 	}
 
 	@Override

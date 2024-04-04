@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class VoidProtection extends DefenceEnch {
 
 	public VoidProtection() {
-		super(Rarity.VERY_RARE, Type.ARMOR, EnchConfigData.NORMAL_3);
+		super(Rarity.VERY_RARE, Type.ARMOR, EnchConfigData.NORMAL_3, PROTECT);
 	}
 
 	@Override

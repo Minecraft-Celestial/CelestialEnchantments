@@ -9,7 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class SolidArmor extends DefenceEnch {
 
 	public SolidArmor() {
-		super(Rarity.VERY_RARE, Type.ARMOR, EnchConfigData.NORMAL_3);
+		super(Rarity.VERY_RARE, Type.ARMOR, EnchConfigData.NORMAL_3, PROTECT);
 	}
 
 	@Override

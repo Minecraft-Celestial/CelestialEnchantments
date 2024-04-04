@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class CorruptionBody extends DefenceEnch {
 
 	public CorruptionBody() {
-		super(Rarity.UNCOMMON, Type.LEGS, EnchConfigData.NORMAL_5);
+		super(Rarity.UNCOMMON, Type.LEGS, EnchConfigData.NORMAL_5, REACTIVE);
 	}
 
 	@Override

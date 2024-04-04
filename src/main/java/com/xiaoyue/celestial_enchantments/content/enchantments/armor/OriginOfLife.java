@@ -11,7 +11,7 @@ import net.minecraftforge.event.entity.living.LivingHealEvent;
 public class OriginOfLife extends ArmorEnch implements LivingHealEnch {
 
 	public OriginOfLife() {
-		super(Rarity.RARE, Type.CHEST, EnchConfigData.treasure(1));
+		super(Rarity.RARE, Type.CHEST, EnchConfigData.treasure(1), EFFECT);
 	}
 
 	@Override

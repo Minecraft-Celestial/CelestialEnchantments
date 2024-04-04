@@ -9,7 +9,7 @@ import net.minecraft.world.entity.player.Player;
 public class DimensionExplorer extends ArmorEnch {
 
 	public DimensionExplorer() {
-		super(Rarity.RARE, Type.FEET, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, Type.FEET, EnchConfigData.NORMAL_3, EFFECT);
 	}
 
 	public static void onLevelChange(Player player, int lv) {

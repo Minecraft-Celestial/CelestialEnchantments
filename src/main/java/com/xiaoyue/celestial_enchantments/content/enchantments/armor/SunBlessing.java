@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class SunBlessing extends ArmorEnch implements LivingTickEnch {
 
 	public SunBlessing() {
-		super(Rarity.UNCOMMON, Type.HEAD, EnchConfigData.NORMAL_2);
+		super(Rarity.UNCOMMON, Type.HEAD, EnchConfigData.NORMAL_2, EFFECT);
 	}
 
 	@Override

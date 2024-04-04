@@ -8,7 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class TraumaAbsorption extends DefenceEnch {
 
 	public TraumaAbsorption() {
-		super(Rarity.RARE, Type.CHEST, EnchConfigData.NORMAL_2);
+		super(Rarity.RARE, Type.CHEST, EnchConfigData.NORMAL_2, PROTECT);
 	}
 
 	@Override

@@ -11,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class FireproofBoots extends DefenceEnch {
 
 	public FireproofBoots() {
-		super(Rarity.UNCOMMON, Type.FEET, EnchConfigData.NORMAL_1);
+		super(Rarity.UNCOMMON, Type.FEET, EnchConfigData.NORMAL_1, EFFECT);
 	}
 
 	@Override

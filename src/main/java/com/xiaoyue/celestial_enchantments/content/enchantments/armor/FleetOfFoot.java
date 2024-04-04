@@ -11,7 +11,7 @@ import net.minecraftforge.event.ItemAttributeModifierEvent;
 public class FleetOfFoot extends ArmorEnch implements AttributeEnchantment {
 
 	public FleetOfFoot() {
-		super(Rarity.RARE, Type.FEET, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, Type.FEET, EnchConfigData.NORMAL_3, EFFECT);
 	}
 
 	@Override

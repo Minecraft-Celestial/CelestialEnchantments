@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class DestructionCurse extends DefenceEnch {
 
 	public DestructionCurse() {
-		super(Rarity.UNCOMMON, Type.CHEST, EnchConfigData.curse(1));
+		super(Rarity.UNCOMMON, Type.CHEST, EnchConfigData.curse(1), CURSE);
 	}
 
 	@Override

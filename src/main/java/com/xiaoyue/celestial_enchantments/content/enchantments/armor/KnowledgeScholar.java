@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.player.PlayerXpEvent;
 public class KnowledgeScholar extends ArmorEnch implements ChangeXpEnch {
 
 	public KnowledgeScholar() {
-		super(Rarity.UNCOMMON, Type.HEAD, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, Type.HEAD, EnchConfigData.NORMAL_3, EXP);
 	}
 
 	@Override

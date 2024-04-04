@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class OvereatingCurse extends ArmorEnch implements LivingTickEnch {
 
 	public OvereatingCurse() {
-		super(Rarity.RARE, Type.CHEST, EnchConfigData.curse(3));
+		super(Rarity.RARE, Type.CHEST, EnchConfigData.curse(3), CURSE);
 	}
 
 	@Override

@@ -6,7 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class DeathEnch extends ArmorEnch {
 
 	protected DeathEnch(Rarity rarity, Type type, EnchConfigData config) {
-		super(rarity, type, config);
+		super(rarity, type, config, DEATH);
 	}
 
 	public void onDeath(LivingEntity entity, int lv) {

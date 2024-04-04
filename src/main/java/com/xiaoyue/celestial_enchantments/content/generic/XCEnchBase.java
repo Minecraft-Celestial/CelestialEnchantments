@@ -24,6 +24,15 @@ import java.util.Set;
 public class XCEnchBase extends Enchantment {
 
 	public static final EnchGroup CURSE = new EnchGroup(ChatFormatting.RED);
+	public static final EnchGroup DEATH = new EnchGroup(ChatFormatting.LIGHT_PURPLE);
+	public static EnchGroup INFLICT = new EnchGroup(ChatFormatting.GREEN);
+	public static EnchGroup A30 = new EnchGroup(ChatFormatting.YELLOW);
+	public static EnchGroup A75 = new EnchGroup(ChatFormatting.AQUA);
+	public static EnchGroup A300 = new EnchGroup(ChatFormatting.GOLD);
+	public static EnchGroup EFFECT = new EnchGroup(ChatFormatting.GREEN);
+	public static EnchGroup REACTIVE = new EnchGroup(ChatFormatting.DARK_AQUA);
+	public static EnchGroup EXP = new EnchGroup(ChatFormatting.YELLOW);
+	public static EnchGroup PROTECT = new EnchGroup(ChatFormatting.GOLD);
 
 	private static final List<XCEnchBase> CACHE = new ArrayList<>();
 

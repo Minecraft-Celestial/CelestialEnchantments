@@ -9,7 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class PotionAffinity extends ArmorEnch {
 
 	public PotionAffinity() {
-		super(Rarity.RARE, Type.CHEST, EnchConfigData.treasure(3));
+		super(Rarity.RARE, Type.CHEST, EnchConfigData.treasure(3), EFFECT);
 	}
 
 	public static void onAddedEffect(LivingEntity entity, int lv, MobEffectInstance ins) {

@@ -11,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class GiftOfThunderGod extends DefenceEnch {
 
 	public GiftOfThunderGod() {
-		super(Rarity.UNCOMMON, Type.CHEST, EnchConfigData.NORMAL_3);
+		super(Rarity.UNCOMMON, Type.CHEST, EnchConfigData.NORMAL_3, EFFECT);
 	}
 
 	@Override

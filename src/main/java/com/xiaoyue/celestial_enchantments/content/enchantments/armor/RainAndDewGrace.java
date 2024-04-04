@@ -9,7 +9,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class RainAndDewGrace extends ArmorEnch implements LivingTickEnch {
 
 	public RainAndDewGrace() {
-		super(Rarity.RARE, Type.HEAD, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, Type.HEAD, EnchConfigData.NORMAL_3, EFFECT);
 	}
 
 	@Override

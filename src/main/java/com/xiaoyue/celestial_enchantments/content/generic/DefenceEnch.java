@@ -7,8 +7,8 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class DefenceEnch extends ArmorEnch {
 
-	protected DefenceEnch(Rarity rarity, Type type, EnchConfigData config) {
-		super(rarity, type, config);
+	protected DefenceEnch(Rarity rarity, Type type, EnchConfigData config, EnchGroup group) {
+		super(rarity, type, config, group);
 	}
 
 	public boolean onAttacked(LivingEntity user, AttackCache cache, int lv) {

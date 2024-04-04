@@ -15,7 +15,7 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 	private static final TokenKey<Token> KEY = TokenKey.of(CelestialEnchantments.loc("echo"));
 
 	public EchoEffect() {
-		super(Rarity.VERY_RARE, Type.CHEST, EnchConfigData.treasure(3));
+		super(Rarity.VERY_RARE, Type.CHEST, EnchConfigData.treasure(3), PROTECT);
 	}
 
 	@Override

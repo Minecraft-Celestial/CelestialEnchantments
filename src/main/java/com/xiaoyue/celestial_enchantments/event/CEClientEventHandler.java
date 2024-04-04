@@ -15,6 +15,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -37,7 +38,7 @@ public class CEClientEventHandler {
 		}
 	}
 
-	@SubscribeEvent
+	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public static void modifyItemTooltip(ItemTooltipEvent event) {
 		var list = event.getToolTip();
 		int n = list.size();
@@ -68,7 +69,7 @@ public class CEClientEventHandler {
 				}
 			}
 		}
-		if (!alt && flag){
+		if (!alt && flag) {
 			list.add(CELang.alt());
 		}
 	}

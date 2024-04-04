@@ -9,7 +9,7 @@ import net.minecraft.world.entity.player.Player;
 public class HaveNiceDream extends ArmorEnch {
 
 	public HaveNiceDream() {
-		super(Rarity.RARE, Type.HEAD, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, Type.HEAD, EnchConfigData.NORMAL_3, EFFECT);
 	}
 
 	public static void onPlayerWake(Player player, int lv) {
