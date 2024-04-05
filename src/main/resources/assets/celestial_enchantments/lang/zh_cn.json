@@ -13,6 +13,14 @@
   "celestial_enchantments.tooltip.eff_amp": "%2$s级%1$s",
   "celestial_enchantments.tooltip.eff_dur": "%2$s秒的%1$s",
 
+  "celestial_enchantments.tooltip.advanced": "[高级]",
+  "celestial_enchantments.tooltip.alt": "按[%s]显示附魔公式",
+  "celestial_enchantments.tooltip.cele": "[星月]",
+  "celestial_enchantments.tooltip.curse": "[诅咒]",
+  "celestial_enchantments.tooltip.double": "[负面]",
+  "celestial_enchantments.tooltip.legendary": "[传奇]",
+  "celestial_enchantments.tooltip.normal": "[基础]",
+
   "enchantment.celestial_enchantments.fatal_blow": "致命一击",
   "enchantment.celestial_enchantments.fatal_blow.desc": "+%s暴击伤害",
   "enchantment.celestial_enchantments.withering_blade": "凋亡之刃",

@@ -11,7 +11,7 @@ import java.util.List;
 public class PartingWish extends DeathEnch {
 
 	public PartingWish() {
-		super(Rarity.UNCOMMON, Type.HEAD, EnchData.bad(3, DEATH));
+		super(Rarity.UNCOMMON, Type.HEAD, EnchData.normal(3, DEATH));
 	}
 
 	@Override

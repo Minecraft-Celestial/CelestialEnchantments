@@ -16,6 +16,13 @@ public enum CELang {
 	EFF_DUR("%2$s seconds of %1$s", 2),
 	EFF_AMP("%1$s with level %2$s", 2),
 	ALT("Press [%s] to show enchantment effect formula", 1),
+
+	CELE("[Celestial]",0),
+	NORMAL("[Basic]",0),
+	ADVANCED("[Advanced]",0),
+	LEGENDARY("[Legendary]",0),
+	CURSE("[Curse]",0),
+	DOUBLE("[Double-Edge]",0)
 	;
 
 	private final String key, def;

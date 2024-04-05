@@ -1,12 +1,15 @@
 package com.xiaoyue.celestial_enchantments.content.generic;
 
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.base.L2Registrate;
 import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -81,6 +84,35 @@ public class XCEnchBase extends Enchantment {
 
 	public Component desc(int lv, String key, boolean alt) {
 		return Component.translatable(key).withStyle(ChatFormatting.DARK_GRAY);
+	}
+
+	public Component descFull(int lv, String key, boolean alt) {
+		if (alt) {
+			return desc(lv, key, true);
+		}
+		var base = CELang.CELE.get().withStyle(ChatFormatting.AQUA).append(CommonComponents.SPACE);
+		base = base.append(config.level().type().lang.get()).append(CommonComponents.SPACE);
+		if (config.bad() && !isCurse()) {
+			base = base.append(CELang.DOUBLE.get().withStyle(ChatFormatting.LIGHT_PURPLE)).append(CommonComponents.SPACE);
+		}
+		return base.append(desc(lv, key, false));
+	}
+
+	@Override
+	public Component getFullname(int pLevel) {
+		MutableComponent mutablecomponent = Component.translatable(this.getDescriptionId());
+		if (this.isCurse()) {
+			mutablecomponent.withStyle(ChatFormatting.RED);
+		} else if (config.bad()) {
+			mutablecomponent.withStyle(ChatFormatting.LIGHT_PURPLE);
+		} else {
+			mutablecomponent.withStyle(ChatFormatting.AQUA);
+		}
+		if (pLevel != 1 || this.getMaxLevel() != 1) {
+			mutablecomponent.append(CommonComponents.SPACE).append(Component.translatable("enchantment.level." + pLevel));
+		}
+
+		return mutablecomponent;
 	}
 
 	protected boolean chance(LivingEntity e, double chance) {

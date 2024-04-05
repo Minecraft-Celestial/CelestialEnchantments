@@ -63,7 +63,7 @@ public class CEClientEventHandler {
 					Enchantment ench = ForgeRegistries.ENCHANTMENTS.getValue(CelestialEnchantments.loc(id));
 					if (ench instanceof XCEnchBase base) {
 						int lv = map.getOrDefault(ench, 0);
-						list.set(i, lit.append(base.desc(lv, tr.getKey(), alt)));
+						list.set(i, lit.append(base.descFull(lv, tr.getKey(), alt)));
 						flag = true;
 					}
 				}

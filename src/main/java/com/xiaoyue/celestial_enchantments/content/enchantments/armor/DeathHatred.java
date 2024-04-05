@@ -13,7 +13,7 @@ import java.util.List;
 public class DeathHatred extends DeathEnch {
 
 	public DeathHatred() {
-		super(Rarity.RARE, Type.CHEST, EnchData.bad(3, DEATH));
+		super(Rarity.RARE, Type.CHEST, EnchData.normal(3, DEATH));
 	}
 
 	@Override
