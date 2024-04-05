@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.LivingHealEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingHealEvent;
@@ -11,7 +11,7 @@ import net.minecraftforge.event.entity.living.LivingHealEvent;
 public class OriginOfLife extends ArmorEnch implements LivingHealEnch {
 
 	public OriginOfLife() {
-		super(Rarity.RARE, Type.CHEST, EnchConfigData.treasure(1), EFFECT);
+		super(Rarity.RARE, Type.CHEST, EnchData.treasure(1, EFFECT));
 	}
 
 	@Override

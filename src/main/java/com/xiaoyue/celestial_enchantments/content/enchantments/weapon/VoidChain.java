@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_core.data.CCDamageTypes;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,7 +15,7 @@ import java.util.List;
 public class VoidChain extends AttackEnch {
 
 	public VoidChain() {
-		super(Rarity.RARE, EnchConfigData.special(3), A300);
+		super(Rarity.RARE, EnchData.special(3, A300));
 	}
 
 	@Override

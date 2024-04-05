@@ -2,7 +2,8 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.DeathEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +14,7 @@ import java.util.List;
 public class DeathPact extends DeathEnch {
 
 	public DeathPact() {
-		super(Rarity.UNCOMMON, Type.CHEST, EnchConfigData.treasure(5));
+		super(Rarity.UNCOMMON, Type.CHEST, EnchData.bad(5,DEATH));
 	}
 
 	@Override

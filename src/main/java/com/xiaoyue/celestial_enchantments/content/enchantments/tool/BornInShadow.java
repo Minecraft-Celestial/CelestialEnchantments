@@ -3,14 +3,14 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.tool;
 import com.xiaoyue.celestial_core.utils.CCUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.GeneralEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.LivingTickEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 public class BornInShadow extends GeneralEnch implements LivingTickEnch {
 
 	public BornInShadow() {
-		super(Rarity.VERY_RARE, EnchConfigData.NORMAL_5);
+		super(Rarity.VERY_RARE, EnchData.normal(5, DURABILITY));
 	}
 
 	@Override

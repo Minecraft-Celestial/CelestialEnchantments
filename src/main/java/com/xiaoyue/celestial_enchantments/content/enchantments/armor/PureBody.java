@@ -2,14 +2,15 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.LivingTickEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 public class PureBody extends ArmorEnch implements LivingTickEnch {
 
 	public PureBody() {
-		super(Rarity.UNCOMMON, Type.CHEST, EnchConfigData.special(1), EFFECT);
+		super(Rarity.UNCOMMON, Type.CHEST, EnchData.special(1, EFFECT));
 	}
 
 	@Override

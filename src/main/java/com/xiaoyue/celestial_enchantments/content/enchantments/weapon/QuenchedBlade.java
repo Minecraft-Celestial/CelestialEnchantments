@@ -2,7 +2,8 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -19,7 +20,7 @@ public class QuenchedBlade extends AttackEnch {
 	}
 
 	public QuenchedBlade() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, A300);
+		super(Rarity.UNCOMMON, EnchData.treasure(3, A300));
 	}
 
 	@Override

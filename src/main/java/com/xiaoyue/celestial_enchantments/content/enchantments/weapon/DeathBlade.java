@@ -2,7 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -15,7 +15,7 @@ public class DeathBlade extends AttackEnch {
 	}
 
 	public DeathBlade() {
-		super(Rarity.VERY_RARE, EnchConfigData.special(5), A300);
+		super(Rarity.VERY_RARE, EnchData.special(5, A300));
 	}
 
 	@Override

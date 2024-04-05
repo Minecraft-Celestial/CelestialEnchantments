@@ -2,7 +2,8 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import dev.xkmc.l2library.capability.conditionals.*;
@@ -15,7 +16,7 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 	private static final TokenKey<Token> KEY = TokenKey.of(CelestialEnchantments.loc("echo"));
 
 	public EchoEffect() {
-		super(Rarity.VERY_RARE, Type.CHEST, EnchConfigData.treasure(3), PROTECT);
+		super(Rarity.VERY_RARE, Type.CHEST, EnchData.treasure(3, PROTECT));
 	}
 
 	@Override

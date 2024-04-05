@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -16,7 +16,7 @@ public class ClusterAwareness extends AttackEnch {
 	}
 
 	public ClusterAwareness() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, A75);
+		super(Rarity.UNCOMMON, EnchData.normal(3, A75));
 	}
 
 	@Override

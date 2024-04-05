@@ -2,7 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.DeathEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.Monster;
@@ -13,7 +13,7 @@ import java.util.List;
 public class DeathHatred extends DeathEnch {
 
 	public DeathHatred() {
-		super(Rarity.RARE, Type.CHEST, EnchConfigData.treasure(3));
+		super(Rarity.RARE, Type.CHEST, EnchData.bad(3, DEATH));
 	}
 
 	@Override

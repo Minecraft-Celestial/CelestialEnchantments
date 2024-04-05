@@ -2,7 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -19,7 +19,7 @@ public class UnstableBlade extends AttackEnch {
 	}
 
 	public UnstableBlade() {
-		super(Rarity.COMMON, EnchConfigData.NORMAL_3, A30);
+		super(Rarity.COMMON, EnchData.normal(3, A30));
 	}
 
 	@Override

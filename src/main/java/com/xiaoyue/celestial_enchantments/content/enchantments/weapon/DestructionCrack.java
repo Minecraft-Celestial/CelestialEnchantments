@@ -1,7 +1,7 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class DestructionCrack extends WeaponEnch {
 
 	public DestructionCrack() {
-		super(Rarity.UNCOMMON, EnchConfigData.special(1), INFLICT);
+		super(Rarity.UNCOMMON, EnchData.special(1, INFLICT));
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,7 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class CelestialShelter extends DefenceEnch {
 
 	public CelestialShelter() {
-		super(Rarity.VERY_RARE, Type.LEGS, EnchConfigData.special(1), PROTECT);
+		super(Rarity.VERY_RARE, Type.LEGS, EnchData.special(1, PROTECT));
 	}
 
 	@Override

@@ -73,6 +73,15 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> GIFT_OF_THUNDER_GOD = reg("gift_of_thunder_god", GiftOfThunderGod::new, "When struck by lightning, immediately recover all lost life, then gain %s, %s, and %s");//C
 	public static final RegistryEntry<Enchantment> THE_SOURCE_OF_SIN = reg("the_source_of_sin", TheSourceOfSin::new, "When attacked, has %s chance to make surrounding mobs attack the attacker");//B
 	public static final RegistryEntry<Enchantment> TRAUMA_ABSORPTION = reg("trauma_absorption", TraumaAbsorption::new, "On hurt, restore %s of the damage you took");//B
+	public static final RegistryEntry<Enchantment> ECHO_EFFECT = reg("echo_effect", EchoEffect::new, "When receiving a fatal attack, dodge the damage and restore [Enchantment Level] * 5% of maximum health. This effect cools down for 600 seconds");
+	public static final RegistryEntry<Enchantment> ORIGIN_OF_LIFE = reg("origin_of_life", OriginOfLife::new, "There is a probability of obtaining resistance improvement or speed improvement effects when receiving treatment");
+	public static final RegistryEntry<Enchantment> POTION_AFFINITY = reg("potion_affinity", PotionAffinity::new, "The duration of the obtained potion effect has been increased by [Enchantment Level] * 15%");
+	public static final RegistryEntry<Enchantment> PURE_BODY = reg("pure_body", PureBody::new, "Continuously clearing the potion effect on the body");
+	public static final RegistryEntry<Enchantment> CELESTIAL_SHELTER = reg("celestial_shelter", CelestialShelter::new, "When damaged, a single attack can only deal up to %s of the wearer's maximum health");
+	// death
+	public static final RegistryEntry<Enchantment> PARTING_WISH = reg("parting_wish", PartingWish::new, "Upon death, surrounding players restore [Enchantment Level] * 8 health points");
+	public static final RegistryEntry<Enchantment> DEATH_HATRED = reg("death_hatred", DeathHatred::new, "Deals [Enchantment Level] * 15 magic damage to surrounding creatures upon death");
+	public static final RegistryEntry<Enchantment> DEATH_PACT = reg("death_pact", DeathPact::new, "When nearby players with [%s] die, gives %s chance to gain %s, %s, %s, and %s. Otherwise, you will die together");
 	// legs
 	public static final RegistryEntry<Enchantment> CORRUPTION_BODY = reg("corruption_body", CorruptionBody::new, "When attacked, inflict attacker with %s");//B
 	public static final RegistryEntry<Enchantment> HOLY_PRAYER = reg("holy_prayer", HolyPrayer::new, "When you are attacked while sneaking, gain %s");//B
@@ -86,37 +95,33 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> BURST_ARROW = reg("burst_arrow", BurstArrow::new, "After hitting the target, there is a [Enchantment Level] * 20% chance of an explosion, which does not damage the blocks");
 	public static final RegistryEntry<Enchantment> MORNING_STAR = reg("morning_star", MorningStar::new, "After arrow hits a target, %s chance to strike the target with lightning");
 	public static final RegistryEntry<Enchantment> SHARP_ARROW = reg("sharp_arrow", SharpArrow::new, "Increase [Enchantment Level] * 20% Arrow Damage");
+	public static final RegistryEntry<Enchantment> DIVINE_PROJECTION = reg("divine_projection", DivineProjection::new, "The further away from the attacking target, the higher the damage");
+
 	// shield
 	public static final RegistryEntry<Enchantment> CONSTRAINTS_SHIELD = reg("constraints_shield", ConstraintsShield::new, "Every 5th blocking reflect [enchantment level] * 50% damage as magic damage");
 	public static final RegistryEntry<Enchantment> HOLY_SHIELD = reg("holy_shield", HolyShield::new, "Gain %s after shielding attacks");
 	public static final RegistryEntry<Enchantment> REACTIVE_BLOCK = reg("reactive_block", ReactiveBlock::new, "After blocking an attack, knock back attack with [Enchantment Level] * 0.5 strength");
 	public static final RegistryEntry<Enchantment> SCORCHING_SHIELD = reg("scorching_shield", ScorchingShield::new, "Using a shield to block an attack will cause the attacker to fall into [Enchantment Level] and burn for seconds");
+
 	// tool
 	public static final RegistryEntry<Enchantment> PHOTO_DYNAMIC = reg("photo_dynamic", PhotoDynamic::new, "Increase [Enchantment Level] * 12% mining speed in areas with brightness above 10");
+	public static final RegistryEntry<Enchantment> ACCELERATE_GROWTH = reg("accelerate_growth", AccelerateGrowth::new, "Right click on the crop to consume some durability to ripen the crop");
+
 	// trident
 	public static final RegistryEntry<Enchantment> SHARP_HALBERD_TIP = reg("sharp_halberd_tip", SharpHalberdTip::new, "Increase [Enchantment Level] * 20% melee and throw damage");
 	public static final RegistryEntry<Enchantment> EXPLOSIVE_HALBERD = reg("explosive_halberd", ExplosiveHalberd::new, "The thrown trident has a [Enchantment Level] * 20% chance to explode");
+
 	// generic
 	public static final RegistryEntry<Enchantment> BORN_IN_SHADOW = reg("born_in_shadow", BornInShadow::new, "Durability will slowly recover in areas with brightness less than 5");
+	// TODO photosynthesis
 
-	// death
-	public static final RegistryEntry<Enchantment> PARTING_WISH = reg("parting_wish", PartingWish::new, "Upon death, surrounding players restore [Enchantment Level] * 8 health points");
-	public static final RegistryEntry<Enchantment> DEATH_HATRED = reg("death_hatred", DeathHatred::new, "Deals [Enchantment Level] * 15 magic damage to surrounding creatures upon death");
-	public static final RegistryEntry<Enchantment> DEATH_PACT = reg("death_pact", DeathPact::new, "When nearby players with [%s] die, gives %s chance to gain %s, %s, %s, and %s. Otherwise, you will die together");
-	// treasure
-	public static final RegistryEntry<Enchantment> ECHO_EFFECT = reg("echo_effect", EchoEffect::new, "When receiving a fatal attack, dodge the damage and restore [Enchantment Level] * 5% of maximum health. This effect cools down for 600 seconds");
-	public static final RegistryEntry<Enchantment> ORIGIN_OF_LIFE = reg("origin_of_life", OriginOfLife::new, "There is a probability of obtaining resistance improvement or speed improvement effects when receiving treatment");
-	public static final RegistryEntry<Enchantment> POTION_AFFINITY = reg("potion_affinity", PotionAffinity::new, "The duration of the obtained potion effect has been increased by [Enchantment Level] * 15%");
-	public static final RegistryEntry<Enchantment> DIVINE_PROJECTION = reg("divine_projection", DivineProjection::new, "The further away from the attacking target, the higher the damage");
-	public static final RegistryEntry<Enchantment> ACCELERATE_GROWTH = reg("accelerate_growth", AccelerateGrowth::new, "Right click on the crop to consume some durability to ripen the crop");
-	// special
-	public static final RegistryEntry<Enchantment> PURE_BODY = reg("pure_body", PureBody::new, "Continuously clearing the potion effect on the body");
-	public static final RegistryEntry<Enchantment> CELESTIAL_SHELTER = reg("celestial_shelter", CelestialShelter::new, "When damaged, a single attack can only deal up to %s of the wearer's maximum health");
 	// curse
 	public static final RegistryEntry<Enchantment> DESTRUCTION_CURSE = reg("destruction_curse", DestructionCurse::new, "Increase explosion damage received by %s, and increase other incoming damage by %s");
 	public static final RegistryEntry<Enchantment> OVEREATING_CURSE = reg("overeating_curse", OvereatingCurse::new, "Gain %s");
 	public static final RegistryEntry<Enchantment> CURSE_OF_WEAKNESS = reg("curse_of_weakness", CurseOfWeakness::new, "-%s of attack damage");
 	public static final RegistryEntry<Enchantment> POWERLESS_CURSE = reg("powerless_curse", PowerlessCurse::new, "-%s mining speed");
+	//TODO dragging curse
+
 
 	public static RegistryEntry<Enchantment> reg(String id, NonNullSupplier<? extends Enchantment> sup, String desc) {
 		return CelestialEnchantments.REGISTRATE.enchantment(id, EnchantmentCategory.BREAKABLE,

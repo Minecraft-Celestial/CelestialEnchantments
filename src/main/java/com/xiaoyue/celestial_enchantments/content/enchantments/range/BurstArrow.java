@@ -1,7 +1,7 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.range;
 
 import com.xiaoyue.celestial_enchantments.content.generic.BowEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import net.minecraft.world.entity.LivingEntity;
@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 public class BurstArrow extends BowEnch {
 
 	public BurstArrow() {
-		super(Rarity.VERY_RARE, EnchConfigData.NORMAL_5);
+		super(Rarity.VERY_RARE, EnchData.normal(3, ARROW_EFFECT));
 	}
 
 	@Override

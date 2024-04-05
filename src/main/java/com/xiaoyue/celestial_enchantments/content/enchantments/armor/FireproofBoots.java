@@ -1,7 +1,7 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.tags.DamageTypeTags;
@@ -11,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class FireproofBoots extends DefenceEnch {
 
 	public FireproofBoots() {
-		super(Rarity.UNCOMMON, Type.FEET, EnchConfigData.NORMAL_1, EFFECT);
+		super(Rarity.UNCOMMON, Type.FEET, EnchData.normal(1, EFFECT));
 	}
 
 	@Override

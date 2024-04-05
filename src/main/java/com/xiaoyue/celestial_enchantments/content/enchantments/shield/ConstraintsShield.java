@@ -3,7 +3,8 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.shield;
 import com.xiaoyue.celestial_core.data.CCDamageTypes;
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.content.generic.ShieldEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2library.capability.conditionals.*;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import dev.xkmc.l2serial.serialization.SerialClass;
@@ -17,7 +18,7 @@ public class ConstraintsShield extends ShieldEnch
 	public static final TokenKey<Token> KEY = TokenKey.of(CelestialEnchantments.loc("constraints_shield"));
 
 	public ConstraintsShield() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchData.treasure(3, SHIELD));
 	}
 
 	@Override

@@ -2,7 +2,8 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.range;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.BowEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Arrow;
@@ -12,7 +13,7 @@ import java.util.List;
 public class ArrowOfTraction extends BowEnch {
 
 	public ArrowOfTraction() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchData.normal(3, ARROW_EFFECT));
 	}
 
 	@Override

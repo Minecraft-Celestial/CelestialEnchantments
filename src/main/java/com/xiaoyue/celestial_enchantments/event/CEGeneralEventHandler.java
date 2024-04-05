@@ -19,6 +19,7 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerXpEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -70,6 +71,15 @@ public class CEGeneralEventHandler {
 		for (var entry : IEnchUtils.getArmorEnch(event.getEntity()).entrySet()) {
 			if (entry.getKey() instanceof LivingHealEnch ench) {
 				ench.onLivingHeal(event, event.getEntity(), entry.getValue());
+			}
+		}
+	}
+
+	@SubscribeEvent(priority = EventPriority.LOW)
+	public static void onLivingDeath(LivingDeathEvent event) {
+		for (var entry : IEnchUtils.getArmorEnch(event.getEntity()).entrySet()) {
+			if (entry.getKey() instanceof DeathEnch ench) {
+				ench.onDeath(event.getEntity(), entry.getValue());
 			}
 		}
 	}

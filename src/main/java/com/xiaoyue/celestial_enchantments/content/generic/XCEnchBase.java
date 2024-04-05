@@ -1,7 +1,7 @@
 package com.xiaoyue.celestial_enchantments.content.generic;
 
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.base.L2Registrate;
@@ -23,16 +23,7 @@ import java.util.Set;
 
 public class XCEnchBase extends Enchantment {
 
-	public static final EnchGroup CURSE = new EnchGroup(ChatFormatting.RED);
-	public static final EnchGroup DEATH = new EnchGroup(ChatFormatting.LIGHT_PURPLE);
-	public static EnchGroup INFLICT = new EnchGroup(ChatFormatting.GREEN);
-	public static EnchGroup A30 = new EnchGroup(ChatFormatting.YELLOW);
-	public static EnchGroup A75 = new EnchGroup(ChatFormatting.AQUA);
-	public static EnchGroup A300 = new EnchGroup(ChatFormatting.GOLD);
-	public static EnchGroup EFFECT = new EnchGroup(ChatFormatting.GREEN);
-	public static EnchGroup REACTIVE = new EnchGroup(ChatFormatting.DARK_AQUA);
-	public static EnchGroup EXP = new EnchGroup(ChatFormatting.YELLOW);
-	public static EnchGroup PROTECT = new EnchGroup(ChatFormatting.GOLD);
+	public static final EnchGroup CURSE = EnchGroup.simple(ChatFormatting.RED);
 
 	private static final List<XCEnchBase> CACHE = new ArrayList<>();
 
@@ -77,11 +68,11 @@ public class XCEnchBase extends Enchantment {
 		return event.getSource();
 	}
 
-	private final EnchConfigData config;
+	private final EnchData config;
 	public Set<EquipmentSlot> slots;
 
 
-	XCEnchBase(Rarity rarity, Type type, EnchConfigData config) {
+	XCEnchBase(Rarity rarity, Type type, EnchData config) {
 		super(rarity, type.category, type.slots);
 		this.slots = Set.of(type.slots);
 		this.config = config;
@@ -98,37 +89,45 @@ public class XCEnchBase extends Enchantment {
 
 	@Override
 	public final int getMaxLevel() {
-		return config.maxLv();
+		return config.level().maxLv();
 	}
 
 	@Override
 	public final int getMinCost(int pLevel) {
-		return config.getMinCost(pLevel);
+		return config.level().getMinCost(pLevel);
 	}
 
 	@Override
 	public final int getMaxCost(int pLevel) {
-		return config.getMaxCost(pLevel);
+		return config.level().getMaxCost(pLevel);
 	}
 
 	@Override
 	public final boolean isTreasureOnly() {
-		return config.isTreasure();
+		return config.level().isTreasure();
 	}
 
 	@Override
 	public final boolean isCurse() {
-		return config.curse();
+		return config.level().curse();
 	}
 
 	@Override
 	public final boolean isDiscoverable() {
-		return super.isDiscoverable() && config.discoverable();
+		return super.isDiscoverable() && config.level().discoverable();
 	}
 
 	@Override
 	public final boolean isTradeable() {
-		return super.isTradeable() && config.tradeable();
+		return false;
+	}
+
+	protected boolean checkCompatibility(Enchantment other) {
+		if (other instanceof XCEnchBase base) {
+			return config.group().multi() || config.group() != base.config.group();
+		} else {
+			return config.group().compatible(other);
+		}
 	}
 
 }

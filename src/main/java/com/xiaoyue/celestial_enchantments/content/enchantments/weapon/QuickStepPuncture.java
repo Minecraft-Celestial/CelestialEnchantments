@@ -2,7 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -19,7 +19,7 @@ public class QuickStepPuncture extends AttackEnch {
 	}
 
 	public QuickStepPuncture() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_5, A75);
+		super(Rarity.RARE, EnchData.treasure(5, A75));
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -18,7 +18,7 @@ public class UpwardPick extends WeaponEnch {
 	private static final EnchEffectEntry EFF = EnchEffectEntry.amp(() -> MobEffects.LEVITATION, UpwardPick::dur);
 
 	public UpwardPick() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3, INFLICT);
+		super(Rarity.RARE, EnchData.normal(3, INFLICT));
 	}
 
 	@Override

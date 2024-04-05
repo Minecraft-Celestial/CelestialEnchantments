@@ -2,7 +2,8 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.shield;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.ShieldEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.ShieldBlockEvent;
@@ -10,7 +11,7 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 public class HolyShield extends ShieldEnch {
 
 	public HolyShield() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_3);
+		super(Rarity.RARE, EnchData.normal(3, SHIELD));
 	}
 
 	@Override

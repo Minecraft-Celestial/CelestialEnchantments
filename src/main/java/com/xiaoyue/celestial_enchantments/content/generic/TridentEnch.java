@@ -1,14 +1,18 @@
 package com.xiaoyue.celestial_enchantments.content.generic;
 
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrownTrident;
 import org.jetbrains.annotations.Nullable;
 
 public class TridentEnch extends XCEnchBase {
 
-	protected TridentEnch(Rarity rarity, EnchConfigData config) {
+	public static final EnchGroup TRIDENT = EnchGroup.simple(ChatFormatting.AQUA);
+
+	protected TridentEnch(Rarity rarity, EnchData config) {
 		super(rarity, Type.TRIDENT, config);
 	}
 

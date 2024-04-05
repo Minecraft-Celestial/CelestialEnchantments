@@ -1,14 +1,15 @@
 package com.xiaoyue.celestial_enchantments.content.generic;
 
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.LivingEntity;
 
 public class DefenceEnch extends ArmorEnch {
 
-	protected DefenceEnch(Rarity rarity, Type type, EnchConfigData config, EnchGroup group) {
-		super(rarity, type, config, group);
+	protected DefenceEnch(Rarity rarity, Type type, EnchData data) {
+		super(rarity, type, data);
 	}
 
 	public boolean onAttacked(LivingEntity user, AttackCache cache, int lv) {

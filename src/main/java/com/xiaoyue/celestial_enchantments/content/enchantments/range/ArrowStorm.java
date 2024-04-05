@@ -2,7 +2,8 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.range;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.BowEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
@@ -15,7 +16,7 @@ import java.util.List;
 public class ArrowStorm extends BowEnch {
 
 	public ArrowStorm() {
-		super(Rarity.RARE, EnchConfigData.NORMAL_5);
+		super(Rarity.RARE, EnchData.normal(3,ARROW));
 	}
 
 	@Override

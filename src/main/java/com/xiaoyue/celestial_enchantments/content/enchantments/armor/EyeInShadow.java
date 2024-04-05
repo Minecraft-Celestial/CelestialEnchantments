@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 import com.xiaoyue.celestial_core.utils.CCUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.LivingTickEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,7 +12,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class EyeInShadow extends ArmorEnch implements LivingTickEnch {
 
 	public EyeInShadow() {
-		super(Rarity.VERY_RARE, Type.HEAD, EnchConfigData.NORMAL_1, EFFECT);
+		super(Rarity.VERY_RARE, Type.HEAD, EnchData.normal(1, EFFECT));
 	}
 
 	@Override

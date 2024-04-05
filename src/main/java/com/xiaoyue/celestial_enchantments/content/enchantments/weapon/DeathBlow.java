@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.generic.AttributeEnchantment;
 import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.init.L2DamageTracker;
 import dev.xkmc.l2library.util.math.MathHelper;
 import net.minecraft.network.chat.Component;
@@ -18,7 +18,7 @@ public class DeathBlow extends WeaponEnch implements AttributeEnchantment {
 	}
 
 	public DeathBlow() {
-		super(Rarity.UNCOMMON, EnchConfigData.NORMAL_3, A75);
+		super(Rarity.UNCOMMON, EnchData.treasure(3, A75));
 	}
 
 	@Override

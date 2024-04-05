@@ -2,7 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.effect.MobEffects;
@@ -11,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class GiftOfThunderGod extends DefenceEnch {
 
 	public GiftOfThunderGod() {
-		super(Rarity.UNCOMMON, Type.CHEST, EnchConfigData.NORMAL_3, EFFECT);
+		super(Rarity.UNCOMMON, Type.CHEST, EnchData.treasure(3, EFFECT));
 	}
 
 	@Override

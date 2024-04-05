@@ -1,7 +1,8 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.tool;
 
 import com.xiaoyue.celestial_enchantments.content.generic.ToolEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BoneMealItem;
@@ -13,7 +14,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 public class AccelerateGrowth extends ToolEnch {
 
 	public AccelerateGrowth() {
-		super(Rarity.VERY_RARE, Type.HOE, EnchConfigData.treasure(1));
+		super(Rarity.VERY_RARE, Type.HOE, EnchData.treasure(1, TOOL));
 	}
 
 	public static void onRightBlockEvent(PlayerInteractEvent.RightClickBlock event, int lv) {

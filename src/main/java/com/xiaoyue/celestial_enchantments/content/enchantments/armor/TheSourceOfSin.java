@@ -2,7 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
-import com.xiaoyue.celestial_enchantments.data.EnchConfigData;
+import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class TheSourceOfSin extends ArmorEnch {
 
 	public TheSourceOfSin() {
-		super(Rarity.VERY_RARE, Type.CHEST, EnchConfigData.NORMAL_3, REACTIVE);
+		super(Rarity.VERY_RARE, Type.CHEST, EnchData.normal(3, REACTIVE));
 	}
 
 	@Override
