@@ -44,16 +44,17 @@ public class CEEnchantments {
 
 	public static final RegistryEntry<Enchantment> QUENCHED_BLADE = reg("quenched_blade", QuenchedBlade::new, "When attacking a burning target, extinguish the target's flame and increase damage by %s for every remaining seconds of fire, up to %s"); //A300, 144%
 	public static final RegistryEntry<Enchantment> WORDS_OF_WISDOM = reg("words_of_wisdom", WordsOfWisdom::new, "Increase damage by %s for every exp level, up to %s");// A300, 180%
-	// special
-	public static final RegistryEntry<Enchantment> DEATH_BLADE = reg("death_blade", DeathBlade::new, "Increase damage by %s of the target's maximum health");//A300, up to 4% of target max
-	public static final RegistryEntry<Enchantment> MAGIC_BLADE = reg("magic_blade", MagicBlade::new, "When you hurt an target, deal additional magic damage equal to the original damage"); // A300, 100%
-	public static final RegistryEntry<Enchantment> VOID_CHAIN = reg("void_chain", VoidChain::new, "Reduce attack damage by 90%, deal original damage * [enchantment level] * 50% damage to surrounding targets after attack");// A300,
-	public static final RegistryEntry<Enchantment> DESTRUCTION_CRACK = reg("destruction_crack", DestructionCrack::new, "On hit, remove invulnerable time on target for 1 minutes");// Effect
-	public static final RegistryEntry<Enchantment> SUPPRESSION_BLADE = reg("suppression_blade", SuppressionBlade::new, "After the attack, the target will no longer be able to heal for 1 minutes");// Effect
-	public static final RegistryEntry<Enchantment> SHADOW_TOUCH = reg("shadow_touch", ShadowTouch::new, "When attacking in areas with brightness less than 5, deal an additional [enchantment level] point of void damage to the target"); // A300
-	public static final RegistryEntry<Enchantment> THE_HAND_OF_THIEF = reg("the_hand_of_thief", TheHandOfThief::new, "When killing a target, the probability of the target dropping the equipment they are wearing increases to 100%"); // Effect
 
 	// TODO progress here
+
+	// special
+	public static final RegistryEntry<Enchantment> DEATH_BLADE = reg("death_blade", DeathBlade::new, "Increase damage by %s of the target's maximum health");//A300, up to 4% of target max
+	public static final RegistryEntry<Enchantment> MAGIC_BLADE = reg("magic_blade", MagicBlade::new, "When you hurt an target, deal additional magic damage equal to %s of the original damage"); // A300, 100%
+	public static final RegistryEntry<Enchantment> VOID_CHAIN = reg("void_chain", VoidChain::new, "When you hurt an target, deal %s of the damage as abyss damage to surrounding monsters");// A300,
+	public static final RegistryEntry<Enchantment> DESTRUCTION_CRACK = reg("destruction_crack", DestructionCrack::new, "Inflict %s");// Effect
+	public static final RegistryEntry<Enchantment> SUPPRESSION_BLADE = reg("suppression_blade", SuppressionBlade::new, "Inflict %s");// Effect
+	public static final RegistryEntry<Enchantment> SHADOW_TOUCH = reg("shadow_touch", ShadowTouch::new, "When attacking in areas with brightness less than 5, deal an additional [enchantment level] point of void damage to the target"); // A300
+	public static final RegistryEntry<Enchantment> THE_HAND_OF_THIEF = reg("the_hand_of_thief", TheHandOfThief::new, "When killing a target, the probability of the target dropping the equipment they are wearing increases to 100%"); // Effect
 
 	// all armor
 	public static final RegistryEntry<Enchantment> VOID_PROTECTION = reg("void_protection", VoidProtection::new, "Reduce %s of void damage received");// A

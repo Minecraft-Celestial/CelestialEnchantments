@@ -11,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class DeathBlade extends AttackEnch {
 
 	private static double atk() {
-		return 0.008;
+		return 0.008;//TODO
 	}
 
 	public DeathBlade() {
