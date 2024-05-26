@@ -12,6 +12,10 @@ import net.minecraftforge.event.entity.player.PlayerXpEvent;
 
 public class CorruptScholar extends ArmorEnch implements ChangeXpEnch {
 
+  private static double exp() {
+		return 0.8;
+	}
+
 	public CorruptScholar() {
 		super(Rarity.UNCOMMON, Type.HEAD,  EnchData.bad(3, EXP));
 	}
@@ -24,6 +28,6 @@ public class CorruptScholar extends ArmorEnch implements ChangeXpEnch {
 			else if (x < 0.7) EntityUtils.addEct(player, MobEffects.WITHER, 100, 0);
 			else EntityUtils.addEct(player, MobEffects.WEAKNESS, 100, 0);
 		}
-		return level * 0.8f;
+		return level * (float) exp();
 	}
 }

@@ -13,13 +13,17 @@ import net.minecraft.world.item.enchantment.Enchantments;
 
 public class MorningStar extends BowEnch {
 
+  private static double chance() {
+		return 0.25;
+	}
+
 	public MorningStar() {
 		super(Rarity.RARE, EnchData.normal(3,ARROW_EFFECT));
 	}
 
 	@Override
 	public void onDamageTargetFinal(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
-		if (chance(target, 0.25 * lv)) {
+		if (chance(target, chance() * lv)) {
 			GeneralEventHandler.schedule(() -> EntityUtils.spawnThunder(target));
 		}
 	}

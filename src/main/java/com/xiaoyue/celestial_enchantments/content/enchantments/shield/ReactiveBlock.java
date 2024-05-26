@@ -8,13 +8,17 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 
 public class ReactiveBlock extends ShieldEnch {
 
+  private static double knockback() {
+		return 0.5;
+	}
+
 	public ReactiveBlock() {
 		super(Rarity.RARE, EnchData.normal(3, SHIELD));
 	}
 
 	@Override
 	public void onShieldBlock(ShieldBlockEvent event, LivingEntity attacker, LivingEntity entity, int level) {
-		attacker.knockback(level * 0.5f, entity.getX() - attacker.getX(), entity.getZ() - attacker.getZ());
+		attacker.knockback(level * (float) knockback(), entity.getX() - attacker.getX(), entity.getZ() - attacker.getZ());
 	}
 
 }

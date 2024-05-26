@@ -8,6 +8,10 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class SolidArmor extends DefenceEnch {
 
+  private static double def() {
+		return 0.03;
+	}
+
 	public SolidArmor() {
 		super(Rarity.VERY_RARE, Type.ARMOR, EnchData.treasure(3, PROTECT));
 	}
@@ -15,7 +19,7 @@ public class SolidArmor extends DefenceEnch {
 	@Override
 	public void onDamagedImpl(LivingEntity user, AttackCache cache, int lv) {
 		if (user.getHealth() < user.getMaxHealth() / 2) {
-			cache.addDealtModifier(DamageModifier.multTotal(1 - lv * 0.03f));
+			cache.addDealtModifier(DamageModifier.multTotal(1 - lv * (float) def()));
 		}
 	}
 

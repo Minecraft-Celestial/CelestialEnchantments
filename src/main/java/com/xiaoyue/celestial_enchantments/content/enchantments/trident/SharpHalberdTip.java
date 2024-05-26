@@ -11,13 +11,17 @@ import org.jetbrains.annotations.Nullable;
 
 public class SharpHalberdTip extends TridentEnch {
 
+  private static double atk() {
+		return 0.2;
+	}
+
 	public SharpHalberdTip() {
 		super(Rarity.VERY_RARE, EnchData.normal(5, TRIDENT));
 	}
 
 	@Override
 	public void hurtTarget(@Nullable ThrownTrident trident, LivingEntity target, int lv, AttackCache cache) {
-		cache.addHurtModifier(DamageModifier.multTotal(1 + lv * 0.2f));
+		cache.addHurtModifier(DamageModifier.multTotal(1 + lv * (float) atk()));
 	}
 
 }

@@ -10,6 +10,10 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class FireproofBoots extends DefenceEnch {
 
+  private static double damageMult() {
+		return 0.85;
+	}
+
 	public FireproofBoots() {
 		super(Rarity.UNCOMMON, Type.FEET, EnchData.normal(1, EFFECT));
 	}
@@ -17,7 +21,7 @@ public class FireproofBoots extends DefenceEnch {
 	@Override
 	public void onDamagedImpl(LivingEntity user, AttackCache cache, int lv) {
 		if (getSource(cache).is(DamageTypeTags.IS_FIRE)) {
-			cache.addDealtModifier(DamageModifier.multTotal(0.85f));
+			cache.addDealtModifier(DamageModifier.multTotal((float) damageMult()));
 		}
 	}
 

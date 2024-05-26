@@ -10,6 +10,10 @@ import java.util.List;
 
 public class PartingWish extends DeathEnch {
 
+  private static double heal() {
+		return 8;
+	}
+
 	public PartingWish() {
 		super(Rarity.UNCOMMON, Type.HEAD, EnchData.normal(3, DEATH));
 	}
@@ -19,7 +23,7 @@ public class PartingWish extends DeathEnch {
 		if (!(entity instanceof Player)) return;
 		List<LivingEntity> players = EntityUtils.getExceptForCentralEntity(entity, 6, 2, livingEntity -> livingEntity instanceof Player);
 		for (LivingEntity list : players) {
-			list.heal(level * 8);
+			list.heal(level * (float) heal());
 		}
 	}
 

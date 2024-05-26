@@ -14,6 +14,10 @@ import net.minecraft.world.entity.player.Player;
 public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.Token, EchoEffect>, Context {
 
 	private static final TokenKey<Token> KEY = TokenKey.of(CelestialEnchantments.loc("echo"));
+	
+	private static double heal() {
+		return 0.05;
+	}
 
 	public EchoEffect() {
 		super(Rarity.VERY_RARE, Type.CHEST, EnchData.treasure(3, PROTECT));
@@ -26,7 +30,7 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 				if (v < user.getHealth()) return v;
 				var data = ConditionalData.HOLDER.get(player);
 				if (data.hasData(KEY)) return v;
-				player.heal(player.getMaxHealth() * v * 0.05f);
+				player.heal(player.getMaxHealth() * v * (float) heal());
 				data.getOrCreateData(this, this).timer = 1200;
 				return 0;
 			}));

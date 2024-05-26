@@ -8,13 +8,17 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 
 public class ScorchingShield extends ShieldEnch {
 
+  private static int fireTick() {
+		return 20;
+	}
+
 	public ScorchingShield() {
 		super(Rarity.RARE, EnchData.normal(3, SHIELD));
 	}
 
 	@Override
 	public void onShieldBlock(ShieldBlockEvent event, LivingEntity attacker, LivingEntity entity, int level) {
-		attacker.setSecondsOnFire(level * 20);
+		attacker.setSecondsOnFire(level * fireTick());
 	}
 
 }

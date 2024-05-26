@@ -9,13 +9,17 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class CurseOfWeakness extends AttackEnch {
 
+  private static double atk() {
+		return 0.15;
+	}
+
 	public CurseOfWeakness() {
 		super(Rarity.UNCOMMON,  EnchData.curse(3));
 	}
 
 	@Override
 	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
-		cache.addHurtModifier(DamageModifier.multTotal(1 - lv * 0.15f));
+		cache.addHurtModifier(DamageModifier.multTotal(1 - lv * (float) atk()));
 	}
 
 }

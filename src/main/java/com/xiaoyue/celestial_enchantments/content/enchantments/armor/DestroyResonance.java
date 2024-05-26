@@ -12,6 +12,11 @@ import net.minecraft.world.entity.LivingEntity;
 import java.util.List;
 
 public class DestroyResonance extends ArmorEnch {
+
+  private static double damage() {
+		return 2;
+	}
+
 	public DestroyResonance() {
 		super(Rarity.RARE, Type.ARMOR,  EnchData.treasure(3, REACTIVE));
 	}
@@ -23,7 +28,7 @@ public class DestroyResonance extends ArmorEnch {
 		others.remove(user);
 		for (LivingEntity list : others) {
 			DamageSource source = new DamageSource(user.getLastDamageSource().typeHolder());
-			GeneralEventHandler.schedule(() -> list.hurt(source, level * 2));
+			GeneralEventHandler.schedule(() -> list.hurt(source, level * (float) damage()));
 		}
 	}
 

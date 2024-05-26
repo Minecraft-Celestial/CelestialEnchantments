@@ -15,6 +15,10 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 public class ConstraintsShield extends ShieldEnch
 		implements TokenProvider<ConstraintsShield.Token, ConstraintsShield>, Context {
 
+	private static double damageMult() {
+		return 0.5;
+	}
+
 	public static final TokenKey<Token> KEY = TokenKey.of(CelestialEnchantments.loc("constraints_shield"));
 
 	public ConstraintsShield() {
@@ -39,7 +43,7 @@ public class ConstraintsShield extends ShieldEnch
 				data.cec++;
 			} else {
 				data.cec = 0;
-				float dmg = event.getBlockedDamage() * level * 0.5f;
+				float dmg = event.getBlockedDamage() * level * (float) damageMult();
 				GeneralEventHandler.schedule(() -> attacker.hurt(CCDamageTypes.magic(entity), dmg));
 			}
 		}

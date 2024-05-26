@@ -15,6 +15,10 @@ import java.util.List;
 
 public class ArrowStorm extends BowEnch {
 
+  private static double atk() {
+		return 0.1;
+	}
+
 	public ArrowStorm() {
 		super(Rarity.RARE, EnchData.normal(3,ARROW));
 	}
@@ -27,7 +31,7 @@ public class ArrowStorm extends BowEnch {
 	@Override
 	public void onDamageTargetFinal(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
 		List<LivingEntity> entities = EntityUtils.getExceptForCentralEntity(target, 5, 2);
-		float damage = cache.getPreDamage() * lv * 0.1f;
+		float damage = cache.getPreDamage() * lv * (float) atk();
 		DamageSource source = new DamageSource(getSource(cache).typeHolder());
 		for (LivingEntity list : entities) {
 			GeneralEventHandler.schedule(() -> list.hurt(source, damage));

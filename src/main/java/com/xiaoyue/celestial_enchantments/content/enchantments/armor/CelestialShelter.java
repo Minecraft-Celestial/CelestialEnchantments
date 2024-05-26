@@ -8,13 +8,17 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class CelestialShelter extends DefenceEnch {
 
+  private static double def() {
+		return 0.25;
+	}
+
 	public CelestialShelter() {
 		super(Rarity.VERY_RARE, Type.LEGS, EnchData.special(1, PROTECT));
 	}
 
 	@Override
 	public void onDamagedImpl(LivingEntity user, AttackCache cache, int lv) {
-		cache.addDealtModifier(DamageModifier.nonlinearMiddle(1015, f -> Math.min(f, user.getMaxHealth() * 0.25f)));
+		cache.addDealtModifier(DamageModifier.nonlinearMiddle(1015, f -> Math.min(f, user.getMaxHealth() * (float) def())));
 	}
 
 }

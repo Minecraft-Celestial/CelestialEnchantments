@@ -10,13 +10,17 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 
 public class PowerlessCurse extends ToolEnch implements PlayerBreakEnch {
 
+  private static double speed() {
+		return 0.15;
+	}
+
 	public PowerlessCurse() {
 		super(Rarity.UNCOMMON, Type.DIGGER, EnchData.curse(3));
 	}
 
 	@Override
 	public float onBreakSpeed(PlayerEvent.BreakSpeed event, Player player, BlockState blockState, int level) {
-		return 1 - level * 0.15f;
+		return 1 - level * (float) speed();
 	}
 
 }

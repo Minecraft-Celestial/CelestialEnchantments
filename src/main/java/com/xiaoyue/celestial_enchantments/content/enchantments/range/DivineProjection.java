@@ -10,6 +10,10 @@ import net.minecraft.world.entity.projectile.Arrow;
 
 public class DivineProjection extends BowEnch {
 
+  private static double atk() {
+		return 0.03;
+	}
+
 	public DivineProjection() {
 		super(Rarity.VERY_RARE, EnchData.treasure(1,ARROW));
 	}
@@ -18,7 +22,7 @@ public class DivineProjection extends BowEnch {
 	public void hurtTarget(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
 		var owner = arrow.getOwner();
 		if (owner != null) {
-			cache.addHurtModifier(DamageModifier.multTotal(1 + owner.distanceTo(target) * 0.03f));
+			cache.addHurtModifier(DamageModifier.multTotal(1 + owner.distanceTo(target) * (float) atk()));
 		}
 	}
 

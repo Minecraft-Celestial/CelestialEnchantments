@@ -9,13 +9,17 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 public class RainAndDewGrace extends ArmorEnch implements LivingTickEnch {
 
+  private static int time() {
+		return 100;
+	}
+
 	public RainAndDewGrace() {
 		super(Rarity.RARE, Type.HEAD, EnchData.normal(3, EFFECT));
 	}
 
 	@Override
 	public void onLivingTick(LivingEvent.LivingTickEvent event, LivingEntity entity, int level) {
-		if (entity.isInWaterOrRain() && entity.tickCount % 100 == 0) {
+		if (entity.isInWaterOrRain() && entity.tickCount % time() == 0) {
 			entity.heal(level);
 		}
 	}

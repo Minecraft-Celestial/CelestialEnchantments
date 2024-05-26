@@ -12,6 +12,10 @@ import java.util.List;
 
 public class DeathHatred extends DeathEnch {
 
+ private static double damage() {
+		return 15;
+	}
+
 	public DeathHatred() {
 		super(Rarity.RARE, Type.CHEST, EnchData.normal(3, DEATH));
 	}
@@ -22,7 +26,7 @@ public class DeathHatred extends DeathEnch {
 		List<LivingEntity> players = EntityUtils.getExceptForCentralEntity(entity, 6, 2, livingEntity -> livingEntity instanceof Monster);
 		for (LivingEntity list : players) {
 			DamageSource damageSource = new DamageSource(entity.damageSources().magic().typeHolder());
-			list.hurt(damageSource, level * 15);
+			list.hurt(damageSource, level * (float) damage());
 		}
 	}
 }

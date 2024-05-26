@@ -10,6 +10,10 @@ import net.minecraft.world.item.enchantment.Enchantments;
 
 public class HearthSupport extends ArmorEnch {
 
+  private static int fireTime() {
+		return 40;
+	}
+
 	public HearthSupport() {
 		super(Rarity.RARE, Type.ARMOR, EnchData.normal(5, REACTIVE));
 	}
@@ -23,7 +27,7 @@ public class HearthSupport extends ArmorEnch {
 	@Override
 	public void doPostHurt(LivingEntity entity, Entity attacker, int level) {
 		if (attacker instanceof LivingEntity livingEntity) {
-			livingEntity.setSecondsOnFire(level * 40);
+			livingEntity.setSecondsOnFire(level * fireTime());
 		}
 	}
 

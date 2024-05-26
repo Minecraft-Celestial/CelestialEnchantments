@@ -12,6 +12,10 @@ import org.jetbrains.annotations.Nullable;
 
 public class ExplosiveHalberd extends TridentEnch {
 
+  private static double strength() {
+		return 1;
+	}
+
 	public ExplosiveHalberd() {
 		super(Rarity.VERY_RARE, EnchData.normal(5, TRIDENT));
 	}
@@ -21,7 +25,7 @@ public class ExplosiveHalberd extends TridentEnch {
 		if (trident != null && !target.level().isClientSide()) {
 			if (chance(target, lv * 0.2)) {
 				GeneralEventHandler.schedule(() -> target.level().explode(target,
-						target.getX(), target.getY(), target.getZ(), 1.0f, Level.ExplosionInteraction.NONE));
+						target.getX(), target.getY(), target.getZ(), (float) strength(), Level.ExplosionInteraction.NONE));
 			}
 		}
 	}

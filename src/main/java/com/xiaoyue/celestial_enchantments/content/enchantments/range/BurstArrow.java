@@ -10,14 +10,22 @@ import net.minecraft.world.level.Level;
 
 public class BurstArrow extends BowEnch {
 
+  private static double chance() {
+		return 0.2;
+	}
+
+  private static double strength() {
+		return 1;
+	}
+
 	public BurstArrow() {
 		super(Rarity.VERY_RARE, EnchData.normal(3, ARROW_EFFECT));
 	}
 
 	@Override
 	public void hurtTarget(Arrow arrow, LivingEntity target, int lv, AttackCache cache) {
-		if (chance(target, 0.2 * lv)) {
-			GeneralEventHandler.schedule(() -> target.level().explode(arrow, arrow.getX(), arrow.getY(), arrow.getZ(), 1.0f,
+		if (chance(target, chance() * lv)) {
+			GeneralEventHandler.schedule(() -> target.level().explode(arrow, arrow.getX(), arrow.getY(), arrow.getZ(), (float) strength(),
 					Level.ExplosionInteraction.NONE));
 		}
 	}

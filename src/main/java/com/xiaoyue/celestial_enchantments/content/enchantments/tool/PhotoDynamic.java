@@ -12,6 +12,10 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 
 public class PhotoDynamic extends ToolEnch implements PlayerBreakEnch {
 
+  private static double speed() {
+		return 0.12;
+	}
+
 	public PhotoDynamic() {
 		super(Rarity.RARE, Type.DIGGER,  EnchData.normal(3, TOOL));
 	}
@@ -20,7 +24,7 @@ public class PhotoDynamic extends ToolEnch implements PlayerBreakEnch {
 	public float onBreakSpeed(PlayerEvent.BreakSpeed event, Player player, BlockState blockState, int level) {
 		if (player.level() instanceof ServerLevel sl) {
 			int brightness = player.level().getBrightness(LightLayer.BLOCK, player.blockPosition());
-			if (brightness > 10) return 1 + level * 0.12f;
+			if (brightness > 10) return 1 + level * (float) speed();
 		}
 		return 1;
 	}

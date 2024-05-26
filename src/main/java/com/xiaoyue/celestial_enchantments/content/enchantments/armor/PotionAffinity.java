@@ -9,11 +9,15 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class PotionAffinity extends ArmorEnch {
 
+  private static double extraTime() {
+		return 0.15;
+	}
+
 	public PotionAffinity() {
 		super(Rarity.RARE, Type.CHEST, EnchData.treasure(3, EFFECT));
 	}
 
 	public static void onAddedEffect(LivingEntity entity, int lv, MobEffectInstance ins) {
-		new EffectBuilder(ins).setDuration((int) (ins.getDuration() * (1 + lv * 0.15f)));
+		new EffectBuilder(ins).setDuration((int) (ins.getDuration() * (1 + lv * extraTime())));
 	}
 }
