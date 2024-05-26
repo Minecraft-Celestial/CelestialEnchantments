@@ -22,7 +22,31 @@ public enum CELang {
 	ADVANCED("[Advanced]",0),
 	LEGENDARY("[Legendary]",0),
 	CURSE("[Curse]",0),
-	DOUBLE("[Double-Edge]",0)
+	DOUBLE("[Double-Edge]",0),
+
+
+	GENERAL("[Generic]",0),
+	UTILITY("[Utility]",0),
+	SHIELD("[Shielding]",0),
+	TRIDENT("[Trident]",0),
+	ARROW("[Archery]",0),
+	ARROW_EFFECT("[Dipped]",0),
+	DEATH("[Death]",0),
+	ARMOR_EFFECT("[Coating]",0),
+	REACTIVE("[Reactive]",0),
+	EXP("[Experience]",0),
+	PROT("[Shelter]",0),
+	INFLICT("[Infused]",0),
+	BLADE("[Blade]",0),
+	BERSERK("[Shredding]",0),
+	EPIC("[Master]",0),
+
+	HEAD("[Helmet]",0),
+	CHEST("[Chestplate]",0),
+	LEGS("[Leggings]",0),
+	FEET("[Boots]",0),
+
+
 	;
 
 	private final String key, def;
@@ -52,8 +76,8 @@ public enum CELang {
 	}
 
 	public static MutableComponent percSmall(int lv, double val, boolean alt) {
-		return (alt ? Component.literal("[Lv]x" + (int) Math.round(val * 10000) * 0.01 + "%") :
-				Component.literal((int) Math.round(lv * val * 10000) * 0.01 + "%"))
+		return (alt ? Component.literal("[Lv]x" + (int) Math.round(val * 10000) /100d + "%") :
+				Component.literal((int) Math.round(lv * val * 10000) /100d + "%"))
 				.withStyle(ChatFormatting.DARK_AQUA);
 	}
 

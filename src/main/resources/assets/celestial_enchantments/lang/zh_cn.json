@@ -21,6 +21,27 @@
   "celestial_enchantments.tooltip.legendary": "[传奇]",
   "celestial_enchantments.tooltip.normal": "[基础]",
 
+  "celestial_enchantments.tooltip.armor_effect": "[镀层]",
+  "celestial_enchantments.tooltip.arrow": "[射技]",
+  "celestial_enchantments.tooltip.arrow_effect": "[魔矢]",
+  "celestial_enchantments.tooltip.berserk": "[狂暴]",
+  "celestial_enchantments.tooltip.blade": "[利刃]",
+  "celestial_enchantments.tooltip.death": "[死灵]",
+  "celestial_enchantments.tooltip.epic": "[密法]",
+  "celestial_enchantments.tooltip.exp": "[经验]",
+  "celestial_enchantments.tooltip.general": "[通用]",
+  "celestial_enchantments.tooltip.inflict": "[魔剑]",
+  "celestial_enchantments.tooltip.prot": "[守护]",
+  "celestial_enchantments.tooltip.reactive": "[反应]",
+  "celestial_enchantments.tooltip.shield": "[格挡]",
+  "celestial_enchantments.tooltip.trident": "[投掷]",
+  "celestial_enchantments.tooltip.utility": "[便捷]",
+
+  "celestial_enchantments.tooltip.chest": "[胸甲]",
+  "celestial_enchantments.tooltip.feet": "[靴子]",
+  "celestial_enchantments.tooltip.head": "[头盔]",
+  "celestial_enchantments.tooltip.legs": "[护腿]",
+
   "enchantment.celestial_enchantments.fatal_blow": "致命一击",
   "enchantment.celestial_enchantments.fatal_blow.desc": "+%s暴击伤害",
   "enchantment.celestial_enchantments.withering_blade": "凋亡之刃",
@@ -218,4 +239,5 @@
   
   "enchantment.celestial_enchantments.powerless_curse": "无力诅咒",
   "enchantment.celestial_enchantments.powerless_curse.desc": "降低[附魔等级]*15%挖掘速度"
+
 }

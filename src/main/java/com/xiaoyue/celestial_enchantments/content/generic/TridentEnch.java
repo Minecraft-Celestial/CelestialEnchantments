@@ -1,5 +1,6 @@
 package com.xiaoyue.celestial_enchantments.content.generic;
 
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
@@ -10,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class TridentEnch extends XCEnchBase {
 
-	public static final EnchGroup TRIDENT = EnchGroup.simple(ChatFormatting.AQUA);
+	public static final EnchGroup TRIDENT = EnchGroup.simple(CELang.TRIDENT, ChatFormatting.AQUA);
 
 	protected TridentEnch(Rarity rarity, EnchData config) {
 		super(rarity, Type.TRIDENT, config);

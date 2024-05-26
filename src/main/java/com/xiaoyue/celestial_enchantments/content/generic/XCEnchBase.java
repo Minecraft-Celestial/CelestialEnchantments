@@ -26,7 +26,7 @@ import java.util.Set;
 
 public class XCEnchBase extends Enchantment {
 
-	public static final EnchGroup CURSE = EnchGroup.simple(ChatFormatting.RED);
+	public static final EnchGroup CURSE = EnchGroup.simple(CELang.CURSE, ChatFormatting.RED);
 
 	private static final List<XCEnchBase> CACHE = new ArrayList<>();
 
@@ -86,16 +86,20 @@ public class XCEnchBase extends Enchantment {
 		return Component.translatable(key).withStyle(ChatFormatting.DARK_GRAY);
 	}
 
-	public Component descFull(int lv, String key, boolean alt) {
+	public List<Component> descFull(int lv, String key, boolean alt, boolean isBook) {
 		if (alt) {
-			return desc(lv, key, true);
+			return List.of(desc(lv, key, true));
 		}
 		var base = CELang.CELE.get().withStyle(ChatFormatting.AQUA).append(CommonComponents.SPACE);
 		base = base.append(config.level().type().lang.get()).append(CommonComponents.SPACE);
-		if (config.bad() && !isCurse()) {
-			base = base.append(CELang.DOUBLE.get().withStyle(ChatFormatting.LIGHT_PURPLE)).append(CommonComponents.SPACE);
+		if (!isCurse()) {
+			base = base.append(config.group().lang().get().withStyle(config.group().color())).append(CommonComponents.SPACE);
+			if (config.bad()) {
+				base = base.append(CELang.DOUBLE.get().withStyle(ChatFormatting.LIGHT_PURPLE)).append(CommonComponents.SPACE);
+			}
 		}
-		return base.append(desc(lv, key, false));
+		if (!isBook) return List.of(base.append(desc(lv, key, false)));
+		return List.of(base, desc(lv, key, false));
 	}
 
 	@Override
