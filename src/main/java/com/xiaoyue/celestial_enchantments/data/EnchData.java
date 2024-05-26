@@ -1,12 +1,11 @@
 package com.xiaoyue.celestial_enchantments.data;
 
-import com.xiaoyue.celestial_enchantments.content.generic.EnchGroup;
-import com.xiaoyue.celestial_enchantments.content.generic.XCEnchBase;
+import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
 
 public record EnchData(EnchLevel level, EnchGroup group, boolean bad) {
 
 	public static EnchData curse(int lv) {
-		return new EnchData(EnchLevel.simple(EnchType.CURSE, lv, 1), XCEnchBase.CURSE, true);
+		return new EnchData(EnchLevel.simple(EnchType.CURSE, lv, 1), CEBaseEnchantment.CURSE, true);
 	}
 
 	public static EnchData normal(int lv, EnchGroup group) {

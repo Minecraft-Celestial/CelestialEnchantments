@@ -1,4 +1,5 @@
 {
+  "block.celestial_enchantments.celestial_enchanting_table": "ǝןqɐ⟘ buıʇuɐɥɔuƎ ןɐıʇsǝןǝƆ",
   "celestial_enchantments.tooltip.advanced": "]pǝɔuɐʌpⱯ[",
   "celestial_enchantments.tooltip.alt": "ɐןnɯɹoɟ ʇɔǝɟɟǝ ʇuǝɯʇuɐɥɔuǝ ʍoɥs oʇ ]%s[ ssǝɹԀ",
   "celestial_enchantments.tooltip.armor_effect": "]buıʇɐoƆ[",
@@ -172,6 +173,9 @@
   "enchantment.celestial_enchantments.withering_blade.desc": "%s ʇɔıןɟuI",
   "enchantment.celestial_enchantments.words_of_wisdom": "ɯopsıM ɟO spɹoM",
   "enchantment.celestial_enchantments.words_of_wisdom.desc": "%s oʇ dn 'ןǝʌǝן dxǝ ʎɹǝʌǝ ɹoɟ %s ʎq ǝbɐɯɐp ǝsɐǝɹɔuI",
+  "item.celestial_enchantments.advanced_celestial_catalyst": "ʇsʎןɐʇɐƆ ןɐıʇsǝןǝƆ pǝɔuɐʌpⱯ",
+  "item.celestial_enchantments.basic_celestial_catalyst": "ʇsʎןɐʇɐƆ ןɐıʇsǝןǝƆ ɔısɐᗺ",
+  "item.celestial_enchantments.legendary_celestial_catalyst": "ʇsʎןɐʇɐƆ ןɐıʇsǝןǝƆ ʎɹɐpuǝbǝꞀ",
   "itemGroup.celestial_enchantments.max_enchantment": "ןǝʌǝꞀ xɐW - sʇuǝɯʇuɐɥɔuƎ ןɐıʇsǝןǝƆ",
   "itemGroup.celestial_enchantments.min_enchantment": "ןǝʌǝꞀ uıW - sʇuǝɯʇuɐɥɔuƎ ןɐıʇsǝןǝƆ"
 }

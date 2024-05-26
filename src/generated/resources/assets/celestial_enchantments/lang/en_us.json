@@ -1,4 +1,5 @@
 {
+  "block.celestial_enchantments.celestial_enchanting_table": "Celestial Enchanting Table",
   "celestial_enchantments.tooltip.advanced": "[Advanced]",
   "celestial_enchantments.tooltip.alt": "Press [%s] to show enchantment effect formula",
   "celestial_enchantments.tooltip.armor_effect": "[Coating]",
@@ -172,6 +173,9 @@
   "enchantment.celestial_enchantments.withering_blade.desc": "Inflict %s",
   "enchantment.celestial_enchantments.words_of_wisdom": "Words Of Wisdom",
   "enchantment.celestial_enchantments.words_of_wisdom.desc": "Increase damage by %s for every exp level, up to %s",
+  "item.celestial_enchantments.advanced_celestial_catalyst": "Advanced Celestial Catalyst",
+  "item.celestial_enchantments.basic_celestial_catalyst": "Basic Celestial Catalyst",
+  "item.celestial_enchantments.legendary_celestial_catalyst": "Legendary Celestial Catalyst",
   "itemGroup.celestial_enchantments.max_enchantment": "Celestial Enchantments - Max Level",
   "itemGroup.celestial_enchantments.min_enchantment": "Celestial Enchantments - Min Level"
 }

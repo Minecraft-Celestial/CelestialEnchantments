@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "tag": "celestial_enchantments:basic_ingredients"
+    }
+  ],
+  "result": {
+    "item": "celestial_enchantments:basic_celestial_catalyst"
+  }
+}

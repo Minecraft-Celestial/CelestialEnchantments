@@ -2,12 +2,12 @@ package com.xiaoyue.celestial_enchantments.content.generic;
 
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
-import com.xiaoyue.celestial_enchantments.data.EnchLevel;
+import com.xiaoyue.celestial_enchantments.data.EnchGroup;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 
-public class ShieldEnch extends XCEnchBase {
+public class ShieldEnch extends CEBaseEnchantment {
 
 	public static final EnchGroup SHIELD = EnchGroup.simple(CELang.SHIELD, ChatFormatting.AQUA);
 

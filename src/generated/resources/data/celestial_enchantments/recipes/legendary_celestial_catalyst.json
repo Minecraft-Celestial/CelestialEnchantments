@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "celestial_enchantments:advanced_celestial_catalyst"
+    },
+    {
+      "item": "celestial_enchantments:advanced_celestial_catalyst"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "tag": "celestial_enchantments:legendary_ingredients"
+    }
+  ],
+  "result": {
+    "item": "celestial_enchantments:legendary_celestial_catalyst"
+  }
+}

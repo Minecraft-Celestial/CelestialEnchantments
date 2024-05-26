@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:enchanted_book"
+    },
+    "O": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "T": {
+      "item": "celestial_core:treasure_fragment"
+    }
+  },
+  "pattern": [
+    " B ",
+    "TRT",
+    "OOO"
+  ],
+  "result": {
+    "item": "celestial_enchantments:celestial_enchanting_table"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "celestial_enchantments:celestial_enchanting_table"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_treasure_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "celestial_core:treasure_fragment"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_treasure_fragment",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "celestial_enchantments:celestial_enchanting_table"
+    ]
+  },
+  "sends_telemetry_event": false
+}

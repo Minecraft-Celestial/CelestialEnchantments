@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.generic;
 
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchGroup;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
@@ -10,7 +11,7 @@ import net.minecraft.network.chat.MutableComponent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArmorEnch extends XCEnchBase {
+public class ArmorEnch extends CEBaseEnchantment {
 
 	protected static final EnchGroup DEATH = EnchGroup.simple(CELang.DEATH, ChatFormatting.LIGHT_PURPLE);
 	protected static final EnchGroup EFFECT = EnchGroup.simple(CELang.ARMOR_EFFECT, ChatFormatting.GREEN);

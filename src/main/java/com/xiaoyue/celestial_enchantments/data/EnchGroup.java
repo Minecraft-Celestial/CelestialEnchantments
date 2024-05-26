@@ -1,6 +1,5 @@
-package com.xiaoyue.celestial_enchantments.content.generic;
+package com.xiaoyue.celestial_enchantments.data;
 
-import com.xiaoyue.celestial_enchantments.data.CELang;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.common.util.Lazy;

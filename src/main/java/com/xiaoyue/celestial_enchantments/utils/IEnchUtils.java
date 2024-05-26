@@ -1,6 +1,6 @@
 package com.xiaoyue.celestial_enchantments.utils;
 
-import com.xiaoyue.celestial_enchantments.content.generic.XCEnchBase;
+import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
@@ -30,7 +30,7 @@ public class IEnchUtils {
 		if (stack.isEnchanted()) {
 			Map<Enchantment, Integer> entries = EnchantmentHelper.getEnchantments(stack);
 			for (var e : entries.entrySet()) {
-				if (e.getKey() instanceof XCEnchBase xc && xc.slots.contains(slot)) {
+				if (e.getKey() instanceof CEBaseEnchantment xc && xc.slots.contains(slot)) {
 					ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + e.getValue());
 				}
 			}
@@ -45,7 +45,7 @@ public class IEnchUtils {
 			if (stack.isEnchanted()) {
 				Map<Enchantment, Integer> entries = EnchantmentHelper.getEnchantments(stack);
 				for (var e : entries.entrySet()) {
-					if (e.getKey() instanceof XCEnchBase xc && xc.slots.contains(slot)) {
+					if (e.getKey() instanceof CEBaseEnchantment xc && xc.slots.contains(slot)) {
 						ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + e.getValue());
 					}
 				}

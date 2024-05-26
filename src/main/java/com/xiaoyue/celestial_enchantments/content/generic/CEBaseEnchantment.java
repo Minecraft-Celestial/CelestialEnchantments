@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.generic;
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.EnchGroup;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.base.L2Registrate;
@@ -24,11 +25,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class XCEnchBase extends Enchantment {
+public class CEBaseEnchantment extends Enchantment {
 
 	public static final EnchGroup CURSE = EnchGroup.simple(CELang.CURSE, ChatFormatting.RED);
 
-	private static final List<XCEnchBase> CACHE = new ArrayList<>();
+	private static final List<CEBaseEnchantment> CACHE = new ArrayList<>();
 
 	public static ItemStack makeBook(Enchantment ench, int level) {
 		return EnchantedBookItem.createForEnchantment(new EnchantmentInstance(ench, level));
@@ -71,11 +72,11 @@ public class XCEnchBase extends Enchantment {
 		return event.getSource();
 	}
 
-	private final EnchData config;
+	public final EnchData config;
 	public Set<EquipmentSlot> slots;
 
 
-	XCEnchBase(Rarity rarity, Type type, EnchData config) {
+	CEBaseEnchantment(Rarity rarity, Type type, EnchData config) {
 		super(rarity, type.category, type.slots);
 		this.slots = Set.of(type.slots);
 		this.config = config;
@@ -159,7 +160,7 @@ public class XCEnchBase extends Enchantment {
 	}
 
 	protected boolean checkCompatibility(Enchantment other) {
-		if (other instanceof XCEnchBase base) {
+		if (other instanceof CEBaseEnchantment base) {
 			return config.group().multi() || config.group() != base.config.group();
 		} else {
 			return config.group().compatible(other);

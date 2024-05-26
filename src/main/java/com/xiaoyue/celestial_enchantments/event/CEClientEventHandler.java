@@ -2,7 +2,7 @@ package com.xiaoyue.celestial_enchantments.event;
 
 import com.mojang.datafixers.util.Either;
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
-import com.xiaoyue.celestial_enchantments.content.generic.XCEnchBase;
+import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -36,7 +36,7 @@ public class CEClientEventHandler {
 		ItemStack itemStack = event.getItemStack();
 		if (itemStack.getItem() instanceof EnchantedBookItem) {
 			for (Enchantment enchantment : EnchantmentHelper.getEnchantments(itemStack).keySet()) {
-				if (enchantment instanceof XCEnchBase) {
+				if (enchantment instanceof CEBaseEnchantment) {
 					event.setBorderStart(0xFF87CEFA);
 					event.setBorderEnd(0xFF87CEFA);
 				}
@@ -72,7 +72,7 @@ public class CEClientEventHandler {
 					String id = tr.getKey().substring("enchantment.celestial_enchantments.".length(),
 							tr.getKey().length() - suffix.length());
 					Enchantment ench = ForgeRegistries.ENCHANTMENTS.getValue(CelestialEnchantments.loc(id));
-					if (ench instanceof XCEnchBase base) {
+					if (ench instanceof CEBaseEnchantment base) {
 						int lv = map.getOrDefault(ench, 0);
 						var es = base.descFull(lv, tr.getKey(), alt, book);
 						compound.set(i, Either.right(es.stream().map(e -> (Component) lit.copy().append(e)).toList()));

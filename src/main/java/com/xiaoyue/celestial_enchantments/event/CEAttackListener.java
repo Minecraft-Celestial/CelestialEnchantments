@@ -34,7 +34,7 @@ public class CEAttackListener implements AttackListener {
 	public void onHurt(AttackCache cache, ItemStack weapon) {
 		var user = cache.getAttacker();
 		var target = cache.getAttackTarget();
-		if (XCEnchBase.getSource(cache).getDirectEntity() instanceof Arrow arrow) {
+		if (CEBaseEnchantment.getSource(cache).getDirectEntity() instanceof Arrow arrow) {
 			ItemStack bow = CEGeneralEventHandler.getBowInfo(arrow);
 			if (bow.isEnchanted()) {
 				for (var ent : EnchantmentHelper.getEnchantments(bow).entrySet()) {
@@ -43,7 +43,7 @@ public class CEAttackListener implements AttackListener {
 					}
 				}
 			}
-		} else if (XCEnchBase.getSource(cache).getDirectEntity() instanceof ThrownTrident trident) {
+		} else if (CEBaseEnchantment.getSource(cache).getDirectEntity() instanceof ThrownTrident trident) {
 			ItemStack item = ((MixinTrident) trident).getTridentItem();
 			if (item.isEnchanted()) {
 				for (var ent : EnchantmentHelper.getEnchantments(item).entrySet()) {
@@ -55,7 +55,7 @@ public class CEAttackListener implements AttackListener {
 		} else if (user != null) {
 			var map = IEnchUtils.getEnch(user, EquipmentSlot.MAINHAND);
 			for (var ent : map.entrySet()) {
-				if (XCEnchBase.getSource(cache).is(L2DamageTypes.DIRECT)) {
+				if (CEBaseEnchantment.getSource(cache).is(L2DamageTypes.DIRECT)) {
 					if (ent.getKey() instanceof AttackEnch atk) {
 						atk.onHurtTarget(user, target, cache, ent.getValue());
 					}
@@ -82,7 +82,7 @@ public class CEAttackListener implements AttackListener {
 	public void onDamageFinalized(AttackCache cache, ItemStack weapon) {
 		var user = cache.getAttacker();
 		var target = cache.getAttackTarget();
-		if (XCEnchBase.getSource(cache).getDirectEntity() instanceof Arrow arrow) {
+		if (CEBaseEnchantment.getSource(cache).getDirectEntity() instanceof Arrow arrow) {
 			ItemStack bow = CEGeneralEventHandler.getBowInfo(arrow);
 			if (bow.isEnchanted()) {
 				for (var ent : EnchantmentHelper.getEnchantments(bow).entrySet()) {
@@ -94,7 +94,7 @@ public class CEAttackListener implements AttackListener {
 		} else if (user != null) {
 			var map = IEnchUtils.getEnch(user, EquipmentSlot.MAINHAND);
 			for (var ent : map.entrySet()) {
-				if (ent.getKey() instanceof AttackEnch atk && XCEnchBase.getSource(cache).is(L2DamageTypes.DIRECT)) {
+				if (ent.getKey() instanceof AttackEnch atk && CEBaseEnchantment.getSource(cache).is(L2DamageTypes.DIRECT)) {
 					atk.onDamageTargetFinal(user, target, cache, ent.getValue());
 				}
 			}

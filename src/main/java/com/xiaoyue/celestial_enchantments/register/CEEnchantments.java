@@ -16,7 +16,7 @@ import com.xiaoyue.celestial_enchantments.content.enchantments.tool.PowerlessCur
 import com.xiaoyue.celestial_enchantments.content.enchantments.trident.ExplosiveHalberd;
 import com.xiaoyue.celestial_enchantments.content.enchantments.trident.SharpHalberdTip;
 import com.xiaoyue.celestial_enchantments.content.enchantments.weapon.*;
-import com.xiaoyue.celestial_enchantments.content.generic.XCEnchBase;
+import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
@@ -130,7 +130,7 @@ public class CEEnchantments {
 	}
 
 	public static void register() {
-		XCEnchBase.injectTab(CelestialEnchantments.REGISTRATE);
+		CEBaseEnchantment.injectTab(CelestialEnchantments.REGISTRATE);
 	}
 
 }
