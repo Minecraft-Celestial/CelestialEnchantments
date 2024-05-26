@@ -12,6 +12,7 @@
   "celestial_enchantments.tooltip.eff_all": "%2$s秒的%3$s级%1$s",
   "celestial_enchantments.tooltip.eff_amp": "%2$s级%1$s",
   "celestial_enchantments.tooltip.eff_dur": "%2$s秒的%1$s",
+  "celestial_enchantments.tooltip.item_cost": "1 %s",
 
   "celestial_enchantments.tooltip.advanced": "[高级]",
   "celestial_enchantments.tooltip.alt": "按[%s]显示附魔公式",
@@ -41,6 +42,11 @@
   "celestial_enchantments.tooltip.feet": "[靴子]",
   "celestial_enchantments.tooltip.head": "[头盔]",
   "celestial_enchantments.tooltip.legs": "[护腿]",
+
+  "block.celestial_enchantments.celestial_enchanting_table": "星月附魔台",
+  "item.celestial_enchantments.advanced_celestial_catalyst": "高级魔引",
+  "item.celestial_enchantments.basic_celestial_catalyst": "基础魔引",
+  "item.celestial_enchantments.legendary_celestial_catalyst": "传奇魔引",
 
   "enchantment.celestial_enchantments.fatal_blow": "致命一击",
   "enchantment.celestial_enchantments.fatal_blow.desc": "+%s暴击伤害",

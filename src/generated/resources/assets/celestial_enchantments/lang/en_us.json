@@ -21,6 +21,7 @@
   "celestial_enchantments.tooltip.general": "[Generic]",
   "celestial_enchantments.tooltip.head": "[Helmet]",
   "celestial_enchantments.tooltip.inflict": "[Infused]",
+  "celestial_enchantments.tooltip.item_cost": "1 %s",
   "celestial_enchantments.tooltip.legendary": "[Legendary]",
   "celestial_enchantments.tooltip.legs": "[Leggings]",
   "celestial_enchantments.tooltip.normal": "[Basic]",

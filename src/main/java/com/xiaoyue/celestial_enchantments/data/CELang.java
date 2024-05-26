@@ -17,13 +17,14 @@ public enum CELang {
 	EFF_AMP("%1$s with level %2$s", 2),
 	ALT("Press [%s] to show enchantment effect formula", 1),
 
+	ITEM_COST( "1 %s",1),
+
 	CELE("[Celestial]",0),
 	NORMAL("[Basic]",0),
 	ADVANCED("[Advanced]",0),
 	LEGENDARY("[Legendary]",0),
 	CURSE("[Curse]",0),
 	DOUBLE("[Double-Edge]",0),
-
 
 	GENERAL("[Generic]",0),
 	UTILITY("[Utility]",0),

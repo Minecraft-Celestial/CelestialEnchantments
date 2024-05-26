@@ -160,7 +160,7 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 			ItemStack tool = enchantSlots.getItem(0);
 			ItemStack fuel = enchantSlots.getItem(1);
 			int i = pId + 1;
-			if (fuel.isEmpty() && !player.getAbilities().instabuild) {
+			if ((fuel.isEmpty() || getFuelLevel(fuel) <= pId) && !player.getAbilities().instabuild) {
 				return false;
 			} else if (costs[pId] <= 0 || tool.isEmpty() || (player.experienceLevel < i || player.experienceLevel < costs[pId] * (pId + 1)) && !player.getAbilities().instabuild) {
 				return false;
@@ -230,7 +230,7 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 
 	public int getGoldCount() {
 		ItemStack itemstack = enchantSlots.getItem(1);
-		return itemstack.isEmpty() ? 0 : itemstack.getCount();
+		return itemstack.isEmpty() ? 0 : getFuelLevel(itemstack);
 	}
 
 	public int getEnchantmentSeed() {

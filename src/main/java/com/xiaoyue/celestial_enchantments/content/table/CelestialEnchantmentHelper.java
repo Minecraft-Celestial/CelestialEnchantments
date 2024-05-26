@@ -53,15 +53,36 @@ public class CelestialEnchantmentHelper {
 			}
 		}
 		if (slot >= 2) {
-			WeightedRandom.getRandomItem(rand, legendary).ifPresent(list::add);
+			roll(val - 20, legendary, list, rand, isBook);
 		}
 		if (slot >= 1) {
-			WeightedRandom.getRandomItem(rand, advance).ifPresent(list::add);
+			roll(val - 10, advance, list, rand, isBook);
 		}
 		if (slot >= 0) {
-			WeightedRandom.getRandomItem(rand, basic).ifPresent(list::add);
+			roll(val, basic, list, rand, isBook);
 		}
 		return list;
+	}
+
+	private static void roll(int val, List<EnchantmentInstance> legendary, List<EnchantmentInstance> list, RandomSource rand, boolean isBook) {
+		if (val < 0) val = 0;
+		double rolls = 1 + rand.nextDouble() * val / 10;
+		int roll = (int) rolls;
+		if (rand.nextDouble() < rolls - roll) roll++;
+		for (int i = 0; i < roll; i++) {
+			if (!list.isEmpty() && isBook) return;
+			legendary.removeIf(e -> CelestialEnchantmentHelper.incompatible(e, list));
+			WeightedRandom.getRandomItem(rand, legendary).ifPresent(list::add);
+		}
+	}
+
+	private static boolean incompatible(EnchantmentInstance e, List<EnchantmentInstance> list) {
+		for (var x : list) {
+			if (!x.enchantment.isCompatibleWith(e.enchantment)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 

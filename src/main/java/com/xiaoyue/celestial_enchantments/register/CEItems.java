@@ -40,6 +40,8 @@ public class CEItems {
 		LEGENDARY_FUEL = CelestialEnchantments.REGISTRATE.item("legendary_celestial_catalyst", Item::new).register();
 	}
 
+	public static final ItemEntry[] FUELS = {BASIC_FUEL, ADVANCED_FUEL, LEGENDARY_FUEL};
+
 	public static void register() {
 
 	}
