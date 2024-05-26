@@ -1,3 +1,9 @@
 {
-  "parent": "minecraft:block/enchanting_table"
+  "parent": "minecraft:block/enchanting_table",
+  "textures": {
+    "bottom": "celestial_enchantments:block/table_bottom",
+    "particle": "celestial_enchantments:block/table_bottom",
+    "side": "celestial_enchantments:block/table_side",
+    "top": "celestial_enchantments:block/table_top"
+  }
 }
