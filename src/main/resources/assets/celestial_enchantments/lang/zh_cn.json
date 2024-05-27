@@ -84,170 +84,125 @@
   "enchantment.celestial_enchantments.death_blade.desc": "攻击时伤害额外提高%s目标最大生命",
   "enchantment.celestial_enchantments.vampire_slash": "嗜血斩",
   "enchantment.celestial_enchantments.vampire_slash.desc": "攻击后回复相当于%s造成的伤害的生命",
+  "enchantment.celestial_enchantments.destruction_crack": "毁灭裂纹",
+  "enchantment.celestial_enchantments.destruction_crack.desc": "攻击后目标%s秒内无法在受击后获得无敌时间",
+  "enchantment.celestial_enchantments.suppression_blade": "抑制刀刃",
+  "enchantment.celestial_enchantments.suppression_blade.desc": "攻击后将使目标%s秒内无法再恢复生命",
+  "enchantment.celestial_enchantments.magic_blade": "魔法刀刃",
+  "enchantment.celestial_enchantments.magic_blade.desc": "你的攻击会额外附带原伤害%s的魔法伤害",
+  "enchantment.celestial_enchantments.void_chain": "虚空锁链",
+  "enchantment.celestial_enchantments.void_chain.desc": "攻击后对周围目标造成原伤害%s的深渊伤害",
+  "enchantment.celestial_enchantments.shadow_touch": "暗影之触",
+  "enchantment.celestial_enchantments.shadow_touch.desc": "在亮度小于%s的地方攻击时额外对目标造成%s点深渊伤害",
+  "enchantment.celestial_enchantments.the_hand_of_thief": "偷窃之手",
+  "enchantment.celestial_enchantments.the_hand_of_thief.desc": "杀死目标时，目标所穿装备必定掉落",
 
 
-
-  "item.celestial_enchantments.c_enchantment_book": "星月附魔书",
-  
-  "enchantment.celestial_enchantments.death_pact": "死亡契约",
-  "enchantment.celestial_enchantments.death_pact.desc": "周围持有死亡契约的玩家死亡时有[附魔等级]*15%概率获得力量，速度提升，生命恢复，伤害吸收，否则你将会一同死亡",
-  
+  "enchantment.celestial_enchantments.void_protection": "虚空保护",
+  "enchantment.celestial_enchantments.void_protection.desc": "降低%s受到的虚空伤害",
+  "enchantment.celestial_enchantments.solid_armor": "坚实铠甲",
+  "enchantment.celestial_enchantments.solid_armor.desc": "穿戴者生命低于一半时，受到伤害降低%s",
+  "enchantment.celestial_enchantments.hearth_support": "炉心拥护",
+  "enchantment.celestial_enchantments.hearth_support.desc": "受到攻击时使攻击者陷入%s秒燃烧",
+  "enchantment.celestial_enchantments.destroy_resonance": "毁灭共鸣",
+  "enchantment.celestial_enchantments.destroy_resonance.desc": "受击后对自身周围目标造成受到伤害的%s",
   "enchantment.celestial_enchantments.frost_thorns": "冰霜荆棘",
   "enchantment.celestial_enchantments.frost_thorns.desc": "受到攻击时对攻击者造成%s点伤害，并给予目标%s",
-  
-  "enchantment.celestial_enchantments.holy_shield": "圣盾",
-  "enchantment.celestial_enchantments.holy_shield.desc": "使用盾牌格挡攻击后获得短时间的伤害吸收效果",
 
-  
-  "enchantment.celestial_enchantments.morning_star": "晨星",
-  "enchantment.celestial_enchantments.morning_star.desc": "箭矢击中目标后会进行[附魔等级]次50%概率召唤雷电",
-
-  "enchantment.celestial_enchantments.trauma_absorption": "创伤吸收",
-  "enchantment.celestial_enchantments.trauma_absorption.desc": "受击时回复已损失生命*[附魔等级]*9%点生命",
-  
-  "enchantment.celestial_enchantments.holy_prayer": "神圣祷告",
-  "enchantment.celestial_enchantments.holy_prayer.desc": "潜行时受到攻击获得生命恢复效果",
-
-  "enchantment.celestial_enchantments.destroy_resonance": "毁灭共鸣",
-  "enchantment.celestial_enchantments.destroy_resonance.desc": "受击后对自身周围目标造成一次[附魔等级]*2点攻击伤害",
-
-  "enchantment.celestial_enchantments.echo_effect": "回光效应",
-  "enchantment.celestial_enchantments.echo_effect.desc": "受到致命攻击时规避该伤害，并回复[附魔等级]*5%最大生命的生命，该效果冷却600秒",
-
+  "enchantment.celestial_enchantments.eye_in_shadow": "影中之眼",
+  "enchantment.celestial_enchantments.eye_in_shadow.desc": "在亮度小于%s的地方持续获得%s效果",
+  "enchantment.celestial_enchantments.have_nice_dream": "做个好梦",
+  "enchantment.celestial_enchantments.have_nice_dream.desc": "从床上醒来后，获得%s与%s",
+  "enchantment.celestial_enchantments.corrupt_scholar": "腐败学者",
+  "enchantment.celestial_enchantments.corrupt_scholar.desc": "提高%s经验获取，但会有%s概率获得负面效果",
   "enchantment.celestial_enchantments.knowledge_scholar": "知识学者",
-  "enchantment.celestial_enchantments.knowledge_scholar.desc": "拾取经验时提高[附魔等级]*10%经验获取",
-  
-  "enchantment.celestial_enchantments.void_protection": "虚空保护",
-  "enchantment.celestial_enchantments.void_protection.desc": "降低[附魔等级]*8%受到的虚空伤害",
+  "enchantment.celestial_enchantments.knowledge_scholar.desc": "提高%s经验获取",
+  "enchantment.celestial_enchantments.moon_blessing": "皎月祝福",
+  "enchantment.celestial_enchantments.moon_blessing.desc": "处于夜间时持续获得%s",
+  "enchantment.celestial_enchantments.sun_blessing": "烈阳祝福",
+  "enchantment.celestial_enchantments.sun_blessing.desc": "处于白天时持续获得%s",
+  "enchantment.celestial_enchantments.rain_and_dew_grace": "雨露恩惠",
+  "enchantment.celestial_enchantments.rain_and_dew_grace.desc": "处于雨天时持续获得%s",
 
+  "enchantment.celestial_enchantments.gift_of_thunder_god": "雷神之赐",
+  "enchantment.celestial_enchantments.gift_of_thunder_god.desc": "受到落雷攻击时立即恢复全部损失生命，并获得%s、%s、%s",
+  "enchantment.celestial_enchantments.the_source_of_sin": "罪孽之源",
+  "enchantment.celestial_enchantments.the_source_of_sin.desc": "受到攻击时有%s概率使攻击者成为周围生物的攻击目标",
+  "enchantment.celestial_enchantments.trauma_absorption": "创伤吸收",
+  "enchantment.celestial_enchantments.trauma_absorption.desc": "受击时回复已损失生命%s点生命",
+  "enchantment.celestial_enchantments.echo_effect": "回光效应",
+  "enchantment.celestial_enchantments.echo_effect.desc": "受到致命攻击时规避该伤害，并回复%s最大生命的生命，该效果冷却%s秒",
+  "enchantment.celestial_enchantments.origin_of_life": "生命本源",
+  "enchantment.celestial_enchantments.origin_of_life.desc": "受到治疗时有%s概率获得%s或%s",
+  "enchantment.celestial_enchantments.potion_affinity": "药水亲和",
+  "enchantment.celestial_enchantments.potion_affinity.desc": "获得的药水效果持续时间提高%s",
   "enchantment.celestial_enchantments.pure_body": "纯净之躯",
   "enchantment.celestial_enchantments.pure_body.desc": "持续清除身上的药水效果",
-
-  
-  "enchantment.celestial_enchantments.corruption_body": "腐败之躯",
-  "enchantment.celestial_enchantments.corruption_body.desc": "受到攻击时使攻击者一段时间内降低[附魔等级]*3点护甲",
-  
   "enchantment.celestial_enchantments.celestial_shelter": "星月庇护",
-  "enchantment.celestial_enchantments.celestial_shelter.desc": "受到伤害时单次最多只能受到穿戴者最大生命的25%",
-  
-  "enchantment.celestial_enchantments.sharp_arrow": "利箭",
-  "enchantment.celestial_enchantments.sharp_arrow.desc": "提高[附魔等级]*20%箭矢伤害",
-  
-  "enchantment.celestial_enchantments.hearth_support": "炉心拥护",
-  "enchantment.celestial_enchantments.hearth_support.desc": "受到攻击时使攻击者陷入[附魔等级]*2秒燃烧",
-  
-  "enchantment.celestial_enchantments.born_in_shadow": "生于暗影",
-  "enchantment.celestial_enchantments.born_in_shadow.desc": "在亮度小于5的地方会缓慢恢复耐久",
-  
-  "enchantment.celestial_enchantments.shadow_touch": "暗影之触",
-  "enchantment.celestial_enchantments.shadow_touch.desc": "在亮度小于5的地方攻击时额外对目标造成[附魔等级]点深渊伤害",
-  
+  "enchantment.celestial_enchantments.celestial_shelter.desc": "受到伤害时单次最多只能受到穿戴者最大生命的%s",
+
   "enchantment.celestial_enchantments.parting_wish": "临别之愿",
-  "enchantment.celestial_enchantments.parting_wish.desc": "死亡时恢复周围玩家[附魔等级]*8点生命",
-  
+  "enchantment.celestial_enchantments.parting_wish.desc": "死亡时恢复周围玩家%s点生命",
   "enchantment.celestial_enchantments.death_hatred": "死亡憎恶",
-  "enchantment.celestial_enchantments.death_hatred.desc": "死亡时对周围生物造成[附魔等级]*15点魔法伤害",
-  
-  "enchantment.celestial_enchantments.corrupt_scholar": "腐败学者",
-  "enchantment.celestial_enchantments.corrupt_scholar.desc": "拾取经验时提高[附魔等级]*80%经验获取，但会有[附魔等级]*25%概率获得负面效果",
-  
-  "enchantment.celestial_enchantments.arrow_storm": "暴风箭矢",
-  "enchantment.celestial_enchantments.arrow_storm.desc": "箭矢伤害降低[附魔等级]*5%，命中后对目标周围的敌人造成原伤害[附魔等级]*10%的弹射物伤害",
-  
-  "enchantment.celestial_enchantments.scorching_shield": "灼热之盾",
-  "enchantment.celestial_enchantments.scorching_shield.desc": "使用盾牌格挡攻击后使攻击者陷入[附魔等级]秒燃烧",
-  
-  "enchantment.celestial_enchantments.destruction_crack": "毁灭裂纹",
-  "enchantment.celestial_enchantments.destruction_crack.desc": "攻击后目1分钟内无法在受击后获得无敌时间",
-  
-  "enchantment.celestial_enchantments.moon_blessing": "皎月祝福",
-  "enchantment.celestial_enchantments.moon_blessing.desc": "处于夜间时持续获得[附魔等级]级生命恢复效果",
-  
-  "enchantment.celestial_enchantments.sun_blessing": "烈阳祝福",
-  "enchantment.celestial_enchantments.sun_blessing.desc": "处于白天时持续获得[附魔等级]级力量效果",
-  
-  "enchantment.celestial_enchantments.gift_of_thunder_god": "雷神之赐",
-  "enchantment.celestial_enchantments.gift_of_thunder_god.desc": "受到落雷攻击时立即恢复100%损失生命，并获得短暂的[附魔等级]级速度提升与抗性提升效果",
-  
-  "enchantment.celestial_enchantments.reactive_block": "格挡反击",
-  "enchantment.celestial_enchantments.reactive_block.desc": "使用盾牌格挡攻击后以[附魔等级]*0.5击退力度击退攻击者",
-  
-  "enchantment.celestial_enchantments.potion_affinity": "药水亲和",
-  "enchantment.celestial_enchantments.potion_affinity.desc": "获得的药水效果持续时间提高[附魔等级]*15%",
-  
-  "enchantment.celestial_enchantments.fireproof_boots": "防火靴",
-  "enchantment.celestial_enchantments.fireproof_boots.desc": "免疫岩浆块伤害，降低15%受到的火焰伤害",
+  "enchantment.celestial_enchantments.death_hatred.desc": "死亡时对周围生物造成%s点魔法伤害",
+  "enchantment.celestial_enchantments.death_pact": "死亡契约",
+  "enchantment.celestial_enchantments.death_pact.desc": "周围持有[%s]的玩家死亡时有[%s概率获得%s，%s，%s，%s，否则你将会一同死亡",
 
-  "enchantment.celestial_enchantments.burst_arrow": "爆裂箭矢",
-  "enchantment.celestial_enchantments.burst_arrow.desc": "命中目标后有[附魔等级]*20%概率产生爆炸，该爆炸不破坏方块",
+  "enchantment.celestial_enchantments.corruption_body": "腐败之躯",
+  "enchantment.celestial_enchantments.corruption_body.desc": "受到攻击时使攻击者获得%s",
+  "enchantment.celestial_enchantments.holy_prayer": "神圣祷告",
+  "enchantment.celestial_enchantments.holy_prayer.desc": "潜行时受到攻击获得%s",
 
-  "enchantment.celestial_enchantments.accelerate_growth": "催熟",
-  "enchantment.celestial_enchantments.accelerate_growth.desc": "右键作物可消耗部分耐久来催熟作物",
-  
-  "enchantment.celestial_enchantments.solid_armor": "坚实铠甲",
-  "enchantment.celestial_enchantments.solid_armor.desc": "穿戴者生命低于一半时，受到伤害降低[附魔等级]3%",
-  
-  "enchantment.celestial_enchantments.rain_and_dew_grace": "雨露恩惠",
-  "enchantment.celestial_enchantments.rain_and_dew_grace.desc": "处于雨天时持续恢复穿戴者生命",
-  
-  "enchantment.celestial_enchantments.the_hand_of_thief": "偷窃之手",
-  "enchantment.celestial_enchantments.the_hand_of_thief.desc": "杀死目标时，目标掉落所穿装备的概率提高至100%",
-  
-  "enchantment.celestial_enchantments.magic_blade": "魔法刀刃",
-  "enchantment.celestial_enchantments.magic_blade.desc": "你的攻击会额外附带与原伤害相等的魔法伤害",
-  
-  "enchantment.celestial_enchantments.constraints_shield": "制约之盾",
-  "enchantment.celestial_enchantments.constraints_shield.desc": "每格挡4次攻击后，下次格挡时对攻击者造成原伤害[附魔等级]*50%的魔法伤害",
-  
-  "enchantment.celestial_enchantments.photo_dynamic": "光动力学",
-  "enchantment.celestial_enchantments.photo_dynamic.desc": "在亮度高于10的地方提高[附魔等级]*12%挖掘速度",
-
-  "enchantment.celestial_enchantments.origin_of_life": "生命本源",
-  "enchantment.celestial_enchantments.origin_of_life.desc": "受到治疗时有概率获得抗性提升或速度提升效果",
-  
-  "enchantment.celestial_enchantments.arrow_of_traction": "牵引之箭",
-  "enchantment.celestial_enchantments.arrow_of_traction.desc": "命中目标后将以目标为中心半径[附魔等级]+1格范围内所有实体牵引至目标处",
-  
-  "enchantment.celestial_enchantments.fleet_of_foot": "健步如飞",
-  "enchantment.celestial_enchantments.fleet_of_foot.desc": "提高[附魔等级]*10%移动速度",
-
-  "enchantment.celestial_enchantments.the_source_of_sin": "罪孽之源",
-  "enchantment.celestial_enchantments.the_source_of_sin.desc": "受到攻击时有[附魔等级]*20%概率使攻击者成为周围生物的攻击目标",
-  
   "enchantment.celestial_enchantments.dimension_explorer": "维度探索者",
-  "enchantment.celestial_enchantments.dimension_explorer.desc": "每次穿越维度后获得30秒[附魔等级]级幸运，力量，急迫效果",
-  
-  "enchantment.celestial_enchantments.sharp_halberd_tip": "锐利戟尖",
-  "enchantment.celestial_enchantments.sharp_halberd_tip.desc": "提高[附魔等级]*20%近战与投掷伤害",
+  "enchantment.celestial_enchantments.dimension_explorer.desc": "每次穿越维度后获得%s、%s、%s",
+  "enchantment.celestial_enchantments.fireproof_boots": "防火靴",
+  "enchantment.celestial_enchantments.fireproof_boots.desc": "免疫岩浆块伤害，降低%s受到的火焰伤害",
+  "enchantment.celestial_enchantments.fleet_of_foot": "健步如飞",
+  "enchantment.celestial_enchantments.fleet_of_foot.desc": "提高%s移动速度",
 
+  "enchantment.celestial_enchantments.arrow_of_traction": "牵引之箭",
+  "enchantment.celestial_enchantments.arrow_of_traction.desc": "命中目标后将以目标为中心半径%s格范围内所有实体牵引至目标处",
+  "enchantment.celestial_enchantments.arrow_storm": "暴风箭矢",
+  "enchantment.celestial_enchantments.arrow_storm.desc": "命中后对目标周围的敌人造成原伤害%s的魔法伤害",
+  "enchantment.celestial_enchantments.burst_arrow": "爆裂箭矢",
+  "enchantment.celestial_enchantments.burst_arrow.desc": "命中目标后有%s概率产生爆炸，该爆炸不破坏方块",
+  "enchantment.celestial_enchantments.morning_star": "晨星",
+  "enchantment.celestial_enchantments.morning_star.desc": "箭矢击中目标后%s概率召唤雷电",
+  "enchantment.celestial_enchantments.sharp_arrow": "利箭",
+  "enchantment.celestial_enchantments.sharp_arrow.desc": "提高%s箭矢伤害",
   "enchantment.celestial_enchantments.divine_projection": "神射",
   "enchantment.celestial_enchantments.divine_projection.desc": "与攻击目标距离越远，伤害越高",
-  
-  "enchantment.celestial_enchantments.eye_in_shadow": "影中之眼",
-  "enchantment.celestial_enchantments.eye_in_shadow.desc": "在亮度小于5的地方持续获得夜视效果",
-  
+
+
+  "enchantment.celestial_enchantments.constraints_shield": "制约之盾",
+  "enchantment.celestial_enchantments.constraints_shield.desc": "每格挡%s次攻击后，下次格挡时对攻击者造成原伤害%s的魔法伤害",
+  "enchantment.celestial_enchantments.holy_shield": "圣盾",
+  "enchantment.celestial_enchantments.holy_shield.desc": "使用盾牌格挡攻击后获得%s",
+  "enchantment.celestial_enchantments.reactive_block": "格挡反击",
+  "enchantment.celestial_enchantments.reactive_block.desc": "使用盾牌格挡攻击后以%s击退力度击退攻击者",
+  "enchantment.celestial_enchantments.scorching_shield": "灼热之盾",
+  "enchantment.celestial_enchantments.scorching_shield.desc": "使用盾牌格挡攻击后使攻击者陷入%s秒燃烧",
+
+  "enchantment.celestial_enchantments.photo_dynamic": "光动力学",
+  "enchantment.celestial_enchantments.photo_dynamic.desc": "在亮度高于%s的地方提高%s挖掘速度",
+  "enchantment.celestial_enchantments.accelerate_growth": "催熟",
+  "enchantment.celestial_enchantments.accelerate_growth.desc": "右键作物可消耗部分耐久来催熟作物",
+
+  "enchantment.celestial_enchantments.sharp_halberd_tip": "锐利戟尖",
+  "enchantment.celestial_enchantments.sharp_halberd_tip.desc": "提高%s近战与投掷伤害",
   "enchantment.celestial_enchantments.explosive_halberd": "易爆戟尖",
-  "enchantment.celestial_enchantments.explosive_halberd.desc": "投掷出的三叉戟有[附魔等级]*20%概率发生爆炸",
-  
-  "enchantment.celestial_enchantments.suppression_blade": "抑制刀刃",
-  "enchantment.celestial_enchantments.suppression_blade.desc": "攻击后将使目标1分钟内无法再恢复生命",
-  
-  "enchantment.celestial_enchantments.have_nice_dream": "做个好梦",
-  "enchantment.celestial_enchantments.have_nice_dream.desc": "从床上醒来后，获得[附魔等级]级生命恢复与跳跃提升效果",
-  
-  "enchantment.celestial_enchantments.void_chain": "虚空锁链",
-  "enchantment.celestial_enchantments.void_chain.desc": "攻击伤害降低90%，攻击后对周围目标造成原伤害*[附魔等级]*50%点伤害",
+  "enchantment.celestial_enchantments.explosive_halberd.desc": "投掷出的三叉戟有%s概率发生爆炸",
+
+  "enchantment.celestial_enchantments.born_in_shadow": "生于暗影",
+  "enchantment.celestial_enchantments.born_in_shadow.desc": "在亮度小于%s的地方会缓慢恢复耐久",
 
   "enchantment.celestial_enchantments.destruction_curse": "毁灭诅咒",
-  "enchantment.celestial_enchantments.destruction_curse.desc": "受到的爆炸伤害提高40%，其他伤害提高25%",
-  
+  "enchantment.celestial_enchantments.destruction_curse.desc": "受到的爆炸伤害提高%s，其他伤害提高%s",
   "enchantment.celestial_enchantments.overeating_curse": "暴食诅咒",
-  "enchantment.celestial_enchantments.overeating_curse.desc": "持续获得[附魔等级]级饥饿效果",
-  
+  "enchantment.celestial_enchantments.overeating_curse.desc": "持续获得%s",
   "enchantment.celestial_enchantments.curse_of_weakness": "软弱诅咒",
-  "enchantment.celestial_enchantments.curse_of_weakness.desc": "降低[附魔等级]*15%攻击伤害",
-  
+  "enchantment.celestial_enchantments.curse_of_weakness.desc": "降低%s攻击伤害",
   "enchantment.celestial_enchantments.powerless_curse": "无力诅咒",
-  "enchantment.celestial_enchantments.powerless_curse.desc": "降低[附魔等级]*15%挖掘速度"
+  "enchantment.celestial_enchantments.powerless_curse.desc": "降低%s挖掘速度"
 
 }

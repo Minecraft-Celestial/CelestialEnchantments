@@ -17,7 +17,7 @@ import java.util.List;
 public class VoidChain extends AttackEnch {
 
 	private static double spread() {
-		return 0.5;
+		return 0.1;
 	}
 
 	public VoidChain() {
@@ -39,7 +39,7 @@ public class VoidChain extends AttackEnch {
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.percSmall(lv, spread(), alt));
+		return CELang.ench(key, CELang.perc(lv, spread(), alt));
 	}
 
 }

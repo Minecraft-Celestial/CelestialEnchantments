@@ -26,7 +26,7 @@ public class MagicBlade extends AttackEnch {
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.percSmall(lv, atk(), alt));
+		return CELang.ench(key, CELang.perc(lv, atk(), alt));
 	}
 
 }

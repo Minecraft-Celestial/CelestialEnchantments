@@ -15,7 +15,7 @@ public class FireproofBoots extends DefenceEnch {
 	}
 
 	public FireproofBoots() {
-		super(Rarity.UNCOMMON, Type.FEET, EnchData.normal(1, EFFECT));
+		super(Rarity.COMMON, Type.FEET, EnchData.normal(1, EFFECT));
 	}
 
 	@Override
