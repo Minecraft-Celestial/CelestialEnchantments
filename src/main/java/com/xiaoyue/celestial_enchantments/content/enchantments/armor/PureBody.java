@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class PureBody extends ArmorEnch implements LivingTickEnch {
 
 	public PureBody() {
-		super(Rarity.UNCOMMON, Type.CHEST, EnchData.special(1, EFFECT));
+		super(Rarity.RARE, Type.CHEST, EnchData.special(1, EFFECT));
 	}
 
 	@Override

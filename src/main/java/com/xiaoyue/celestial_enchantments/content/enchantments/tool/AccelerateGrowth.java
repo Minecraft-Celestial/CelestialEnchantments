@@ -14,7 +14,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 public class AccelerateGrowth extends ToolEnch {
 
 	public AccelerateGrowth() {
-		super(Rarity.VERY_RARE, Type.HOE, EnchData.treasure(1, TOOL));
+		super(Rarity.UNCOMMON, Type.HOE, EnchData.treasure(1, TOOL));
 	}
 
 	public static void onRightBlockEvent(PlayerInteractEvent.RightClickBlock event, int lv) {

@@ -15,7 +15,7 @@ public class Revenge extends AttackEnch {
 	}
 
 	public Revenge() {
-		super(Rarity.UNCOMMON, EnchData.treasure(3, A30));
+		super(Rarity.COMMON, EnchData.treasure(3, A30));
 	}
 
 	@Override

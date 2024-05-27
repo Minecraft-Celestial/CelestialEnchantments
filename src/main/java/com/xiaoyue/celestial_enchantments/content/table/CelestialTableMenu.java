@@ -1,5 +1,7 @@
 package com.xiaoyue.celestial_enchantments.content.table;
 
+import com.xiaoyue.celestial_enchantments.compat.EnchCompat;
+import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
 import com.xiaoyue.celestial_enchantments.register.CEItems;
 import net.minecraft.Util;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -19,11 +21,15 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class CelestialTableMenu extends AbstractContainerMenu {
@@ -47,6 +53,7 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 	private final ContainerLevelAccess access;
 	private final RandomSource random = RandomSource.create();
 	private final DataSlot enchantmentSeed = DataSlot.standalone();
+	private final Player player;
 
 	public final int[] costs = new int[3];
 	public final int[] enchantClue = new int[]{-1, -1, -1};
@@ -58,6 +65,7 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 
 	public CelestialTableMenu(MenuType<? extends CelestialTableMenu> type, int wid, Inventory inv, ContainerLevelAccess pAccess) {
 		super(type, wid);
+		player = inv.player;
 		access = pAccess;
 		addSlot(new Slot(enchantSlots, 0, 15, 47) {
 
@@ -127,22 +135,25 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 			}
 		}
 
+		int forbidden = getForbiddenSet().size();
+
 		random.setSeed(enchantmentSeed.get());
 
 		for (int rank = 0; rank < 3; ++rank) {
-			costs[rank] = EnchantmentHelper.getEnchantmentCost(random, 2, (int) shelfs, stack);
+			int lv = EnchantmentHelper.getEnchantmentCost(random, 2, (int) shelfs, stack);
+			costs[rank] = lv - forbidden;
 			enchantClue[rank] = -1;
 			levelClue[rank] = -1;
-			if (costs[rank] < 10) {
-				costs[rank] = 0;
+			if (costs[rank] < 10 && lv > 0) {
+				costs[rank] = 1;
 			}
 		}
 
 		for (int l = 0; l < 3; ++l) {
 			if (costs[l] > 0) {
-				List<EnchantmentInstance> list = getEnchantmentList(stack, l, costs[l]);
+				var list = getEnchantmentList(stack, l, costs[l]);
 				if (!list.isEmpty()) {
-					EnchantmentInstance ins = list.get(random.nextInt(list.size()));
+					var ins = list.get(random.nextInt(list.size()));
 					enchantClue[l] = BuiltInRegistries.ENCHANTMENT.getId(ins.enchantment);
 					levelClue[l] = ins.level;
 				}
@@ -152,9 +163,6 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 		broadcastChanges();
 	}
 
-	/**
-	 * Handles the given Button-click on the server, currently only used by enchanting. Name is for legacy.
-	 */
 	public boolean clickMenuButton(Player player, int pId) {
 		if (pId >= 0 && pId < costs.length) {
 			ItemStack tool = enchantSlots.getItem(0);
@@ -165,7 +173,9 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 			} else if (costs[pId] <= 0 || tool.isEmpty() || (player.experienceLevel < i || player.experienceLevel < costs[pId] * (pId + 1)) && !player.getAbilities().instabuild) {
 				return false;
 			} else {
-				access.execute((level, pos) -> onEnchant(player, tool, fuel, pId, level, pos));
+				if (!player.level().isClientSide()) {
+					access.execute((level, pos) -> onEnchant(player, tool, fuel, pId, level, pos));
+				}
 				return true;
 			}
 		} else {
@@ -177,7 +187,7 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 	private void onEnchant(Player player, ItemStack tool, ItemStack fuel, int btn, Level level, BlockPos pos) {
 		int spent = (btn + 1) * 10;
 		ItemStack newTool = tool;
-		List<EnchantmentInstance> list = getEnchantmentList(tool, btn, costs[btn]);
+		var list = getEnchantmentList(tool, btn, costs[btn]);
 		if (!list.isEmpty()) {
 			player.onEnchantmentPerformed(tool, spent);
 			boolean flag = tool.is(Items.BOOK);
@@ -190,9 +200,9 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 				enchantSlots.setItem(0, newTool);
 			}
 
-			for (EnchantmentInstance ins : list) {
+			for (var ins : list) {
 				if (flag) {
-					EnchantedBookItem.addEnchantment(newTool, ins);
+					EnchantedBookItem.addEnchantment(newTool, new EnchantmentInstance(ins.enchantment, ins.level));
 				} else {
 					newTool.enchant(ins.enchantment, ins.level);
 				}
@@ -218,9 +228,30 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 
 	}
 
-	private List<EnchantmentInstance> getEnchantmentList(ItemStack pStack, int slot, int pLevel) {
+	private Set<Enchantment> getForbiddenSet() {
+		return access.evaluate((level, pos) -> {
+			Set<Enchantment> set = new HashSet<>();
+			for (BlockPos offset : CelestialTableBlock.BOOKSHELF_OFFSETS) {
+				if (!(level.getBlockEntity(pos.offset(offset)) instanceof ChiseledBookShelfBlockEntity ch)) continue;
+				for (int i = 0; i < ch.getContainerSize(); i++) {
+					ItemStack stack = ch.getItem(i);
+					if (!stack.is(Items.ENCHANTED_BOOK)) continue;
+					for (var e : EnchantmentHelper.getEnchantments(stack).keySet()) {
+						if (!(e instanceof CEBaseEnchantment be)) continue;
+						set.add(be);
+					}
+				}
+			}
+			return set;
+		}, Set.<Enchantment>of());
+	}
+
+	private List<CelestialEnchIns> getEnchantmentList(ItemStack pStack, int slot, int pLevel) {
+		var ans = getForbiddenSet();
 		random.setSeed(enchantmentSeed.get() + slot);
-		List<EnchantmentInstance> list = CelestialEnchantmentHelper.selectEnchantment(random, pStack, slot, pLevel);
+		boolean chaotic = EnchCompat.hasChaoticPendent(player);
+		var list = CelestialEnchantmentHelper.selectEnchantment(
+				random, pStack, slot, pLevel, ans, chaotic ? 10 : 0, chaotic ? 3 : 0);
 		if (pStack.is(Items.BOOK) && list.size() > 1) {
 			list.remove(random.nextInt(list.size()));
 		}

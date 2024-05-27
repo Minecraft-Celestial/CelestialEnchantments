@@ -10,7 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class DestructionCrack extends WeaponEnch {
 
 	public DestructionCrack() {
-		super(Rarity.UNCOMMON, EnchData.special(1, INFLICT));
+		super(Rarity.VERY_RARE, EnchData.specialHigh(1, INFLICT));
 	}
 
 	@Override

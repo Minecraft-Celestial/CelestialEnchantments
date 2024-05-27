@@ -47,6 +47,10 @@ public enum CELang {
 	LEGS("[Leggings]",0),
 	FEET("[Boots]",0),
 
+	TABLE_DESC_0("Applies Celestial Enchantments to your tools. Consumes Celestial Catalysts.",0),
+	TABLE_DESC_1("Books in Chiseled Bookshelves provides black list for enchanting, but decreases enchantment levels.",0),
+	TABLE_DESC_CA("Chaotic Pendant and tools with high enchantment affinity will make rare enchantments more common",0)
+
 
 	;
 

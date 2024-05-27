@@ -18,7 +18,7 @@ public class DeathBlow extends WeaponEnch implements AttributeEnchantment {
 	}
 
 	public DeathBlow() {
-		super(Rarity.UNCOMMON, EnchData.treasure(3, A75));
+		super(Rarity.RARE, EnchData.treasure(3, A75));
 	}
 
 	@Override

@@ -9,7 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class CelestialShelter extends DefenceEnch {
 
 	public CelestialShelter() {
-		super(Rarity.VERY_RARE, Type.LEGS, EnchData.special(1, PROTECT));
+		super(Rarity.VERY_RARE, Type.LEGS, EnchData.specialHigh(1, PROTECT));
 	}
 
 	@Override
