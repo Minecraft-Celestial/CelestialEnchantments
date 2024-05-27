@@ -102,6 +102,13 @@ public class CEGeneralEventHandler {
 				ench.onLivingTick(event, event.getEntity(), entry.getValue());
 			}
 		}
+		for (var e : EquipmentSlot.values()) {
+			for (Map.Entry<Enchantment, Integer> entry : IEnchUtils.getEnch(event.getEntity(), e).entrySet()) {
+				if (entry.getKey() instanceof ToolTickEnch ench) {
+					ench.onLivingTick(event, event.getEntity().getItemBySlot(e), entry.getValue());
+				}
+			}
+		}
 	}
 
 	@SubscribeEvent

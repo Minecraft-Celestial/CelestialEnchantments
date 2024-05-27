@@ -74,7 +74,7 @@ public class CEClientEventHandler {
 					Enchantment ench = ForgeRegistries.ENCHANTMENTS.getValue(CelestialEnchantments.loc(id));
 					if (ench instanceof CEBaseEnchantment base) {
 						int lv = map.getOrDefault(ench, 0);
-						var es = base.descFull(lv, tr.getKey(), alt, book);
+						var es = base.descFull(Math.min(base.getMaxLevel(), lv), tr.getKey(), alt, book);
 						compound.set(i, Either.right(es.stream().map(e -> (Component) lit.copy().append(e)).toList()));
 						flag = true;
 					}

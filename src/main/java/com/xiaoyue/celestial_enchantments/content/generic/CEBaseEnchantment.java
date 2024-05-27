@@ -84,7 +84,7 @@ public class CEBaseEnchantment extends Enchantment {
 	}
 
 	public Component desc(int lv, String key, boolean alt) {
-		return Component.translatable(key).withStyle(ChatFormatting.DARK_GRAY);
+		return CELang.ench(key);
 	}
 
 	public List<Component> descFull(int lv, String key, boolean alt, boolean isBook) {
@@ -103,8 +103,7 @@ public class CEBaseEnchantment extends Enchantment {
 		return List.of(base, desc(lv, key, false));
 	}
 
-	@Override
-	public Component getFullname(int pLevel) {
+	public MutableComponent getName() {
 		MutableComponent mutablecomponent = Component.translatable(this.getDescriptionId());
 		if (this.isCurse()) {
 			mutablecomponent.withStyle(ChatFormatting.RED);
@@ -113,11 +112,16 @@ public class CEBaseEnchantment extends Enchantment {
 		} else {
 			mutablecomponent.withStyle(ChatFormatting.AQUA);
 		}
-		if (pLevel != 1 || this.getMaxLevel() != 1) {
-			mutablecomponent.append(CommonComponents.SPACE).append(Component.translatable("enchantment.level." + pLevel));
-		}
-
 		return mutablecomponent;
+	}
+
+	@Override
+	public Component getFullname(int pLevel) {
+		var ans = getName();
+		if (pLevel != 1 || this.getMaxLevel() != 1) {
+			ans.append(CommonComponents.SPACE).append(Component.translatable("enchantment.level." + pLevel));
+		}
+		return ans;
 	}
 
 	protected boolean chance(LivingEntity e, double chance) {

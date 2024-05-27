@@ -1,9 +1,11 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 
 public class SolidArmor extends DefenceEnch {
@@ -22,5 +24,11 @@ public class SolidArmor extends DefenceEnch {
 			cache.addDealtModifier(DamageModifier.multTotal(1 - lv * (float) def()));
 		}
 	}
+
+	@Override
+	public Component desc(int lv, String key, boolean alt) {
+		return CELang.ench(key, CELang.perc(lv, def(), alt));
+	}
+
 
 }

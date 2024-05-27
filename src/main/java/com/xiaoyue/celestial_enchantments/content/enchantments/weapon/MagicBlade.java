@@ -12,11 +12,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class MagicBlade extends AttackEnch {
 
 	private static double atk() {
-		return 1;//TODO
+		return 0.2;//TODO
 	}
 
 	public MagicBlade() {
-		super(Rarity.RARE, EnchData.special(1, A300));
+		super(Rarity.RARE, EnchData.special(3, A300));
 	}
 
 	@Override

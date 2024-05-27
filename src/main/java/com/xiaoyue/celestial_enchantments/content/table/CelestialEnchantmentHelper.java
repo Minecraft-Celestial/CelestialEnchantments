@@ -18,6 +18,7 @@ public class CelestialEnchantmentHelper {
 
 	private static final double EXTRA_ROLL_PER_AFFINITY = 0.1;
 	private static final double EXTRA_WEIGHT_PER_AFFINITY = 0.1;
+	private static final double BOOK_CURSE_CHANCE = 0.15;
 
 	private static int maxLevel(CEBaseEnchantment ce, int level) {
 		int lv = ce.getMaxLevel();
@@ -33,6 +34,7 @@ public class CelestialEnchantmentHelper {
 		int val = stack.getEnchantmentValue();
 		if (val <= 0) return list;
 		boolean isBook = stack.is(Items.BOOK);
+		List<CelestialEnchIns> curse = new ArrayList<>();
 		List<CelestialEnchIns> basic = new ArrayList<>();
 		List<CelestialEnchIns> advance = new ArrayList<>();
 		List<CelestialEnchIns> legendary = new ArrayList<>();
@@ -47,6 +49,9 @@ public class CelestialEnchantmentHelper {
 				if (max <= 0) continue;
 				if (ban.contains(e)) continue;
 				var ins = new CelestialEnchIns(ce, max, averager);
+				if (ce.config.level().type() == EnchType.CURSE) {
+					curse.add(ins);
+				}
 				if (ce.config.level().type() == EnchType.NORMAL) {
 					basic.add(ins);
 				}
@@ -58,6 +63,14 @@ public class CelestialEnchantmentHelper {
 				}
 			}
 		}
+
+		if (isBook) {
+			if (rand.nextDouble() < BOOK_CURSE_CHANCE - averager * 0.02f) {
+				roll(0, curse, list, rand, true);
+				if (!list.isEmpty()) return list;
+			}
+		}
+
 		if (slot >= 2) {
 			roll(val - 20, legendary, list, rand, isBook);
 			if (list.isEmpty()) return list;
@@ -70,18 +83,22 @@ public class CelestialEnchantmentHelper {
 			roll(val, basic, list, rand, isBook);
 			if (list.isEmpty()) return list;
 		}
+		double chance = (slot + 1) * (30 - val) * 0.01 - averager * 0.02f;
+		if (!isBook && rand.nextDouble() < chance) {
+			roll(0, curse, list, rand, false);
+		}
 		return list;
 	}
 
-	private static void roll(int val, List<CelestialEnchIns> legendary, List<CelestialEnchIns> list, RandomSource rand, boolean isBook) {
+	private static void roll(int val, List<CelestialEnchIns> avail, List<CelestialEnchIns> list, RandomSource rand, boolean isBook) {
 		if (val < 0) val = 0;
 		double rolls = 1 + rand.nextDouble() * val * EXTRA_ROLL_PER_AFFINITY;
 		int roll = (int) rolls;
 		if (rand.nextDouble() < rolls - roll) roll++;
 		for (int i = 0; i < roll; i++) {
 			if (!list.isEmpty() && isBook) return;
-			legendary.removeIf(e -> CelestialEnchantmentHelper.incompatible(e, list));
-			WeightedRandom.getRandomItem(rand, legendary).ifPresent(list::add);
+			avail.removeIf(e -> CelestialEnchantmentHelper.incompatible(e, list));
+			WeightedRandom.getRandomItem(rand, avail).ifPresent(list::add);
 		}
 	}
 

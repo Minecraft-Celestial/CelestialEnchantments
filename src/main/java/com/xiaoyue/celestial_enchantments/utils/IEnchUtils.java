@@ -31,7 +31,7 @@ public class IEnchUtils {
 			Map<Enchantment, Integer> entries = EnchantmentHelper.getEnchantments(stack);
 			for (var e : entries.entrySet()) {
 				if (e.getKey() instanceof CEBaseEnchantment xc && xc.slots.contains(slot)) {
-					ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + e.getValue());
+					ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + guard(e));
 				}
 			}
 		}
@@ -46,12 +46,16 @@ public class IEnchUtils {
 				Map<Enchantment, Integer> entries = EnchantmentHelper.getEnchantments(stack);
 				for (var e : entries.entrySet()) {
 					if (e.getKey() instanceof CEBaseEnchantment xc && xc.slots.contains(slot)) {
-						ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + e.getValue());
+						ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + guard(e));
 					}
 				}
 			}
 		}
 		return ans;
+	}
+
+	private static int guard(Map.Entry<Enchantment, Integer> ent) {
+		return Math.min(ent.getKey().getMaxLevel(), ent.getValue());
 	}
 
 	public static EnchantmentCategory SHIELD = EnchantmentCategory.create("shield", item -> item instanceof ShieldItem);

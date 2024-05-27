@@ -38,7 +38,7 @@ public class ShadowTouch extends WeaponEnch {
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.num(lv, brightness(), alt), CELang.num(lv, factor(), alt));
+		return CELang.ench(key, CELang.num(brightness()), CELang.num(lv, factor(), alt));
 	}
 
 }

@@ -50,7 +50,7 @@
 
   "celestial_enchantments.tooltip.table_desc_0": "为装备施加星月附魔。消耗魔引。",
   "celestial_enchantments.tooltip.table_desc_1": "周围的錾制书架中附魔书的星月附魔不会出现在附魔结果中，但是会降低附魔等级",
-  "celestial_enchantments.tooltip.table_desc_ca": "混沌吊坠和高魔力亲和度的装备会让稀有附魔更频繁的出现",
+  "celestial_enchantments.tooltip.table_desc_ca": "混沌吊坠和高魔力亲和度的装备会让稀有附魔更频繁的出现，并且减少诅咒附魔出现的概率",
 
   "enchantment.celestial_enchantments.fatal_blow": "致命一击",
   "enchantment.celestial_enchantments.fatal_blow.desc": "+%s暴击伤害",
@@ -125,11 +125,11 @@
   "enchantment.celestial_enchantments.rain_and_dew_grace.desc": "处于雨天时持续获得%s",
 
   "enchantment.celestial_enchantments.gift_of_thunder_god": "雷神之赐",
-  "enchantment.celestial_enchantments.gift_of_thunder_god.desc": "受到落雷攻击时立即恢复全部损失生命，并获得%s、%s、%s",
+  "enchantment.celestial_enchantments.gift_of_thunder_god.desc": "受到落雷攻击时立即恢复损失生命的%s，并获得%s、%s",
   "enchantment.celestial_enchantments.the_source_of_sin": "罪孽之源",
   "enchantment.celestial_enchantments.the_source_of_sin.desc": "受到攻击时有%s概率使攻击者成为周围生物的攻击目标",
   "enchantment.celestial_enchantments.trauma_absorption": "创伤吸收",
-  "enchantment.celestial_enchantments.trauma_absorption.desc": "受击时回复已损失生命%s点生命",
+  "enchantment.celestial_enchantments.trauma_absorption.desc": "受击时回复已损失生命的%s",
   "enchantment.celestial_enchantments.echo_effect": "回光效应",
   "enchantment.celestial_enchantments.echo_effect.desc": "受到致命攻击时规避该伤害，并回复%s最大生命的生命，该效果冷却%s秒",
   "enchantment.celestial_enchantments.origin_of_life": "生命本源",
@@ -146,7 +146,7 @@
   "enchantment.celestial_enchantments.death_hatred": "死亡憎恶",
   "enchantment.celestial_enchantments.death_hatred.desc": "死亡时对周围生物造成%s点魔法伤害",
   "enchantment.celestial_enchantments.death_pact": "死亡契约",
-  "enchantment.celestial_enchantments.death_pact.desc": "周围持有[%s]的玩家死亡时有[%s概率获得%s，%s，%s，%s，否则你将会一同死亡",
+  "enchantment.celestial_enchantments.death_pact.desc": "周围持有[%s]的玩家死亡时有%s概率获得%s，%s，%s，%s，否则你将会一同死亡",
 
   "enchantment.celestial_enchantments.corruption_body": "腐败之躯",
   "enchantment.celestial_enchantments.corruption_body.desc": "受到攻击时使攻击者获得%s",
@@ -194,7 +194,7 @@
   "enchantment.celestial_enchantments.explosive_halberd.desc": "投掷出的三叉戟有%s概率发生爆炸",
 
   "enchantment.celestial_enchantments.born_in_shadow": "生于暗影",
-  "enchantment.celestial_enchantments.born_in_shadow.desc": "在亮度小于%s的地方会缓慢恢复耐久",
+  "enchantment.celestial_enchantments.born_in_shadow.desc": "在亮度小于%1$s的地方每%3$s秒恢复%2$s耐久",
 
   "enchantment.celestial_enchantments.destruction_curse": "毁灭诅咒",
   "enchantment.celestial_enchantments.destruction_curse.desc": "受到的爆炸伤害提高%s，其他伤害提高%s",

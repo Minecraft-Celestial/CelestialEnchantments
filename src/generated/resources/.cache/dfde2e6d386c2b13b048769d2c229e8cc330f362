@@ -1,7 +1,7 @@
-// 1.20.1	2024-05-27T13:12:18.542809	Registrate Provider for celestial_enchantments [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
+// 1.20.1	2024-05-27T15:49:12.944297	Registrate Provider for celestial_enchantments [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
 9324ace04daaaa167cd8942fc6ae1bc89b55800f assets/celestial_enchantments/blockstates/celestial_enchanting_table.json
-9df958205042e2721c210d2be79469094265f635 assets/celestial_enchantments/lang/en_ud.json
-758a9081126e236871968fcdfd9a74d4c7b22852 assets/celestial_enchantments/lang/en_us.json
+64c64aa9d5992ad649e0f10b8bd4f7ffd87ea443 assets/celestial_enchantments/lang/en_ud.json
+10a40f167553e9601e176fde69a5b9384bf8637b assets/celestial_enchantments/lang/en_us.json
 fd8226b2c08c5f37ca7a4dc8418f664004288a20 assets/celestial_enchantments/models/block/celestial_enchanting_table.json
 c6f0eca2fbe585592df304bd874dfb11dea79cef assets/celestial_enchantments/models/item/advanced_celestial_catalyst.json
 b1e5da506b348c2512c3cf629abf6c99f26b7b78 assets/celestial_enchantments/models/item/basic_celestial_catalyst.json

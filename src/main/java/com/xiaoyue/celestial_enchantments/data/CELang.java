@@ -49,7 +49,7 @@ public enum CELang {
 
 	TABLE_DESC_0("Applies Celestial Enchantments to your tools. Consumes Celestial Catalysts.",0),
 	TABLE_DESC_1("Books in Chiseled Bookshelves provides black list for enchanting, but decreases enchantment levels.",0),
-	TABLE_DESC_CA("Chaotic Pendant and tools with high enchantment affinity will make rare enchantments more common",0)
+	TABLE_DESC_CA("Chaotic Pendant and tools with high enchantment affinity will make rare enchantments more common, and reduce chance to produce curse enchantments",0)
 
 
 	;
@@ -97,7 +97,7 @@ public enum CELang {
 	}
 
 	public static Component ench(String key, MutableComponent... perc) {
-		return Component.translatable(key, (Object[]) perc).withStyle(ChatFormatting.DARK_GRAY);
+		return Component.translatable(key, (Object[]) perc).withStyle(ChatFormatting.GRAY);
 	}
 
 	public static MutableComponent eff(MobEffectInstance ins) {
@@ -110,7 +110,7 @@ public enum CELang {
 			desc = Component.translatable("potion.withAmplifier", desc,
 					Component.translatable("potion.potency." + ins.getAmplifier()));
 		}
-		if (showDuration && !ins.endsWithin(20)) {
+		if (showDuration && !ins.endsWithin(19)) {
 			desc = Component.translatable("potion.withDuration", desc, MobEffectUtil.formatDuration(ins, 1));
 		}
 		return desc.withStyle(ins.getEffect().getCategory().getTooltipFormatting());

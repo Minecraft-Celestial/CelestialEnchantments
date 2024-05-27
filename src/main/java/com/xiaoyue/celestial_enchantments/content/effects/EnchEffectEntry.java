@@ -35,7 +35,7 @@ public interface EnchEffectEntry {
 
 		@Override
 		public MutableComponent comp(int lv, boolean alt) {
-			return alt ? CELang.eff(ins(lv)) : CELang.EFF_ALL.get(
+			return !alt ? CELang.eff(ins(lv)) : CELang.EFF_ALL.get(
 					CELang.eff(ins(lv), false, false),
 					CELang.num(lv, dur.getAsInt(), true),
 					CELang.num(lv, 1, true));
@@ -52,7 +52,7 @@ public interface EnchEffectEntry {
 
 		@Override
 		public MutableComponent comp(int lv, boolean alt) {
-			return alt ? CELang.eff(ins(lv)) : CELang.EFF_DUR.get(
+			return !alt ? CELang.eff(ins(lv)) : CELang.EFF_DUR.get(
 					CELang.eff(ins(lv), true, false),
 					CELang.num(lv, dur.getAsInt(), true));
 		}
@@ -68,8 +68,8 @@ public interface EnchEffectEntry {
 
 		@Override
 		public MutableComponent comp(int lv, boolean alt) {
-			return alt ? CELang.eff(ins(lv)) : CELang.EFF_AMP.get(
-					CELang.eff(ins(lv), false, false),
+			return !alt ? CELang.eff(ins(lv)) : CELang.EFF_AMP.get(
+					CELang.eff(ins(lv), false, true),
 					CELang.num(lv, 1, true));
 		}
 

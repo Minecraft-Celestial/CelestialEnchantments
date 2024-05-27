@@ -2,12 +2,13 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
-import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import dev.xkmc.l2library.capability.conditionals.*;
 import dev.xkmc.l2serial.serialization.SerialClass;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 
@@ -19,8 +20,12 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 		return 0.05;
 	}
 
+	private static int cd() {
+		return 60;
+	}
+
 	public EchoEffect() {
-		super(Rarity.VERY_RARE, Type.CHEST, EnchData.treasure(3, PROTECT));
+		super(Rarity.VERY_RARE, Type.LEGS, EnchData.treasure(3, PROTECT));
 	}
 
 	@Override
@@ -31,7 +36,7 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 				var data = ConditionalData.HOLDER.get(player);
 				if (data.hasData(KEY)) return v;
 				player.heal(player.getMaxHealth() * v * (float) heal());
-				data.getOrCreateData(this, this).timer = 1200;
+				data.getOrCreateData(this, this).timer = cd() * 20;
 				return 0;
 			}));
 		}
@@ -45,6 +50,11 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 	@Override
 	public TokenKey<Token> getKey() {
 		return KEY;
+	}
+
+	@Override
+	public Component desc(int lv, String key, boolean alt) {
+		return CELang.ench(key, CELang.perc(lv, heal(), alt), CELang.num(cd()));
 	}
 
 	@SerialClass

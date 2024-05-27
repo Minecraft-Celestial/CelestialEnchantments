@@ -15,13 +15,17 @@ public class ClusterAwareness extends AttackEnch {
 		return 0.03;//TODO
 	}
 
+	private static int radius() {
+		return 12;
+	}
+
 	public ClusterAwareness() {
 		super(Rarity.UNCOMMON, EnchData.normal(3, A75));
 	}
 
 	@Override
 	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
-		int count = EntityUtils.getExceptForCentralEntity(user, 6, 2, e -> e.getType() == user.getType()).size();
+		int count = EntityUtils.getExceptForCentralEntity(user, radius(), 2, e -> e.getType() == user.getType()).size();
 		cache.addHurtModifier(DamageModifier.multBase(lv * count * (float) atk()));
 	}
 

@@ -1,9 +1,11 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
+import net.minecraft.network.chat.Component;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,7 +23,7 @@ public class FireproofBoots extends DefenceEnch {
 	@Override
 	public void onDamagedImpl(LivingEntity user, AttackCache cache, int lv) {
 		if (getSource(cache).is(DamageTypeTags.IS_FIRE)) {
-			cache.addDealtModifier(DamageModifier.multTotal((float) damageMult()));
+			cache.addDealtModifier(DamageModifier.multTotal(1 - (float) damageMult()));
 		}
 	}
 
@@ -30,4 +32,8 @@ public class FireproofBoots extends DefenceEnch {
 		return getSource(cache).is(DamageTypes.HOT_FLOOR);
 	}
 
+	@Override
+	public Component desc(int lv, String key, boolean alt) {
+		return CELang.ench(key, CELang.perc(damageMult()));
+	}
 }

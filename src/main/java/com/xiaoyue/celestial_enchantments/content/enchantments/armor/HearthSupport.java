@@ -1,8 +1,10 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -11,7 +13,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 public class HearthSupport extends ArmorEnch {
 
   private static int fireTime() {
-		return 40;
+		return 2;
 	}
 
 	public HearthSupport() {
@@ -27,8 +29,14 @@ public class HearthSupport extends ArmorEnch {
 	@Override
 	public void doPostHurt(LivingEntity entity, Entity attacker, int level) {
 		if (attacker instanceof LivingEntity livingEntity) {
-			livingEntity.setSecondsOnFire(level * fireTime());
+			livingEntity.setSecondsOnFire(level * fireTime() * 20);
 		}
 	}
+
+	@Override
+	public Component desc(int lv, String key, boolean alt) {
+		return CELang.ench(key, CELang.num(lv, fireTime(), alt));
+	}
+
 
 }

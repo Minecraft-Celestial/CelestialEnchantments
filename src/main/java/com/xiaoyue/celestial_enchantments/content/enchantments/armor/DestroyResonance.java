@@ -2,9 +2,11 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 
@@ -30,5 +32,11 @@ public class DestroyResonance extends DefenceEnch {
 			GeneralEventHandler.schedule(() -> list.hurt(source, lv * (float) damage() * cache.getPreDamage()));
 		}
 	}
+
+	@Override
+	public Component desc(int lv, String key, boolean alt) {
+		return CELang.ench(key, CELang.perc(lv, damage(), alt));
+	}
+
 
 }
