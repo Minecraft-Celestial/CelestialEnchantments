@@ -19,7 +19,7 @@ public class LightArmorKiller extends AttackEnch {
 	}
 
 	public LightArmorKiller() {
-		super(Rarity.RARE, EnchData.treasure(3, A75));
+		super(Rarity.COMMON, EnchData.treasure(3, A75));
 	}
 
 	@Override

@@ -23,7 +23,12 @@ public class CEItems {
 		TABLE = CelestialEnchantments.REGISTRATE.block("celestial_enchanting_table", p -> new CelestialTableBlock(
 						BlockBehaviour.Properties.copy(Blocks.ENCHANTING_TABLE)))
 				.blockstate((ctx, pvd) -> pvd.simpleBlock(ctx.get(), pvd.models()
-						.withExistingParent(ctx.getName(), "block/enchanting_table")))
+						.withExistingParent(ctx.getName(), "block/enchanting_table")
+						.texture("particle",pvd.modLoc("block/table_bottom"))
+						.texture("bottom",pvd.modLoc("block/table_bottom"))
+						.texture("top",pvd.modLoc("block/table_top"))
+						.texture("side",pvd.modLoc("block/table_side"))
+				))
 				.simpleItem()
 				.tag(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_DIAMOND_TOOL)
 				.register();

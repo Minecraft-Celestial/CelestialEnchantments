@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "celestial_enchantments:celestial_enchanting_table"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_treasure_fragment": {
+    "has_basic_celestial_catalyst": {
       "conditions": {
         "items": [
           {
             "items": [
-              "celestial_core:treasure_fragment"
+              "celestial_enchantments:basic_celestial_catalyst"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "celestial_enchantments:celestial_enchanting_table"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_treasure_fragment",
+      "has_basic_celestial_catalyst",
       "has_the_recipe"
     ]
   ],

@@ -17,16 +17,16 @@ import java.util.function.BiFunction;
 public class CERecipeGen {
 
 	public static void onRecipeGen(RegistrateRecipeProvider pvd) {
-		unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CEItems.TABLE)::unlockedBy, CCItems.TREASURE_FRAGMENT.get())
+		unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CEItems.TABLE)::unlockedBy, CEItems.BASIC_FUEL.get())
 				.pattern(" B ").pattern("TRT").pattern("OOO")
 				.define('B', Items.ENCHANTED_BOOK)
-				.define('T', CCItems.TREASURE_FRAGMENT)
+				.define('T', CEItems.BASIC_FUEL)
 				.define('R', Items.REDSTONE_BLOCK)
 				.define('O', Items.CRYING_OBSIDIAN)
 				.save(pvd);
 
 		unlock(pvd, ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CEItems.BASIC_FUEL)::unlockedBy, Items.LAPIS_LAZULI)
-				.requires(Items.LAPIS_LAZULI).requires(Items.REDSTONE).requires(Items.AMETHYST_SHARD)
+				.requires(Items.LAPIS_LAZULI).requires(Items.REDSTONE).requires(Items.GOLD_INGOT).requires(Items.AMETHYST_SHARD)
 				.requires(CETagGen.BASIC_INGREDIENTS).save(pvd);
 
 		unlock(pvd, ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CEItems.ADVANCED_FUEL)::unlockedBy, CEItems.BASIC_FUEL.get())

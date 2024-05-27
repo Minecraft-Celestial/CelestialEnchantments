@@ -20,7 +20,7 @@ public class QuenchedBlade extends AttackEnch {
 	}
 
 	public QuenchedBlade() {
-		super(Rarity.UNCOMMON, EnchData.treasure(3, A300));
+		super(Rarity.VERY_RARE, EnchData.treasure(3, A300));
 	}
 
 	@Override

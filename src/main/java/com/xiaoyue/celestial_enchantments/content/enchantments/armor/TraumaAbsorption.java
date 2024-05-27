@@ -12,7 +12,7 @@ public class TraumaAbsorption extends DefenceEnch {
 	}
 
 	public TraumaAbsorption() {
-		super(Rarity.RARE, Type.CHEST, EnchData.treasure(5, PROTECT));
+		super(Rarity.UNCOMMON, Type.CHEST, EnchData.treasure(5, PROTECT));
 	}
 
 	@Override

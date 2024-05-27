@@ -12,7 +12,7 @@
       "item": "minecraft:redstone_block"
     },
     "T": {
-      "item": "celestial_core:treasure_fragment"
+      "item": "celestial_enchantments:basic_celestial_catalyst"
     }
   },
   "pattern": [

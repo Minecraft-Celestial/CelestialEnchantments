@@ -48,6 +48,10 @@
   "item.celestial_enchantments.basic_celestial_catalyst": "基础魔引",
   "item.celestial_enchantments.legendary_celestial_catalyst": "传奇魔引",
 
+  "celestial_enchantments.tooltip.table_desc_0": "为装备施加星月附魔。消耗魔引。",
+  "celestial_enchantments.tooltip.table_desc_1": "周围的錾制书架中附魔书的星月附魔不会出现在附魔结果中，但是会降低附魔等级",
+  "celestial_enchantments.tooltip.table_desc_ca": "混沌吊坠和高魔力亲和度的装备会让稀有附魔更频繁的出现",
+
   "enchantment.celestial_enchantments.fatal_blow": "致命一击",
   "enchantment.celestial_enchantments.fatal_blow.desc": "+%s暴击伤害",
   "enchantment.celestial_enchantments.withering_blade": "凋亡之刃",

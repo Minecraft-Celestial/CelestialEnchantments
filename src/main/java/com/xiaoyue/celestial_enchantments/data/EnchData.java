@@ -23,4 +23,8 @@ public record EnchData(EnchLevel level, EnchGroup group, boolean bad) {
 	public static EnchData special(int lv, EnchGroup group) {
 		return new EnchData(EnchLevel.simple(EnchType.LEGENDARY, lv, 30), group, false);
 	}
+
+	public static EnchData specialHigh(int lv, EnchGroup group) {
+		return new EnchData(EnchLevel.simple(EnchType.LEGENDARY, lv, 45), group, false);
+	}
 }

@@ -1,6 +1,9 @@
 package com.xiaoyue.celestial_enchantments.content.table;
 
+import com.xiaoyue.celestial_artifacts.CelestialArtifacts;
+import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.register.CEItems;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -14,6 +17,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -28,6 +32,7 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.fml.ModList;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -44,6 +49,16 @@ public class CelestialTableBlock extends BaseEntityBlock {
       return level.getBlockState(self.offset(offset)).getEnchantPowerBonus(level, self.offset(offset)) != 0 &&
               level.getBlockState(self.offset(offset.getX() / 2, offset.getY(), offset.getZ() / 2))
                       .is(BlockTags.ENCHANTMENT_POWER_TRANSMITTER);
+   }
+
+   @Override
+   public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> list, TooltipFlag flag) {
+      list.add(CELang.TABLE_DESC_0.get().withStyle(ChatFormatting.GRAY));
+      list.add(CELang.TABLE_DESC_1.get().withStyle(ChatFormatting.RED));
+      if (ModList.get().isLoaded(CelestialArtifacts.MODID)) {
+         list.add(CELang.TABLE_DESC_CA.get().withStyle(ChatFormatting.AQUA));
+      }
+      super.appendHoverText(stack, level, list, flag);
    }
 
    public boolean useShapeForLightOcclusion(BlockState pState) {

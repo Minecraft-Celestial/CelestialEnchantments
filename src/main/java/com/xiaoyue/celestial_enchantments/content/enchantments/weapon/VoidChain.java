@@ -21,7 +21,7 @@ public class VoidChain extends AttackEnch {
 	}
 
 	public VoidChain() {
-		super(Rarity.RARE, EnchData.special(3, A300));
+		super(Rarity.UNCOMMON, EnchData.special(3, A300));
 	}
 
 	@Override

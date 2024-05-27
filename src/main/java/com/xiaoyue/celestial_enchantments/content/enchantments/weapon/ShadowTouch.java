@@ -11,7 +11,7 @@ import net.minecraft.world.level.LightLayer;
 public class ShadowTouch extends WeaponEnch {
 
 	public ShadowTouch() {
-		super(Rarity.VERY_RARE, EnchData.special(5, A300));
+		super(Rarity.COMMON, EnchData.special(5, A300));
 	}
 
 	@Override
