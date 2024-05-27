@@ -43,7 +43,7 @@ public class CelestialEnchantmentHelper {
 		averager += (int) (val * EXTRA_WEIGHT_PER_AFFINITY);
 
 		for (Enchantment e : ForgeRegistries.ENCHANTMENTS) {
-			if (e instanceof CEBaseEnchantment ce &&
+			if (e instanceof CEBaseEnchantment ce && ce.isEnabled() &&
 					(e.canApplyAtEnchantingTable(stack) || isBook && e.isAllowedOnBooks())) {
 				var max = Math.min(ce.getMaxLevel(), maxLevel(ce, level) + levelBonus);
 				if (max <= 0) continue;

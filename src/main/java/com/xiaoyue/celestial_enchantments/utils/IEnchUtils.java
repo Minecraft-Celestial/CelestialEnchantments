@@ -27,14 +27,7 @@ public class IEnchUtils {
 		EquipmentSlot slot = entity.getMainHandItem() == stack ? EquipmentSlot.MAINHAND :
 				entity.getOffhandItem() == stack ? EquipmentSlot.OFFHAND : null;
 		if (slot == null) return ans;
-		if (stack.isEnchanted()) {
-			Map<Enchantment, Integer> entries = EnchantmentHelper.getEnchantments(stack);
-			for (var e : entries.entrySet()) {
-				if (e.getKey() instanceof CEBaseEnchantment xc && xc.slots.contains(slot)) {
-					ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + guard(e));
-				}
-			}
-		}
+		merge(ans, stack, slot);
 		return ans;
 	}
 
@@ -42,16 +35,20 @@ public class IEnchUtils {
 		Map<Enchantment, Integer> ans = new HashMap<>();
 		for (EquipmentSlot slot : slots) {
 			ItemStack stack = entity.getItemBySlot(slot);
-			if (stack.isEnchanted()) {
-				Map<Enchantment, Integer> entries = EnchantmentHelper.getEnchantments(stack);
-				for (var e : entries.entrySet()) {
-					if (e.getKey() instanceof CEBaseEnchantment xc && xc.slots.contains(slot)) {
-						ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + guard(e));
-					}
+			merge(ans, stack, slot);
+		}
+		return ans;
+	}
+
+	private static void merge(Map<Enchantment, Integer> ans, ItemStack stack, EquipmentSlot slot) {
+		if (stack.isEnchanted()) {
+			Map<Enchantment, Integer> entries = EnchantmentHelper.getEnchantments(stack);
+			for (var e : entries.entrySet()) {
+				if (e.getKey() instanceof CEBaseEnchantment xc && xc.isEnabled() && xc.slots.contains(slot)) {
+					ans.compute(e.getKey(), (k, v) -> (v == null ? 0 : v) + guard(e));
 				}
 			}
 		}
-		return ans;
 	}
 
 	private static int guard(Map.Entry<Enchantment, Integer> ent) {

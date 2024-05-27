@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.CERecipeGen;
 import com.xiaoyue.celestial_enchantments.data.CETagGen;
 import com.xiaoyue.celestial_enchantments.event.CEAttackListener;
@@ -40,6 +41,7 @@ public class CelestialEnchantments {
 		CEEnchantments.register();
 		CEEffects.register();
 		CEItems.register();
+		CEModConfig.init();
 		AttackEventHandler.register(3560, new CEAttackListener());
 		REGISTRATE.addDataGenerator(ProviderType.LANG, CELang::genLang);
 		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, CETagGen::onItemTagGen);

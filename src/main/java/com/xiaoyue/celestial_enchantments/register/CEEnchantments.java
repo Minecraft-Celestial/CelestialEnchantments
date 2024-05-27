@@ -20,10 +20,12 @@ import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
+import java.util.LinkedHashSet;
+
 @SuppressWarnings("unused")
 public class CEEnchantments {
 
-	// 60 / 69
+	public static final LinkedHashSet<String> ALL_ENCH = new LinkedHashSet<>();
 
 	// weapons
 	public static final RegistryEntry<Enchantment> WITHERING_BLADE = reg("withering_blade", ApoptosisBlade::new, "Inflict %s"); // effect
@@ -126,6 +128,7 @@ public class CEEnchantments {
 
 
 	public static RegistryEntry<Enchantment> reg(String id, NonNullSupplier<? extends Enchantment> sup, String desc) {
+		ALL_ENCH.add(id);
 		return CelestialEnchantments.REGISTRATE.enchantment(id, EnchantmentCategory.BREAKABLE,
 				(r, c, s) -> (Enchantment) sup.get(), desc).register();
 	}

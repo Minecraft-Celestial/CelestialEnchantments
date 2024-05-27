@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.generic;
 
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.data.EnchGroup;
 import com.xiaoyue.celestial_enchantments.utils.IEnchUtils;
@@ -11,6 +12,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,6 +22,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,6 +91,9 @@ public class CEBaseEnchantment extends Enchantment {
 	}
 
 	public List<Component> descFull(int lv, String key, boolean alt, boolean isBook) {
+		if (!isEnabled()) {
+			return List.of();
+		}
 		if (alt) {
 			return List.of(desc(lv, key, true));
 		}
@@ -103,9 +109,23 @@ public class CEBaseEnchantment extends Enchantment {
 		return List.of(base, desc(lv, key, false));
 	}
 
+	private ResourceLocation id;
+
+	public ResourceLocation getID() {
+		if (id != null) return id;
+		id = ForgeRegistries.ENCHANTMENTS.getKey(this);
+		return id;
+	}
+
+	public boolean isEnabled() {
+		return CEModConfig.COMMON.enabled(this);
+	}
+
 	public MutableComponent getName() {
 		MutableComponent mutablecomponent = Component.translatable(this.getDescriptionId());
-		if (this.isCurse()) {
+		if (!isEnabled()) {
+			return mutablecomponent.withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.STRIKETHROUGH);
+		} else if (this.isCurse()) {
 			mutablecomponent.withStyle(ChatFormatting.RED);
 		} else if (config.bad()) {
 			mutablecomponent.withStyle(ChatFormatting.LIGHT_PURPLE);
@@ -116,10 +136,11 @@ public class CEBaseEnchantment extends Enchantment {
 	}
 
 	@Override
-	public Component getFullname(int pLevel) {
+	public Component getFullname(int lv) {
+		lv = Math.min(getMaxLevel(), lv);
 		var ans = getName();
-		if (pLevel != 1 || this.getMaxLevel() != 1) {
-			ans.append(CommonComponents.SPACE).append(Component.translatable("enchantment.level." + pLevel));
+		if (lv != 1 || this.getMaxLevel() != 1) {
+			ans.append(CommonComponents.SPACE).append(Component.translatable("enchantment.level." + lv));
 		}
 		return ans;
 	}
