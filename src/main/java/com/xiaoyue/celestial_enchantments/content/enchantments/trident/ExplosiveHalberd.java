@@ -22,7 +22,7 @@ public class ExplosiveHalberd extends TridentEnch {
 	}
 
 	public ExplosiveHalberd() {
-		super(Rarity.VERY_RARE, EnchData.normal(5, TRIDENT));
+		super(Rarity.COMMON, EnchData.normal(5, TRIDENT));
 	}
 
 	@Override

@@ -97,7 +97,7 @@ public class CEBaseEnchantment extends Enchantment {
 		if (alt) {
 			return List.of(desc(lv, key, true));
 		}
-		var base = CELang.CELE.get().withStyle(ChatFormatting.AQUA).append(CommonComponents.SPACE);
+		var base = CELang.CELE.get().withStyle(ChatFormatting.DARK_AQUA).append(CommonComponents.SPACE);
 		base = base.append(config.level().type().lang.get()).append(CommonComponents.SPACE);
 		if (!isCurse()) {
 			base = base.append(config.group().lang().get().withStyle(config.group().color())).append(CommonComponents.SPACE);

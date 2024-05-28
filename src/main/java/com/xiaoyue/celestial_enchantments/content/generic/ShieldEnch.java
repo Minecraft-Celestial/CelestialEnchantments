@@ -9,7 +9,7 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 
 public class ShieldEnch extends CEBaseEnchantment {
 
-	public static final EnchGroup SHIELD = EnchGroup.simple(CELang.SHIELD, ChatFormatting.AQUA);
+	public static final EnchGroup SHIELD = EnchGroup.simple(CELang.SHIELD, ChatFormatting.DARK_AQUA);
 
 	protected ShieldEnch(Rarity rarity, EnchData config) {
 		super(rarity, Type.SHIELD, config);

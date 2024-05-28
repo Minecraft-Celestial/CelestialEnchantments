@@ -7,7 +7,7 @@ import net.minecraft.ChatFormatting;
 
 public class GeneralEnch extends CEBaseEnchantment {
 
-	public static final EnchGroup DURABILITY = EnchGroup.simple(CELang.GENERAL, ChatFormatting.AQUA);
+	public static final EnchGroup DURABILITY = EnchGroup.simple(CELang.GENERAL, ChatFormatting.DARK_AQUA);
 
 	protected GeneralEnch(Rarity rarity, EnchData config) {
 		super(rarity, Type.ALL, config);

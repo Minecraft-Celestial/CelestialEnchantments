@@ -16,8 +16,8 @@ public class PartingWish extends DeathEnch {
 		return 12;
 	}
 
-	private static int heal() {
-		return 8;
+	private static double heal() {
+		return 0.3;
 	}
 
 	public PartingWish() {
@@ -28,14 +28,14 @@ public class PartingWish extends DeathEnch {
 	public void onDeath(LivingEntity entity, int level) {
 		if (!(entity instanceof Player)) return;
 		List<LivingEntity> players = EntityUtils.getExceptForCentralEntity(entity, radius(), 2, livingEntity -> livingEntity instanceof Player);
-		for (LivingEntity list : players) {
-			list.heal(level * (float) heal());
+		for (LivingEntity p : players) {
+			p.heal(level * (float) heal() * p.getMaxHealth());
 		}
 	}
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.num(lv, heal(), alt));
+		return CELang.ench(key, CELang.perc(lv, heal(), alt));
 	}
 
 }

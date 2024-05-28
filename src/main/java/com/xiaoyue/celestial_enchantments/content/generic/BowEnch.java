@@ -11,8 +11,8 @@ import net.minecraft.world.item.enchantment.Enchantments;
 
 public class BowEnch extends CEBaseEnchantment {
 
-	public static final EnchGroup ARROW = EnchGroup.of(CELang.ARROW, ChatFormatting.AQUA, () -> Enchantments.POWER_ARROWS);
-	public static final EnchGroup ARROW_EFFECT = EnchGroup.of(CELang.ARROW_EFFECT, ChatFormatting.AQUA, () -> Enchantments.FLAMING_ARROWS);
+	public static final EnchGroup ARROW = EnchGroup.of(CELang.ARROW, ChatFormatting.DARK_AQUA, () -> Enchantments.POWER_ARROWS);
+	public static final EnchGroup ARROW_EFFECT = EnchGroup.of(CELang.ARROW_EFFECT, ChatFormatting.DARK_GREEN, () -> Enchantments.FLAMING_ARROWS);
 
 	protected BowEnch(Rarity rarity, EnchData config) {
 		super(rarity, Type.BOW, config);

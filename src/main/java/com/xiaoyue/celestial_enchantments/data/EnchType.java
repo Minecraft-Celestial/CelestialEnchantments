@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 public enum EnchType {
 	CURSE(true, true, () -> CELang.CURSE.get().withStyle(ChatFormatting.RED)),
 	NORMAL(false, true, () -> CELang.NORMAL.get().withStyle(ChatFormatting.GREEN)),
-	TREASURE(false, false, () -> CELang.ADVANCED.get().withStyle(ChatFormatting.AQUA)),
+	TREASURE(false, false, () -> CELang.ADVANCED.get().withStyle(ChatFormatting.DARK_AQUA)),
 	LEGENDARY(false, false, () -> CELang.LEGENDARY.get().withStyle(ChatFormatting.GOLD)),
 	;
 

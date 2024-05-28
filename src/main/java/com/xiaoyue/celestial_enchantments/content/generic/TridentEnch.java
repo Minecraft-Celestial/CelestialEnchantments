@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class TridentEnch extends CEBaseEnchantment {
 
-	public static final EnchGroup TRIDENT = EnchGroup.simple(CELang.TRIDENT, ChatFormatting.AQUA);
+	public static final EnchGroup TRIDENT = EnchGroup.simple(CELang.TRIDENT, ChatFormatting.DARK_AQUA);
 
 	protected TridentEnch(Rarity rarity, EnchData config) {
 		super(rarity, Type.TRIDENT, config);
