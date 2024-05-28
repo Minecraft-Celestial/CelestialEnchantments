@@ -16,7 +16,7 @@ public class VoidProtection extends DefenceEnch {
 	}
 
 	public VoidProtection() {
-		super(Rarity.VERY_RARE, Type.ARMOR, EnchData.normal(4, PROTECT));
+		super(Rarity.UNCOMMON, Type.ARMOR, EnchData.normal(4, PROTECT));
 	}
 
 	@Override

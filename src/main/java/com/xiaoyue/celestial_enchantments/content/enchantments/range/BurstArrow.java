@@ -17,11 +17,11 @@ public class BurstArrow extends BowEnch {
 	}
 
   private static double strength() {
-		return 1;
+		return 3;
 	}
 
 	public BurstArrow() {
-		super(Rarity.VERY_RARE, EnchData.normal(3, ARROW_EFFECT));
+		super(Rarity.VERY_RARE, EnchData.treasure(3, ARROW_EFFECT));
 	}
 
 	@Override

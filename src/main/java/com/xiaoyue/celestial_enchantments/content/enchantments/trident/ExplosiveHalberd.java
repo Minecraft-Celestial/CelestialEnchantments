@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 public class ExplosiveHalberd extends TridentEnch {
 
 	private static double strength() {
-		return 1;
+		return 3;
 	}
 
 	private static double chance() {

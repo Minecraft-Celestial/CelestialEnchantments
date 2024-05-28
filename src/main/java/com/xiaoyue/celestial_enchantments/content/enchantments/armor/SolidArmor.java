@@ -15,7 +15,7 @@ public class SolidArmor extends DefenceEnch {
 	}
 
 	public SolidArmor() {
-		super(Rarity.UNCOMMON, Type.ARMOR, EnchData.treasure(3, PROTECT));
+		super(Rarity.UNCOMMON, Type.ARMOR, EnchData.treasure(4, PROTECT));
 	}
 
 	@Override

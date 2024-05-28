@@ -9,21 +9,21 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
-public class BornInShadow extends GeneralEnch implements ToolTickEnch {
+public class Photosynthesis extends GeneralEnch implements ToolTickEnch {
 
 	private static int dur() {
 		return 10;
 	}
 
 	private static int light() {
-		return 5;
+		return 10;
 	}
 
 	private static int recover() {
 		return 1;
 	}
 
-	public BornInShadow() {
+	public Photosynthesis() {
 		super(Rarity.COMMON, EnchData.normal(5, DURABILITY));
 	}
 
@@ -33,7 +33,7 @@ public class BornInShadow extends GeneralEnch implements ToolTickEnch {
 		if (entity.level().isClientSide()) return;
 		if (entity.tickCount % (dur() * 20) == 0) {
 			int brightness = CCUtils.getLight(entity.level(), entity.blockPosition());
-			if (brightness <= light()) {
+			if (brightness >= light()) {
 				stack.setDamageValue(Math.max(0, stack.getDamageValue() - recover() * level));
 			}
 		}

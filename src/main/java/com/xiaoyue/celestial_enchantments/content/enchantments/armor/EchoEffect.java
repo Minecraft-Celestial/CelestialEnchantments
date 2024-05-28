@@ -25,7 +25,7 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 	}
 
 	public EchoEffect() {
-		super(Rarity.VERY_RARE, Type.LEGS, EnchData.treasure(3, PROTECT));
+		super(Rarity.VERY_RARE, Type.LEGS, EnchData.specialHigh(3, PROTECT));
 	}
 
 	@Override

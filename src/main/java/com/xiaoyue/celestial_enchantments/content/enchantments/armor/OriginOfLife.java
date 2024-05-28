@@ -24,7 +24,7 @@ public class OriginOfLife extends ArmorEnch implements LivingHealEnch {
 	private static final EnchEffectEntry RES = EnchEffectEntry.amp(() -> MobEffects.DAMAGE_RESISTANCE, OriginOfLife::dur);
 
 	public OriginOfLife() {
-		super(Rarity.RARE, Type.CHEST, EnchData.treasure(2, EFFECT));
+		super(Rarity.RARE, Type.CHEST, EnchData.normal(2, EFFECT));
 	}
 
 	@Override

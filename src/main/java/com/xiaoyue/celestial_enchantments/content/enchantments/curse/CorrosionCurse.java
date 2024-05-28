@@ -1,6 +1,5 @@
-package com.xiaoyue.celestial_enchantments.content.enchantments.tool;
+package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 
-import com.xiaoyue.celestial_core.utils.CCUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.GeneralEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolTickEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
@@ -9,22 +8,18 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
-public class BornInShadow extends GeneralEnch implements ToolTickEnch {
+public class CorrosionCurse extends GeneralEnch implements ToolTickEnch {
 
 	private static int dur() {
-		return 10;
-	}
-
-	private static int light() {
 		return 5;
 	}
 
-	private static int recover() {
+	private static int lose() {
 		return 1;
 	}
 
-	public BornInShadow() {
-		super(Rarity.COMMON, EnchData.normal(5, DURABILITY));
+	public CorrosionCurse() {
+		super(Rarity.RARE, EnchData.curse(5));
 	}
 
 	@Override
@@ -32,16 +27,16 @@ public class BornInShadow extends GeneralEnch implements ToolTickEnch {
 		var entity = event.getEntity();
 		if (entity.level().isClientSide()) return;
 		if (entity.tickCount % (dur() * 20) == 0) {
-			int brightness = CCUtils.getLight(entity.level(), entity.blockPosition());
-			if (brightness <= light()) {
-				stack.setDamageValue(Math.max(0, stack.getDamageValue() - recover() * level));
-			}
+			int max = stack.getMaxDamage() / 2;
+			int dur = stack.getDamageValue();
+			if (dur < max)
+				stack.setDamageValue(Math.min(max, dur + lose() * level));
 		}
 	}
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.num(light()), CELang.num(lv, recover(), alt), CELang.num(dur()));
+		return CELang.ench(key, CELang.num(lv, lose(), alt), CELang.num(dur()));
 	}
 
 }
