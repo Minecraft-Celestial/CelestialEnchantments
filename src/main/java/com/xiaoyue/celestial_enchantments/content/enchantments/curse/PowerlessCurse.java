@@ -17,7 +17,7 @@ public class PowerlessCurse extends ToolEnch implements PlayerBreakEnch {
 	}
 
 	public PowerlessCurse() {
-		super(Rarity.UNCOMMON, Type.DIGGER, EnchData.curse(3));
+		super(Rarity.UNCOMMON, Type.DIGGER, EnchData.curse(5));
 	}
 
 	@Override

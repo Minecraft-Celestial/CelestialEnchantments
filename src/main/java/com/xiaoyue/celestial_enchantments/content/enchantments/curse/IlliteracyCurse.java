@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ChangeXpEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ExperienceOrb;
@@ -12,7 +13,7 @@ import net.minecraftforge.event.entity.player.PlayerXpEvent;
 public class IlliteracyCurse extends ArmorEnch implements ChangeXpEnch {
 
 	private static double exp() {
-		return 0.15;
+		return CEModConfig.COMMON.ench.curse.curseOfIlliteracyExpLost.get();
 	}
 
 	public IlliteracyCurse() {

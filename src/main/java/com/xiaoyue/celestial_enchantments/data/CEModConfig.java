@@ -92,9 +92,36 @@ public class CEModConfig {
 
 			public static class Curse {
 
+				public final ForgeConfigSpec.IntValue curseOfCorrosionInterval;
+				public final ForgeConfigSpec.IntValue curseOfCorrosionDurabilityLost;
+				public final ForgeConfigSpec.DoubleValue curseOfWeaknessAttackLost;
+				public final ForgeConfigSpec.DoubleValue destructionCurseExplosion;
+				public final ForgeConfigSpec.DoubleValue destructionCurseOther;
+				public final ForgeConfigSpec.DoubleValue curseOfGravityAttackSpeedLost;
+				public final ForgeConfigSpec.DoubleValue curseOfIlliteracyExpLost;
+				public final ForgeConfigSpec.DoubleValue powerlessCurseMiningSpeedLost;
+				public final ForgeConfigSpec.DoubleValue curseOfWitheringHealthLost;
+
 				Curse(ForgeConfigSpec.Builder builder) {
 					builder.push("Curse");
-
+					curseOfCorrosionInterval = builder.comment("Curse of Corrosion: time interval in seconds between durability lost")
+							.defineInRange("curseOfCorrosionInterval", 5, 1, 100);
+					curseOfCorrosionDurabilityLost = builder.comment("Curse of Corrosion: durability lost per level per time interval")
+							.defineInRange("curseOfCorrosionDurabilityLost", 1, 1, 100);
+					curseOfWeaknessAttackLost = builder.comment("Curse of Weakness: Attack lost per level")
+							.defineInRange("curseOfWeaknessAttackLost", 0.15, 0, 0.2);
+					destructionCurseExplosion = builder.comment("Destruction Curse: explosion damage amplification per level")
+							.defineInRange("destructionCurseExplosion", 0.4, 0, 10);
+					destructionCurseOther = builder.comment("Destruction Curse: other damage amplification per level")
+							.defineInRange("destructionCurseOther", 0.25, 0, 10);
+					curseOfGravityAttackSpeedLost = builder.comment("Curse of Gravity: attack speed lost per level")
+							.defineInRange("curseOfGravityAttackSpeedLost", 0.1, 0, 0.2);
+					curseOfIlliteracyExpLost = builder.comment("Curse of Illiteracy: exp lost per level")
+							.defineInRange("curseOfIlliteracyExpLost", 0.15, 0, 0.33);
+					powerlessCurseMiningSpeedLost = builder.comment("Powerless Curse: Mining speed lost per level")
+							.defineInRange("powerlessCurseMiningSpeedLost", 0.15, 0, 0.2);
+					curseOfWitheringHealthLost = builder.comment("Curse of Withering: max health lost per level per piece")
+							.defineInRange("curseOfWitheringHealthLost", 0.05, 0, 0.25);
 					builder.pop();
 				}
 

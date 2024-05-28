@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -12,11 +13,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class DestructionCurse extends DefenceEnch {
 
 	private static double explDmg() {
-		return 0.4;
+		return CEModConfig.COMMON.ench.curse.destructionCurseExplosion.get();
 	}
 	
 	private static double otherDmg() {
-		return 0.25;
+		return CEModConfig.COMMON.ench.curse.destructionCurseOther.get();
 	}
 
 	public DestructionCurse() {

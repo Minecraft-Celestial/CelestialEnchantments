@@ -19,9 +19,10 @@ public class CETagGen {
 						CCItems.FIRE_ESSENCE.get(), CCItems.OCEAN_ESSENCE.get(), CCItems.DEATH_ESSENCE.get())
 				.addOptional(CAItems.THE_END_DUST.getId());
 		pvd.addTag(ADVANCED_INGREDIENTS).add(CCItems.MIDNIGHT_FRAGMENT.get(), CCItems.MIDNIGHT_FRAGMENT.get(),
-				CCItems.SHULKER_SCRAP.get(), CCItems.WARDEN_SCLERITE.get());
+				CCItems.SHULKER_SCRAP.get(), CCItems.WARDEN_SCLERITE.get())
+				.addOptional(CAItems.NEBULA_CUBE.getId());
 		pvd.addTag(LEGENDARY_INGREDIENTS).add(CCItems.HEART_FRAGMENT.get(), CCItems.PURE_NETHER_STAR.get(),
-				CCItems.SOARING_WINGS.get()).addOptional(CAItems.NEBULA_CUBE.getId());
+				CCItems.SOARING_WINGS.get());
 
 	}
 }

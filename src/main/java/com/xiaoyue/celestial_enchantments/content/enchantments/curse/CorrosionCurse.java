@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 import com.xiaoyue.celestial_enchantments.content.generic.GeneralEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolTickEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -11,11 +12,11 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class CorrosionCurse extends GeneralEnch implements ToolTickEnch {
 
 	private static int dur() {
-		return 5;
+		return CEModConfig.COMMON.ench.curse.curseOfCorrosionInterval.get();
 	}
 
 	private static int lose() {
-		return 1;
+		return CEModConfig.COMMON.ench.curse.curseOfCorrosionDurabilityLost.get();
 	}
 
 	public CorrosionCurse() {

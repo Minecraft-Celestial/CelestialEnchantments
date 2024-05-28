@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.AttributeEnchantment;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2library.util.math.MathHelper;
 import net.minecraft.network.chat.Component;
@@ -13,11 +14,11 @@ import net.minecraftforge.event.ItemAttributeModifierEvent;
 public class WitheringCurse extends ArmorEnch implements AttributeEnchantment {
 
 	private static double health() {
-		return 0.05;
+		return CEModConfig.COMMON.ench.curse.curseOfWitheringHealthLost.get();
 	}
 
 	public WitheringCurse() {
-		super(Rarity.RARE, Type.ARMOR, EnchData.curse(5));
+		super(Rarity.RARE, Type.ARMOR, EnchData.curse(4));
 	}
 
 	@Override

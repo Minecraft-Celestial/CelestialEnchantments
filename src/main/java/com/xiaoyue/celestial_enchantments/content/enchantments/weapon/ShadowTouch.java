@@ -21,7 +21,7 @@ public class ShadowTouch extends WeaponEnch {
 	}
 
 	public ShadowTouch() {
-		super(Rarity.COMMON, EnchData.special(5, A300));
+		super(Rarity.UNCOMMON, EnchData.special(5, A300));
 	}
 
 	@Override
