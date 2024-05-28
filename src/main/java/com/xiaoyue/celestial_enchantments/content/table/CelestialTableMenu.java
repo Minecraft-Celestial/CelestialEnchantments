@@ -249,9 +249,10 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 	private List<CelestialEnchIns> getEnchantmentList(ItemStack pStack, int slot, int pLevel) {
 		var ans = getForbiddenSet();
 		random.setSeed(enchantmentSeed.get() + slot);
-		boolean chaotic = EnchCompat.hasChaoticPendent(player);
+		int weight = EnchCompat.extraWeight(player);
+		int extraLv = EnchCompat.extraLevel(player);
 		var list = CelestialEnchantmentHelper.selectEnchantment(
-				random, pStack, slot, pLevel, ans, chaotic ? 10 : 0, chaotic ? 3 : 0);
+				random, pStack, slot, pLevel, ans, weight, extraLv);
 		if (pStack.is(Items.BOOK) && list.size() > 1) {
 			list.remove(random.nextInt(list.size()));
 		}

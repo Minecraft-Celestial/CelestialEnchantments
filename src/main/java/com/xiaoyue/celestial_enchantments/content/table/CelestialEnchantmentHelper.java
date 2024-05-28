@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.table;
 
 import com.google.common.collect.Lists;
 import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchType;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.random.WeightedRandom;
@@ -16,9 +17,30 @@ import java.util.Set;
 
 public class CelestialEnchantmentHelper {
 
-	private static final double EXTRA_ROLL_PER_AFFINITY = 0.1;
-	private static final double EXTRA_WEIGHT_PER_AFFINITY = 0.1;
-	private static final double BOOK_CURSE_CHANCE = 0.15;
+	private static double extraRollPerAffinity() {
+		return CEModConfig.COMMON.table.extraRollPerAffinity.get();
+	}
+
+	private static double extraWeightPerAffinity() {
+		return CEModConfig.COMMON.table.extraWeightPerAffinity.get();
+	}
+
+	private static double bookCurseChance() {
+		return CEModConfig.COMMON.table.bookCurseChance.get();
+	}
+
+	private static double noCurseAffinity() {
+		return CEModConfig.COMMON.table.noCurseAffinity.get();
+	}
+
+	private static double baseCurseChance() {
+		return CEModConfig.COMMON.table.baseCurseChance.get();
+	}
+
+	private static double weightCurseReduction() {
+		return CEModConfig.COMMON.table.weightCurseReduction.get();
+	}
+
 
 	private static int maxLevel(CEBaseEnchantment ce, int level) {
 		int lv = ce.getMaxLevel();
@@ -40,7 +62,7 @@ public class CelestialEnchantmentHelper {
 		List<CelestialEnchIns> legendary = new ArrayList<>();
 
 		level += val / 2 + Math.max(0, val - 10) / 2 + Math.max(0, val - 20) / 2;
-		averager += (int) (val * EXTRA_WEIGHT_PER_AFFINITY);
+		averager += (int) (val * extraWeightPerAffinity());
 
 		for (Enchantment e : ForgeRegistries.ENCHANTMENTS) {
 			if (e instanceof CEBaseEnchantment ce && ce.isEnabled() &&
@@ -65,7 +87,7 @@ public class CelestialEnchantmentHelper {
 		}
 
 		if (isBook) {
-			if (rand.nextDouble() < BOOK_CURSE_CHANCE - averager * 0.02f) {
+			if (rand.nextDouble() < bookCurseChance() - averager * weightCurseReduction()) {
 				roll(0, curse, list, rand, true);
 				if (!list.isEmpty()) return list;
 			}
@@ -83,7 +105,7 @@ public class CelestialEnchantmentHelper {
 			roll(val, basic, list, rand, isBook);
 			if (list.isEmpty()) return list;
 		}
-		double chance = (slot + 1) * (30 - val) * 0.01 - averager * 0.02f;
+		double chance = (slot + 1) * (noCurseAffinity() - val) * baseCurseChance() - averager * weightCurseReduction();
 		if (!isBook && rand.nextDouble() < chance) {
 			roll(0, curse, list, rand, false);
 		}
@@ -92,7 +114,7 @@ public class CelestialEnchantmentHelper {
 
 	private static void roll(int val, List<CelestialEnchIns> avail, List<CelestialEnchIns> list, RandomSource rand, boolean isBook) {
 		if (val < 0) val = 0;
-		double rolls = 1 + rand.nextDouble() * val * EXTRA_ROLL_PER_AFFINITY;
+		double rolls = 1 + rand.nextDouble() * val * extraRollPerAffinity();
 		int roll = (int) rolls;
 		if (rand.nextDouble() < rolls - roll) roll++;
 		for (int i = 0; i < roll; i++) {

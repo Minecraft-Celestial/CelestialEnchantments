@@ -1,4 +1,4 @@
-package com.xiaoyue.celestial_enchantments.content.enchantments.tool;
+package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 
 import com.xiaoyue.celestial_enchantments.content.generic.PlayerBreakEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolEnch;

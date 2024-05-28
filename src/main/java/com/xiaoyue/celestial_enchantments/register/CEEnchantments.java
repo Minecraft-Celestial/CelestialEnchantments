@@ -4,6 +4,9 @@ import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.content.enchantments.armor.*;
+import com.xiaoyue.celestial_enchantments.content.enchantments.curse.CurseOfWeakness;
+import com.xiaoyue.celestial_enchantments.content.enchantments.curse.DestructionCurse;
+import com.xiaoyue.celestial_enchantments.content.enchantments.curse.OvereatingCurse;
 import com.xiaoyue.celestial_enchantments.content.enchantments.range.*;
 import com.xiaoyue.celestial_enchantments.content.enchantments.shield.ConstraintsShield;
 import com.xiaoyue.celestial_enchantments.content.enchantments.shield.HolyShield;
@@ -12,7 +15,7 @@ import com.xiaoyue.celestial_enchantments.content.enchantments.shield.ScorchingS
 import com.xiaoyue.celestial_enchantments.content.enchantments.tool.AccelerateGrowth;
 import com.xiaoyue.celestial_enchantments.content.enchantments.tool.BornInShadow;
 import com.xiaoyue.celestial_enchantments.content.enchantments.tool.PhotoDynamic;
-import com.xiaoyue.celestial_enchantments.content.enchantments.tool.PowerlessCurse;
+import com.xiaoyue.celestial_enchantments.content.enchantments.curse.PowerlessCurse;
 import com.xiaoyue.celestial_enchantments.content.enchantments.trident.ExplosiveHalberd;
 import com.xiaoyue.celestial_enchantments.content.enchantments.trident.SharpHalberdTip;
 import com.xiaoyue.celestial_enchantments.content.enchantments.weapon.*;

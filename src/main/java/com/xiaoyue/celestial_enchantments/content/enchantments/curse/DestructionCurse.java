@@ -1,4 +1,4 @@
-package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
+package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;

@@ -1,4 +1,4 @@
-package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
+package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;

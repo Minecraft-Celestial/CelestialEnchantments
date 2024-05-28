@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
@@ -12,7 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class ApoptosisBlade extends WeaponEnch {
 
 	private static int dur() {
-		return 2;//TODO
+		return CEModConfig.COMMON.ench.weapon.apoptosisBladeWitherDuration.get();
 	}
 
 	private static final EnchEffectEntry EFF = EnchEffectEntry.amp(() -> MobEffects.WITHER, ApoptosisBlade::dur);
