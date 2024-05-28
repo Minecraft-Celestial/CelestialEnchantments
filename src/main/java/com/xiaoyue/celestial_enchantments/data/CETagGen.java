@@ -1,6 +1,7 @@
 package com.xiaoyue.celestial_enchantments.data;
 
 import com.tterrag.registrate.providers.RegistrateItemTagsProvider;
+import com.xiaoyue.celestial_artifacts.register.CAItems;
 import com.xiaoyue.celestial_core.register.CCItems;
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import net.minecraft.tags.ItemTags;
@@ -15,11 +16,12 @@ public class CETagGen {
 
 	public static void onItemTagGen(RegistrateItemTagsProvider pvd) {
 		pvd.addTag(BASIC_INGREDIENTS).add(CCItems.TREASURE_FRAGMENT.get(), CCItems.VOID_ESSENCE.get(),
-				CCItems.FIRE_ESSENCE.get(), CCItems.OCEAN_ESSENCE.get(), CCItems.DEATH_ESSENCE.get());
+						CCItems.FIRE_ESSENCE.get(), CCItems.OCEAN_ESSENCE.get(), CCItems.DEATH_ESSENCE.get())
+				.addOptional(CAItems.THE_END_DUST.getId());
 		pvd.addTag(ADVANCED_INGREDIENTS).add(CCItems.MIDNIGHT_FRAGMENT.get(), CCItems.MIDNIGHT_FRAGMENT.get(),
 				CCItems.SHULKER_SCRAP.get(), CCItems.WARDEN_SCLERITE.get());
 		pvd.addTag(LEGENDARY_INGREDIENTS).add(CCItems.HEART_FRAGMENT.get(), CCItems.PURE_NETHER_STAR.get(),
-				CCItems.SOARING_WINGS.get());
+				CCItems.SOARING_WINGS.get()).addOptional(CAItems.NEBULA_CUBE.getId());
 
 	}
 }

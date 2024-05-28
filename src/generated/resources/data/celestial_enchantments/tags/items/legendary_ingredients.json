@@ -2,6 +2,10 @@
   "values": [
     "celestial_core:heart_fragment",
     "celestial_core:pure_nether_star",
-    "celestial_core:soaring_wings"
+    "celestial_core:soaring_wings",
+    {
+      "id": "celestial_artifacts:nebula_cube",
+      "required": false
+    }
   ]
 }

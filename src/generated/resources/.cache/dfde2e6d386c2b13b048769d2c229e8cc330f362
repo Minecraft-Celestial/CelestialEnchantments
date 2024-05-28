@@ -1,7 +1,7 @@
-// 1.20.1	2024-05-28T09:20:38.977054	Registrate Provider for celestial_enchantments [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
+// 1.20.1	2024-05-28T09:38:07.893225	Registrate Provider for celestial_enchantments [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
 9324ace04daaaa167cd8942fc6ae1bc89b55800f assets/celestial_enchantments/blockstates/celestial_enchanting_table.json
-a0a74a879ab4a32f8167a544e267c55907a82f5d assets/celestial_enchantments/lang/en_ud.json
-2433e9988a6e783239140f92e14a935c879239ab assets/celestial_enchantments/lang/en_us.json
+12a40c67941c6f9f54ed8bb31d1ae4361a05791c assets/celestial_enchantments/lang/en_ud.json
+d3ca81435c4a605fbc686e2448c6bcc5e2da64d6 assets/celestial_enchantments/lang/en_us.json
 fd8226b2c08c5f37ca7a4dc8418f664004288a20 assets/celestial_enchantments/models/block/celestial_enchanting_table.json
 c6f0eca2fbe585592df304bd874dfb11dea79cef assets/celestial_enchantments/models/item/advanced_celestial_catalyst.json
 b1e5da506b348c2512c3cf629abf6c99f26b7b78 assets/celestial_enchantments/models/item/basic_celestial_catalyst.json
@@ -17,7 +17,7 @@ e4624a2cfcee39b73b08496fef2d07e9f6f11ebd data/celestial_enchantments/advancement
 5005cf7b22443037d89f81d78f0b80cf27d7d3ba data/celestial_enchantments/recipes/celestial_enchanting_table.json
 3a79055823d6b29527ddd1d700e6e36a7d3f80e3 data/celestial_enchantments/recipes/legendary_celestial_catalyst.json
 d039a4a95518c4aa87c5b221a45e1b9340626a43 data/celestial_enchantments/tags/items/advanced_ingredients.json
-9d6d36c1548499fe022fec59674fe32ae468d31d data/celestial_enchantments/tags/items/basic_ingredients.json
-7170ad873347af514628553bc8b9cd3ebbd86858 data/celestial_enchantments/tags/items/legendary_ingredients.json
+d9dda4fcfbfa35e04bb72fe1c540cad115ecd368 data/celestial_enchantments/tags/items/basic_ingredients.json
+d14bd36ce706d0a0baff5b8489b053aa03e297a3 data/celestial_enchantments/tags/items/legendary_ingredients.json
 f1460c61cd2d9c13eff78aa34aeb18969dc303a3 data/minecraft/tags/blocks/mineable/pickaxe.json
 f1460c61cd2d9c13eff78aa34aeb18969dc303a3 data/minecraft/tags/blocks/needs_diamond_tool.json

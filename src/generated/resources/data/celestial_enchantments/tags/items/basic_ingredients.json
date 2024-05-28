@@ -4,6 +4,10 @@
     "celestial_core:void_essence",
     "celestial_core:fire_essence",
     "celestial_core:ocean_essence",
-    "celestial_core:death_essence"
+    "celestial_core:death_essence",
+    {
+      "id": "celestial_artifacts:the_end_dust",
+      "required": false
+    }
   ]
 }

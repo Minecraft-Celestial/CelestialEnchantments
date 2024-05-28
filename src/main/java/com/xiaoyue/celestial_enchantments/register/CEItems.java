@@ -4,6 +4,7 @@ import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.entry.MenuEntry;
+import com.xiaoyue.celestial_core.CelestialCore;
 import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.content.table.*;
 import net.minecraft.tags.BlockTags;
@@ -20,6 +21,9 @@ public class CEItems {
 	public static final ItemEntry<Item> BASIC_FUEL, ADVANCED_FUEL, LEGENDARY_FUEL;
 
 	static {
+
+		CelestialEnchantments.REGISTRATE.defaultCreativeTab(CelestialCore.TAB.getKey());
+
 		TABLE = CelestialEnchantments.REGISTRATE.block("celestial_enchanting_table", p -> new CelestialTableBlock(
 						BlockBehaviour.Properties.copy(Blocks.ENCHANTING_TABLE)))
 				.blockstate((ctx, pvd) -> pvd.simpleBlock(ctx.get(), pvd.models()
