@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
@@ -11,7 +12,7 @@ import net.minecraft.world.entity.player.Player;
 public class DimensionExplorer extends ArmorEnch {
 
 	private static int dur() {
-		return 60;
+		return CEModConfig.COMMON.ench.armor.dimensionExplorerDuration.get();
 	}
 
 	private static final EnchEffectEntry LUCK = EnchEffectEntry.amp(() -> MobEffects.LUCK, DimensionExplorer::dur);

@@ -42,8 +42,160 @@ public class CEModConfig {
 
 			public static class Armor {
 
+				public final ForgeConfigSpec.DoubleValue abyssalContactReduction;
+				public final ForgeConfigSpec.DoubleValue abyssalContactAmplification;
+				public final ForgeConfigSpec.DoubleValue celestialShelterDamageCap;
+				public final ForgeConfigSpec.IntValue corruptionBodyDuration;
+				public final ForgeConfigSpec.IntValue corruptScholarDuration;
+				public final ForgeConfigSpec.DoubleValue corruptScholarChance;
+				public final ForgeConfigSpec.DoubleValue corruptScholarExpBonus;
+				public final ForgeConfigSpec.IntValue dimensionExplorerDuration;
+				public final ForgeConfigSpec.DoubleValue echoEffectHeal;
+				public final ForgeConfigSpec.IntValue echoEffectCooldown;
+				public final ForgeConfigSpec.IntValue eyesInShadowsMaxLight;
+				public final ForgeConfigSpec.DoubleValue fireproofBootsReduction;
+				public final ForgeConfigSpec.IntValue flameStrikeDuration;
+				public final ForgeConfigSpec.DoubleValue fleetOfFootSpeed;
+				public final ForgeConfigSpec.IntValue frostThornDamage;
+				public final ForgeConfigSpec.IntValue frostThornDuration;
+				public final ForgeConfigSpec.DoubleValue giftOfThunderGodHeal;
+				public final ForgeConfigSpec.IntValue giftOfThunderGodDuration;
+				public final ForgeConfigSpec.IntValue haveANiceDreamDuration;
+				public final ForgeConfigSpec.DoubleValue knowledgeScholarExpBonus;
+				public final ForgeConfigSpec.DoubleValue lifeShieldPercentage;
+				public final ForgeConfigSpec.IntValue originOfLifeDuration;
+				public final ForgeConfigSpec.DoubleValue originOfLifeChance;
+				public final ForgeConfigSpec.DoubleValue potionAffinityExtension;
+				public final ForgeConfigSpec.DoubleValue solidArmorReduction;
+				public final ForgeConfigSpec.DoubleValue traumaAbsorptionHeal;
+				public final ForgeConfigSpec.DoubleValue voidProtectionReduction;
+
+				public final ForgeConfigSpec.IntValue deathHatredDamage;
+				public final ForgeConfigSpec.IntValue deathHatredRadius;
+				public final ForgeConfigSpec.IntValue deathPackDuration;
+				public final ForgeConfigSpec.DoubleValue deathPackChance;
+				public final ForgeConfigSpec.IntValue deathPackRadius;
+				public final ForgeConfigSpec.DoubleValue partingWishHeal;
+				public final ForgeConfigSpec.IntValue partingWishRadius;
+				public final ForgeConfigSpec.DoubleValue theSourceOfSinChance;
+				public final ForgeConfigSpec.IntValue theSourceOfSinRadius;
+				public final ForgeConfigSpec.DoubleValue destroyResonanceDamage;
+				public final ForgeConfigSpec.IntValue destroyResonanceRadius;
+
+				//TODO death hatred, death pack, destroy resonance,parting wish,the source of sin
+
+
 				Armor(ForgeConfigSpec.Builder builder) {
 					builder.push("Armor");
+
+					abyssalContactReduction = builder.comment("Abyssal Contact: Abyss damage reduction")
+							.defineInRange("abyssalContactReduction", 0.06, 0, 1);
+					abyssalContactAmplification = builder.comment("Abyssal Contact: Other damage amplification")
+							.defineInRange("abyssalContactAmplification", 0.12, 0, 10);
+
+					celestialShelterDamageCap = builder.comment("Celestial Shelter: Max damage to take as percentage of max health")
+							.defineInRange("celestialShelterDamageCap", 0.25, 0, 1);
+
+					corruptionBodyDuration = builder.comment("Corruption Body: Duration of corruption in seconds to inflict to attacker")
+							.defineInRange("corruptionBodyDuration", 30, 0, 600);
+
+					corruptScholarDuration = builder.comment("Corrupt Scholar: Duration of negative effects to get when pick up exp orbs")
+							.defineInRange("corruptScholarDuration", 5, 0, 600);
+					corruptScholarChance = builder.comment("Corrupt Scholar: Chance per level to get negative effects when pick up exp orbs")
+							.defineInRange("corruptScholarChance", 0.25, 0, 1);
+					corruptScholarExpBonus = builder.comment("Corrupt Scholar: Exp pickup bonus per level")
+							.defineInRange("corruptScholarExpBonus", 0.8, 0, 1);
+
+					dimensionExplorerDuration = builder.comment("Dimension Explorer: Duration of effects in seconds to gain")
+							.defineInRange("dimensionExplorerDuration", 60, 0, 600);
+
+					echoEffectHeal = builder.comment("Echo Effect: Percentage of max health to heal")
+							.defineInRange("echoEffectHeal", 0.05, 0, 1);
+					echoEffectCooldown = builder.comment("Echo Effect: Cool down of totem effect")
+							.defineInRange("echoEffectCooldown", 600, 0, 0);
+
+					eyesInShadowsMaxLight = builder.comment("Eyes in Shadows: maximum light level to give Night Vision")
+							.defineInRange("eyesInShadowsMaxLight", 5, 0, 15);
+
+					fireproofBootsReduction = builder.comment("Fireproof Boots: fire damage reduction")
+							.defineInRange("fireproofBootsReduction", 0.85, 0, 1);
+
+					flameStrikeDuration = builder.comment("Flame Strike: duration of fire per level to inflict")
+							.defineInRange("flameStrikeDuration", 2, 0, 600);
+
+					fleetOfFootSpeed = builder.comment("Fleet of Foot: speed bonus")
+							.defineInRange("fleetOfFootSpeed", 0.1, 0, 1);
+
+					frostThornDamage = builder.comment("Frost Thorn: thorn damage")
+							.defineInRange("frostThornDamage", 1, 0, 100);
+					frostThornDuration = builder.comment("Frost Thorn: duration per level to slow down")
+							.defineInRange("frostThornDuration", 2, 0, 600);
+
+					giftOfThunderGodHeal = builder.comment("Gift of Thunder God: percentage of lost health to heal per level")
+							.defineInRange("giftOfThunderGodHeal", 0.1, 0, 1);
+					giftOfThunderGodDuration = builder.comment("Gift of Thunder God: duration of effects to gain")
+							.defineInRange("giftOfThunderGodDuration", 10, 0, 600);
+
+					haveANiceDreamDuration = builder.comment("Have a Nice Dream: duration of effects to gain")
+							.defineInRange("haveANiceDreamDuration", 60, 0, 600);
+
+					knowledgeScholarExpBonus = builder.comment("Knowledge Scholar: Exp pickup bonus")
+							.defineInRange("knowledgeScholarExpBonus", 0.1, 0, 1);
+
+					lifeShieldPercentage = builder.comment("Life Shield: Absorption healing percentage")
+							.defineInRange("lifeShieldPercentage", 0.2, 0, 1);
+
+					originOfLifeDuration = builder.comment("Origin of Life: Duration of positive effects to get when healing")
+							.defineInRange("originOfLifeDuration", 5, 0, 600);
+					originOfLifeChance = builder.comment("Origin of Life: Chance per level to get positive effects when healing")
+							.defineInRange("originOfLifeChance", 0.1, 0, 1);
+
+					potionAffinityExtension = builder.comment("Potion Affinity: Effect duration extionsion per level")
+							.defineInRange("potionAffinityExtension", 0.15, 0, 1);
+
+					solidArmorReduction = builder.comment("Solid Armor: Damage reduction per level")
+							.defineInRange("solidArmorReduction", 0.03, 0, 1);
+
+					traumaAbsorptionHeal = builder.comment("Trauma Absorption: Healing per level")
+							.defineInRange("traumaAbsorptionHeal", 0.04, 0, 1);
+
+					voidProtectionReduction = builder.comment("Void Protection: Void damage reduction per level")
+							.defineInRange("voidProtectionReduction", 0.04, 0, 1);
+
+					/*
+				public final ForgeConfigSpec.DoubleValue theSourceOfSinChance;
+				public final ForgeConfigSpec.IntValue theSourceOfSinRadius;
+				public final ForgeConfigSpec.DoubleValue destroyResonanceDamage;
+				public final ForgeConfigSpec.IntValue destroyResonanceRadius;
+					*
+					* */
+
+					deathHatredDamage = builder.comment("Death Hatred: Damage for surrounding mobs")
+							.defineInRange("deathHatredDamage", 15, 0, 100);
+					deathHatredRadius = builder.comment("Death Hatred: Radius for damaging surrounding mobs")
+							.defineInRange("deathHatredRadius", 6, 0, 24);
+
+					deathPackDuration = builder.comment("Death Pack: Duration in seconds for positive effects")
+							.defineInRange("deathPackDuration", 10, 0, 100);
+					deathPackChance = builder.comment("Death Pack: Chance of not dying together")
+							.defineInRange("deathPackChance", 0.2, 0, 1);
+					deathPackRadius = builder.comment("Death Pack: Radius for detection")
+							.defineInRange("deathPackRadius", 12, 0, 24);
+
+					partingWishHeal = builder.comment("Parting Wish: Percentage of max health to heal")
+							.defineInRange("partingWishHeal", 0.3, 0, 1);
+					partingWishRadius = builder.comment("Parting Wish: Radius for detection")
+							.defineInRange("partingWishRadius", 12, 0, 24);
+
+					theSourceOfSinChance = builder.comment("The Source of Sin: Chance of redirecting anger")
+							.defineInRange("theSourceOfSinChance", 0.1, 0, 1);
+					theSourceOfSinRadius = builder.comment("The Source of Sin: Radius for detection")
+							.defineInRange("theSourceOfSinRadius", 3, 0, 24);
+
+					destroyResonanceDamage = builder.comment("Destroy Resonance: Damage as percentage of incoming damage to deal")
+							.defineInRange("destroyResonanceDamage", 0.1, 0, 1);
+					destroyResonanceRadius = builder.comment("Destroy Resonance: Radius for damage")
+							.defineInRange("destroyResonanceRadius", 6, 0, 24);
 
 					builder.pop();
 				}

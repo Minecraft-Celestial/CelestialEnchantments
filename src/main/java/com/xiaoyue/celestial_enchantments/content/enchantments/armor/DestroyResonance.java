@@ -3,19 +3,24 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.entity.LivingEntity;
 
 import java.util.List;
 
 public class DestroyResonance extends DefenceEnch {
 
-  private static double damage() {
-	  return 0.1;
+	private static double damage() {
+		return CEModConfig.COMMON.ench.armor.destroyResonanceDamage.get();
+	}
+
+	private static int radius() {
+		return CEModConfig.COMMON.ench.armor.destroyResonanceRadius.get();
 	}
 
 	public DestroyResonance() {
@@ -24,18 +29,19 @@ public class DestroyResonance extends DefenceEnch {
 
 	@Override
 	public void onDamagedFinal(LivingEntity user, AttackCache cache, int lv) {
-		if (user.getLastDamageSource() == null) return;
-		List<LivingEntity> others = EntityUtils.getDelimitedMonster(user, 6);
+		var source = getSource(cache);
+		if (source.is(DamageTypeTags.BYPASSES_COOLDOWN)) return;
+		List<LivingEntity> others = EntityUtils.getDelimitedMonster(user, radius());
 		others.remove(user);
-		for (LivingEntity list : others) {
-			DamageSource source = new DamageSource(user.getLastDamageSource().typeHolder());
-			GeneralEventHandler.schedule(() -> list.hurt(source, lv * (float) damage() * cache.getPreDamage()));
+		for (LivingEntity lest : others) {
+			if (source.is(DamageTypeTags.AVOIDS_GUARDIAN_THORNS) && lest == cache.getAttacker()) continue;
+			GeneralEventHandler.schedule(() -> lest.hurt(source, lv * (float) damage() * cache.getPreDamage()));
 		}
 	}
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.perc(lv, damage(), alt));
+		return CELang.ench(key, CELang.perc(lv, damage(), alt), CELang.num(radius()));
 	}
 
 

@@ -7,6 +7,8 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,4 +41,9 @@ public class ArmorEnch extends CEBaseEnchantment {
 		}
 		return ans;
 	}
+
+	@Override
+	public final void doPostHurt(LivingEntity pTarget, Entity pAttacker, int pLevel) {
+	}
+
 }

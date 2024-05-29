@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2library.base.effects.EffectBuilder;
 import net.minecraft.network.chat.Component;
@@ -11,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class PotionAffinity extends ArmorEnch {
 
   private static double extraTime() {
-		return 0.15;
+		return CEModConfig.COMMON.ench.armor.potionAffinityExtension.get();
 	}
 
 	public PotionAffinity() {

@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
@@ -10,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class TraumaAbsorption extends DefenceEnch {
 
   private static double heal() {
-		return 0.04;
+	  return CEModConfig.COMMON.ench.armor.traumaAbsorptionHeal.get();
 	}
 
 	public TraumaAbsorption() {

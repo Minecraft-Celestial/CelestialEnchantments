@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -11,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class CelestialShelter extends DefenceEnch {
 
   private static double def() {
-		return 0.25;
+		return CEModConfig.COMMON.ench.armor.celestialShelterDamageCap.get();
 	}
 
 	public CelestialShelter() {
@@ -20,7 +21,7 @@ public class CelestialShelter extends DefenceEnch {
 
 	@Override
 	public void onDamagedImpl(LivingEntity user, AttackCache cache, int lv) {
-		cache.addDealtModifier(DamageModifier.nonlinearMiddle(1015, f -> Math.min(f, user.getMaxHealth() * (float) def())));
+		cache.addDealtModifier(DamageModifier.nonlinearPre(315, f -> Math.min(f, user.getMaxHealth() * (float) def())));
 	}
 
 	@Override

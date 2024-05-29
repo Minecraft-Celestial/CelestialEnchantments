@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.LivingHealEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
@@ -13,18 +14,18 @@ import net.minecraftforge.event.entity.living.LivingHealEvent;
 public class OriginOfLife extends ArmorEnch implements LivingHealEnch {
 
 	private static double chance() {
-		return 0.25;
+		return CEModConfig.COMMON.ench.armor.originOfLifeChance.get();
 	}
 
 	private static int dur() {
-		return 5;
+		return CEModConfig.COMMON.ench.armor.originOfLifeDuration.get();
 	}
 
 	private static final EnchEffectEntry MOVE = EnchEffectEntry.amp(() -> MobEffects.MOVEMENT_SPEED, OriginOfLife::dur);
 	private static final EnchEffectEntry RES = EnchEffectEntry.amp(() -> MobEffects.DAMAGE_RESISTANCE, OriginOfLife::dur);
 
 	public OriginOfLife() {
-		super(Rarity.RARE, Type.CHEST, EnchData.normal(2, EFFECT));
+		super(Rarity.RARE, Type.CHEST, EnchData.normal(3, EFFECT));
 	}
 
 	@Override

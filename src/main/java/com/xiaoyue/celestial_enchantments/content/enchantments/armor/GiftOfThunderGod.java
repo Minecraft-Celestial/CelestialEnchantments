@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
@@ -13,11 +14,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class GiftOfThunderGod extends DefenceEnch {
 
 	private static double heal() {
-		return 0.5;
+		return CEModConfig.COMMON.ench.armor.giftOfThunderGodHeal.get();
 	}
 
 	private static int duration() {
-		return 10;
+		return CEModConfig.COMMON.ench.armor.giftOfThunderGodDuration.get();
 	}
 
 	private static final EnchEffectEntry MOVE = EnchEffectEntry.amp(() -> MobEffects.MOVEMENT_SPEED, GiftOfThunderGod::duration);
@@ -30,7 +31,7 @@ public class GiftOfThunderGod extends DefenceEnch {
 	@Override
 	public boolean onAttackedImpl(LivingEntity user, AttackCache cache, int lv) {
 		if (getSource(cache).is(DamageTypeTags.IS_LIGHTNING)) {
-			user.heal((float) heal() * (user.getMaxHealth() - user.getHealth()));
+			user.heal(lv * (float) heal() * (user.getMaxHealth() - user.getHealth()));
 			user.addEffect(MOVE.ins(lv));
 			user.addEffect(RES.ins(lv));
 			return true;

@@ -94,7 +94,7 @@ public class CelestialTableBlock extends BaseEntityBlock {
    }
 
    @Nullable
-   public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {//TODO
+   public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
       return pLevel.isClientSide ? createTickerHelper(pBlockEntityType, CEItems.BE_TABLE.get(), CelestialTableBlockEntity::bookAnimationTick) : null;
    }
 

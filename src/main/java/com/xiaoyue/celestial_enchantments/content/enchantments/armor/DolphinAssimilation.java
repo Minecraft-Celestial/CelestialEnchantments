@@ -12,8 +12,6 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 public class DolphinAssimilation extends ArmorEnch implements LivingTickEnch {
 
-	private static final EnchEffectEntry EFF = EnchEffectEntry.amp(() -> MobEffects.DOLPHINS_GRACE, () -> 1);
-
 	public DolphinAssimilation() {
 		super(Rarity.RARE, Type.LEGS, EnchData.normal(1, EFFECT));
 	}

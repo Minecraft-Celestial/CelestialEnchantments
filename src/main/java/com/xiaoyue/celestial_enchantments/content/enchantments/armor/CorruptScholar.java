@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ChangeXpEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
@@ -14,15 +15,15 @@ import net.minecraftforge.event.entity.player.PlayerXpEvent;
 public class CorruptScholar extends ArmorEnch implements ChangeXpEnch {
 
 	private static double exp() {
-		return 0.8;
+		return CEModConfig.COMMON.ench.armor.corruptScholarExpBonus.get();
 	}
 
 	private static double chance() {
-		return 0.25;
+		return CEModConfig.COMMON.ench.armor.corruptScholarChance.get();
 	}
 
 	private static int dur() {
-		return 5;
+		return CEModConfig.COMMON.ench.armor.corruptScholarDuration.get();
 	}
 
 	public CorruptScholar() {
@@ -33,8 +34,8 @@ public class CorruptScholar extends ArmorEnch implements ChangeXpEnch {
 	public float onPickupXp(PlayerXpEvent.PickupXp event, Player player, int level, ExperienceOrb Orb) {
 		if (chance(player, chance() * level)) {
 			var x = player.getRandom().nextDouble();
-			if (x < 0.3) EntityUtils.addEct(player, MobEffects.POISON, dur() * 20, 0);
-			else if (x < 0.7) EntityUtils.addEct(player, MobEffects.WITHER, dur() * 20, 0);
+			if (x < 0.33) EntityUtils.addEct(player, MobEffects.POISON, dur() * 20, 0);
+			else if (x < 0.67) EntityUtils.addEct(player, MobEffects.WITHER, dur() * 20, 0);
 			else EntityUtils.addEct(player, MobEffects.WEAKNESS, dur() * 20, 0);
 		}
 		return level * (float) exp();

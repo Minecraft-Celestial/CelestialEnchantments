@@ -3,6 +3,10 @@
     "celestial_core:midnight_fragment",
     "celestial_core:midnight_fragment",
     "celestial_core:shulker_scrap",
-    "celestial_core:warden_sclerite"
+    "celestial_core:warden_sclerite",
+    {
+      "id": "celestial_artifacts:nebula_cube",
+      "required": false
+    }
   ]
 }

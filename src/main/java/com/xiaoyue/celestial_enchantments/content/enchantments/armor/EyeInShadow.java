@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_core.utils.CCUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.LivingTickEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -14,7 +15,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class EyeInShadow extends ArmorEnch implements LivingTickEnch {
 
 	private static int light() {
-		return 5;
+		return CEModConfig.COMMON.ench.armor.eyesInShadowsMaxLight.get();
 	}
 
 

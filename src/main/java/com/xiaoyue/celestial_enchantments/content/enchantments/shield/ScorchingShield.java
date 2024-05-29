@@ -9,7 +9,7 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 
 public class ScorchingShield extends ShieldEnch {
 
-  private static int fireTick() {
+  private static int fireTime() {
 		return 20;
 	}
 
@@ -19,12 +19,12 @@ public class ScorchingShield extends ShieldEnch {
 
 	@Override
 	public void onShieldBlock(ShieldBlockEvent event, LivingEntity attacker, LivingEntity entity, int level) {
-		attacker.setSecondsOnFire(level * fireTick());
+		attacker.setSecondsOnFire(level * fireTime());
 	}
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.num(lv, fireTick(), alt));
+		return CELang.ench(key, CELang.num(lv, fireTime(), alt));
 	}
 
 }

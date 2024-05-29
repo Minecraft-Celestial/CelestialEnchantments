@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.DeathEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
@@ -16,15 +17,15 @@ import java.util.List;
 public class DeathPact extends DeathEnch {
 
 	private static int radius() {
-		return 12;
+		return CEModConfig.COMMON.ench.armor.deathPackRadius.get();
 	}
 
 	private static double chance() {
-		return 0.2;
+		return CEModConfig.COMMON.ench.armor.deathPackChance.get();
 	}
 
 	private static int dur() {
-		return 10;
+		return CEModConfig.COMMON.ench.armor.deathPackDuration.get();
 	}
 
 	private static final EnchEffectEntry EFF0 = EnchEffectEntry.dur(() -> MobEffects.DAMAGE_RESISTANCE, DeathPact::dur, () -> 1);
@@ -40,7 +41,7 @@ public class DeathPact extends DeathEnch {
 	public void onDeath(LivingEntity entity, int level) {
 		if (entity.level().isClientSide()) return;
 		if (entity instanceof Player player) {
-			List<LivingEntity> list = EntityUtils.getExceptForCentralEntity(player, radius(), 2, livingEntity -> livingEntity instanceof Player);
+			List<LivingEntity> list = EntityUtils.getExceptForCentralEntity(player, radius(), radius(), livingEntity -> livingEntity instanceof Player);
 			for (LivingEntity pl : list) {
 				int lv = EnchantmentHelper.getEnchantmentLevel(this, pl);
 				if (chance(entity, lv * chance())) {
@@ -57,7 +58,7 @@ public class DeathPact extends DeathEnch {
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, getName(), CELang.perc(lv, chance(), alt),
+		return CELang.ench(key, CELang.num(radius()), getName(), CELang.perc(lv, chance(), alt),
 				EFF0.comp(lv, alt), EFF1.comp(lv, alt),
 				EFF2.comp(lv, alt), EFF3.comp(lv, alt));
 	}

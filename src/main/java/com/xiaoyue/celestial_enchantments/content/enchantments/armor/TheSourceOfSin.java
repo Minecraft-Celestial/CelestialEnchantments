@@ -1,23 +1,24 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_core.utils.EntityUtils;
-import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
+import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
 import java.util.List;
 
-public class TheSourceOfSin extends ArmorEnch {
+public class TheSourceOfSin extends DefenceEnch {
 
 	private static double chance() {
-		return 0.2;
+		return CEModConfig.COMMON.ench.armor.theSourceOfSinChance.get();
 	}
 
 	private static int radius(){
-		return 3;
+		return CEModConfig.COMMON.ench.armor.theSourceOfSinRadius.get();
 	}
 
 	public TheSourceOfSin() {
@@ -25,13 +26,13 @@ public class TheSourceOfSin extends ArmorEnch {
 	}
 
 	@Override
-	public void doPostHurt(LivingEntity user, Entity attacker, int level) {
-		if (attacker instanceof LivingEntity livingEntity) {
-			if (chance(user, level * chance())) {
-				List<LivingEntity> entities = EntityUtils.getExceptForCentralEntity(livingEntity, radius(), 2);
+	public void onDamagedFinal(LivingEntity user, AttackCache cache, int lv) {
+		if (cache.getAttacker() != null) {
+			if (chance(user, lv * chance())) {
+				List<LivingEntity> entities = EntityUtils.getExceptForCentralEntity(cache.getAttacker(), radius(), radius());
 				for (LivingEntity list : entities) {
-					list.setLastHurtByMob(livingEntity);
-					list.setLastHurtMob(livingEntity);
+					list.setLastHurtByMob(cache.getAttacker());
+					list.setLastHurtMob(cache.getAttacker());
 				}
 			}
 		}
@@ -39,7 +40,7 @@ public class TheSourceOfSin extends ArmorEnch {
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
-		return CELang.ench(key, CELang.perc(lv, chance(), alt));
+		return CELang.ench(key, CELang.perc(lv, chance(), alt), CELang.num(radius()));
 	}
 
 }

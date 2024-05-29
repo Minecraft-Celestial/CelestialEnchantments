@@ -26,7 +26,6 @@ public class QuenchedBlade extends AttackEnch {
 	@Override
 	public void onHurtTarget(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
 		if (target.isOnFire()) {
-			target.setSecondsOnFire(1);
 			float i = Math.min(maxFire(), target.getRemainingFireTicks() * 0.05f) * (float) atk();
 			cache.addHurtModifier(DamageModifier.multBase(lv * i));
 			target.clearFire();

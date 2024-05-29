@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -12,7 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class VoidProtection extends DefenceEnch {
 
   private static double def() {
-		return 0.04;
+	  return CEModConfig.COMMON.ench.armor.voidProtectionReduction.get();
 	}
 
 	public VoidProtection() {

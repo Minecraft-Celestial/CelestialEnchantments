@@ -16,6 +16,7 @@ public enum CELang {
 	EFF_DUR("%2$s seconds of %1$s", 2),
 	EFF_AMP("%1$s with level %2$s", 2),
 	ALT("Press [%s] to show enchantment effect formula", 1),
+	ECHO("Cooldown: %s seconds", 1),
 
 	ITEM_COST( "1 %s",1),
 

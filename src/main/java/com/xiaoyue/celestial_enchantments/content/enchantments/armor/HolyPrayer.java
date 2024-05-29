@@ -1,16 +1,16 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
-import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
+import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 
-public class HolyPrayer extends ArmorEnch {
+public class HolyPrayer extends DefenceEnch {
 
 	private static int dur() {
 		return 2;
@@ -23,10 +23,10 @@ public class HolyPrayer extends ArmorEnch {
 	}
 
 	@Override
-	public void doPostHurt(LivingEntity user, Entity attacker, int level) {
+	public void onDamagedFinal(LivingEntity user, AttackCache cache, int lv) {
 		if (user instanceof Player player) {
 			if (player.isCrouching()) {
-				player.addEffect(EFF.ins(level));
+				player.addEffect(EFF.ins(lv));
 			}
 		}
 	}

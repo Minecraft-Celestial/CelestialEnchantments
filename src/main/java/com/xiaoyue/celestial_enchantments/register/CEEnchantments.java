@@ -74,8 +74,8 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> VOID_PROTECTION = reg("void_protection", VoidProtection::new, "Reduce void damage by %s");// A
 	public static final RegistryEntry<Enchantment> ABYSSAL_CONTACT = reg("abyssal_contact", AbyssalContact::new, "Reduce abyssal damage by %s, but increase other damage by %s");// A
 	public static final RegistryEntry<Enchantment> SOLID_ARMOR = reg("solid_armor", SolidArmor::new, "When the wearer's health is less than half, the damage received is reduced by %s");//A
-	public static final RegistryEntry<Enchantment> HEARTH_SUPPORT = reg("flame_strike", HearthSupport::new, "Burn attacker for %s seconds when attacked");//B
-	public static final RegistryEntry<Enchantment> DESTROY_RESONANCE = reg("destroy_resonance", DestroyResonance::new, "Deals %s of received damage to surrounding targets after being attacked");//B
+	public static final RegistryEntry<Enchantment> HEARTH_SUPPORT = reg("flame_strike", FlameStrike::new, "Burn attacker for %s seconds when attacked");//B
+	public static final RegistryEntry<Enchantment> DESTROY_RESONANCE = reg("destroy_resonance", DestroyResonance::new, "After being attacked, deals %s of received damage to surrounding targets within %s blocks");//B TODO
 	public static final RegistryEntry<Enchantment> FROST_THORNS = reg("frost_thorns", FrostThorns::new, "Deals %s damage to the attacker when hurt, and inflict %s");//B
 	public static final RegistryEntry<Enchantment> TRAUMA_ABSORPTION = reg("trauma_absorption", TraumaAbsorption::new, "Restore %s of lost health when attacked");//B
 	// head
@@ -88,10 +88,10 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> RAIN_AND_DEW_GRACE = reg("rain_and_dew_grace", RainAndDewGrace::new, "Gain %s when wet");//C
 	// chest
 	public static final RegistryEntry<Enchantment> GIFT_OF_THUNDER_GOD = reg("gift_of_thunder_god", GiftOfThunderGod::new, "When struck by lightning, recover %s of lost life, then gain %s and %s");//C
-	public static final RegistryEntry<Enchantment> THE_SOURCE_OF_SIN = reg("the_source_of_sin", TheSourceOfSin::new, "When attacked, there i a %s chance that attacker will be targeted by surrounding mobs");//B
+	public static final RegistryEntry<Enchantment> THE_SOURCE_OF_SIN = reg("the_source_of_sin", TheSourceOfSin::new, "When attacked, there is a %s chance that attacker will be targeted by surrounding mobs within %s blocks");//B TODO
 	public static final RegistryEntry<Enchantment> ECHO_EFFECT = reg("echo_effect", EchoEffect::new, "When receiving a deadly attack, block the damage and restore %s of maximum health. Cooldown: %s seconds");//A
 	public static final RegistryEntry<Enchantment> ORIGIN_OF_LIFE = reg("origin_of_life", OriginOfLife::new, "When healed, there is a %s chance to gain %s or %s");//C
-	public static final RegistryEntry<Enchantment> LIFE_SHIELD = reg("life_shield", LifeShield::new, "When healed, gain same amount of absorption, up to %s of max health");//C
+	public static final RegistryEntry<Enchantment> LIFE_SHIELD = reg("life_shield", LifeShield::new, "When healed, gain absorption equal to %s of amount healed, up to %s of max health");//C
 	public static final RegistryEntry<Enchantment> TURTLE_ASSIMILATION = reg("turtle_assimilation", TurtleAssimilation::new, "Gain %s and %s when sneaking");//C
 	public static final RegistryEntry<Enchantment> CELESTIAL_SHELTER = reg("celestial_shelter", CelestialShelter::new, "When damaged, a single attack can only deal up to %s of the wearer's maximum health");//A
 	// legs
@@ -107,9 +107,9 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> FLEET_OF_FOOT = reg("fleet_of_foot", FleetOfFoot::new, "+%s Movement Speed");//C
 	public static final RegistryEntry<Enchantment> RABBIT_ASSIMILATION = reg("rabbit_assimilation", RabbitAssimilation::new, "Gain %s when sneaking");//C
 	// death
-	public static final RegistryEntry<Enchantment> PARTING_WISH = reg("parting_wish", PartingWish::new, "Upon death, surrounding players heal %s of their max health");
-	public static final RegistryEntry<Enchantment> DEATH_HATRED = reg("death_hatred", DeathHatred::new, "Deals %s magic damage to surrounding creatures upon death");
-	public static final RegistryEntry<Enchantment> DEATH_PACT = reg("death_pact", DeathPact::new, "When nearby players die with [%s], there is a %s chance to gain %s, %s, %s, and %s. Otherwise, you will die together");
+	public static final RegistryEntry<Enchantment> PARTING_WISH = reg("parting_wish", PartingWish::new, "Upon death, surrounding players within %s blocks heal %s of their max health");//TODO
+	public static final RegistryEntry<Enchantment> DEATH_HATRED = reg("death_hatred", DeathHatred::new, "Upon death, deals %s magic damage to surrounding creatures within %s blocks");//TODO
+	public static final RegistryEntry<Enchantment> DEATH_PACT = reg("death_pact", DeathPact::new, "When nearby players within %s blocks die with [%s], there is a %s chance to gain %s, %s, %s, and %s. Otherwise, you will die together");//TODO
 
 	// bow
 	public static final RegistryEntry<Enchantment> ARROW_OF_TRACTION = reg("arrow_of_traction", ArrowOfTraction::new, "After hitting target, drag all entities within a radius of %s grid with the target as the center to the target");
