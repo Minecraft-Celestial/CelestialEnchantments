@@ -112,7 +112,7 @@ public class CEModConfig {
 					echoEffectHeal = builder.comment("Echo Effect: Percentage of max health to heal")
 							.defineInRange("echoEffectHeal", 0.05, 0, 1);
 					echoEffectCooldown = builder.comment("Echo Effect: Cool down of totem effect")
-							.defineInRange("echoEffectCooldown", 600, 0, 0);
+							.defineInRange("echoEffectCooldown", 600, 0, 60000);
 
 					eyesInShadowsMaxLight = builder.comment("Eyes in Shadows: maximum light level to give Night Vision")
 							.defineInRange("eyesInShadowsMaxLight", 5, 0, 15);
