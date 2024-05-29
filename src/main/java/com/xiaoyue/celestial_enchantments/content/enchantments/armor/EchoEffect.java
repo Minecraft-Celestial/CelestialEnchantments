@@ -58,7 +58,7 @@ public class EchoEffect extends DefenceEnch implements TokenProvider<EchoEffect.
 		var data = ClientEffectHandlers.getPlayerDataClientSide(KEY);
 		if (data != null && data.timer > 0) {
 			ans.add(CELang.ECHO.get(Component.literal(data.timer / 20 + "")
-					.withStyle(ChatFormatting.DARK_AQUA)).withStyle(ChatFormatting.GRAY));
+					.withStyle(ChatFormatting.RED)).withStyle(ChatFormatting.DARK_AQUA));
 		}
 		return ans;
 	}
