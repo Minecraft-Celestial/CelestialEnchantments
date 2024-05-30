@@ -1,15 +1,15 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
-import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
+import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
-public class DestructionCrack extends WeaponEnch {
+public class DestructionCrack extends AttackEnch {
 
 	private static int duration() {
 		return 5;//TODO
@@ -20,10 +20,8 @@ public class DestructionCrack extends WeaponEnch {
 	}
 
 	@Override
-	public void doPostAttack(LivingEntity attacker, Entity entity, int level) {
-		if (entity instanceof LivingEntity livingEntity) {
-			livingEntity.addEffect(new MobEffectInstance(CEEffects.DESTRUCTED.get(), duration() * 20));
-		}
+	public void onDamageTargetFinal(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
+		target.addEffect(new MobEffectInstance(CEEffects.DESTRUCTED.get(), duration() * 20));
 	}
 
 	@Override

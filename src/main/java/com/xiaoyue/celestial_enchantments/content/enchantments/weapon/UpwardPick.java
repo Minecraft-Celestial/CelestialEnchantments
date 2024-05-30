@@ -1,15 +1,15 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
-import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
+import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
-public class UpwardPick extends WeaponEnch {
+public class UpwardPick extends AttackEnch {
 
 	private static int dur() {
 		return 1;//TODO
@@ -22,16 +22,13 @@ public class UpwardPick extends WeaponEnch {
 	}
 
 	@Override
-	public void doPostAttack(LivingEntity attacker, Entity target, int level) {
-		if (target instanceof LivingEntity livingEntity) {
-			livingEntity.addEffect(EFF.ins(level));
-		}
+	public void onDamageTargetFinal(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
+		target.addEffect(EFF.ins(lv));
 	}
 
 	@Override
 	public Component desc(int lv, String key, boolean alt) {
 		return CELang.ench(key, EFF.comp(lv, alt));
 	}
-
 
 }

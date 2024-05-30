@@ -1,16 +1,16 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_core.data.CCDamageTypes;
-import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
+import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.LightLayer;
 
-public class ShadowTouch extends WeaponEnch {
+public class ShadowTouch extends AttackEnch {
 
 	private static int brightness() {
 		return 5;
@@ -25,13 +25,11 @@ public class ShadowTouch extends WeaponEnch {
 	}
 
 	@Override
-	public void doPostAttack(LivingEntity attacker, Entity target, int lv) {
-		if (target instanceof LivingEntity user) {
-			if (!attacker.level().isClientSide()) {
-				int brightness = attacker.level().getBrightness(LightLayer.BLOCK, attacker.blockPosition());
-				if (brightness <= brightness()) {
-					GeneralEventHandler.schedule(() -> user.hurt(CCDamageTypes.abyss(user), lv * factor()));
-				}
+	public void onDamageTargetFinal(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
+		if (!user.level().isClientSide()) {
+			int brightness = user.level().getBrightness(LightLayer.BLOCK, user.blockPosition());
+			if (brightness <= brightness()) {
+				GeneralEventHandler.schedule(() -> target.hurt(CCDamageTypes.abyss(user), lv * factor()));
 			}
 		}
 	}

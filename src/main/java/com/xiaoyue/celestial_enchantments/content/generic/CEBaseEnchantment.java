@@ -14,8 +14,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -190,6 +192,19 @@ public class CEBaseEnchantment extends Enchantment {
 		} else {
 			return config.group().compatible(other);
 		}
+	}
+
+	@Override
+	public final void doPostHurt(LivingEntity pTarget, Entity pAttacker, int pLevel) {
+	}
+
+	@Override
+	public final int getDamageProtection(int pLevel, DamageSource pSource) {
+		return 0;
+	}
+
+	@Override
+	public final void doPostAttack(LivingEntity pAttacker, Entity pTarget, int pLevel) {
 	}
 
 }

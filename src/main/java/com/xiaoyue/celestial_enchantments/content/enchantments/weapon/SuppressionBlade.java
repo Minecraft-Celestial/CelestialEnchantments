@@ -1,15 +1,15 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
-import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
+import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
+import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
-public class SuppressionBlade extends WeaponEnch {
+public class SuppressionBlade extends AttackEnch {
 
 	private static int duration() {
 		return 10;//TODO
@@ -20,10 +20,8 @@ public class SuppressionBlade extends WeaponEnch {
 	}
 
 	@Override
-	public void doPostAttack(LivingEntity attacker, Entity target, int level) {
-		if (target instanceof LivingEntity livingEntity) {
-			livingEntity.addEffect(new MobEffectInstance(CEEffects.SUPPRESSED.get(), duration() * 20));
-		}
+	public void onDamageTargetFinal(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
+		target.addEffect(new MobEffectInstance(CEEffects.SUPPRESSED.get(), duration() * 20));
 	}
 
 	@Override

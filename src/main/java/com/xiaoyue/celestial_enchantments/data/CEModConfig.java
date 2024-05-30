@@ -82,9 +82,6 @@ public class CEModConfig {
 				public final ForgeConfigSpec.DoubleValue destroyResonanceDamage;
 				public final ForgeConfigSpec.IntValue destroyResonanceRadius;
 
-				//TODO death hatred, death pack, destroy resonance,parting wish,the source of sin
-
-
 				Armor(ForgeConfigSpec.Builder builder) {
 					builder.push("Armor");
 
@@ -161,14 +158,6 @@ public class CEModConfig {
 
 					voidProtectionReduction = builder.comment("Void Protection: Void damage reduction per level")
 							.defineInRange("voidProtectionReduction", 0.04, 0, 1);
-
-					/*
-				public final ForgeConfigSpec.DoubleValue theSourceOfSinChance;
-				public final ForgeConfigSpec.IntValue theSourceOfSinRadius;
-				public final ForgeConfigSpec.DoubleValue destroyResonanceDamage;
-				public final ForgeConfigSpec.IntValue destroyResonanceRadius;
-					*
-					* */
 
 					deathHatredDamage = builder.comment("Death Hatred: Damage for surrounding mobs")
 							.defineInRange("deathHatredDamage", 15, 0, 100);

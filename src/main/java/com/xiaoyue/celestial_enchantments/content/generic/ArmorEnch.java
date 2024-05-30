@@ -42,8 +42,4 @@ public class ArmorEnch extends CEBaseEnchantment {
 		return ans;
 	}
 
-	@Override
-	public final void doPostHurt(LivingEntity pTarget, Entity pAttacker, int pLevel) {
-	}
-
 }
