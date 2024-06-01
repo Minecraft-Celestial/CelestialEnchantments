@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_core.utils.CCUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.GeneralEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolTickEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -12,15 +13,15 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 public class Photosynthesis extends GeneralEnch implements ToolTickEnch {
 
 	private static int dur() {
-		return 10;
+		return CEModConfig.COMMON.ench.tool.photosynthesisInterval.get();
 	}
 
 	private static int light() {
-		return 10;
+		return CEModConfig.COMMON.ench.tool.photosynthesisMinLight.get();
 	}
 
 	private static int recover() {
-		return 1;
+		return CEModConfig.COMMON.ench.tool.photosynthesisRecover.get();
 	}
 
 	public Photosynthesis() {

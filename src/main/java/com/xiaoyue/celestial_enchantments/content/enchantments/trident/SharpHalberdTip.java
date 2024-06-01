@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.trident;
 
 import com.xiaoyue.celestial_enchantments.content.generic.TridentEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -13,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 public class SharpHalberdTip extends TridentEnch {
 
   private static double atk() {
-		return 0.2;
+		return CEModConfig.COMMON.ench.trident.sharpHalberdBonus.get();
 	}
 
 	public SharpHalberdTip() {

@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.tool;
 import com.xiaoyue.celestial_enchantments.content.generic.PlayerBreakEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -14,11 +15,11 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 public class PhotoDynamic extends ToolEnch implements PlayerBreakEnch {
 
 	private static int light() {
-		return 10;
+		return CEModConfig.COMMON.ench.tool.photoDynamicMinLight.get();
 	}
 
 	private static double speed() {
-		return 0.12;
+		return CEModConfig.COMMON.ench.tool.photoDynamicSpeedBonus.get();
 	}
 
 	public PhotoDynamic() {
@@ -29,7 +30,7 @@ public class PhotoDynamic extends ToolEnch implements PlayerBreakEnch {
 	public float onBreakSpeed(PlayerEvent.BreakSpeed event, Player player, BlockState blockState, int level) {
 		if (player.level() instanceof ServerLevel sl) {
 			int brightness = player.level().getBrightness(LightLayer.BLOCK, player.blockPosition());
-			if (brightness > light()) return 1 + level * (float) speed();
+			if (brightness >= light()) return 1 + level * (float) speed();
 		}
 		return 1;
 	}

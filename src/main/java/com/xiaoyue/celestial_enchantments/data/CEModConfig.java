@@ -25,7 +25,7 @@ public class CEModConfig {
 
 		public static class Ench {
 
-			public static class Weapon {
+			public static class Weapon {//TODO
 
 				public final ForgeConfigSpec.IntValue apoptosisBladeWitherDuration;
 
@@ -191,7 +191,7 @@ public class CEModConfig {
 
 			}
 
-			public static class Ranged {
+			public static class Ranged {//TODO
 
 				Ranged(ForgeConfigSpec.Builder builder) {
 					builder.push("Bow");
@@ -201,7 +201,7 @@ public class CEModConfig {
 
 			}
 
-			public static class Shield {
+			public static class Shield {//TODO
 
 				Shield(ForgeConfigSpec.Builder builder) {
 					builder.push("Shield");
@@ -213,8 +213,19 @@ public class CEModConfig {
 
 			public static class Trident {
 
+				public final ForgeConfigSpec.DoubleValue explosiveHalberdChance;
+				public final ForgeConfigSpec.IntValue explosiveHalberdExplosionLevel;
+				public final ForgeConfigSpec.DoubleValue sharpHalberdBonus;
+
+
 				Trident(ForgeConfigSpec.Builder builder) {
 					builder.push("Trident");
+					explosiveHalberdChance = builder.comment("Explosive Halberd: Chance per level to cause explosion")
+							.defineInRange("explosiveHalberdChance", 0.2, 0, 1);
+					explosiveHalberdExplosionLevel = builder.comment("Explosive Halberd: Explosion level (3 = Creeper)")
+							.defineInRange("explosiveHalberdExplosionLevel", 3, 1, 10);
+					sharpHalberdBonus = builder.comment("Sharp Halberd: Damage bonus per level")
+							.defineInRange("sharpHalberdBonus", 0.2, 0, 1);
 
 					builder.pop();
 				}
@@ -223,8 +234,42 @@ public class CEModConfig {
 
 			public static class Tool {
 
+				public final ForgeConfigSpec.IntValue accelerateGrowthDurabilityCost;
+				public final ForgeConfigSpec.IntValue bornInShadowInterval;
+				public final ForgeConfigSpec.IntValue bornInShadowMaxLight;
+				public final ForgeConfigSpec.IntValue bornInShadowRecover;
+				public final ForgeConfigSpec.IntValue photoDynamicMinLight;
+				public final ForgeConfigSpec.DoubleValue photoDynamicSpeedBonus;
+				public final ForgeConfigSpec.IntValue photosynthesisInterval;
+				public final ForgeConfigSpec.IntValue photosynthesisMinLight;
+				public final ForgeConfigSpec.IntValue photosynthesisRecover;
+
+
 				Tool(ForgeConfigSpec.Builder builder) {
 					builder.push("Tool");
+
+					accelerateGrowthDurabilityCost = builder.comment("Accelerate Growth: durability cost of fertilizing crops")
+							.defineInRange("accelerateGrowthDurabilityCost", 20, 0, 10000);
+					bornInShadowInterval = builder.comment("Born in Shadow: Interval in seconds to recover durability")
+							.defineInRange("bornInShadowInterval", 10, 1, 1000);
+					bornInShadowMaxLight = builder.comment("Born in Shadow: Max brightness to recover durability")
+							.defineInRange("bornInShadowMaxLight", 5, 0, 15);
+					bornInShadowRecover = builder.comment("Born in Shadow: Durability to recover per level")
+							.defineInRange("bornInShadowRecover", 1, 0, 1000);
+
+					photoDynamicMinLight = builder.comment("Photo Dynamic: Min brightness to boost mining speed")
+							.defineInRange("photoDynamicMinLight", 10, 0, 15);
+					photoDynamicSpeedBonus = builder.comment("Photo Dynamic: Mining speed bonus per level")
+							.defineInRange("photoDynamicSpeedBonus", 0.12, 0, 10);
+
+					photosynthesisInterval = builder.comment("Photosynthesis: Interval in seconds to recover durability")
+							.defineInRange("photosynthesisInterval", 10, 1, 1000);
+					photosynthesisMinLight = builder.comment("Photosynthesis: Min brightness to recover durability")
+							.defineInRange("photosynthesisMinLight", 10, 0, 15);
+					photosynthesisRecover = builder.comment("Photosynthesis: Durability to recover per level")
+							.defineInRange("photosynthesisRecover", 1, 0, 1000);
+
+
 
 					builder.pop();
 				}

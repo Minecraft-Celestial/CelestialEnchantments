@@ -1,6 +1,7 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.tool;
 
 import com.xiaoyue.celestial_enchantments.content.generic.ToolEnch;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import net.minecraft.core.BlockPos;
@@ -13,6 +14,10 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
 public class AccelerateGrowth extends ToolEnch {
 
+	private static int cost(){
+		return CEModConfig.COMMON.ench.tool.accelerateGrowthDurabilityCost.get();
+	}
+
 	public AccelerateGrowth() {
 		super(Rarity.UNCOMMON, Type.HOE, EnchData.treasure(1, TOOL));
 	}
@@ -24,7 +29,7 @@ public class AccelerateGrowth extends ToolEnch {
 		if (block instanceof CropBlock) {
 			if (BoneMealItem.applyBonemeal(Items.BONE_MEAL.getDefaultInstance(), player.level(), blockPos, player)) {
 				player.level().levelEvent(2005, blockPos, 0);
-				event.getItemStack().hurtAndBreak(100, player, p -> p.broadcastBreakEvent(event.getHand()));
+				event.getItemStack().hurtAndBreak(cost(), player, p -> p.broadcastBreakEvent(event.getHand()));
 			}
 		}
 	}
