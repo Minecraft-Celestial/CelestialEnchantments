@@ -25,7 +25,7 @@ public class CEModConfig {
 
 		public static class Ench {
 
-			public static class Weapon {//TODO
+			public static class Weapon {
 
 				public final ForgeConfigSpec.IntValue apoptosisBladeWitherDuration;
 				public final ForgeConfigSpec.DoubleValue clusterAwarenessDamage;
@@ -53,7 +53,7 @@ public class CEModConfig {
 				public final ForgeConfigSpec.IntValue upwardPickEffectDuration;
 				public final ForgeConfigSpec.DoubleValue vampireSlashHeal;
 				public final ForgeConfigSpec.DoubleValue voidChainSpread;
-				public final ForgeConfigSpec.DoubleValue voidChainRadius;
+				public final ForgeConfigSpec.IntValue voidChainRadius;
 				public final ForgeConfigSpec.DoubleValue wordsOfWisdomDamage;
 				public final ForgeConfigSpec.IntValue wordsOfWisdomMaxLevel;
 
