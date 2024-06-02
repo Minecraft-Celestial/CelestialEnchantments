@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -12,11 +13,11 @@ import net.minecraft.world.entity.player.Player;
 public class WordsOfWisdom extends AttackEnch {
 
 	private static double atk() {
-		return 0.002;//TODO
+		return CEModConfig.COMMON.ench.weapon.wordsOfWisdomDamage.get();
 	}
 
 	private static int maxLv() {
-		return 300;//TODO
+		return CEModConfig.COMMON.ench.weapon.wordsOfWisdomMaxLevel.get();
 	}
 
 	public WordsOfWisdom() {

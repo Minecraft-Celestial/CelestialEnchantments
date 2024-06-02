@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.generic.AttributeEnchantment;
 import com.xiaoyue.celestial_enchantments.content.generic.WeaponEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.init.L2DamageTracker;
 import dev.xkmc.l2library.util.math.MathHelper;
@@ -14,7 +15,7 @@ import net.minecraftforge.event.ItemAttributeModifierEvent;
 public class DeathBlow extends WeaponEnch implements AttributeEnchantment {
 
 	private static double crit() {
-		return 0.25;//TODO
+		return CEModConfig.COMMON.ench.weapon.deathBlowAttribute.get();
 	}
 
 	public DeathBlow() {

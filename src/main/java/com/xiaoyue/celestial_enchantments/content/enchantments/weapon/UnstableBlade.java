@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -11,11 +12,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class UnstableBlade extends AttackEnch {
 
 	private static double chance() {
-		return 0.1;//TODO
+		return CEModConfig.COMMON.ench.weapon.unstableBladeChance.get();
 	}
 
 	private static double atk() {
-		return 0.25;//TODO
+		return CEModConfig.COMMON.ench.weapon.unstableBladeDamage.get();
 	}
 
 	public UnstableBlade() {

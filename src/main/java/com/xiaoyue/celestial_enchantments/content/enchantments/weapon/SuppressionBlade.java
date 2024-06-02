@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
@@ -12,7 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class SuppressionBlade extends AttackEnch {
 
 	private static int duration() {
-		return 10;//TODO
+		return CEModConfig.COMMON.ench.weapon.suppressionBladeEffectDuration.get();
 	}
 
 	public SuppressionBlade() {

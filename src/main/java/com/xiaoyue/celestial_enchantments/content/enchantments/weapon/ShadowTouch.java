@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_core.data.CCDamageTypes;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
@@ -13,11 +14,11 @@ import net.minecraft.world.level.LightLayer;
 public class ShadowTouch extends AttackEnch {
 
 	private static int brightness() {
-		return 5;
+		return CEModConfig.COMMON.ench.weapon.shadowTouchBrightness.get();
 	}
 
 	private static int factor() {
-		return 2;
+		return CEModConfig.COMMON.ench.weapon.shadowTouchDamage.get();
 	}
 
 	public ShadowTouch() {

@@ -39,7 +39,7 @@ public class CelestialTableBlock extends BaseEntityBlock {
    protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D);
    public static final List<BlockPos> BOOKSHELF_OFFSETS = BlockPos.betweenClosedStream(-2, 0, -2, 2, 1, 2).filter((p_207914_) -> Math.abs(p_207914_.getX()) == 2 || Math.abs(p_207914_.getZ()) == 2).map(BlockPos::immutable).toList();
 
-   public CelestialTableBlock(BlockBehaviour.Properties prop) {
+   public CelestialTableBlock(Properties prop) {
       super(prop);
    }
 

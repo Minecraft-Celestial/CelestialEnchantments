@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_core.data.CCDamageTypes;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
@@ -12,7 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class MagicBlade extends AttackEnch {
 
 	private static double atk() {
-		return 0.2;//TODO
+		return CEModConfig.COMMON.ench.weapon.magicBladeDamage.get();
 	}
 
 	public MagicBlade() {

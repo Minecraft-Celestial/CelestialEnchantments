@@ -28,12 +28,96 @@ public class CEModConfig {
 			public static class Weapon {
 
 				public final ForgeConfigSpec.IntValue apoptosisBladeWitherDuration;
+				public final ForgeConfigSpec.DoubleValue clusterAwarenessDamage;
+				public final ForgeConfigSpec.IntValue clusterAwarenessRadius;
+				public final ForgeConfigSpec.DoubleValue deathBladeDamage;
+				public final ForgeConfigSpec.DoubleValue deathBlowAttribute;
+				public final ForgeConfigSpec.IntValue destructionCrackDuration;
+				public final ForgeConfigSpec.DoubleValue fierceSlashDamage;
+				public final ForgeConfigSpec.DoubleValue hiddenBladeDamage;
+				public final ForgeConfigSpec.DoubleValue knightSlashDamage;
+				public final ForgeConfigSpec.IntValue lightArmorKillerArmor;
+				public final ForgeConfigSpec.DoubleValue lightArmorKillerDamage;
+				public final ForgeConfigSpec.DoubleValue magicBladeDamage;
+				public final ForgeConfigSpec.DoubleValue misfortuneBladeDamage;
+				public final ForgeConfigSpec.DoubleValue quenchedBladeDamage;
+				public final ForgeConfigSpec.IntValue quenchedBladeMaxFire;
+				public final ForgeConfigSpec.DoubleValue quickStepPunctureDamage;
+				public final ForgeConfigSpec.DoubleValue quickStepPunctureKnockback;
+				public final ForgeConfigSpec.DoubleValue revengeDamage;
+				public final ForgeConfigSpec.IntValue shadowTouchBrightness;
+				public final ForgeConfigSpec.IntValue shadowTouchDamage;
+				public final ForgeConfigSpec.IntValue suppressionBladeEffectDuration;
+				public final ForgeConfigSpec.DoubleValue unstableBladeChance;
+				public final ForgeConfigSpec.DoubleValue unstableBladeDamage;
+				public final ForgeConfigSpec.IntValue upwardPickEffectDuration;
+				public final ForgeConfigSpec.DoubleValue vampireSlashHeal;
+				public final ForgeConfigSpec.DoubleValue voidChainSpread;
+				public final ForgeConfigSpec.DoubleValue voidChainRadius;
+				public final ForgeConfigSpec.DoubleValue wordsOfWisdomDamage;
+				public final ForgeConfigSpec.IntValue wordsOfWisdomMaxLevel;
 
 				Weapon(ForgeConfigSpec.Builder builder) {
 					builder.push("Weapon");
 
 					apoptosisBladeWitherDuration = builder.comment("Apoptosis Blade: Wither effect duration per level in seconds")
 							.defineInRange("apoptosisBladeWitherDuration", 2, 0, 100);
+					clusterAwarenessDamage = builder.comment("Cluster Awareness: The damage increased by each surrounding creature")
+							.defineInRange("clusterAwarenessDamage", 0.03, 0, 1024);
+					clusterAwarenessRadius = builder.comment("Cluster Awareness: The range radius used to obtain organisms")
+							.defineInRange("clusterAwarenessRadius", 12, 0, 100);
+					deathBladeDamage = builder.comment("Death Blade: Can increase attack damage equivalent to the maximum life of the target")
+							.defineInRange("deathBladeDamage", 0.08, 0, 1);
+					deathBlowAttribute = builder.comment("Death Blow: How much critical damage attribute can be increased")
+							.defineInRange("deathBlowAttribute", 0.25, 0, 1024);
+					destructionCrackDuration = builder.comment("Destruction Crack: How many seconds of destructive effect can be given to the target")
+							.defineInRange("destructionCrackDuration", 5, 0, 1024);
+					fierceSlashDamage = builder.comment("Fierce Slash: How much damage can each level increase")
+							.defineInRange("fierceSlashDamage", 0.08, 0, 1024);
+					hiddenBladeDamage = builder.comment("Hidden Blade: How much damage can each level increase")
+							.defineInRange("hiddenBladeDamage", 0.1, 0, 1024);
+					knightSlashDamage = builder.comment("Knight Slash: How much damage can each level increase")
+							.defineInRange("knightSlashDamage", 0.15, 0, 1024);
+					lightArmorKillerArmor = builder.comment("Light Armor Killer: When the target armor is below what level, it can trigger the damage enhancement effect")
+							.defineInRange("lightArmorKillerArmor", 8, 0, 100);
+					lightArmorKillerDamage = builder.comment("Light Armor Killer: How much damage can each level increase")
+							.defineInRange("lightArmorKillerDamage", 0.25, 0, 1024);
+					magicBladeDamage = builder.comment("Magic Blade: How much additional magic damage can each level deal")
+							.defineInRange("magicBladeDamage", 0.2, 0, 1024);
+					misfortuneBladeDamage = builder.comment("Misfortune Blade: How much damage can each level increase")
+							.defineInRange("misfortuneBladeDamage", 0.12, 0, 1024);
+					quenchedBladeDamage = builder.comment("Quenched Blade: How much damage can the combustion time increase every 1 second")
+							.defineInRange("quenchedBladeDamage", 0.08, 0, 1024);
+					quenchedBladeMaxFire = builder.comment("Quenched Blade: What is the maximum amount of combustion time that can increase damage")
+							.defineInRange("quenchedBladeMaxFire", 60, 0, 1024);
+					quickStepPunctureDamage = builder.comment("Quick Step Puncture: How much damage can each level increase")
+							.defineInRange("quickStepPunctureDamage", 0.16, 0, 1024);
+					quickStepPunctureKnockback = builder.comment("Quick Step Puncture: How much force will be used to repel the target")
+							.defineInRange("quickStepPunctureKnockback", 0.3, 0, 1024);
+					revengeDamage = builder.comment("Revenge: How much damage can each level increase")
+							.defineInRange("revengeDamage", 0.08, 0, 1024);
+					shadowTouchBrightness = builder.comment("Shadow Touch: When the brightness is below what level, it will trigger additional damage")
+							.defineInRange("shadowTouchBrightness", 5, 1, 15);
+					shadowTouchDamage = builder.comment("Shadow Touch: How many additional Abyss damage can be caused")
+							.defineInRange("shadowTouchDamage", 2, 0, 1024);
+					suppressionBladeEffectDuration = builder.comment("Suppression Blade: Suppressed effect duration per level in seconds")
+							.defineInRange("suppressionBladeEffectDuration", 10, 0, 1024);
+					unstableBladeChance = builder.comment("Unstable Blade: What is the probability of triggering additional damage")
+							.defineInRange("unstableBladeChance", 0.1, 0, 1);
+					unstableBladeDamage = builder.comment("Unstable Blade: How much damage can each level increase")
+							.defineInRange("unstableBladeDamage", 0.25, 0, 1024);
+					upwardPickEffectDuration = builder.comment("Upward Pick: Levitation effect duration per level in seconds")
+							.defineInRange("upwardPickEffectDuration", 1, 0, 1024);
+					vampireSlashHeal = builder.comment("Vampire Slash: How many attack damage points can you heal after an attack")
+							.defineInRange("vampireSlashHeal", 0.2, 0, 10);
+					voidChainSpread = builder.comment("Void Chain: Causing damage equivalent to attack damage to targets around the target")
+							.defineInRange("voidChainSpread", 0.1, 0, 10);
+					voidChainRadius = builder.comment("Void Chain: What radius will the attack cause damage to the target within")
+							.defineInRange("voidChainRadius", 6, 0, 1024);
+					wordsOfWisdomDamage = builder.comment("Words Of Wisdom: How much attack damage can each experience level increase")
+							.defineInRange("wordsOfWisdomDamage", 0.002, 0, 1024);
+					wordsOfWisdomMaxLevel = builder.comment("Words Of Wisdom: What is the maximum experience level that can be calculated")
+							.defineInRange("wordsOfWisdomMaxLevel", 300, 0, 4096);
 
 					builder.pop();
 				}

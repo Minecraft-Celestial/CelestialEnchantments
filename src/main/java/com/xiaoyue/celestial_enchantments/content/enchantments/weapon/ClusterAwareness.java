@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -12,11 +13,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class ClusterAwareness extends AttackEnch {
 
 	private static double atk() {
-		return 0.03;//TODO
+		return CEModConfig.COMMON.ench.weapon.clusterAwarenessDamage.get();
 	}
 
 	private static int radius() {
-		return 12;
+		return CEModConfig.COMMON.ench.weapon.clusterAwarenessRadius.get();
 	}
 
 	public ClusterAwareness() {
