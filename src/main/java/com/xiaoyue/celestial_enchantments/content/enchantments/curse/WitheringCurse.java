@@ -7,8 +7,10 @@ import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2library.util.math.MathHelper;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraftforge.event.ItemAttributeModifierEvent;
 
 public class WitheringCurse extends ArmorEnch implements AttributeEnchantment {
@@ -23,6 +25,10 @@ public class WitheringCurse extends ArmorEnch implements AttributeEnchantment {
 
 	@Override
 	public void addAttributes(int lv, ItemAttributeModifierEvent event) {
+		var item = event.getItemStack().getItem();
+		var slot = item instanceof ArmorItem armor ? armor.getEquipmentSlot() :
+				LivingEntity.getEquipmentSlotForItem(event.getItemStack());
+		if (event.getSlotType() == slot)
 		event.addModifier(Attributes.MAX_HEALTH, new AttributeModifier(
 				MathHelper.getUUIDFromString("curse_of_withering"), "curse_of_withering", -lv * health(),
 				AttributeModifier.Operation.MULTIPLY_BASE));

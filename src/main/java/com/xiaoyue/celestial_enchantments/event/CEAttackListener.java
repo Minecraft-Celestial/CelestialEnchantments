@@ -12,6 +12,8 @@ import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 
+import static com.xiaoyue.celestial_enchantments.event.CEGeneralEventHandler.guard;
+
 public class CEAttackListener implements AttackListener {
 
 	@Override
@@ -39,7 +41,7 @@ public class CEAttackListener implements AttackListener {
 			if (bow.isEnchanted()) {
 				for (var ent : EnchantmentHelper.getEnchantments(bow).entrySet()) {
 					if (ent.getKey() instanceof BowEnch attr) {
-						attr.hurtTarget(arrow, target, ent.getValue(), cache);
+						attr.hurtTarget(arrow, target, guard(ent), cache);
 					}
 				}
 			}
@@ -48,7 +50,7 @@ public class CEAttackListener implements AttackListener {
 			if (item.isEnchanted()) {
 				for (var ent : EnchantmentHelper.getEnchantments(item).entrySet()) {
 					if (ent.getKey() instanceof TridentEnch attr) {
-						attr.hurtTarget(trident, target, ent.getValue(), cache);
+						attr.hurtTarget(trident, target, guard(ent), cache);
 					}
 				}
 			}
@@ -87,7 +89,7 @@ public class CEAttackListener implements AttackListener {
 			if (bow.isEnchanted()) {
 				for (var ent : EnchantmentHelper.getEnchantments(bow).entrySet()) {
 					if (ent.getKey() instanceof BowEnch attr) {
-						attr.onDamageTargetFinal(arrow, target, ent.getValue(), cache);
+						attr.onDamageTargetFinal(arrow, target, guard(ent), cache);
 					}
 				}
 			}

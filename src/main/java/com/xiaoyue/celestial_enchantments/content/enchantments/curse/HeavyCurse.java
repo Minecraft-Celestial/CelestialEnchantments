@@ -7,6 +7,7 @@ import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2library.util.math.MathHelper;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraftforge.event.ItemAttributeModifierEvent;
@@ -23,6 +24,7 @@ public class HeavyCurse extends ArmorEnch implements AttributeEnchantment {
 
 	@Override
 	public void addAttributes(int lv, ItemAttributeModifierEvent event) {
+		if (event.getSlotType() == EquipmentSlot.MAINHAND)
 		event.addModifier(Attributes.ATTACK_SPEED, new AttributeModifier(
 				MathHelper.getUUIDFromString("curse_of_gravity"), "curse_of_gravity", -lv * slow(),
 				AttributeModifier.Operation.MULTIPLY_TOTAL));

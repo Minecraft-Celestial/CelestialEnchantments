@@ -30,13 +30,17 @@ import static com.xiaoyue.celestial_enchantments.CelestialEnchantments.MODID;
 @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CEGeneralEventHandler {
 
+	public static int guard(Map.Entry<Enchantment, Integer> ent){
+		return Math.min(ent.getKey().getMaxLevel(), ent.getValue());
+	}
+
 	@SubscribeEvent
 	public static void onItemAttributes(ItemAttributeModifierEvent event) {
 		ItemStack stack = event.getItemStack();
 		if (stack.isEnchanted()) {
 			for (var ent : EnchantmentHelper.getEnchantments(stack).entrySet()) {
 				if (ent.getKey() instanceof AttributeEnchantment attr) {
-					attr.addAttributes(ent.getValue(), event);
+					attr.addAttributes(guard(ent), event);
 				}
 			}
 		}
