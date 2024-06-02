@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -11,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class Revenge extends AttackEnch {
 
 	private static double atk() {
-		return 0.08;//TODO
+		return CEModConfig.COMMON.ench.weapon.revengeDamage.get();
 	}
 
 	public Revenge() {

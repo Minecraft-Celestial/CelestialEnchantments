@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_core.data.CCDamageTypes;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
@@ -16,11 +17,11 @@ import java.util.List;
 public class VoidChain extends AttackEnch {
 
 	private static double spread() {
-		return 0.1;
+		return CEModConfig.COMMON.ench.weapon.voidChainSpread.get();
 	}
 
 	private static int radius() {
-		return 6;
+		return CEModConfig.COMMON.ench.weapon.voidChainRadius.get();
 	}
 
 	public VoidChain() {

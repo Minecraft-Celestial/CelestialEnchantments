@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -11,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class KnightSlash extends AttackEnch {
 
 	private static double atk() {
-		return 0.15;//TODO
+		return CEModConfig.COMMON.ench.weapon.knightSlashDamage.get();
 	}
 
 	public KnightSlash() {

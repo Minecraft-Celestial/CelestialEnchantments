@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -10,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class VampireSlash extends AttackEnch {
 
 	private static double heal() {
-		return 0.2;
+		return CEModConfig.COMMON.ench.weapon.vampireSlashHeal.get();
 	}
 
 	public VampireSlash() {

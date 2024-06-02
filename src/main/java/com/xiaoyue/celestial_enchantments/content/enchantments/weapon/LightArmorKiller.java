@@ -2,6 +2,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.weapon;
 
 import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -11,11 +12,11 @@ import net.minecraft.world.entity.LivingEntity;
 public class LightArmorKiller extends AttackEnch {
 
 	private static int armor() {
-		return 8;//TODO
+		return CEModConfig.COMMON.ench.weapon.lightArmorKillerArmor.get();
 	}
 
 	private static double atk() {
-		return 0.25;//TODO
+		return CEModConfig.COMMON.ench.weapon.lightArmorKillerDamage.get();
 	}
 
 	public LightArmorKiller() {
