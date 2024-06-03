@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.range;
 import com.xiaoyue.celestial_enchantments.content.generic.BowEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -12,7 +13,7 @@ import net.minecraft.world.entity.projectile.Arrow;
 public class SharpArrow extends BowEnch {
 
   private static double atk() {
-		return 0.2;
+		return CEModConfig.COMMON.ench.ranged.sharpArrowDamage.get();
 	}
 
 	public SharpArrow() {

@@ -5,6 +5,7 @@ import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.content.generic.ShieldEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2library.capability.conditionals.*;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import dev.xkmc.l2serial.serialization.SerialClass;
@@ -17,11 +18,11 @@ public class ConstraintsShield extends ShieldEnch
 		implements TokenProvider<ConstraintsShield.Token, ConstraintsShield>, Context {
 
 	private static int prepare() {
-		return 4;
+		return CEModConfig.COMMON.ench.shield.constraintsShieldPrepare.get();
 	}
 
 	private static double damageMult() {
-		return 0.2;
+		return CEModConfig.COMMON.ench.shield.constraintsShieldDamageMult.get();
 	}
 
 	public static final TokenKey<Token> KEY = TokenKey.of(CelestialEnchantments.loc("constraints_shield"));

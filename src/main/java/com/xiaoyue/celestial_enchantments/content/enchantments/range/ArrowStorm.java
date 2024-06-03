@@ -5,6 +5,7 @@ import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.BowEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import net.minecraft.network.chat.Component;
@@ -17,11 +18,11 @@ import java.util.List;
 public class ArrowStorm extends BowEnch {
 
 	private static double atk() {
-		return 0.1;
+		return CEModConfig.COMMON.ench.ranged.arrowStormDamage.get();
 	}
 
 	private static int radius() {
-		return 5;
+		return CEModConfig.COMMON.ench.ranged.arrowStormRadius.get();
 	}
 
 	public ArrowStorm() {
