@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.shield;
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.ShieldEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
@@ -12,7 +13,7 @@ import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 public class HolyShield extends ShieldEnch {
 
 	private static int dur() {
-		return 5;
+		return CEModConfig.COMMON.ench.shield.holyShieldEffectDuration.get();
 	}
 
 	private static final EnchEffectEntry EFF = EnchEffectEntry.amp(() -> MobEffects.ABSORPTION, HolyShield::dur);

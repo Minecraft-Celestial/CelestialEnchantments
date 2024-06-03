@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.BowEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import net.minecraft.network.chat.Component;
@@ -13,7 +14,7 @@ import net.minecraft.world.entity.projectile.Arrow;
 public class MorningStar extends BowEnch {
 
   private static double chance() {
-		return 0.25;
+		return CEModConfig.COMMON.ench.ranged.morningStarChance.get();
 	}
 
 	public MorningStar() {

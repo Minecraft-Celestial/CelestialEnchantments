@@ -275,20 +275,60 @@ public class CEModConfig {
 
 			}
 
-			public static class Ranged {//TODO
+			public static class Ranged {
+
+			  public final ForgeConfigSpec.DoubleValue sharpArrowDamage;
+			  public final ForgeConfigSpec.DoubleValue morningStarChance;
+			  public final ForgeConfigSpec.DoubleValue divineProjectionDamage;
+			  public final ForgeConfigSpec.DoubleValue burstArrowChance;
+			  public final ForgeConfigSpec.IntValue burstArrowStrength;
+			  public final ForgeConfigSpec.DoubleValue arrowStormDamage;
+			  public final ForgeConfigSpec.IntValue arrowStormRadius;
 
 				Ranged(ForgeConfigSpec.Builder builder) {
 					builder.push("Bow");
+
+					sharpArrowDamage = builder.comment("Sharp Arrow: How much damage can arrows increase")
+							.defineInRange("sharpArrowDamage",0.2, 0, 1024);
+					morningStarChance = builder.comment("Morning Star: What is the probability of summoning lightning")
+							.defineInRange("morningStarChance", 0.25, 0, 1);
+					divineProjectionDamage = builder.comment("Divine Projection: How much damage can each grid distance increase for arrows")
+							.defineInRange("divineProjectionDamage", 0.03, 0, 1);
+					burstArrowChance = builder.comment("Burst Arrow: What is the probability of an explosion occurring")
+							.defineInRange("burstArrowChance", 0.2, 0, 1);
+					burstArrowStrength = builder.comment("Burst Arrow: How much explosive strength will it cause")
+							.defineInRange("burstArrowStrength", 3, 0, 100);
+					arrowStormDamage = builder.comment("Arrow Storm: Will cause damage equivalent to the original damage to targets around the target")
+							.defineInRange("arrowStormDamage", 0.1, 0, 100);
+					arrowStormRadius = builder.comment("Arrow Storm: What radius of target will it cause damage to")
+							.defineInRange("arrowStormRadius", 5, 0, 100);
 
 					builder.pop();
 				}
 
 			}
 
-			public static class Shield {//TODO
+			public static class Shield {
+
+			  public final ForgeConfigSpec.IntValue scorchingShieldFireTime;
+			  public final ForgeConfigSpec.IntValue reactiveBlockKnockback;
+			  public final ForgeConfigSpec.IntValue holyShieldEffectDuration;
+			  public final ForgeConfigSpec.IntValue constraintsShieldPrepare;
+			  public final ForgeConfigSpec.DoubleValue constraintsShieldDamageMult;
 
 				Shield(ForgeConfigSpec.Builder builder) {
 					builder.push("Shield");
+
+					scorchingShieldFireTime = builder.comment("Scorching Shield: How long will a blocking attack cause the attacker to burn")
+							.defineInRange("scorchingShieldFireTime", 20, 0, 1024);
+					reactiveBlockKnockback = builder.comment("Reactive Block: How much force will be used to repel the attacker after blocking the attack")
+							.defineInRange("reactiveBlockKnockback", 1, 0, 100);
+					holyShieldEffectDuration = builder.comment("Holy Shield: How many seconds of damage absorption effect will be obtained after blocking an attack")
+							.defineInRange("holyShieldEffectDuration", 5, 0, 1024);
+					constraintsShieldPrepare = builder.comment("Constraints Shield: How many times will the enchantment effect be triggered after blocking")
+							.defineInRange("constraintsShieldPrepare", 4, 0, 100);
+					constraintsShieldDamageMult = builder.comment("Constraints Shield: Will cause damage equivalent to how much block damage to the attacker")
+							.defineInRange("constraintsShieldDamageMult", 0.2, 0, 1024);
 
 					builder.pop();
 				}
