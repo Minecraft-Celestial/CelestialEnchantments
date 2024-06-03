@@ -277,19 +277,19 @@ public class CEModConfig {
 
 			public static class Ranged {
 
-			  public final ForgeConfigSpec.DoubleValue sharpArrowDamage;
-			  public final ForgeConfigSpec.DoubleValue morningStarChance;
-			  public final ForgeConfigSpec.DoubleValue divineProjectionDamage;
-			  public final ForgeConfigSpec.DoubleValue burstArrowChance;
-			  public final ForgeConfigSpec.IntValue burstArrowStrength;
-			  public final ForgeConfigSpec.DoubleValue arrowStormDamage;
-			  public final ForgeConfigSpec.IntValue arrowStormRadius;
+				public final ForgeConfigSpec.DoubleValue sharpArrowDamage;
+				public final ForgeConfigSpec.DoubleValue morningStarChance;
+				public final ForgeConfigSpec.DoubleValue divineProjectionDamage;
+				public final ForgeConfigSpec.DoubleValue burstArrowChance;
+				public final ForgeConfigSpec.IntValue burstArrowStrength;
+				public final ForgeConfigSpec.DoubleValue arrowStormDamage;
+				public final ForgeConfigSpec.IntValue arrowStormRadius;
 
 				Ranged(ForgeConfigSpec.Builder builder) {
 					builder.push("Bow");
 
 					sharpArrowDamage = builder.comment("Sharp Arrow: How much damage can arrows increase")
-							.defineInRange("sharpArrowDamage",0.2, 0, 1024);
+							.defineInRange("sharpArrowDamage", 0.2, 0, 1024);
 					morningStarChance = builder.comment("Morning Star: What is the probability of summoning lightning")
 							.defineInRange("morningStarChance", 0.25, 0, 1);
 					divineProjectionDamage = builder.comment("Divine Projection: How much damage can each grid distance increase for arrows")
@@ -310,11 +310,11 @@ public class CEModConfig {
 
 			public static class Shield {
 
-			  public final ForgeConfigSpec.IntValue scorchingShieldFireTime;
-			  public final ForgeConfigSpec.IntValue reactiveBlockKnockback;
-			  public final ForgeConfigSpec.IntValue holyShieldEffectDuration;
-			  public final ForgeConfigSpec.IntValue constraintsShieldPrepare;
-			  public final ForgeConfigSpec.DoubleValue constraintsShieldDamageMult;
+				public final ForgeConfigSpec.IntValue scorchingShieldFireTime;
+				public final ForgeConfigSpec.IntValue reactiveBlockKnockback;
+				public final ForgeConfigSpec.IntValue holyShieldEffectDuration;
+				public final ForgeConfigSpec.IntValue constraintsShieldPrepare;
+				public final ForgeConfigSpec.DoubleValue constraintsShieldDamageMult;
 
 				Shield(ForgeConfigSpec.Builder builder) {
 					builder.push("Shield");
@@ -394,7 +394,6 @@ public class CEModConfig {
 							.defineInRange("photosynthesisRecover", 1, 0, 1000);
 
 
-
 					builder.pop();
 				}
 
@@ -467,6 +466,7 @@ public class CEModConfig {
 			public final ForgeConfigSpec.IntValue noCurseAffinity;
 			public final ForgeConfigSpec.DoubleValue baseCurseChance;
 			public final ForgeConfigSpec.DoubleValue weightCurseReduction;
+			public final ForgeConfigSpec.DoubleValue maxCurseChancePerRank;
 			public final ForgeConfigSpec.IntValue chaoticPendantWeightBonus;
 
 			Table(ForgeConfigSpec.Builder builder) {
@@ -503,6 +503,11 @@ public class CEModConfig {
 						.comment("Extra weights for enchantments will also reduce curse chance")
 						.comment("This value determines how much curse chance to decrease per additional weight")
 						.defineInRange("weightCurseReduction", 0.02, 0, 1);
+
+				maxCurseChancePerRank = builder
+						.comment("Maximum chance for items to be enchanted with curse (per rank)")
+						.comment("Advanced enchanting will have 2x chance, and legendary will have 3x chance")
+						.defineInRange("maxCurseChancePerRank", 0.15, 0, 1);
 
 				chaoticPendantWeightBonus = builder
 						.comment("Chaotic Pendant from Celestial Artifacts gives 3 extra enchantment levels, but it also gives extra weights")

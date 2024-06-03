@@ -41,6 +41,9 @@ public class CelestialEnchantmentHelper {
 		return CEModConfig.COMMON.table.weightCurseReduction.get();
 	}
 
+	private static double maxCurseChance() {
+		return CEModConfig.COMMON.table.maxCurseChancePerRank.get();
+	}
 
 	private static int maxLevel(CEBaseEnchantment ce, int level) {
 		int lv = ce.getMaxLevel();
@@ -105,7 +108,8 @@ public class CelestialEnchantmentHelper {
 			roll(val, basic, list, rand, isBook);
 			if (list.isEmpty()) return list;
 		}
-		double chance = (slot + 1) * (noCurseAffinity() - val) * baseCurseChance() - averager * weightCurseReduction();
+		double rankChance = Math.min(maxCurseChance(), (noCurseAffinity() - val) * baseCurseChance());
+		double chance = (slot + 1) * rankChance - averager * weightCurseReduction();
 		if (!isBook && rand.nextDouble() < chance) {
 			roll(0, curse, list, rand, false);
 		}

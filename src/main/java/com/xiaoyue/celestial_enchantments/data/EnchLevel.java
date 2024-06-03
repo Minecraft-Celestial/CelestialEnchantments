@@ -6,6 +6,10 @@ public record EnchLevel(EnchType type, int maxLv, int baseCost, int extraCost) {
 		return new EnchLevel(type, max, base, 30 / max);
 	}
 
+	public static EnchLevel curse(EnchType type, int max, int base) {
+		return new EnchLevel(type, max, base, 90 / max);
+	}
+
 	public boolean isTreasure() {
 		return true;
 	}

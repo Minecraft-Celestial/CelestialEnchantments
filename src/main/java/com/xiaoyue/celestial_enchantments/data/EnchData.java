@@ -5,7 +5,7 @@ import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
 public record EnchData(EnchLevel level, EnchGroup group, boolean bad) {
 
 	public static EnchData curse(int lv) {
-		return new EnchData(EnchLevel.simple(EnchType.CURSE, lv, 1), CEBaseEnchantment.CURSE, true);
+		return new EnchData(EnchLevel.curse(EnchType.CURSE, lv, 1), CEBaseEnchantment.CURSE, true);
 	}
 
 	public static EnchData normal(int lv, EnchGroup group) {
