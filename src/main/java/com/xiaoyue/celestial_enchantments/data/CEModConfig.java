@@ -30,7 +30,7 @@ public class CEModConfig {
 				public final ForgeConfigSpec.IntValue apoptosisBladeWitherDuration;
 				public final ForgeConfigSpec.DoubleValue clusterAwarenessDamage;
 				public final ForgeConfigSpec.IntValue clusterAwarenessRadius;
-				public final ForgeConfigSpec.DoubleValue deathBladeDamage;
+				public final ForgeConfigSpec.DoubleValue deathBladePercentDamage;
 				public final ForgeConfigSpec.DoubleValue deathBlowAttribute;
 				public final ForgeConfigSpec.IntValue destructionCrackDuration;
 				public final ForgeConfigSpec.DoubleValue fierceSlashDamage;
@@ -40,7 +40,7 @@ public class CEModConfig {
 				public final ForgeConfigSpec.DoubleValue lightArmorKillerDamage;
 				public final ForgeConfigSpec.DoubleValue magicBladeDamage;
 				public final ForgeConfigSpec.DoubleValue misfortuneBladeDamage;
-				public final ForgeConfigSpec.DoubleValue quenchedBladeDamage;
+				public final ForgeConfigSpec.DoubleValue quenchedBladeDamagePerSecond;
 				public final ForgeConfigSpec.IntValue quenchedBladeMaxFire;
 				public final ForgeConfigSpec.DoubleValue quickStepPunctureDamage;
 				public final ForgeConfigSpec.DoubleValue quickStepPunctureKnockback;
@@ -51,7 +51,7 @@ public class CEModConfig {
 				public final ForgeConfigSpec.DoubleValue unstableBladeChance;
 				public final ForgeConfigSpec.DoubleValue unstableBladeDamage;
 				public final ForgeConfigSpec.IntValue upwardPickEffectDuration;
-				public final ForgeConfigSpec.DoubleValue vampireSlashHeal;
+				public final ForgeConfigSpec.DoubleValue vampireSlashHealRate;
 				public final ForgeConfigSpec.DoubleValue voidChainSpread;
 				public final ForgeConfigSpec.IntValue voidChainRadius;
 				public final ForgeConfigSpec.DoubleValue wordsOfWisdomDamage;
@@ -66,8 +66,8 @@ public class CEModConfig {
 							.defineInRange("clusterAwarenessDamage", 0.03, 0, 1024);
 					clusterAwarenessRadius = builder.comment("Cluster Awareness: The range radius used to obtain organisms")
 							.defineInRange("clusterAwarenessRadius", 12, 0, 100);
-					deathBladeDamage = builder.comment("Death Blade: Can increase attack damage equivalent to the maximum life of the target")
-							.defineInRange("deathBladeDamage", 0.08, 0, 1);
+					deathBladePercentDamage = builder.comment("Death Blade: Can increase attack damage equivalent to the maximum life of the target")
+							.defineInRange("deathBladePercentDamage", 0.008, 0, 1);
 					deathBlowAttribute = builder.comment("Death Blow: How much critical damage attribute can be increased")
 							.defineInRange("deathBlowAttribute", 0.25, 0, 1024);
 					destructionCrackDuration = builder.comment("Destruction Crack: How many seconds of destructive effect can be given to the target")
@@ -86,8 +86,8 @@ public class CEModConfig {
 							.defineInRange("magicBladeDamage", 0.2, 0, 1024);
 					misfortuneBladeDamage = builder.comment("Misfortune Blade: How much damage can each level increase")
 							.defineInRange("misfortuneBladeDamage", 0.12, 0, 1024);
-					quenchedBladeDamage = builder.comment("Quenched Blade: How much damage can the combustion time increase every 1 second")
-							.defineInRange("quenchedBladeDamage", 0.08, 0, 1024);
+					quenchedBladeDamagePerSecond = builder.comment("Quenched Blade: How much damage can the combustion time increase every 1 second")
+							.defineInRange("quenchedBladeDamagePerSecond", 0.008, 0, 1024);
 					quenchedBladeMaxFire = builder.comment("Quenched Blade: What is the maximum amount of combustion time that can increase damage")
 							.defineInRange("quenchedBladeMaxFire", 60, 0, 1024);
 					quickStepPunctureDamage = builder.comment("Quick Step Puncture: How much damage can each level increase")
@@ -108,8 +108,8 @@ public class CEModConfig {
 							.defineInRange("unstableBladeDamage", 0.25, 0, 1024);
 					upwardPickEffectDuration = builder.comment("Upward Pick: Levitation effect duration per level in seconds")
 							.defineInRange("upwardPickEffectDuration", 1, 0, 1024);
-					vampireSlashHeal = builder.comment("Vampire Slash: How many attack damage points can you heal after an attack")
-							.defineInRange("vampireSlashHeal", 0.2, 0, 10);
+					vampireSlashHealRate = builder.comment("Vampire Slash: How many attack damage points can you heal after an attack")
+							.defineInRange("vampireSlashHealRate", 0.1, 0, 10);
 					voidChainSpread = builder.comment("Void Chain: Causing damage equivalent to attack damage to targets around the target")
 							.defineInRange("voidChainSpread", 0.1, 0, 10);
 					voidChainRadius = builder.comment("Void Chain: What radius will the attack cause damage to the target within")

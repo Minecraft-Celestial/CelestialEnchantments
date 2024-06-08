@@ -4,7 +4,6 @@ import com.xiaoyue.celestial_enchantments.content.generic.AttackEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
-import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import net.minecraft.network.chat.Component;
@@ -13,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class QuenchedBlade extends AttackEnch {
 
 	private static double atk() {
-		return CEModConfig.COMMON.ench.weapon.quenchedBladeDamage.get();
+		return CEModConfig.COMMON.ench.weapon.quenchedBladeDamagePerSecond.get();
 	}
 
 	private static int maxFire() {

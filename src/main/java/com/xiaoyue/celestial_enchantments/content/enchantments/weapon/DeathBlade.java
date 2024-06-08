@@ -12,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class DeathBlade extends AttackEnch {
 
 	private static double atk() {
-		return CEModConfig.COMMON.ench.weapon.deathBladeDamage.get();
+		return CEModConfig.COMMON.ench.weapon.deathBladePercentDamage.get();
 	}
 
 	public DeathBlade() {

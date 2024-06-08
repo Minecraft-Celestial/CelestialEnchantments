@@ -11,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class VampireSlash extends AttackEnch {
 
 	private static double heal() {
-		return CEModConfig.COMMON.ench.weapon.vampireSlashHeal.get();
+		return CEModConfig.COMMON.ench.weapon.vampireSlashHealRate.get();
 	}
 
 	public VampireSlash() {
