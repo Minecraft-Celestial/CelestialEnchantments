@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "celestial_enchantments.refmap.json",
   "mixins": [
-    "MixinTrident"
+	"MixinTrident",
+	"ServerLevelMixin"
   ],
   "minVersion": "0.8"
 }

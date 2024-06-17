@@ -37,13 +37,6 @@ public class CEMiscEventHandler {
 	}
 
 	@SubscribeEvent
-	public static void onPlayerWake(PlayerWakeUpEvent event) {
-		Player player = event.getEntity();
-		int lv = EnchantmentHelper.getEnchantmentLevel(CEEnchantments.HAVE_NICE_DREAM.get(), player);
-		if (lv > 0 && event.wakeImmediately()) HaveNiceDream.onPlayerWake(player, lv);
-	}
-
-	@SubscribeEvent
 	public static void onRightBlockEvent(PlayerInteractEvent.RightClickBlock event) {
 		Player player = event.getEntity();
 		int lv = EnchantmentHelper.getEnchantmentLevel(CEEnchantments.ACCELERATE_GROWTH.get(), player);
