@@ -22,7 +22,7 @@ public class DestructionCrack extends AttackEnch {
 
 	@Override
 	public void onDamageTargetFinal(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
-		target.addEffect(new MobEffectInstance(CEEffects.DESTRUCTED.get(), duration() * 20));
+		target.addEffect(new MobEffectInstance(CEEffects.DESTRUCTED.get(), duration() * 20 * lv, 0, false, false, false));
 	}
 
 	@Override

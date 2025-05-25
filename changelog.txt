@@ -1,3 +1,6 @@
+1.3.4
+- Make Destruction Crank and Suppression Blade scale with enchantment level and not showing effect icons
+
 1.3.3
 - Fix Have a Nice Dream
 

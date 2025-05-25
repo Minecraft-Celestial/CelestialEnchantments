@@ -1,14 +1,23 @@
 package com.xiaoyue.celestial_enchantments.content.effects;
 
+import com.xiaoyue.celestial_enchantments.CelestialEnchantments;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
 public interface EnchEffectEntry {
+
+	static MobEffectInstance create(MobEffect effect, int dur, int amp) {
+		var id = ForgeRegistries.MOB_EFFECTS.getKey(effect);
+		boolean ambient = false, visible = false;
+		boolean showIcon = id != null && !id.getNamespace().equals(CelestialEnchantments.MODID);
+		return new MobEffectInstance(effect, dur, amp, ambient, visible, showIcon);
+	}
 
 	MobEffectInstance ins(int lv);
 
@@ -34,7 +43,7 @@ public interface EnchEffectEntry {
 
 		@Override
 		public MobEffectInstance ins(int lv) {
-			return new MobEffectInstance(eff.get(), dur.getAsInt() * 20 * lv, lv - 1);
+			return create(eff.get(), dur.getAsInt() * 20 * lv, lv - 1);
 		}
 
 		@Override
@@ -51,7 +60,7 @@ public interface EnchEffectEntry {
 
 		@Override
 		public MobEffectInstance ins(int lv) {
-			return new MobEffectInstance(eff.get(), dur.getAsInt() * 20 * lv, level.getAsInt());
+			return create(eff.get(), dur.getAsInt() * 20 * lv, level.getAsInt());
 		}
 
 		@Override
@@ -67,7 +76,7 @@ public interface EnchEffectEntry {
 
 		@Override
 		public MobEffectInstance ins(int lv) {
-			return new MobEffectInstance(eff.get(), dur.getAsInt() * 20, lv * factor - 1);
+			return create(eff.get(), dur.getAsInt() * 20, lv * factor - 1);
 		}
 
 		@Override

@@ -1,3 +1,5 @@
+import net.darkhax.curseforgegradle.TaskPublishCurseForge
+
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
@@ -12,6 +14,8 @@ buildscript {
 
 plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'net.darkhax.curseforgegradle' version '[1.1.24,)'
+    id "at.stnwtr.gradle-secrets-plugin" version "1.0.1"
 }
 
 apply plugin: 'maven-publish'
@@ -99,7 +103,7 @@ dependencies {
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
     compileOnly fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
 
-    implementation fg.deobf("xiaoyue.celestial_core:celestial_core:1.3.4-slim")
+    implementation fg.deobf("xiaoyue.celestial_core:celestial_core:1.5.2-slim")
     implementation fg.deobf("xiaoyue.celestial_artifacts:celestial_artifacts:1.3.7-slim")
     implementation fg.deobf("dev.xkmc.l2serial:l2serial:1.2.2")
     implementation fg.deobf("dev.xkmc.l2tabs:l2tabs:0.3.1")
@@ -181,4 +185,17 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+tasks.register('publishCurseForge', TaskPublishCurseForge) {
+    apiToken = secrets.get("curseforge_token")
+    def mainFile = upload(project.curseforge_project, new File("./build/libs/${mod_id}-${mod_version}.jar"))
+    mainFile.changelog = new File('./changelog.txt')
+    mainFile.addEnvironment("Client", "Server")
+    mainFile.addGameVersion("1.20.1")
+    mainFile.addModLoader("Forge", "NeoForge")
+    mainFile.addRequirement("celestial-core")
+    mainFile.addOptional("enchantment-descriptions", "celestial-artifacts")
+    mainFile.releaseType = "release"
+    disableVersionDetection()
 }
