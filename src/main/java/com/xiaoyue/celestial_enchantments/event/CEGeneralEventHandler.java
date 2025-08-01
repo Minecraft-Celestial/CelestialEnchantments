@@ -30,7 +30,7 @@ import static com.xiaoyue.celestial_enchantments.CelestialEnchantments.MODID;
 @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CEGeneralEventHandler {
 
-	public static int guard(Map.Entry<Enchantment, Integer> ent){
+	public static int guard(Map.Entry<Enchantment, Integer> ent) {
 		return Math.min(ent.getKey().getMaxLevel(), ent.getValue());
 	}
 
@@ -101,6 +101,7 @@ public class CEGeneralEventHandler {
 
 	@SubscribeEvent
 	public static void onLivingTick(LivingEvent.LivingTickEvent event) {
+		if (event.getEntity().tickCount % 4 != 0) return;
 		for (Map.Entry<Enchantment, Integer> entry : IEnchUtils.getAllEnch(event.getEntity()).entrySet()) {
 			if (entry.getKey() instanceof LivingTickEnch ench) {
 				ench.onLivingTick(event, event.getEntity(), entry.getValue());

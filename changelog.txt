@@ -1,3 +1,6 @@
+1.3.5
+- Reduce ticking enchantment tick frequency to improve performance
+
 1.3.4
 - Make Destruction Crank and Suppression Blade scale with enchantment level and not showing effect icons
 
