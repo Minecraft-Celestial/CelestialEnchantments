@@ -3,30 +3,30 @@ package com.xiaoyue.celestial_enchantments;
 import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.util.entry.RegistryEntry;
-import com.xiaoyue.celestial_enchantments.data.CELang;
-import com.xiaoyue.celestial_enchantments.data.CEModConfig;
-import com.xiaoyue.celestial_enchantments.data.CERecipeGen;
-import com.xiaoyue.celestial_enchantments.data.CETagGen;
+import com.xiaoyue.celestial_enchantments.data.*;
 import com.xiaoyue.celestial_enchantments.event.CEAttackListener;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import com.xiaoyue.celestial_enchantments.register.CEItems;
 import dev.xkmc.l2damagetracker.contents.attack.AttackEventHandler;
 import dev.xkmc.l2library.base.L2Registrate;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
+import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
 
 @Mod(CelestialEnchantments.MODID)
+@Mod.EventBusSubscriber(modid = CelestialEnchantments.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CelestialEnchantments {
 
 	public static final String MODID = "celestial_enchantments";
 	public static final Logger LOGGER = LogUtils.getLogger();
-
 	public static final L2Registrate REGISTRATE = new L2Registrate(MODID);
 
 	public static final RegistryEntry<CreativeModeTab> TAB_ENCHMIN = REGISTRATE.buildModCreativeTab(
@@ -46,6 +46,12 @@ public class CelestialEnchantments {
 		REGISTRATE.addDataGenerator(ProviderType.LANG, CELang::genLang);
 		REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, CETagGen::onItemTagGen);
 		REGISTRATE.addDataGenerator(ProviderType.RECIPE, CERecipeGen::onRecipeGen);
+	}
+
+	@SubscribeEvent
+	public static void gatherData(GatherDataEvent event) {
+		DataGenerator gen = event.getGenerator();
+		gen.addProvider(event.includeClient(), new CEBookModelGen(gen.getPackOutput(), event.getExistingFileHelper()));
 	}
 
 	public static ResourceLocation loc(String id) {

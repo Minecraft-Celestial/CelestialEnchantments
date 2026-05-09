@@ -11,8 +11,8 @@ import net.minecraftforge.event.entity.living.LivingHealEvent;
 
 public class LifeShield extends ArmorEnch implements LivingHealEnch {
 
-	public static double factor() {
-		return CEModConfig.COMMON.ench.armor.lifeShieldPercentage.get();
+	public static float factor() {
+		return CEModConfig.COMMON.ench.armor.lifeShieldPercentage.get().floatValue();
 	}
 
 	public LifeShield() {
@@ -20,11 +20,11 @@ public class LifeShield extends ArmorEnch implements LivingHealEnch {
 	}
 
 	@Override
-	public void onLivingHeal(LivingHealEvent event, LivingEntity entity, int level) {
+	public void onLivingHeal(LivingHealEvent event, LivingEntity entity, int lv) {
 		float current = entity.getAbsorptionAmount();
-		float max = entity.getMaxHealth() * (float) factor();
+		float max = entity.getMaxHealth() * factor() * lv;
 		if (current > max) return;
-		float amount = event.getAmount() * (float) factor();
+		float amount = event.getAmount() * factor() * lv;
 		entity.setAbsorptionAmount(Math.min(amount + current, max));
 	}
 

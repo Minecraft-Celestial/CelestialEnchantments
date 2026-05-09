@@ -4,7 +4,6 @@ import com.xiaoyue.celestial_enchantments.content.generic.PlayerBreakEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
-import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.BlockState;

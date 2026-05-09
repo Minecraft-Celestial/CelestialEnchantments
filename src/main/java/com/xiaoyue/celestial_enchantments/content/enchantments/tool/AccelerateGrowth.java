@@ -3,7 +3,6 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.tool;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolEnch;
 import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
-import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BoneMealItem;

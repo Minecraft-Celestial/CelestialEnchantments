@@ -10,10 +10,7 @@ import com.xiaoyue.celestial_enchantments.content.enchantments.shield.Constraint
 import com.xiaoyue.celestial_enchantments.content.enchantments.shield.HolyShield;
 import com.xiaoyue.celestial_enchantments.content.enchantments.shield.ReactiveBlock;
 import com.xiaoyue.celestial_enchantments.content.enchantments.shield.ScorchingShield;
-import com.xiaoyue.celestial_enchantments.content.enchantments.tool.AccelerateGrowth;
-import com.xiaoyue.celestial_enchantments.content.enchantments.tool.BornInShadow;
-import com.xiaoyue.celestial_enchantments.content.enchantments.tool.PhotoDynamic;
-import com.xiaoyue.celestial_enchantments.content.enchantments.tool.Photosynthesis;
+import com.xiaoyue.celestial_enchantments.content.enchantments.tool.*;
 import com.xiaoyue.celestial_enchantments.content.enchantments.trident.ExplosiveHalberd;
 import com.xiaoyue.celestial_enchantments.content.enchantments.trident.SharpHalberdTip;
 import com.xiaoyue.celestial_enchantments.content.enchantments.weapon.*;
@@ -23,14 +20,15 @@ import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
-import java.util.LinkedHashSet;
+import java.util.LinkedHashMap;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 @SuppressWarnings("unused")
 public class CEEnchantments {
 
-	public static final LinkedHashSet<String> ALL_ENCH = new LinkedHashSet<>();
+	public static int index = 1;
+	public static final LinkedHashMap<String, Integer> ALL_ENCH = new LinkedHashMap<>();
 
 	private static final Set<String> SMALL = Set.of("in", "of", "the", "a", "and");
 
@@ -39,8 +37,6 @@ public class CEEnchantments {
 				.map(e -> SMALL.contains(e) ? e : StringUtils.capitalize(e))
 				.collect(Collectors.joining(" ")));
 	}
-
-	// 81 enchantments
 
 	// weapons
 	public static final RegistryEntry<Enchantment> WITHERING_BLADE = reg("withering_blade", ApoptosisBlade::new, "Inflict %s"); // effect
@@ -75,7 +71,7 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> ABYSSAL_CONTACT = reg("abyssal_contact", AbyssalContact::new, "Reduce abyssal damage by %s, but increase other damage by %s");// A
 	public static final RegistryEntry<Enchantment> SOLID_ARMOR = reg("solid_armor", SolidArmor::new, "When the wearer's health is less than half, the damage received is reduced by %s");//A
 	public static final RegistryEntry<Enchantment> HEARTH_SUPPORT = reg("flame_strike", FlameStrike::new, "Burn attacker for %s seconds when attacked");//B
-	public static final RegistryEntry<Enchantment> DESTROY_RESONANCE = reg("destroy_resonance", DestroyResonance::new, "After being attacked, deals %s of received damage to surrounding targets within %s blocks");//B TODO
+	public static final RegistryEntry<Enchantment> DESTROY_RESONANCE = reg("destroy_resonance", DestroyResonance::new, "After being attacked, deals %s of received damage to surrounding targets within %s blocks");//B
 	public static final RegistryEntry<Enchantment> FROST_THORNS = reg("frost_thorns", FrostThorns::new, "Deals %s damage to the attacker when hurt, and inflict %s");//B
 	public static final RegistryEntry<Enchantment> TRAUMA_ABSORPTION = reg("trauma_absorption", TraumaAbsorption::new, "Restore %s of lost health when attacked");//B
 	// head
@@ -107,9 +103,9 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> FLEET_OF_FOOT = reg("fleet_of_foot", FleetOfFoot::new, "+%s Movement Speed");//C
 	public static final RegistryEntry<Enchantment> RABBIT_ASSIMILATION = reg("rabbit_assimilation", RabbitAssimilation::new, "Gain %s when sneaking");//C
 	// death
-	public static final RegistryEntry<Enchantment> PARTING_WISH = reg("parting_wish", PartingWish::new, "Upon death, surrounding players within %s blocks heal %s of their max health");//TODO
-	public static final RegistryEntry<Enchantment> DEATH_HATRED = reg("death_hatred", DeathHatred::new, "Upon death, deals %s magic damage to surrounding creatures within %s blocks");//TODO
-	public static final RegistryEntry<Enchantment> DEATH_PACT = reg("death_pact", DeathPact::new, "When nearby players within %s blocks die with [%s], there is a %s chance to gain %s, %s, %s, and %s. Otherwise, you will die together");//TODO
+	public static final RegistryEntry<Enchantment> PARTING_WISH = reg("parting_wish", PartingWish::new, "Upon death, surrounding players within %s blocks heal %s of their max health");
+	public static final RegistryEntry<Enchantment> DEATH_HATRED = reg("death_hatred", DeathHatred::new, "Upon death, deals %s magic damage to surrounding creatures within %s blocks");
+	public static final RegistryEntry<Enchantment> DEATH_PACT = reg("death_pact", DeathPact::new, "When nearby players within %s blocks die with [%s], there is a %s chance to gain %s, %s, %s, and %s. Otherwise, you will die together");
 
 	// bow
 	public static final RegistryEntry<Enchantment> ARROW_OF_TRACTION = reg("arrow_of_traction", ArrowOfTraction::new, "After hitting target, drag all entities within a radius of %s grid with the target as the center to the target");
@@ -118,7 +114,6 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> MORNING_STAR = reg("lightning_arrow", MorningStar::new, "After arrow hits a target, %s chance to strike the target with lightning");
 	public static final RegistryEntry<Enchantment> SHARP_ARROW = reg("sharp_arrow", SharpArrow::new, "+%s Arrow Damage");
 	public static final RegistryEntry<Enchantment> DIVINE_PROJECTION = reg("divine_projection", DivineProjection::new, "The further the target is from the attacker, the higher damage output is");
-
 
 	// shield
 	public static final RegistryEntry<Enchantment> CONSTRAINTS_SHIELD = reg("constraints_shield", ConstraintsShield::new, "After blocking %s damage, next blocking will reflect %s damage as magic damage");
@@ -132,13 +127,18 @@ public class CEEnchantments {
 
 	// tool
 	public static final RegistryEntry<Enchantment> PHOTO_DYNAMIC = reg("photo_dynamic", PhotoDynamic::new, "In places where brightness level is above %s, gain +%s mining speed");
+	public static final RegistryEntry<Enchantment> EXPERIENCE_PROSPECTOR = reg("experience_prospector", ExperienceProspector::new, "When digging blocks, there is a %s chance to drop %s experience additionally");
+	public static final RegistryEntry<Enchantment> MOON_POWER = reg("moon_power", MoonPower::new, "Increases the digging speed according to the moon's phase, up to %s on the full moon");
+	// axe
+	public static final RegistryEntry<Enchantment> LEAF_CUTTING = reg("leaf_cutting", LeafCutting::new, "This tool is capable of instantly destroying leaves");
+	// hoe
 	public static final RegistryEntry<Enchantment> ACCELERATE_GROWTH = reg("accelerate_growth", AccelerateGrowth::new, "Right click to fertilize crops");
 
 	// generic
 	public static final RegistryEntry<Enchantment> BORN_IN_SHADOW = reg("born_in_shadow", BornInShadow::new, "Recover %2$s durability every %3$s seconds in places where brightness level is less than %1$s");
 	public static final RegistryEntry<Enchantment> PHOTOSYNTHESIS = reg("photosynthesis", Photosynthesis::new, "Recover %2$s durability every %3$s seconds in places where brightness level is greater than %1$s");
 
-	// curse 1 breakable, 2 armor, 2 weapon, 1 head, 1 chest, 1 leg, 1 tool
+	// curse 1 breakable, 2 armors, 2 weapons, 1 head, 1 chest, 1 leg, 1 tool
 	public static final RegistryEntry<Enchantment> DESTRUCTION_CURSE = reg("destruction_curse", DestructionCurse::new, "Increase explosion damage received by %s, and increase other incoming damage by %s");
 	public static final RegistryEntry<Enchantment> OVEREATING_CURSE = reg("overeating_curse", OvereatingCurse::new, "Gain %s");
 	public static final RegistryEntry<Enchantment> CURSE_OF_WEAKNESS = reg("curse_of_weakness", CurseOfWeakness::new, "-%s of attack damage");
@@ -150,7 +150,8 @@ public class CEEnchantments {
 	public static final RegistryEntry<Enchantment> CURSE_OF_CORROSION = reg("cures_of_corrosion", CorrosionCurse::new, "When equipped, lose %s durability every %s seconds until it has less than half durability");
 
 	public static RegistryEntry<Enchantment> reg(String id, NonNullSupplier<? extends Enchantment> sup, String desc) {
-		ALL_ENCH.add(id);
+		index = index + 1;
+		ALL_ENCH.put(id, index);
 		return CelestialEnchantments.REGISTRATE.enchantment(id, EnchantmentCategory.BREAKABLE,
 				(r, c, s) -> (Enchantment) sup.get(), desc).lang(parse(id)).register();
 	}

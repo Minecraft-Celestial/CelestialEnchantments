@@ -1,7 +1,6 @@
 package com.xiaoyue.celestial_enchantments.content.generic;
 
 import com.xiaoyue.celestial_enchantments.data.EnchData;
-import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;

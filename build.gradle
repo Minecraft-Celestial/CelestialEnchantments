@@ -14,7 +14,7 @@ buildscript {
 
 plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
-    id 'net.darkhax.curseforgegradle' version '[1.1.24,)'
+    id 'net.darkhax.curseforgegradle' version '[1.1.24,1.2)'
     id "at.stnwtr.gradle-secrets-plugin" version "1.0.1"
 }
 
@@ -125,7 +125,6 @@ dependencies {
     implementation fg.deobf("curse.maven:apotheosis-313970:5209354")
     implementation fg.deobf("curse.maven:apothic-attributes-898963:5209162")
     implementation fg.deobf("curse.maven:placebo-283644:5098182")
-
 
 }
 

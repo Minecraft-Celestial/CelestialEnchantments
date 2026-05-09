@@ -1,10 +1,8 @@
 package com.xiaoyue.celestial_enchantments.content.generic;
 
 import com.xiaoyue.celestial_enchantments.data.EnchData;
-import com.xiaoyue.celestial_enchantments.data.EnchLevel;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import net.minecraft.tags.DamageTypeTags;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
 public class DefenceEnch extends ArmorEnch {

@@ -57,6 +57,7 @@ public class IEnchUtils {
 
 	public static EnchantmentCategory SHIELD = EnchantmentCategory.create("shield", item -> item instanceof ShieldItem);
 	public static EnchantmentCategory HOE = EnchantmentCategory.create("hoe", item -> item instanceof HoeItem);
+	public static EnchantmentCategory AXE = EnchantmentCategory.create("axe", item -> item instanceof AxeItem);
 	public static EnchantmentCategory BOW_AND_CROSSBOW = EnchantmentCategory.create("bow_and_crossbow", item -> item instanceof BowItem || item instanceof CrossbowItem);
 
 }

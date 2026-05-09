@@ -1,9 +1,9 @@
 package com.xiaoyue.celestial_enchantments.event;
 
 import com.xiaoyue.celestial_enchantments.content.enchantments.armor.DimensionExplorer;
-import com.xiaoyue.celestial_enchantments.content.enchantments.armor.HaveNiceDream;
 import com.xiaoyue.celestial_enchantments.content.enchantments.armor.PotionAffinity;
 import com.xiaoyue.celestial_enchantments.content.enchantments.tool.AccelerateGrowth;
+import com.xiaoyue.celestial_enchantments.content.enchantments.tool.ExperienceProspector;
 import com.xiaoyue.celestial_enchantments.register.CEEffects;
 import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,7 +13,7 @@ import net.minecraftforge.event.entity.living.LivingHealEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -51,4 +51,10 @@ public class CEMiscEventHandler {
 		}
 	}
 
+	@SubscribeEvent
+	public static void onBlockBreak(BlockEvent.BreakEvent event) {
+		Player player = event.getPlayer();
+		 int lv = EnchantmentHelper.getEnchantmentLevel(CEEnchantments.EXPERIENCE_PROSPECTOR.get(), player);
+		 if (lv > 0) ExperienceProspector.onBlockBreak(player, event, lv);
+	}
 }

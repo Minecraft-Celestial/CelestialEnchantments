@@ -1,0 +1,518 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "celestial_enchantments:item/withering_blade",
+      "predicate": {
+        "celestial_enchantments:book": 2.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/upward_pick",
+      "predicate": {
+        "celestial_enchantments:book": 3.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/vampire_slash",
+      "predicate": {
+        "celestial_enchantments:book": 4.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/unstable_blade",
+      "predicate": {
+        "celestial_enchantments:book": 5.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/fierce_slash",
+      "predicate": {
+        "celestial_enchantments:book": 6.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/revenge",
+      "predicate": {
+        "celestial_enchantments:book": 7.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/hidden_blade",
+      "predicate": {
+        "celestial_enchantments:book": 8.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/misfortune_blade",
+      "predicate": {
+        "celestial_enchantments:book": 9.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/knight_slash",
+      "predicate": {
+        "celestial_enchantments:book": 10.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/fatal_blow",
+      "predicate": {
+        "celestial_enchantments:book": 11.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/light_armor_killer",
+      "predicate": {
+        "celestial_enchantments:book": 12.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/quick_step_puncture",
+      "predicate": {
+        "celestial_enchantments:book": 13.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/cluster_awareness",
+      "predicate": {
+        "celestial_enchantments:book": 14.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/quenched_blade",
+      "predicate": {
+        "celestial_enchantments:book": 15.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/words_of_wisdom",
+      "predicate": {
+        "celestial_enchantments:book": 16.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/destruction_crack",
+      "predicate": {
+        "celestial_enchantments:book": 17.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/suppression_blade",
+      "predicate": {
+        "celestial_enchantments:book": 18.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/death_blade",
+      "predicate": {
+        "celestial_enchantments:book": 19.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/magic_blade",
+      "predicate": {
+        "celestial_enchantments:book": 20.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/void_chain",
+      "predicate": {
+        "celestial_enchantments:book": 21.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/shadow_touch",
+      "predicate": {
+        "celestial_enchantments:book": 22.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/hand_of_thief",
+      "predicate": {
+        "celestial_enchantments:book": 23.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/void_protection",
+      "predicate": {
+        "celestial_enchantments:book": 24.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/abyssal_contact",
+      "predicate": {
+        "celestial_enchantments:book": 25.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/solid_armor",
+      "predicate": {
+        "celestial_enchantments:book": 26.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/flame_strike",
+      "predicate": {
+        "celestial_enchantments:book": 27.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/destroy_resonance",
+      "predicate": {
+        "celestial_enchantments:book": 28.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/frost_thorns",
+      "predicate": {
+        "celestial_enchantments:book": 29.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/trauma_absorption",
+      "predicate": {
+        "celestial_enchantments:book": 30.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/eyes_in_the_shadows",
+      "predicate": {
+        "celestial_enchantments:book": 31.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/have_a_nice_dream",
+      "predicate": {
+        "celestial_enchantments:book": 32.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/corrupt_scholar",
+      "predicate": {
+        "celestial_enchantments:book": 33.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/knowledge_scholar",
+      "predicate": {
+        "celestial_enchantments:book": 34.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/moon_blessing",
+      "predicate": {
+        "celestial_enchantments:book": 35.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/sun_blessing",
+      "predicate": {
+        "celestial_enchantments:book": 36.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/rain_and_dew_grace",
+      "predicate": {
+        "celestial_enchantments:book": 37.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/gift_of_thunder_god",
+      "predicate": {
+        "celestial_enchantments:book": 38.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/the_source_of_sin",
+      "predicate": {
+        "celestial_enchantments:book": 39.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/echo_effect",
+      "predicate": {
+        "celestial_enchantments:book": 40.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/origin_of_life",
+      "predicate": {
+        "celestial_enchantments:book": 41.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/life_shield",
+      "predicate": {
+        "celestial_enchantments:book": 42.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/turtle_assimilation",
+      "predicate": {
+        "celestial_enchantments:book": 43.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/celestial_shelter",
+      "predicate": {
+        "celestial_enchantments:book": 44.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/potion_affinity",
+      "predicate": {
+        "celestial_enchantments:book": 45.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/pure_body",
+      "predicate": {
+        "celestial_enchantments:book": 46.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/dolphin_assimilation",
+      "predicate": {
+        "celestial_enchantments:book": 47.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/leopard_assimilation",
+      "predicate": {
+        "celestial_enchantments:book": 48.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/corruption_body",
+      "predicate": {
+        "celestial_enchantments:book": 49.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/holy_prayer",
+      "predicate": {
+        "celestial_enchantments:book": 50.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/dimension_explorer",
+      "predicate": {
+        "celestial_enchantments:book": 51.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/fireproof_boots",
+      "predicate": {
+        "celestial_enchantments:book": 52.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/fleet_of_foot",
+      "predicate": {
+        "celestial_enchantments:book": 53.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/rabbit_assimilation",
+      "predicate": {
+        "celestial_enchantments:book": 54.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/parting_wish",
+      "predicate": {
+        "celestial_enchantments:book": 55.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/death_hatred",
+      "predicate": {
+        "celestial_enchantments:book": 56.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/death_pact",
+      "predicate": {
+        "celestial_enchantments:book": 57.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/arrow_of_traction",
+      "predicate": {
+        "celestial_enchantments:book": 58.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/arrow_storm",
+      "predicate": {
+        "celestial_enchantments:book": 59.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/explosive_arrow",
+      "predicate": {
+        "celestial_enchantments:book": 60.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/lightning_arrow",
+      "predicate": {
+        "celestial_enchantments:book": 61.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/sharp_arrow",
+      "predicate": {
+        "celestial_enchantments:book": 62.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/divine_projection",
+      "predicate": {
+        "celestial_enchantments:book": 63.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/constraints_shield",
+      "predicate": {
+        "celestial_enchantments:book": 64.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/holy_shield",
+      "predicate": {
+        "celestial_enchantments:book": 65.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/reactive_block",
+      "predicate": {
+        "celestial_enchantments:book": 66.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/scorching_shield",
+      "predicate": {
+        "celestial_enchantments:book": 67.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/sharp_halberd_tip",
+      "predicate": {
+        "celestial_enchantments:book": 68.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/explosive_halberd",
+      "predicate": {
+        "celestial_enchantments:book": 69.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/photo_dynamic",
+      "predicate": {
+        "celestial_enchantments:book": 70.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/experience_prospector",
+      "predicate": {
+        "celestial_enchantments:book": 71.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/moon_power",
+      "predicate": {
+        "celestial_enchantments:book": 72.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/leaf_cutting",
+      "predicate": {
+        "celestial_enchantments:book": 73.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/accelerate_growth",
+      "predicate": {
+        "celestial_enchantments:book": 74.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/born_in_shadow",
+      "predicate": {
+        "celestial_enchantments:book": 75.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/photosynthesis",
+      "predicate": {
+        "celestial_enchantments:book": 76.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/destruction_curse",
+      "predicate": {
+        "celestial_enchantments:book": 77.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/overeating_curse",
+      "predicate": {
+        "celestial_enchantments:book": 78.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/curse_of_weakness",
+      "predicate": {
+        "celestial_enchantments:book": 79.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/powerless_curse",
+      "predicate": {
+        "celestial_enchantments:book": 80.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/dragging_curse",
+      "predicate": {
+        "celestial_enchantments:book": 81.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/curse_of_gravity",
+      "predicate": {
+        "celestial_enchantments:book": 82.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/curse_of_withering",
+      "predicate": {
+        "celestial_enchantments:book": 83.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/curse_of_illiteracy",
+      "predicate": {
+        "celestial_enchantments:book": 84.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/cures_of_corrosion",
+      "predicate": {
+        "celestial_enchantments:book": 85.0
+      }
+    },
+    {
+      "model": "celestial_enchantments:item/compound_book",
+      "predicate": {
+        "celestial_enchantments:book": 222.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "minecraft:item/enchanted_book"
+  }
+}

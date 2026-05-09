@@ -52,7 +52,6 @@ public enum CELang {
 	TABLE_DESC_1("Enchanted books in Chiseled Bookshelves provide black list for enchanting, but decrease enchantment levels.",0),
 	TABLE_DESC_CA("Chaotic Pendant and tools with high enchantment affinity will make rare enchantments more common, and reduce chance to produce curse enchantments",0)
 
-
 	;
 
 	private final String key, def;

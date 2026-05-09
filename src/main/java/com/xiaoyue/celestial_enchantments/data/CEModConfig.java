@@ -367,7 +367,9 @@ public class CEModConfig {
 				public final ForgeConfigSpec.IntValue photosynthesisInterval;
 				public final ForgeConfigSpec.IntValue photosynthesisMinLight;
 				public final ForgeConfigSpec.IntValue photosynthesisRecover;
-
+				public final ForgeConfigSpec.DoubleValue experienceProspectorChance;
+				public final ForgeConfigSpec.IntValue experienceProspectorExp;
+				public final ForgeConfigSpec.DoubleValue moonPowerFullMoonSpeed;
 
 				Tool(ForgeConfigSpec.Builder builder) {
 					builder.push("Tool");
@@ -393,7 +395,13 @@ public class CEModConfig {
 					photosynthesisRecover = builder.comment("Photosynthesis: Durability to recover per level")
 							.defineInRange("photosynthesisRecover", 1, 0, 1000);
 
+					experienceProspectorChance = builder.comment("Experience Prospector: Experience drop probability")
+							.defineInRange("experienceProspectorChance", 0.2, 0, 1);
+					experienceProspectorExp = builder.comment("Experience Prospector: Dropped experience points")
+							.defineInRange("experienceProspectorExp", 2, 0, 1000);
 
+					moonPowerFullMoonSpeed = builder.comment("Moon Power: Increased mining speed during the full moon")
+							.defineInRange("moonPowerFullMoonSpeed", 1, 0.1, 1000);
 					builder.pop();
 				}
 
@@ -529,7 +537,7 @@ public class CEModConfig {
 			table = new Table(builder);
 
 			builder.push("Toggles");
-			for (var e : CEEnchantments.ALL_ENCH) {
+			for (var e : CEEnchantments.ALL_ENCH.keySet()) {
 				map.put(e, builder.define(e, true));
 			}
 			builder.pop();

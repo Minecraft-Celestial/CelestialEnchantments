@@ -25,7 +25,7 @@ public class FleetOfFoot extends ArmorEnch implements AttributeEnchantment {
 	@Override
 	public void addAttributes(int lv, ItemAttributeModifierEvent event) {
 		if (event.getSlotType() == EquipmentSlot.FEET)
-		event.addModifier(Attributes.MOVEMENT_SPEED, new AttributeModifier(
+			event.addModifier(Attributes.MOVEMENT_SPEED, new AttributeModifier(
 				MathHelper.getUUIDFromString("fleet_of_foot"), "fleet_of_foot", lv * speed(),
 				AttributeModifier.Operation.MULTIPLY_BASE));
 	}

@@ -1,6 +1,5 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
-import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.ArmorEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.LivingTickEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;

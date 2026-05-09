@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "celestial_enchantments:item/book/rain_and_dew_grace"
+  }
+}

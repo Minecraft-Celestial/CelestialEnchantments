@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "celestial_enchantments:item/book/have_a_nice_dream"
+  }
+}

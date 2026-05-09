@@ -22,7 +22,7 @@ public class MagicBlade extends AttackEnch {
 
 	@Override
 	public void onDamageTargetFinal(LivingEntity user, LivingEntity target, AttackCache cache, int lv) {
-		GeneralEventHandler.schedule(() -> target.hurt(CCDamageTypes.magic(user), cache.getDamageDealt() * (float) atk()));
+		GeneralEventHandler.schedule(() -> target.hurt(CCDamageTypes.magic(user), cache.getDamageDealt() * (float) atk() * lv));
 	}
 
 	@Override

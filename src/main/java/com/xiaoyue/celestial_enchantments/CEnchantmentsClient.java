@@ -1,6 +1,7 @@
 package com.xiaoyue.celestial_enchantments;
 
 import com.xiaoyue.celestial_enchantments.content.generic.CEBaseEnchantment;
+import com.xiaoyue.celestial_enchantments.register.CEEnchantments;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -17,13 +18,19 @@ public class CEnchantmentsClient {
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> ItemProperties.register(Items.ENCHANTED_BOOK, new ResourceLocation(CelestialEnchantments.MODID, "book"),
-				(itemStack, clientLevel, livingEntity, i) -> {
-					for (Enchantment enchantment : EnchantmentHelper.getEnchantments(itemStack).keySet()) {
-						if (enchantment instanceof CEBaseEnchantment) {
-							return 2.0f;
+				(stack, clientLevel, entity, i) -> {
+					int index = 0;
+					int count = 0;
+					for (Enchantment enchantment : EnchantmentHelper.getEnchantments(stack).keySet()) {
+						if (enchantment instanceof CEBaseEnchantment ce) {
+							index = CEEnchantments.ALL_ENCH.getOrDefault(ce.getID().getPath(), 0);
+							count++;
 						}
 					}
-					return 0;
+					if (count >= 2) {
+						return 222;
+					}
+					return index;
 				}));
 	}
 }

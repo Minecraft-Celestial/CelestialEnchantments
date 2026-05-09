@@ -7,7 +7,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.ToolActions;
 
 public class WeaponEnch extends CEBaseEnchantment {
 
