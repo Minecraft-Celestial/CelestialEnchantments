@@ -48,7 +48,7 @@ public class EchoEffect extends DefenceEnch {
 				if (v < user.getHealth()) return v;
 				var cond = L2LibReg.CONDITIONAL.type().getOrCreate(player);
 				if (cond.hasData(KEY)) return v;
-				player.heal(player.getMaxHealth() * v * (float) heal());
+				player.heal(player.getMaxHealth() * lv * (float) heal());
 				var token = cond.getOrCreateData(KEY, Token::new);
 				token.timer = cd() * 20;
 				token.sync(KEY, token, player);

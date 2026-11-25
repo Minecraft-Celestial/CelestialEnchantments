@@ -13,8 +13,8 @@ import dev.xkmc.l2core.init.L2LibReg;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 
 public class ConstraintsShield extends ShieldEnch {
@@ -35,7 +35,7 @@ public class ConstraintsShield extends ShieldEnch {
 
 	@Override
 	public void onShieldBlock(LivingShieldBlockEvent event, LivingEntity attacker, LivingEntity entity, int level) {
-		if (entity instanceof Player player) {
+		if (entity instanceof ServerPlayer player) {
 			var data = L2LibReg.CONDITIONAL.type().getOrCreate(player);
 			var token = data.getOrCreateData(KEY, Token::new);
 			if (token.cec < prepare()) {

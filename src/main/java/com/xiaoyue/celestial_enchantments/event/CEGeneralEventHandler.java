@@ -62,7 +62,7 @@ public class CEGeneralEventHandler {
 				val += ench.onPickupXp(event, event.getEntity(), entry.getValue(), event.getOrb());
 			}
 		}
-		event.getOrb().value = (int) (event.getOrb().value * val);
+		event.getOrb().value = (int) (event.getOrb().value * Math.max(0, val));
 	}
 
 	@SubscribeEvent
@@ -144,6 +144,7 @@ public class CEGeneralEventHandler {
 			var owner = arrow.getOwner();
 			if (owner != null && ent.user == owner && ent.tickCount == owner.tickCount) {
 				arrow.getPersistentData().put("Celestial-BowInfo", ent.stack.save(arrow.level().registryAccess()));
+				TEMP.remove();
 			}
 		}
 	}

@@ -95,7 +95,7 @@ public class TransfusionHelper {
 		if (copy.getOrDefault(DataComponents.REPAIR_COST, 0) > 0) {
 			copy.set(DataComponents.REPAIR_COST, 0);
 		}
-		return setEnch(a, amap);
+		return setEnch(copy, amap);
 	}
 
 	@Nullable
@@ -107,7 +107,8 @@ public class TransfusionHelper {
 			var ent = new ArrayList<>(map.entrySet()).get(0);
 			if (ent.getValue() <= 1) return null;
 			var ans = Map.of(ent.getKey(), ent.getValue() - 1);
-			return Pair.of(setEnch(a.copy(), ans), setEnch(new ItemStack(Items.ENCHANTED_BOOK), ans));
+			var book = Map.of(ent.getKey(), 1);
+			return Pair.of(setEnch(a.copy(), ans), setEnch(new ItemStack(Items.ENCHANTED_BOOK), book));
 		}
 		var ent = new ArrayList<>(map.entrySet()).get(rand.nextInt(map.size()));
 		map.remove(ent.getKey());

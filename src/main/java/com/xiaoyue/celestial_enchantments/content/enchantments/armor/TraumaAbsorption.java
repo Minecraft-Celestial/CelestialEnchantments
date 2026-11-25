@@ -20,7 +20,7 @@ public class TraumaAbsorption extends DefenceEnch {
 
 	@Override
 	public void onDamagedFinal(LivingEntity user, DamageData.DefenceMax data, int lv) {
-		user.heal((user.getMaxHealth() - user.getHealth()) * (float) heal());
+		user.heal((user.getMaxHealth() - user.getHealth()) * lv * (float) heal());
 	}
 
 	@Override

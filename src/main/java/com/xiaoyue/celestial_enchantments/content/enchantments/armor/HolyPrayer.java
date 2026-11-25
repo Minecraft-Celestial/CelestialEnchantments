@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 import com.xiaoyue.celestial_enchantments.content.effects.EnchEffectEntry;
 import com.xiaoyue.celestial_enchantments.content.generic.DefenceEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import dev.xkmc.l2damagetracker.contents.attack.DamageData;
 import net.minecraft.network.chat.Component;
@@ -13,7 +14,7 @@ import net.minecraft.world.entity.player.Player;
 public class HolyPrayer extends DefenceEnch {
 
 	private static int dur() {
-		return 2;
+		return CEModConfig.SERVER.ench.armor.holyPrayerDuration.get();
 	}
 
 	private static final EnchEffectEntry EFF = EnchEffectEntry.all(() -> MobEffects.REGENERATION, HolyPrayer::dur);

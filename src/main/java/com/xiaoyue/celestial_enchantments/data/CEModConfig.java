@@ -144,6 +144,7 @@ public class CEModConfig {
 				public final ModConfigSpec.DoubleValue giftOfThunderGodHeal;
 				public final ModConfigSpec.IntValue giftOfThunderGodDuration;
 				public final ModConfigSpec.IntValue haveANiceDreamDuration;
+				public final ModConfigSpec.IntValue holyPrayerDuration;
 				public final ModConfigSpec.DoubleValue knowledgeScholarExpBonus;
 				public final ModConfigSpec.DoubleValue lifeShieldPercentage;
 				public final ModConfigSpec.IntValue originOfLifeDuration;
@@ -218,6 +219,9 @@ public class CEModConfig {
 
 					haveANiceDreamDuration = builder.comment("Have a Nice Dream: duration of effects to gain")
 							.defineInRange("haveANiceDreamDuration", 60, 0, 600);
+
+					holyPrayerDuration = builder.comment("Holy Prayer: duration per level of regeneration to gain")
+							.defineInRange("holyPrayerDuration", 2, 0, 600);
 
 					knowledgeScholarExpBonus = builder.comment("Knowledge Scholar: Exp pickup bonus")
 							.defineInRange("knowledgeScholarExpBonus", 0.1, 0, 1);

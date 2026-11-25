@@ -22,7 +22,7 @@ public class SolidArmor extends DefenceEnch {
 	@Override
 	public void onDamagedImpl(LivingEntity user, DamageData.Defence data, int lv) {
 		if (user.getHealth() < user.getMaxHealth() / 2) {
-			data.addDealtModifier(DamageModifier.multTotal(1 - lv * (float) def(), damageId()));
+			data.addDealtModifier(DamageModifier.multTotal(Math.max(0, 1 - lv * (float) def()), damageId()));
 		}
 	}
 

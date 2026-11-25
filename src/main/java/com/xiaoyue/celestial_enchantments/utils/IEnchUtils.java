@@ -8,7 +8,10 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class IEnchUtils {
@@ -31,9 +34,18 @@ public class IEnchUtils {
 	}
 
 	public static Map<CEBaseEnchantment, Integer> getEnch(LivingEntity entity, EquipmentSlot... slots) {
-		Map<CEBaseEnchantment, Integer> ans = LegacyEnchantment.accumulateOnEntity(entity, CEBaseEnchantment.class, true);
-		ans.keySet().removeIf(e -> !e.isEnabled());
+		List<EquipmentSlot> filter = List.of(slots);
+		Map<CEBaseEnchantment, Integer> ans = new LinkedHashMap<>();
+		for (EquipmentSlot slot : EquipmentSlot.values()) {
+			if (!filter.contains(slot)) continue;
+			ItemStack stack = entity.getItemBySlot(slot);
+			if (stack.isEmpty() || !stack.isEnchanted()) continue;
+			for (var holder : LegacyEnchantment.findAll(stack, CEBaseEnchantment.class, true)) {
+				CEBaseEnchantment ench = holder.val();
+				if (!ench.isEnabled() || !List.of(ench.slots).contains(slot)) continue;
+				ans.merge(ench, Math.min(ench.getMaxLevel(), holder.lv()), Integer::sum);
+			}
+		}
 		return ans;
 	}
-
 }

@@ -24,8 +24,9 @@ public class WitheringCurse extends ArmorEnch implements AttributeEnchantment {
 
 	@Override
 	public void addAttributes(int lv, ItemAttributeModifierEvent event) {
+		double lost = Math.min(0.9, lv * health());
 		event.addModifier(Attributes.MAX_HEALTH, new AttributeModifier(
-				CelestialEnchantments.loc("curse_of_withering"), -lv * health(),
+				CelestialEnchantments.loc("curse_of_withering"), -lost,
 				AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.ARMOR);
 	}
 

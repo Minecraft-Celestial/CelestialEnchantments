@@ -35,7 +35,7 @@ public class DestroyResonance extends DefenceEnch {
 		others.remove(user);
 		for (LivingEntity lest : others) {
 			if (source.is(DamageTypeTags.AVOIDS_GUARDIAN_THORNS) && lest == data.getAttacker()) continue;
-			SchedulerHandler.schedule(() -> lest.hurt(source, lv * (float) damage() * data.getDamageIncoming()));
+			SchedulerHandler.schedule(() -> lest.hurt(source, lv * (float) damage() * data.getDamageFinal()));
 		}
 	}
 

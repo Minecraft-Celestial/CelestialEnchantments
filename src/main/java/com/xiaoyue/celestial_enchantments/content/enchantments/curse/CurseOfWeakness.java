@@ -21,7 +21,7 @@ public class CurseOfWeakness extends AttackEnch {
 
 	@Override
 	public void onHurtTarget(LivingEntity user, LivingEntity target, DamageData.Offence data, int lv) {
-		data.addHurtModifier(DamageModifier.multTotal(1 - lv * (float) atk(), damageId()));
+		data.addHurtModifier(DamageModifier.multTotal(Math.max(0, 1 - lv * (float) atk()), damageId()));
 	}
 
 	@Override

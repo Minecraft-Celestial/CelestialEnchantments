@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_enchantments.content.enchantments.curse;
 import com.xiaoyue.celestial_enchantments.content.generic.PlayerBreakEnch;
 import com.xiaoyue.celestial_enchantments.content.generic.ToolEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
+import com.xiaoyue.celestial_enchantments.data.CEModConfig;
 import com.xiaoyue.celestial_enchantments.data.EnchData;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +13,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 public class PowerlessCurse extends ToolEnch implements PlayerBreakEnch {
 
   private static double speed() {
-		return 0.15;
+		return CEModConfig.SERVER.ench.curse.powerlessCurseMiningSpeedLost.get();
 	}
 
 	public PowerlessCurse() {

@@ -1,5 +1,6 @@
 package com.xiaoyue.celestial_enchantments.content.enchantments.armor;
 
+import com.xiaoyue.celestial_core.data.CCDamageTypes;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import com.xiaoyue.celestial_enchantments.content.generic.DeathEnch;
 import com.xiaoyue.celestial_enchantments.data.CELang;
@@ -30,10 +31,9 @@ public class DeathHatred extends DeathEnch {
 	@Override
 	public void onDeath(LivingEntity entity, int level) {
 		if (!(entity instanceof Player)) return;
-		List<LivingEntity> players = EntityUtils.getExceptForCentralEntity(entity, radius(), radius(), livingEntity -> livingEntity instanceof Enemy);
-		for (LivingEntity list : players) {
-			DamageSource damageSource = new DamageSource(entity.damageSources().magic().typeHolder());
-			list.hurt(damageSource, level * (float) damage());
+		List<LivingEntity> enemies = EntityUtils.getExceptForCentralEntity(entity, radius(), radius(), livingEntity -> livingEntity instanceof Enemy);
+		for (LivingEntity enemy : enemies) {
+			enemy.hurt(CCDamageTypes.magic(entity), level * (float) damage());
 		}
 	}
 

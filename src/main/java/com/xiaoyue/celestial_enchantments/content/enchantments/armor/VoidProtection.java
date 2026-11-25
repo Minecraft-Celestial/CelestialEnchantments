@@ -23,7 +23,7 @@ public class VoidProtection extends DefenceEnch {
 	@Override
 	public void onDamaged(LivingEntity user, DamageData.Defence data, int lv) {
 		if (data.getSource().is(DamageTypes.FELL_OUT_OF_WORLD)) {
-			data.addDealtModifier(DamageModifier.multTotal(1 - lv * (float) def(), damageId()));
+			data.addDealtModifier(DamageModifier.multTotal(Math.max(0, 1 - lv * (float) def()), damageId()));
 		}
 	}
 
