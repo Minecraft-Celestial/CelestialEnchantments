@@ -32,17 +32,10 @@ import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
 public class CelestialTableScreen extends AbstractContainerScreen<CelestialTableMenu> {
-   /**
-    * The ResourceLocation containing the Enchantment GUI texture location
-    */
+
    private static final ResourceLocation ENCHANTING_TABLE_LOCATION = CelestialEnchantments.loc("textures/gui/celestial_table.png");
-   /**
-    * The ResourceLocation containing the texture for the Book rendered above the enchantment table
-    */
    private static final ResourceLocation ENCHANTING_BOOK_LOCATION = CelestialEnchantments.loc("textures/entity/celestial_table_book.png");
-   /**
-    * A Random instance for use with the enchantment gui
-    */
+
    private final RandomSource random = RandomSource.create();
    private BookModel bookModel;
    public int time;

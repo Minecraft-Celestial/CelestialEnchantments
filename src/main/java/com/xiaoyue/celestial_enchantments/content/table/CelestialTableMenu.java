@@ -104,9 +104,6 @@ public class CelestialTableMenu extends AbstractContainerMenu {
 		addDataSlot(DataSlot.shared(levelClue, 2));
 	}
 
-	/**
-	 * Callback for when the crafting matrix is changed.
-	 */
 	public void slotsChanged(Container inv) {
 		if (inv == enchantSlots) {
 			ItemStack itemstack = inv.getItem(0);

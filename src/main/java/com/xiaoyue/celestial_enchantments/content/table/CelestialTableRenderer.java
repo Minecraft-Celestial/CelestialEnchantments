@@ -17,9 +17,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class CelestialTableRenderer implements BlockEntityRenderer<CelestialTableBlockEntity> {
-	/**
-	 * The texture for the book above the enchantment table.
-	 */
+
 	public static final ResourceLocation BOOK_LOCATION = CelestialEnchantments.loc("textures/entity/celestial_table_book.png");
 	private final BookModel bookModel;
 

@@ -71,9 +71,6 @@ public class CelestialTableBlock extends BaseEntityBlock {
       return SHAPE;
    }
 
-   /**
-    * Called periodically clientside on blocks near the player to show effects (like furnace fire particles).
-    */
    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
       super.animateTick(pState, pLevel, pPos, pRandom);
 
